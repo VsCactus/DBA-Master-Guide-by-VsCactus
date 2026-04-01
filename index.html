@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DB Asylum — Master Player Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&family=Exo+2:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-primary: #07070f;
+    --bg-secondary: #0e0e1c;
+    --bg-card: #12121f;
+    --bg-card-hover: #1a1a2e;
+    --accent-orange: #ff6b00;
+    --accent-gold: #ffd700;
+    --accent-blue: #00b4ff;
+    --accent-red: #ff2244;
+    --accent-green: #00ff88;
+    --accent-purple: #9d4edd;
+    --text-primary: #e8e8f0;
+    --text-secondary: #8888aa;
+    --text-dim: #555570;
+    --border-glow: rgba(255, 107, 0, 0.3);
+    --border-subtle: rgba(255,255,255,0.06);
+    --override-bg: rgba(255, 34, 68, 0.08);
+    --override-border: rgba(255, 34, 68, 0.4);
+    --new-bg: rgba(0, 255, 136, 0.06);
+    --new-border: rgba(0, 255, 136, 0.35);
+    --table-header: #1c1c30;
+    --table-row-alt: rgba(255,255,255,0.02);
+    --tab-active-bg: rgba(255, 107, 0, 0.12);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ANIMATED BACKGROUND */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background:
+      radial-gradient(ellipse at 20% 20%, rgba(255,107,0,0.04) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 80%, rgba(0,180,255,0.03) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 50%, rgba(157,78,221,0.02) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .app {
+    position: relative;
+    z-index: 1;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 16px 60px;
+  }
+
+  /* ── HEADER ── */
+  .site-header {
+    padding: 32px 0 0;
+    text-align: center;
+    position: relative;
+  }
+
+  .header-eyebrow {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--accent-orange);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    opacity: 0.8;
+  }
+
+  .header-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: clamp(32px, 6vw, 60px);
+    line-height: 1;
+    background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-orange) 40%, #ff4444 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .header-subtitle {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-top: 8px;
+    letter-spacing: 1px;
+  }
+
+  .header-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent-orange), transparent);
+    margin: 20px 0 0;
+    opacity: 0.5;
+  }
+
+  .version-badge {
+    display: inline-block;
+    background: var(--override-bg);
+    border: 1px solid var(--override-border);
+    border-radius: 4px;
+    padding: 3px 10px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 11px;
+    color: var(--accent-red);
+    margin-top: 10px;
+    letter-spacing: 1px;
+  }
+
+  /* ── TAB NAV ── */
+  .tab-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 20px 0 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: linear-gradient(to bottom, var(--bg-primary) 85%, transparent);
+    padding-bottom: 12px;
+  }
+
+  .tab-btn {
+    flex: 1;
+    min-width: 130px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    color: var(--text-secondary);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 10px 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tab-btn::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0; height: 2px;
+    background: var(--accent-orange);
+    transition: width 0.25s ease;
+  }
+
+  .tab-btn:hover {
+    color: var(--text-primary);
+    background: var(--bg-card-hover);
+    border-color: rgba(255,107,0,0.2);
+  }
+
+  .tab-btn:hover::before { width: 100%; }
+
+  .tab-btn.active {
+    background: var(--tab-active-bg);
+    border-color: var(--accent-orange);
+    color: var(--accent-orange);
+  }
+
+  .tab-btn.active::before { width: 100%; }
+
+  .tab-icon { margin-right: 6px; font-size: 14px; }
+
+  /* ── TAB PANELS ── */
+  .tab-panel { display: none; animation: fadeIn 0.25s ease; }
+  .tab-panel.active { display: block; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── SECTION HEADERS ── */
+  .section-header {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    padding: 28px 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-header::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, rgba(255,215,0,0.3), transparent);
+  }
+
+  .sub-header {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--accent-orange);
+    padding: 18px 0 8px;
+    border-bottom: 1px solid rgba(255,107,0,0.15);
+    margin-bottom: 10px;
+  }
+
+  .sub-sub-header {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--accent-blue);
+    padding: 12px 0 6px;
+  }
+
+  /* ── CARDS & GRIDS ── */
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    transition: border-color 0.2s;
+  }
+
+  .card:hover { border-color: rgba(255,107,0,0.15); }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .stat-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 4px;
+  }
+
+  .stat-value {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--text-primary);
+  }
+
+  /* ── OVERRIDE & NEW BADGES ── */
+  .override-box {
+    background: var(--override-bg);
+    border: 1px solid var(--override-border);
+    border-left: 3px solid var(--accent-red);
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin: 8px 0;
+    font-size: 13px;
+  }
+
+  .override-box .badge {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 10px;
+    background: var(--accent-red);
+    color: #fff;
+    padding: 1px 6px;
+    border-radius: 3px;
+    margin-right: 6px;
+    letter-spacing: 1px;
+  }
+
+  .new-box {
+    background: var(--new-bg);
+    border: 1px solid var(--new-border);
+    border-left: 3px solid var(--accent-green);
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin: 8px 0;
+    font-size: 13px;
+  }
+
+  .new-box .badge {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 10px;
+    background: var(--accent-green);
+    color: #000;
+    padding: 1px 6px;
+    border-radius: 3px;
+    margin-right: 6px;
+  }
+
+  .tip-box {
+    background: rgba(0,180,255,0.06);
+    border: 1px solid rgba(0,180,255,0.25);
+    border-left: 3px solid var(--accent-blue);
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin: 8px 0;
+    font-size: 13px;
+    color: #aad6ff;
+  }
+
+  .warn-box {
+    background: rgba(255,215,0,0.05);
+    border: 1px solid rgba(255,215,0,0.2);
+    border-left: 3px solid var(--accent-gold);
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin: 8px 0;
+    font-size: 13px;
+    color: #ffe97a;
+  }
+
+  /* ── TABLES ── */
+  .table-wrap {
+    overflow-x: auto;
+    margin: 10px 0 16px;
+    border-radius: 8px;
+    border: 1px solid var(--border-subtle);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+
+  thead tr {
+    background: var(--table-header);
+  }
+
+  th {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-subtle);
+    white-space: nowrap;
+  }
+
+  td {
+    padding: 9px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+    color: var(--text-primary);
+    vertical-align: top;
+    line-height: 1.5;
+  }
+
+  tbody tr:nth-child(even) { background: var(--table-row-alt); }
+  tbody tr:hover { background: rgba(255,107,0,0.04); }
+  tbody tr:last-child td { border-bottom: none; }
+
+  .t-orange { color: var(--accent-orange); font-weight: 600; }
+  .t-gold { color: var(--accent-gold); font-weight: 600; }
+  .t-blue { color: var(--accent-blue); }
+  .t-green { color: var(--accent-green); }
+  .t-red { color: var(--accent-red); }
+  .t-purple { color: var(--accent-purple); }
+  .t-dim { color: var(--text-secondary); }
+  .t-mono { font-family: 'Share Tech Mono', monospace; font-size: 12px; }
+  .t-bold { font-weight: 700; }
+
+  /* ── TIER LIST ── */
+  .tier-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 8px;
+    padding: 10px 14px;
+    background: var(--bg-card);
+    border-radius: 8px;
+    border: 1px solid var(--border-subtle);
+  }
+
+  .tier-label {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    min-width: 44px;
+    text-align: center;
+    line-height: 1;
+    padding-top: 2px;
+  }
+
+  .tier-ss .tier-label { color: #ff6b00; text-shadow: 0 0 12px rgba(255,107,0,0.5); }
+  .tier-s .tier-label { color: #ffd700; }
+  .tier-a .tier-label { color: #00ff88; }
+  .tier-b .tier-label { color: #00b4ff; }
+  .tier-c .tier-label { color: #9d4edd; }
+  .tier-d .tier-label { color: #888; }
+  .tier-hit .tier-label { color: #555; }
+
+  .tier-races {
+    font-size: 13px;
+    color: var(--text-primary);
+    flex: 1;
+    line-height: 1.6;
+  }
+
+  /* ── REBIRTH FLOW ── */
+  .rebirth-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .rebirth-step {
+    position: relative;
+    padding: 14px 18px 14px 50px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    transition: border-color 0.2s;
+  }
+
+  .rebirth-step:hover { border-color: rgba(255,107,0,0.25); }
+
+  .step-num {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--accent-orange);
+    opacity: 0.5;
+  }
+
+  .step-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--accent-gold);
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .step-body {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  .step-body strong { color: var(--text-primary); }
+
+  /* ── RULES LIST ── */
+  .rules-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .rules-list li {
+    display: flex;
+    gap: 14px;
+    padding: 11px 14px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 7px;
+    margin-bottom: 6px;
+    font-size: 13px;
+    line-height: 1.6;
+    transition: border-color 0.2s;
+  }
+
+  .rules-list li:hover { border-color: rgba(255,255,255,0.09); }
+
+  .rule-num {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 11px;
+    color: var(--accent-orange);
+    min-width: 24px;
+    padding-top: 2px;
+    font-weight: 700;
+  }
+
+  .rule-text { flex: 1; }
+  .rule-critical { border-left: 3px solid var(--accent-red) !important; }
+  .rule-critical .rule-num { color: var(--accent-red); }
+
+  /* ── PROGRESS BAR ── */
+  .progress-section {
+    margin: 8px 0;
+  }
+
+  .prog-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-bottom: 4px;
+    color: var(--text-secondary);
+  }
+
+  .prog-bar {
+    height: 6px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .prog-fill {
+    height: 100%;
+    border-radius: 3px;
+    background: linear-gradient(90deg, var(--accent-orange), var(--accent-gold));
+  }
+
+  /* ── CHANGELOG SUMMARY ── */
+  .cl-entry {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 10px;
+  }
+
+  .cl-version {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 12px;
+    color: var(--accent-orange);
+    margin-bottom: 8px;
+  }
+
+  .cl-item {
+    font-size: 13px;
+    padding: 4px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+    display: flex;
+    gap: 10px;
+    line-height: 1.5;
+  }
+
+  .cl-item:last-child { border-bottom: none; }
+
+  .cl-dot {
+    color: var(--accent-orange);
+    margin-top: 2px;
+    font-size: 10px;
+  }
+
+  /* ── INLINE TAGS ── */
+  .tag {
+    display: inline-block;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 10px;
+    padding: 1px 6px;
+    border-radius: 3px;
+    margin-left: 4px;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+  }
+
+  .tag-override { background: rgba(255,34,68,0.2); color: var(--accent-red); border: 1px solid rgba(255,34,68,0.3); }
+  .tag-new { background: rgba(0,255,136,0.15); color: var(--accent-green); border: 1px solid rgba(0,255,136,0.25); }
+  .tag-perm { background: rgba(157,78,221,0.15); color: var(--accent-purple); border: 1px solid rgba(157,78,221,0.25); }
+  .tag-zeno { background: rgba(255,215,0,0.15); color: var(--accent-gold); border: 1px solid rgba(255,215,0,0.25); }
+  .tag-pvp { background: rgba(0,180,255,0.12); color: var(--accent-blue); border: 1px solid rgba(0,180,255,0.25); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .tab-btn { min-width: calc(50% - 4px); font-size: 11px; }
+    .card-grid { grid-template-columns: 1fr; }
+    th, td { padding: 7px 10px; }
+  }
+
+  /* ── SCROLLBAR ── */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg-primary); }
+  ::-webkit-scrollbar-thumb { background: rgba(255,107,0,0.3); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: rgba(255,107,0,0.5); }
+
+  p { font-size: 13px; line-height: 1.7; color: var(--text-secondary); margin-bottom: 8px; }
+  p strong { color: var(--text-primary); }
+  ul { padding-left: 18px; margin: 6px 0; }
+  li { font-size: 13px; line-height: 1.7; color: var(--text-secondary); }
+  li strong { color: var(--text-primary); }
+  code { font-family: 'Share Tech Mono', monospace; font-size: 12px; background: rgba(255,255,255,0.06); padding: 1px 5px; border-radius: 3px; color: #aad6ff; }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-eyebrow">★ Dragonball Asylum ★</div>
+    <h1 class="header-title">Master Player Guide</h1>
+    <div class="header-subtitle">Compiled by VsCactus from in game and discord guides</div>
+    <div class="version-badge">⚠ Latest: v8.67.14 · All Data comes from in game guides, player made guides in discord, and changelogs</div>
+    <div class="header-divider"></div>
+  </header>
+
+  <!-- TAB NAV -->
+  <nav class="tab-nav" id="tabNav">
+    <button class="tab-btn active" onclick="showTab('newplayer',this)"><span class="tab-icon">🌱</span>New Player</button>
+    <button class="tab-btn" onclick="showTab('equipment',this)"><span class="tab-icon">⚔️</span>Techs &amp; Equips</button>
+    <button class="tab-btn" onclick="showTab('events',this)"><span class="tab-icon">🏆</span>Events</button>
+    <button class="tab-btn" onclick="showTab('transforms',this)"><span class="tab-icon">⚡</span>Transformations</button>
+    <button class="tab-btn" onclick="showTab('mobfarming',this)"><span class="tab-icon">🗺️</span>Mob Farming</button>
+    <button class="tab-btn" onclick="showTab('rules',this)"><span class="tab-icon">📋</span>Rules</button>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════
+       TAB 1 — NEW PLAYER GUIDE
+  ══════════════════════════════════════════════ -->
+  <section class="tab-panel active" id="panel-newplayer">
+
+    <div class="section-header">⌨ Movement &amp; Macros</div>
+
+    <div class="card-grid">
+      <div class="card">
+        <div class="sub-sub-header">Arrow Keys</div>
+        <p><strong>Left</strong> = West &nbsp;|&nbsp; <strong>Up</strong> = North<br>
+        <strong>Right</strong> = East &nbsp;|&nbsp; <strong>Down</strong> = South<br>
+        <em>Combine 2 arrows for diagonal movement.</em></p>
+      </div>
+      <div class="card">
+        <div class="sub-sub-header">Numpad (Num Lock OFF)</div>
+        <p>1=SW &nbsp; 2=S &nbsp; 3=SE<br>4=W &nbsp; 6=E<br>7=NW &nbsp; 8=N &nbsp; 9=NE</p>
+      </div>
+      <div class="card">
+        <div class="sub-sub-header">Macro Setup</div>
+        <p>Commands (top-left) → Set Macros<br>
+        Multi-word: use hyphen → <code>ki-blast</code><br>
+        <code>.click z-sword</code> — equip/unequip without inventory<br>
+        <code>.click gi\nhide gi</code> — equip + hide in one key</p>
+      </div>
+    </div>
+
+    <!-- CLASSES -->
+    <div class="section-header">🎯 Classes</div>
+    <p>Change at Z Agent (Level 100,000) or any level at Rebirth 4/3 or 5/3 for <strong>25 ZP</strong>. <span class="tag tag-new">v8.66.2</span> Also changeable via <strong>Candy Broker NPC</strong> for Candy.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Class</th><th>Benefit</th><th>Best For</th></tr></thead>
+        <tbody>
+          <tr><td class="t-orange t-bold">Mystic</td><td>Better stat gains on Ki (level gains & equipment)</td><td>Ki builds</td></tr>
+          <tr><td class="t-orange t-bold">Aggressor</td><td>Better stat gains on Str (level gains & equipment)</td><td>STR builds</td></tr>
+          <tr><td class="t-orange t-bold">Guardian</td><td>Better stat gains on Def (level gains & equipment)</td><td>Tank builds</td></tr>
+          <tr><td class="t-orange t-bold">Velocitor</td><td>+5% EXP while mobbing + increased EXP while training</td><td class="t-green">⭐ Best for new players</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- STATS & ABILITIES -->
+    <div class="section-header">📊 Stats &amp; Abilities</div>
+    <div class="card-grid">
+      <div class="card">
+        <div class="sub-sub-header">Core Stats</div>
+        <ul>
+          <li><strong>Powerlevel (PL):</strong> Reaches 0 = KO/killed. Health/durability only <span class="tag tag-override">v8.66</span></li>
+          <li><strong>Ki:</strong> Strength of ki attacks</li>
+          <li><strong>Ki Defense:</strong> Defence vs. ki attacks</li>
+          <li><strong>Strength:</strong> Strength of melee attacks</li>
+          <li><strong>Defense:</strong> Defence vs. melee attacks</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="sub-sub-header">Abilities (talk to Hercule | cap: 75%)</div>
+        <ul>
+          <li><strong>Block</strong> — Chance to block melee attacks</li>
+          <li><strong>Counter</strong> — Chance to counter melee attacks</li>
+          <li><strong>Critical</strong> — Chance to score a critical hit</li>
+          <li><strong>Dodge</strong> — Chance to dodge ki attacks</li>
+          <li><strong>Reflect</strong> — Chance to reflect ki attacks</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TRAINING -->
+    <div class="section-header">🏋️ Training Methods</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Method</th><th>Description</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Self Train</td><td>Levels + stats; stamina depletes</td><td>Use treadmills to restore stamina</td></tr>
+          <tr><td class="t-bold">Dual Train</td><td>Partner next to you; more levels than self train</td><td>Less TPs than self train</td></tr>
+          <tr><td class="t-bold">Shadow Spar</td><td>Press arrows in order; 2x–3x EXP/TP multi</td><td class="t-green">Best EXP/TP method; improves each rebirth</td></tr>
+          <tr><td class="t-bold">Meditation</td><td>Gains karma, stats, EXP</td><td>Meditation pads can double gains</td></tr>
+          <tr><td class="t-bold">Weight Train</td><td>Weighted gear; halves stats + slows movement</td><td>Extra stamina + EXP bonus</td></tr>
+          <tr><td class="t-bold">Killing Mobs</td><td>EXP multiplied by mode</td><td>Noob x1 → Easy x2 → Medium x3 → +1x per mode</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sub-header">Gravity Multipliers</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Location</th><th>Multi</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Club House</td><td class="t-gold t-bold">x30</td><td>Limited: 30 min session (45 min Gym Bunny)</td></tr>
+          <tr><td>HBTC</td><td class="t-orange t-bold">x15 <span class="tag tag-override">v8.66</span></td><td>Limited: 3 uses × 2 hrs each; <strong>freezes TNL</strong></td></tr>
+          <tr><td>Sub Room</td><td class="t-orange t-bold">x15 <span class="tag tag-override">v8.66</span></td><td>Unlimited time</td></tr>
+          <tr><td>FCC (PvP)</td><td class="t-blue t-bold">x15 <span class="tag tag-override">v8.66</span></td><td>EXP Till Next Level does NOT rise here</td></tr>
+          <tr><td>High Strain SZ Chamber (PvP)</td><td class="t-blue t-bold">x20</td><td>PvP zone</td></tr>
+          <tr><td>Normal Gravity</td><td class="t-dim">x2</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- RANKS -->
+    <div class="section-header">🎖 Ranks &amp; Quest Medals</div>
+    <div class="tip-box">💡 <strong>Relog after hitting a new rank</strong> to activate gains. Use <code>Quest Medal Check</code> in Training tab. Easiest early medals: King Kai, Yamcha (Lvl 500), Dr. Briefs, Master Roshi (Kamehameha), Saiyaman.</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Level</th><th>Rank</th><th>Quest Medals Required</th></tr></thead>
+        <tbody>
+          <tr><td class="t-mono">2,000</td><td class="t-bold">Easy</td><td class="t-dim">—</td></tr>
+          <tr><td class="t-mono">7,500</td><td class="t-bold">Medium</td><td class="t-dim">—</td></tr>
+          <tr><td class="t-mono">15,000</td><td class="t-bold">Hard</td><td class="t-dim">—</td></tr>
+          <tr><td class="t-mono">25,000</td><td class="t-bold">Extreme</td><td class="t-orange">3</td></tr>
+          <tr><td class="t-mono">35,000</td><td class="t-bold">Immortal</td><td class="t-orange">5</td></tr>
+          <tr><td class="t-mono">50,000</td><td class="t-bold">Renegade</td><td class="t-orange">7</td></tr>
+          <tr><td class="t-mono">75,000</td><td class="t-bold">King</td><td class="t-orange">9</td></tr>
+          <tr><td class="t-mono">100,000</td><td class="t-bold">Divine</td><td class="t-orange">11</td></tr>
+          <tr><td class="t-mono">150,000</td><td class="t-bold">Deity</td><td class="t-orange">13</td></tr>
+          <tr><td class="t-mono">200,000</td><td class="t-bold">Berserker</td><td class="t-dim">—</td></tr>
+          <tr><td class="t-mono">250,000</td><td class="t-bold">Sentinel</td><td class="t-orange">15</td></tr>
+          <tr><td class="t-mono">300,000</td><td class="t-bold">Shogun</td><td class="t-orange">20 at 350k</td></tr>
+          <tr><td class="t-mono">400,000</td><td class="t-bold">Sage</td><td class="t-orange">25 (30 to pass 450k)</td></tr>
+          <tr><td class="t-mono">500,000</td><td class="t-gold t-bold">Champion</td><td class="t-green">Max Rank</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- CURRENCIES -->
+    <div class="section-header">💰 Currencies</div>
+    <div class="card-grid">
+      <div class="card">
+        <div class="sub-sub-header">Zenni</div>
+        <p>Main currency; transferable between players.<br>Sources: mobbing, quests, selling items, mall lottery, events.</p>
+      </div>
+      <div class="card">
+        <div class="sub-sub-header">ZP (Z Points)</div>
+        <p>Used at Z Agent, special suit store, sword vendor. Critical for progression.<br>
+        <span class="tag tag-override">v8.67.1</span> SDB Zenni Purchase <strong>REMOVED</strong> from DBA Store.<br>
+        <span class="tag tag-override">v8.67.1</span> Z Agent ZP Skill Trees gated behind <strong>5/3 rebirths</strong>.</p>
+      </div>
+      <div class="card">
+        <div class="sub-sub-header">UP (Universe Points)</div>
+        <p>Used at Agent X (Level 250k+, <strong>orange</strong> portal by Zeno). Buy house at 5/3: <strong>2,500 UP</strong>.<br>
+        Sources: Conquest, Tournament of Power, Pillar, Vegeta quest.</p>
+      </div>
+      <div class="card">
+        <div class="sub-sub-header">TL (True Level)</div>
+        <p>Required for Oracle Fish Ultra Points &amp; Dual Gene (10.5m TL threshold).<br>Selling levels and re-leveling still counts toward TL.</p>
+      </div>
+      <div class="card">
+        <div class="sub-sub-header">EK (Epic Kills)</div>
+        <p>Exchange at Oracle Fish or Hunter NPC.<br>Sources: sagas, portal mobs, tower mobs, Champion Tower, Lab 4.</p>
+      </div>
+    </div>
+
+    <div class="override-box"><span class="badge">OVERRIDE v8.67.6</span> RBA Points → ZP = <strong>10 ZP</strong> (was 4 ZP)</div>
+    <div class="override-box"><span class="badge">OVERRIDE v8.66.2</span> Candy → TP rate = <strong>10 Candies for 1,000,000 TPs</strong> (was 100,000)</div>
+    <div class="override-box"><span class="badge">OVERRIDE v8.67.10</span> Oracle Fish Prophecy: static <strong>2.5m TPs</strong> (no longer TL-scaled); costs 1,500 EK; 3× per 18 hrs</div>
+
+    <!-- SHARDS -->
+    <div class="sub-header">Shards</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Shard</th><th>Normal Bonus</th><th>Large Bonus</th><th>Large Source</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">EXP Shard</td><td class="t-green">+50% EXP</td><td class="t-green">+75% EXP</td><td>Z Agent, God Planet — 75 ZP</td></tr>
+          <tr><td class="t-bold">Zenni Shard</td><td class="t-gold">+25% Zenni</td><td class="t-gold">+50% Zenni</td><td>Z Agent, God Planet — 75 ZP</td></tr>
+          <tr><td class="t-bold">TP Shard</td><td class="t-blue">+50% TPs</td><td class="t-blue">+100% TPs</td><td>Z Agent, God Planet — 75 ZP</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- REBIRTHS -->
+    <div class="section-header">🔄 Rebirth System</div>
+    <div class="tip-box">💡 <strong>Carries over:</strong> Club tickets, ZP, UP, locker items, banked zenni, super wish. <strong>Everything else resets.</strong> After 2 rebirths, talk to Whis for special genes (Daishinkan DNA, Saiyan God, Golden Frieza).</div>
+    <div class="warn-box">⚠️ <strong>DO NOT reset your Super Dragon Ball wish counter to 0 before rebirthing to 4/3.</strong> Your counter MUST show 1/1. You WILL NOT be edited if you break this.</div>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Rebirth</th><th>Level Required</th><th>Additional Requirement</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">1st (0/3 → 1/3)</td><td class="t-orange t-bold">50,000</td><td>Talk to King Kai (or Gero depending on race)</td></tr>
+          <tr><td class="t-bold">2nd (1/3 → 2/3)</td><td class="t-orange t-bold">75,000</td><td>Talk to King Kai (or Gero)</td></tr>
+          <tr><td class="t-bold">3rd (2/3 → 3/3)</td><td class="t-orange">100,000</td><td>Talk to King Kai (or Gero)</td></tr>
+          <tr><td class="t-bold">4th</td><td class="t-orange">150,000</td><td>Super Dragon Balls used (1/1) + SR portal boss defeated + talk to NPC inside portal</td></tr>
+          <tr><td class="t-bold">5th</td><td class="t-gold">250,000</td><td>Complete Zeno's quest — defeat ALL SR portal bosses</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sub-header">ZP Level Cap Costs</div>
+    <div class="card-grid">
+      <div class="stat-card"><div class="stat-label">3/3 Level Cap</div><div class="stat-value">500 ZP × 2 = 1,000 ZP → Level 150k</div></div>
+      <div class="stat-card"><div class="stat-label">4/3 Level Cap</div><div class="stat-value">500 ZP × 2 = 1,000 ZP → Level 250k</div></div>
+      <div class="stat-card"><div class="stat-label">5/3 Level Cap</div><div class="stat-value">5,000 ZP → Level 500k max</div></div>
+      <div class="stat-card"><div class="stat-label">TNL Cutting Cost</div><div class="stat-value t-red">400 ZP <span class="tag tag-override">OVERRIDE</span> (was 500)</div></div>
+      <div class="stat-card"><div class="stat-label">Total ZP to Champion</div><div class="stat-value t-gold">7,000 ZP</div></div>
+    </div>
+
+    <!-- BEERUS PATHS -->
+    <div class="section-header">⚡ Sixth Rebirth / Beerus Paths <span class="tag tag-new">v8.66.5</span></div>
+    <p>Quest from <strong>NPC Beerus</strong>. Complete 3 trials: Instruction, Endurance (survive Sentinel waves), Growth. Grants <strong>+30% EXP boost</strong>. Cannot change path without rerolling via Beerus again.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Path</th><th>Effect</th></tr></thead>
+        <tbody>
+          <tr><td class="t-orange t-bold">TPs Path</td><td>Extra stat gains from TP usage. Max Stat Gain per 1 TP spend = <strong class="t-red">7,500</strong> <span class="tag tag-override">v8.67.10</span> (was 12,000)</td></tr>
+          <tr><td class="t-orange t-bold">Gym Path</td><td>Extra stat gains from training equipment. Max Stat Gain per 1 Lift/Deflect/Hit/Run +105% (1 Weight Lift = 3.5m vs 1.7m)</td></tr>
+          <tr><td class="t-orange t-bold">Mob Farming Path</td><td>Extra stat gains from mob grinding/kills/leveling. Max Stat Gain from leveling = <strong>x6</strong> (5/3 base is x3)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ROAD TO 5/3 -->
+    <div class="section-header">🏁 Road to 5/3 Champion</div>
+
+    <div class="sub-header">0/3 → 1/3 (Level 1 → 75,000)</div>
+    <div class="rebirth-flow">
+      <div class="rebirth-step"><span class="step-num">1</span><div class="step-title">Start</div><div class="step-body">Pick <strong>Velocitor</strong>. Avoid permanent transformation races early. Talk to Yamcha → Level 500 → talk again → leave house. Buy <strong>ultra weights + small EXP Shard</strong>. Get <strong>Kaioken</strong> from King Kai.</div></div>
+      <div class="rebirth-step"><span class="step-num">2</span><div class="step-title">Level 1 → 10,000</div><div class="step-body">Mob Crocodiles &amp; Wolves at Master Roshi's Training Island or Orange Star portal (right side of map). Shadow spar at x3 OR dual train. Sub room gravity or HBTC.</div></div>
+      <div class="rebirth-step"><span class="step-num">3</span><div class="step-title">Level 10,000 → 20,000</div><div class="step-body">Sim room clones: safe zone house → down stairs past Hercule → 2nd set of stairs → computer → right click → spawn clones. Power down to PL 1 → hold attack macro → repeat. Gets you to ~20k.</div></div>
+      <div class="rebirth-step"><span class="step-num">4</span><div class="step-title">Level 20,000 → 40,000</div><div class="step-body">Start <strong>Focus Meditation</strong> (unlock from Master Roshi at Level 10,000). Shadow Spar the Focus Med. Takes ~5–6 hours. <strong>Highly recommended every rebirth for the ZP + club ticket rewards.</strong></div></div>
+      <div class="rebirth-step"><span class="step-num">5</span><div class="step-title">Level 40,000 → 50,000</div><div class="step-body">Turn in Focus Med to Roshi. Distribute stats with TPs (evenly, except Ki). Mob: Glass Civilian Cave, Xeno Pan, Copy Vegetas, Universe Caves (Beerus Planet), Tuffle Civilian 2-4, Space Portals, Portal NE of Vegito.</div></div>
+      <div class="rebirth-step"><span class="step-num">R</span><div class="step-title">Rebirth at Level 50,000</div><div class="step-body">Do ZP quests first. Put ALL items in locker above Yamcha NPC. Then rebirth.</div></div>
+    </div>
+
+    <div class="sub-header">2/3 → 4/3 (Level 1 → 150,000)</div>
+    <div class="override-box"><span class="badge">KEY NOTE</span> Cannot boost until you can kill the portal boss. Need <strong>150m stats minimum</strong> before boosting (300m recommended weighted). Super Dragon Balls: wish for <strong>ZP</strong>. Buy Dark Robe (better late game) or Pride Troopers Suit.</div>
+
+    <div class="sub-header">4/3 → 5/3 (Level 1 → 250,000)</div>
+    <div class="override-box"><span class="badge">OVERRIDE v8.67</span> TNL Cutting = <strong>400 ZP (unlimited uses)</strong>. Buy ALL level caps FIRST before any TNL cuts. Target ~60m TNL before Level 350k; ~100m TNL after Level 350k.</div>
+
+    <div class="sub-header">5/3 End Game</div>
+    <div class="card">
+      <ul>
+        <li><strong>No boosting</strong> until End of Wipe tournament. Candy farm heavily early.</li>
+        <li>After Level 500,000: sell 200k–300k levels for zenni (~2–3b). Rest for ZP.</li>
+        <li>Portal Maze: requires <strong>1 million TL</strong>.</li>
+        <li>Lab 4 + Champion Tower: ~<strong>2 trillion stats</strong> to clear (except Ace and Shredz).</li>
+        <li>Enter replications via Zeno NPC for best EXP at this stage.</li>
+        <li>Kill Golden Frieza in Mystical Cavern crystal room once you have <strong>30b+ base stats</strong> → drops Cavern Pill <span class="tag tag-override">50% drop — v8.67.9</span></li>
+        <li>Legendary equipment from Real Estate Renji NPC: <strong>10b zenni per piece</strong>.</li>
+        <li>Cut TNL when it hits <strong>40m</strong> (30m if Universe GoD).</li>
+      </ul>
+    </div>
+
+    <!-- G.o.D SYSTEM -->
+    <div class="section-header">👑 G.o.D System <span class="tag tag-override">Overhauled v8.66</span></div>
+    <p>One G.o.D per universe (4 total). Elected via G.o.D tournament once per wipe. G.o.D can be challenged via <strong>Channels tab</strong> (1v1 same-stats). G.o.Ds have <strong>2 rejects</strong>.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Turnover Trigger</th><th>Chance</th></tr></thead>
+        <tbody>
+          <tr><td>Killed by NPC</td><td class="t-red t-bold">5% <span class="tag tag-override">v8.67.13</span> (was 10%)</td></tr>
+          <tr><td>Killed by Player / Hakai'd (outside events/tournaments/arenas)</td><td class="t-red t-bold">25% <span class="tag tag-override">v8.67.13</span> (was 20%)</td></tr>
+          <tr><td>8+ hours accumulated without defending</td><td class="t-orange">Must defend at least once to reset timer</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="new-box">
+      <span class="badge">v8.67.14</span>
+      <ul style="margin-top:6px;list-style:disc;padding-left:18px">
+        <li>AFK grace period reduced: <strong>30 min → 5 min</strong> (popup dialog box)</li>
+        <li><strong>G.o.Ds cannot rebirth or change their 6/3 path</strong> while holding a G.o.D title — doing so would void the title</li>
+        <li>If a Dual Gene is lost due to a 6/3 path change, it can be <strong>re-acquired for free</strong> at the Oracle Fish NPC</li>
+        <li><strong>G.o.D Arena Spectate</strong> ability added to Tournament TV</li>
+      </ul>
+    </div>
+    <div class="new-box"><span class="badge">NEW v8.67.14</span> <strong>Ignore System</strong> added to <strong>Channels tab</strong> — add, remove, and view ignored players. Removes them from OOC, Local, and Universe chats.</div>
+
+
+    <!-- GUILD SYSTEM -->
+    <div class="section-header">🏰 Guild System</div>
+    <div class="sub-header">Guild Evolution Paths</div>
+    <p><span class="tag tag-override">v8.66.8</span> Guilds with Evolution Path: <strong>24-hour join cooldown</strong> for new invitees.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Path</th><th>Perks</th></tr></thead>
+        <tbody>
+          <tr><td class="t-orange t-bold">Gym Bunny</td><td>Candy farming +50% | Stat Training w/ Equipment: +30% active / +20% AFK | Club House duration +50%</td></tr>
+          <tr><td class="t-orange t-bold">Mobsters</td><td>Mob Farming EXP +30% | Player Kill EXP +50% | Stat Pills: Red/Blue x2.5 (was x2); Cavern x3.5 (was x3)</td></tr>
+          <tr><td class="t-orange t-bold">Hustlers</td><td>Mob Farming w/ ZP Suits +50% | TP Gains when Spending +25% | Level Up Stat Gains +10% | Oracle Fish EXP chance 20%→50% | Stat Storage +10% per 100b</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- NPC BOOSTS -->
+    <div class="section-header">💪 NPC Stat Boosts</div>
+    <div class="warn-box">⚠️ One-time only! Set multipliers. Make sure you have desirable stats FIRST. All require Level 35,000 unless noted. Cannot Potara if you boost first (except Supreme Kai). Mystic/Human Convert/Changeling Convert = cannot Potara.</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>NPC</th><th>Boost</th><th>Requirements</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Son Goku</td><td class="t-green">PL ×1.2</td><td>Level 35,000</td></tr>
+          <tr><td class="t-bold">Krillin</td><td class="t-green">Ki ×1.2</td><td>Level 35,000 + 100,000,000 zenni</td></tr>
+          <tr><td class="t-bold">King Vegeta</td><td class="t-green">Ki Defense ×1.2</td><td>Kill 25 enemies</td></tr>
+          <tr><td class="t-bold">Hercule</td><td class="t-green">Strength ×1.2</td><td>Level 35,000</td></tr>
+          <tr><td class="t-bold">Piccolo</td><td class="t-green">Defense ×1.2</td><td>Level 35,000</td></tr>
+          <tr><td class="t-bold">Guru</td><td class="t-gold">All stats ×1.2</td><td>25% Good Karma + Kill 3 of Frieza's Henchmen</td></tr>
+          <tr><td class="t-bold">Frieza</td><td class="t-gold">All stats ×1.2</td><td>25% Evil Karma + Kill 3 Namekian Civilians</td></tr>
+          <tr><td class="t-bold">Babidi</td><td class="t-gold">All stats ×1.5 (×1.6 Pride Saiyan)</td><td>Level 35,000 + 100% Evil Karma</td></tr>
+          <tr><td class="t-bold">Supreme Kai (Potara)</td><td class="t-gold">Both players' stats added OR Self ×1.8</td><td>Level 35,000 + Kill (Saga) Shenron</td></tr>
+          <tr><td class="t-bold">Princess Snake <span class="tag tag-new">HIDDEN</span></td><td class="t-orange">All stats ×2</td><td>None</td></tr>
+          <tr><td class="t-bold">Shin</td><td class="t-gold">All stats ×1.5</td><td>Level 35,000 + Perm races only</td></tr>
+          <tr><td class="t-bold">Toronbo Dragon</td><td class="t-orange">All stats ×2</td><td>Cereal Dragonball Wish</td></tr>
+          <tr><td class="t-bold">Dr. Gero – Convert</td><td class="t-gold">All stats ×1.8</td><td>Human only</td></tr>
+          <tr><td class="t-bold">King Cold – Convert</td><td class="t-gold">×1.8 (Metal=STR; Mecha=KI)</td><td>Changeling only</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       TAB 2 — EQUIPMENT & ITEMS
+  ══════════════════════════════════════════════ -->
+  <section class="tab-panel" id="panel-equipment">
+
+    <div class="new-box"><span class="badge">OVERRIDE v8.67.8</span> ZP Suit EXP buffs now <strong>ENABLED</strong> for Lab 4 and Champion Tower.</div>
+
+    <div class="section-header">🥋 Z-Suits (ZP Store)</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Item</th><th>ZP Cost</th><th>Bonus</th></tr></thead>
+        <tbody>
+          <tr><td class="t-gold t-bold">Pride Trooper Suit</td><td class="t-mono">2,200</td><td>+25% EXP training &amp; mobbing; chance to gain ZP on level up</td></tr>
+          <tr><td class="t-gold t-bold">Robe of the Dark Lord</td><td class="t-mono">2,000</td><td>+15% EXP mobbing; +15% Zenni mobbing; chance to gain ZP on level up</td></tr>
+          <tr><td class="t-orange t-bold">Daishinkan Suit</td><td class="t-mono">1,500</td><td>+10% EXP training; chance to gain UP on level up</td></tr>
+          <tr><td class="t-orange t-bold">Zamasu Gi</td><td class="t-mono">1,000</td><td>Chance to gain ZP on level up</td></tr>
+          <tr><td class="t-bold">Hermit Shell</td><td class="t-mono">800</td><td>+25% Ki Boost</td></tr>
+          <tr><td class="t-bold">King Vegeta Armor</td><td class="t-mono">700</td><td>+15% EXP mobbing</td></tr>
+          <tr><td class="t-bold">Vegito Gi</td><td class="t-mono">400</td><td>+15% PL Boost</td></tr>
+          <tr><td class="t-bold">Tuxedo</td><td class="t-mono">300</td><td>+15% Zenni mobbing</td></tr>
+          <tr><td class="t-bold">Z Fighter Gi</td><td class="t-mono">200</td><td>+10% EXP training</td></tr>
+          <tr><td class="t-bold">Full Cape</td><td class="t-mono">200</td><td>Small chance to gain double epic kill when mobbing</td></tr>
+          <tr><td class="t-bold">Side Cape</td><td class="t-mono">200</td><td>+10% EXP during sagas</td></tr>
+          <tr><td class="t-bold">Ninja Suit <span class="tag tag-override">v8.67</span></td><td class="t-mono">180</td><td>No longer slowed by weights; speed boost even while weighted</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sub-header">Accessories</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Item</th><th>Cost</th><th>Bonus</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Tagoma Scouter</td><td class="t-mono">500 ZP</td><td>Scans stats + functions as scouter radio</td></tr>
+          <tr><td class="t-bold">Potara Earrings</td><td class="t-mono">400 ZP</td><td>+15% Ki Boost</td></tr>
+          <tr><td class="t-bold">Z Fighter Half Gi</td><td class="t-mono">80 ZP</td><td>+25% TPs while training</td></tr>
+          <tr><td class="t-bold">Lucky Charm</td><td class="t-mono">10m Casino Coins</td><td>Improves casino game luck</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- LEVEL UP TECHS -->
+    <div class="section-header">📈 Level-Up Techniques</div>
+    <div class="sub-header">Universal (All Races)</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Technique</th><th>Level</th><th>Race Note</th></tr></thead>
+        <tbody>
+          <tr><td>Sense Energy</td><td class="t-mono t-green">25</td><td>All</td></tr>
+          <tr><td>Fly</td><td class="t-mono">75</td><td>All</td></tr>
+          <tr><td>Power Up</td><td class="t-mono">100</td><td>All</td></tr>
+          <tr><td>Fusion Dance</td><td class="t-mono">1,000</td><td>Non-Perm only</td></tr>
+          <tr><td>Sonic Speed</td><td class="t-mono">1,500</td><td>All</td></tr>
+          <tr><td>Zap Cannon</td><td class="t-mono">1,500</td><td>All</td></tr>
+          <tr><td>Water Jet Blast</td><td class="t-mono">2,500</td><td>All</td></tr>
+          <tr><td>Nova Heat Blast</td><td class="t-mono">4,000</td><td>All</td></tr>
+          <tr><td>Invert Power</td><td class="t-mono">5,000</td><td>Non-Revertable races</td></tr>
+          <tr><td>Instant Kamehameha</td><td class="t-mono">7,500</td><td>All</td></tr>
+          <tr><td>Combo Attack</td><td class="t-mono">8,500</td><td>All</td></tr>
+          <tr><td>Skip Forms</td><td class="t-mono">9,500</td><td>Non-Perm only</td></tr>
+          <tr><td>Shine Missile</td><td class="t-mono">20,000</td><td>Non-Perm only</td></tr>
+          <tr><td>Ki Shower</td><td class="t-mono">20,000</td><td>Perm only</td></tr>
+          <tr><td>Omega Blast</td><td class="t-mono">25,000</td><td>All</td></tr>
+          <tr><td>Godly Blast</td><td class="t-mono">30,000</td><td>All</td></tr>
+          <tr><td>Kamehameha Charge Attack</td><td class="t-mono">35,000</td><td>All</td></tr>
+          <tr><td>Double Edge Blast</td><td class="t-mono">35,500</td><td>All</td></tr>
+          <tr><td>Scatter Shot</td><td class="t-mono">45,000</td><td>All</td></tr>
+          <tr><td>Burning Star</td><td class="t-mono">55,000</td><td>All</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- NPC TECHNIQUES -->
+    <div class="section-header">📜 NPC Techniques</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Technique</th><th>Race</th><th>Giver NPC</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Zanzoken Warp</td><td>All</td><td>Piccolo (Zanzoken Mastery)</td></tr>
+          <tr><td class="t-bold">Kamehameha</td><td>All</td><td>Master Roshi</td></tr>
+          <tr><td class="t-bold">Death Beam</td><td>Changeling</td><td>Frieza</td></tr>
+          <tr><td class="t-bold">Super Ghost Kamikaze Attack</td><td>Half Saiyan, Saiyan, Human</td><td>Gotenks</td></tr>
+          <tr><td class="t-bold">Zanzoken</td><td>All</td><td>Piccolo</td></tr>
+          <tr><td class="t-bold">Light Grenade</td><td>Namekian</td><td>Piccolo</td></tr>
+          <tr><td class="t-bold">Special Beam Cannon</td><td>Namekian</td><td>Piccolo</td></tr>
+          <tr><td class="t-bold">Solar Flare</td><td>All</td><td>Tien</td></tr>
+          <tr><td class="t-bold">Trinity Beam</td><td>Human</td><td>Tien</td></tr>
+          <tr><td class="t-bold">Galick Gun</td><td>Saiyan &amp; Half Saiyan</td><td>Vegeta</td></tr>
+          <tr><td class="t-bold">Final Flash</td><td>Saiyan</td><td>Vegeta</td></tr>
+          <tr><td class="t-bold">Hyper Tornado</td><td>All</td><td>Pikkon</td></tr>
+          <tr><td class="t-bold">Instant Transmission</td><td>All</td><td>Yardrat Sensei or Trainer NPC</td></tr>
+          <tr><td class="t-bold">Big Bang Attack</td><td>All</td><td>Vegeta</td></tr>
+          <tr><td class="t-bold">SS Deadly Bomber</td><td>Android</td><td>Dr. Gero</td></tr>
+          <tr><td class="t-bold">Death Ball</td><td>All</td><td>Dabura</td></tr>
+          <tr><td class="t-bold">Quad Barrage</td><td>Human</td><td>Tien</td></tr>
+          <tr><td class="t-bold">After Image</td><td>All</td><td>Son Goku</td></tr>
+          <tr><td class="t-bold">Big Bang Kamehameha</td><td>Gogeta or Vegito</td><td>Gogeta</td></tr>
+          <tr><td class="t-bold">Final Kamehameha</td><td>Saiyan</td><td>Vegito</td></tr>
+          <tr><td class="t-bold">Dragon Fist</td><td>Saiyan</td><td>Son Goku</td></tr>
+          <tr><td class="t-bold">Destructo Disk</td><td>Human, Half Saiyan, Saiyan</td><td>Krillin</td></tr>
+          <tr><td class="t-bold">Super Speed Attack</td><td>All</td><td>Mr. Popo</td></tr>
+          <tr><td class="t-bold">Super Speed Block</td><td>All</td><td>Mr. Popo</td></tr>
+          <tr><td class="t-bold t-green">Legendary Dragon Fist <span class="tag tag-new">NEW</span></td><td>All</td><td>Agent X</td></tr>
+          <tr><td class="t-bold t-green">Fly Kick <span class="tag tag-new">NEW</span></td><td>All</td><td>Combat Utility NPC</td></tr>
+          <tr><td class="t-bold t-green">Burning Lotus <span class="tag tag-new">NEW</span></td><td>All</td><td>Combat Utility NPC</td></tr>
+          <tr><td class="t-bold t-green">Wind Gust <span class="tag tag-new">NEW</span></td><td>All</td><td>Combat Utility NPC</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- RACE SPECIAL TECHNIQUES -->
+    <div class="section-header">⚔️ Race Special Techniques</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Race</th><th>Technique</th><th>Effect</th></tr></thead>
+        <tbody>
+          <tr><td>Assassin</td><td class="t-bold">Time Skip: Assassinate</td><td>High power &amp; fast strength based attack</td></tr>
+          <tr><td>Assassin *Legendary Hit*</td><td class="t-bold">Pure Progress</td><td>Transformation — boost increases the more damage dealt</td></tr>
+          <tr><td>Angel</td><td class="t-bold">Divine Push</td><td>High power ki based homing</td></tr>
+          <tr><td>Angel *Daishinkan*</td><td class="t-bold">Dimensional Rift</td><td>High power ki homing + <strong>15% Auto kill chance</strong></td></tr>
+          <tr><td>Alien</td><td class="t-bold">Power Impact</td><td>High power ki based AOE</td></tr>
+          <tr><td>Alien *Jiren*</td><td class="t-bold">Awakening Blast</td><td>High power ki based homing</td></tr>
+          <tr><td>Alien *Sealas*</td><td class="t-bold">Madness Rush</td><td>High power strength based attack</td></tr>
+          <tr><td>Alien *Sealas*</td><td class="t-bold">Wormhole</td><td>Manipulate Space/Time — warp the enemy</td></tr>
+          <tr><td>Bojack *Pirate King*</td><td class="t-bold">Galactic Tyrant</td><td>High Power Stun Punch</td></tr>
+          <tr><td>Tuffle</td><td class="t-bold">Revenge Death Ball</td><td>High power ki based shell blast</td></tr>
+          <tr><td>Demon</td><td class="t-bold">Stone Spit</td><td>Cuts foe's defence in half</td></tr>
+          <tr><td>Gogeta</td><td class="t-bold">Soul Punisher</td><td>High speed ki based homing with stun</td></tr>
+          <tr><td>Majin</td><td class="t-bold">Genocide Attack</td><td>High power ki scatter technique</td></tr>
+          <tr><td>Dragon</td><td class="t-bold">Negative Karma Bomb</td><td>High power ki based homing</td></tr>
+          <tr><td>Kai *Zamasu*</td><td class="t-bold">Energy Blade</td><td>Blade that increases damage dealt</td></tr>
+          <tr><td>Feline</td><td class="t-bold">Hakai</td><td>High power ki homing + <strong>20% Auto kill chance</strong></td></tr>
+          <tr><td>Half Saiyan</td><td class="t-bold">Kami Wave ×10</td><td>Super fast and high powered Ki beam</td></tr>
+          <tr><td>Half Saiyan *Gohan*</td><td class="t-bold">Father-Son Kamehameha</td><td>Ki Deviation Technique</td></tr>
+          <tr><td>Human *Warlock*</td><td class="t-bold">Jiangshi Summon</td><td>NPC Summoning technique</td></tr>
+          <tr><td>Human *Herculean*</td><td class="t-bold">Herculean Spirit</td><td>Temporarily boosts Human Attacks</td></tr>
+          <tr><td>Changeling</td><td class="t-bold">Kienzan Disk</td><td>High power ki based homing</td></tr>
+          <tr><td>Changeling *Black Frieza*</td><td class="t-bold">Emperor's Spirit</td><td>Temporarily boosts Changeling Attacks</td></tr>
+          <tr><td>Changeling *Black Frieza*</td><td class="t-bold">Nova Chariot</td><td>Strength Base Ki Deviation Technique</td></tr>
+          <tr><td>Namekian</td><td class="t-bold">Hell Zone Grenade</td><td>High power ki scatter technique</td></tr>
+          <tr><td>Uub</td><td class="t-bold">Chocolate Kamehameha</td><td>Super fast and high powered Ki beam</td></tr>
+          <tr><td>Saiyan *Broly*</td><td class="t-bold">Powered Ki Blast</td><td>Super fast high powered Ki — no delay</td></tr>
+          <tr><td>Saiyan *Broly*</td><td class="t-bold">Wrathful Spirit</td><td>Temporarily boosts ALL stats ×2</td></tr>
+          <tr><td>Saiyan</td><td class="t-bold">Kami Wave ×10</td><td>Super fast and high powered Ki beam</td></tr>
+          <tr><td>Saiyan *Vegito*</td><td class="t-bold">Spirit Sword</td><td>Sword that increases melee damage dealt</td></tr>
+          <tr><td>Saiyan *Broly Black*</td><td class="t-bold">Saiba Shockwave</td><td>High Power Multi AoE</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-header">⚡ SSA Technique Balance <span class="tag tag-new">v8.67.14</span></div>
+    <div class="new-box">
+      <span class="badge">v8.67.14</span>
+      <ul style="margin-top:6px;list-style:disc;padding-left:18px">
+        <li>SSA-style techniques now have a <strong>damage cap</strong> and <strong>increased cooldowns</strong> in all skill-based events and arenas</li>
+        <li>Previously-banned SSA techniques (PPS, Madness Rush, etc.) are now <strong>UNBANNED</strong> for skill-based events (RBA, G.o.D Arena, RR Battle Tower)</li>
+        <li><strong>Paralyze duration</strong> nerfed: 5 seconds → <strong>2.5 seconds</strong> in normalised/skill-based events only</li>
+        <li>The full tech list will be reviewed in upcoming updates — new techs, face-lifts, and more ban-list removals coming</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       TAB 3 — EVENTS
+  ══════════════════════════════════════════════ -->
+  <section class="tab-panel" id="panel-events">
+
+    <div class="section-header">🚩 Mayhem</div>
+    <p>Guild-based. Ki ONLY. Friendly fire ON. 10 total flags; each flag captured = <strong>10× boost</strong> (must be online). Flag order changes every Mayhem — <strong>Abyss always stays at the bottom</strong>. Stat boosts based on your CURRENT base stats (including stat-modifying items).</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Flag</th><th>Benefit</th><th>Cap</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Palace of Powerlevel</td><td>Increases PL</td><td>1b gains/tick</td></tr>
+          <tr><td class="t-bold">Kingdom of Ki</td><td>Increases Ki + Ki-Defense</td><td>1b gains/tick</td></tr>
+          <tr><td class="t-bold">Stronghold of Strength</td><td>Increases Str</td><td>1b gains/tick</td></tr>
+          <tr><td class="t-bold">Dungeon of Defense</td><td>Increases Defense</td><td>1b gains/tick</td></tr>
+          <tr><td class="t-bold">Tower of Training Points</td><td>Fixed TP amount</td><td>—</td></tr>
+          <tr><td class="t-bold">Zenith of Zenni</td><td>Fixed zenni amount</td><td>—</td></tr>
+          <tr><td class="t-bold">Loft of Levels</td><td>Gives levels</td><td>—</td></tr>
+          <tr><td class="t-bold">Gulag of Guild Points</td><td>Gives guild points</td><td>—</td></tr>
+          <tr><td class="t-bold">Zone of Z Points</td><td>Gives ZP</td><td>—</td></tr>
+          <tr class="rule-critical"><td class="t-gold t-bold">Abyss of All Stats ⭐</td><td>All stats — double vs. regular stat flags</td><td class="t-red">Must be Level 100k (not TL); 1b gains/tick; ALWAYS at bottom</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-header">🥊 Tournaments</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Tournament</th><th>Type</th><th>Rewards</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">World Tournament</td><td>Open to all</td><td>Levels (win or loss)</td></tr>
+          <tr><td class="t-bold">Baba Tournament</td><td>Team: red vs. blue (1v1)</td><td>Levels + TPs (win) / Levels (loss)</td></tr>
+          <tr><td class="t-bold">Galactic Tournament</td><td>Open to all</td><td>Levels + TPs (win) / Levels (loss)</td></tr>
+          <tr><td class="t-bold">FFA Tournament</td><td>Free-for-all</td><td>Levels (win or loss)</td></tr>
+          <tr><td class="t-bold">Guild Tournament</td><td>Guild-based; fixed stats</td><td>Levels + guild points (win)</td></tr>
+          <tr><td class="t-bold">Tournament of Power</td><td>Universe-based; rules change (melee or ki only)</td><td>Levels + ZP + UP (win) / Levels + UP (loss)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-header">🏴 Capture the Flag (CTF)</div>
+    <div class="card">
+      <ul>
+        <li>Team-based; min <strong>4 players</strong> to start; max 6 (talk to mall mascot)</li>
+        <li>5th player is thrown into a random team</li>
+        <li>Flag holders: reduced movement + reduced attack speed</li>
+        <li>Rewards: <strong>Levels + ZP</strong> for winning AND losing (less for loss)</li>
+      </ul>
+    </div>
+
+    <div class="section-header">🕳️ Mystical Cavern Event</div>
+    <div class="warn-box">⚠️ Must be in <strong>BASE FORM</strong> to enter. Location: safe zone house → bottom right past 2 sets of stairs → large hole in wall.</div>
+    <div class="card">
+      <ul>
+        <li>Only event where <strong>mobs scale to your stats</strong></li>
+        <li>Treasure chests throughout: levels, ZP, zenni, club tickets (or bomb traps!)</li>
+        <li>Each ladder = random point in maze; <strong>10% chance to reach Crystal Room</strong></li>
+        <li><strong>Crystal Room:</strong> need 30b base stats to kill Golden Frieza → drops <strong>Cavern Pill</strong>
+          <div class="override-box" style="margin-top:6px"><span class="badge">OVERRIDE v8.67.9</span> Drop chance: <strong>50%</strong> (was 10%) | Duration: <strong>30 mins</strong> (was 60) | Hold <strong>only 1</strong> at a time | Effect: 6× stat increase while leveling</div>
+          <div class="new-box" style="margin-top:6px"><span class="badge">v8.67.14</span> Cavern Pill now costs <strong>12 tokens</strong> in the Daily Reward Store (was 25)</div>
+        </li>
+        </li>
+        <li class="t-blue"><strong>TIP:</strong> Bring up to 10 Crocodile Meats from Roshi's Training Island for full heals inside</li>
+      </ul>
+    </div>
+
+    <div class="section-header">🌿 Conquest</div>
+    <p>Universe-based; halts repop. Up to 4 teams. Capture banners by standing on conquest pad. Warp via Channels tab. <strong>Buffs last until next Conquest.</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Banner</th><th>Buff</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold t-green">Earth</td><td>+10% EXP on all Saga Mobs</td></tr>
+          <tr><td class="t-bold t-blue">Namek</td><td>+10% Zenni on all Mobs</td></tr>
+          <tr><td class="t-bold t-orange">Vegeta</td><td>+10% EXP on all Portal + Mob Tower Mobs <em>(also affects Lab4 + Champion Tower)</em></td></tr>
+          <tr><td class="t-bold t-purple">Future Earth</td><td>+10% EXP on all Standard Cave Mobs + all other world mobs + players</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tip-box">💡 Lab mobs are a combination of all mob types. Capping all 4 banners improves your overall EXP from Lab mobs. <strong>Vegeta flag</strong> affects Lab4 and Champion Tower. Future Earth flag does NOT affect Lab4.</div>
+
+    <div class="section-header">✨ Golden Hour Event <span class="tag tag-new">NEW</span></div>
+    <div class="new-box"><span class="badge">NEW</span> EXP Event + Zenni Event + Crystal Event combined!<br>
+    <strong>+50% EXP gain | +100% Zenni gain</strong> | Special Crystals scattered across all worlds → 10× stats based on TL (100 TL = +1,000 to all stats) | <strong>+50% extra stat gain per level up</strong></div>
+
+    <div class="section-header">⚔️ Ranked Battle Arena (RBA)</div>
+    <div class="card">
+      <p>Admin-hosted. Join via <strong>Channels tab → Ranked Battle Arena verb</strong>. Matched 1v1 against another player.</p>
+      <ul>
+        <li><strong>Win:</strong> levels + ZP + zenni + RBA points</li>
+        <li><span class="tag tag-override">OVERRIDE v8.67.6</span> RBA Points → ZP = <strong>10 ZP</strong> per exchange (was 4)</li>
+        <li>RBA Broker NPC: Mall → IT to Mall Mascot → inside → bottom left</li>
+      </ul>
+    </div>
+
+    <div class="section-header">💎 Crystal Event</div>
+    <div class="card"><p>Crystals spawn across all worlds. Higher level = more power from crystals. Held once every few hours in-game.</p></div>
+
+    <div class="section-header">🎰 Gamba Event <span class="tag tag-new">NEW v8.67.5</span></div>
+    <div class="new-box"><span class="badge">NEW</span> NEW Gamba Event Room — no outside interference. Gamba Warp verb in Channels tab when Gamba Machine spawned. Admin-hosted + automated. <span class="tag tag-override">v8.67.3</span> Chest Trap probability = 50%.</div>
+
+    <div class="section-header">📅 Daily Quests &amp; Stamps</div>
+    <div class="card-grid">
+      <div class="card">
+        <div class="sub-sub-header">Daily Quest</div>
+        <p>Every <strong>18 hours</strong>. Complete for quest tokens. <strong>Relog = lose quest.</strong><br>Redeem tokens: Rewards → DQ Rewards Store (top-left of client).</p>
+      </div>
+      <div class="card">
+        <div class="sub-sub-header">Daily Stamps</div>
+        <p>Every <strong>24 hours</strong>. 5 stamps = weekly rewards (levels, TPs, zenni).<br>⚠️ <strong>Do NOT accumulate more than 5 stamps before claiming</strong> — you'll lose them all!</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       TAB 4 — TRANSFORMATIONS
+  ══════════════════════════════════════════════ -->
+  <section class="tab-panel" id="panel-transforms">
+
+    <div class="section-header">⚡ Universal Extra Transformations</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Transformation</th><th>PL Required</th><th>Other Requirement</th><th>Eligible Races</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Invert Power</td><td class="t-mono">Level 10,000 PL</td><td>—</td><td>Perm races only</td></tr>
+          <tr><td class="t-bold">Super Invert Power</td><td class="t-mono">Level 30,000 PL</td><td>King Vegeta's Special Training</td><td>Perm races only</td></tr>
+          <tr><td class="t-bold">Kaioken</td><td class="t-mono">Level 2,000 PL</td><td>Speak to King Kai</td><td>All races</td></tr>
+          <tr><td class="t-bold">Advanced Kaioken</td><td class="t-mono">Level 10,000 PL</td><td>Speak to King Kai</td><td>Aliens, Cerealians, Felines, Kais, Makyos, Bojacks, Yardrats, Super 17</td></tr>
+          <tr><td class="t-bold t-gold">UT (Ultimate Transformation)</td><td class="t-mono t-orange">10,000,000 PL</td><td>150 Epic Kills</td><td class="t-green">ANY race — stackable on current form!</td></tr>
+          <tr><td class="t-bold">Ultra Instinct Sign</td><td class="t-mono">500,000,000 PL</td><td>Level 200,000</td><td>Any non-perm race</td></tr>
+          <tr><td class="t-bold">Mastered Invert</td><td class="t-mono">500,000,000 PL</td><td>Level 200,000</td><td>Any non-transed PERM race</td></tr>
+          <tr><td class="t-bold t-blue">Ultra Instinct (Unlocked)</td><td class="t-mono t-orange">1,000,000,000 PL</td><td>Level 500,000 + 5/3 + 1,000 EK</td><td>Any non-perm race</td></tr>
+          <tr><td class="t-bold t-red">Ultra Ego</td><td class="t-mono t-orange">1,000,000,000 PL</td><td>Level 500,000 + 5/3 + 1,000 EK</td><td>Any non-perm race</td></tr>
+          <tr><td class="t-bold t-purple">Ultra Invert</td><td class="t-mono t-orange">1,000,000,000 PL</td><td>Level 500,000 + 5/3</td><td>Any non-transed PERM race</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-header">💥 Ultra Techniques</div>
+    <div class="card-grid">
+      <div class="card">
+        <div class="sub-sub-header" style="color:var(--accent-red)">Ultra Ego — Aggressive</div>
+        <ul>
+          <li><strong>Lustful Desire:</strong> Increased multis for 30s; afterwards deals massive self-damage. CD: 2 min</li>
+          <li><strong>Hakai Homing Blast:</strong> 50% chance to instantly kill any player. <span class="t-red"><strong>BANNED in most events and EoW.</strong></span> CD: 30s</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="sub-sub-header" style="color:var(--accent-blue)">Ultra Instinct — Defensive</div>
+        <ul>
+          <li><strong>Full Instinct:</strong> Full immunity to ALL damage for 15s. CD: 2 min</li>
+          <li><strong>Instinct Dodge:</strong> Dodge similar to Zanzo warp.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="sub-sub-header" style="color:var(--accent-purple)">Ultra Invert — Balanced</div>
+        <ul>
+          <li><strong>Dark Contract:</strong> Semi-perm/perm unlocks Perm multis for 30s. CD: 2 min</li>
+          <li><strong>Dark Contract Spirit:</strong> Once final trans reached, stack for <strong>20× boost to stats</strong>.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-header">🧬 Dual Gene</div>
+    <div class="card">
+      <p>Requires <strong>10.5m TL</strong>. Exchange 10m TL → 2nd gene. Benefits: increased stat gains, increased multis for ultra form, learn ALL races' techs including Super and Zeno race techs. Best to obtain at max True Level.</p>
+      <p><span class="tag tag-new">v8.67.14</span> If your Dual Gene is lost (e.g., due to changing your 6/3 path), it can be <strong>re-acquired for free</strong> at the Oracle Fish NPC.</p>
+      <p><strong>Available Dual Genes:</strong> Bio-android, Assassin, Changeling, Kai, Human, Dragon, Feline, Majin</p>
+    </div>
+    <div class="sub-header">Ultra Points</div>
+    <div class="card">
+      <ul>
+        <li>Base <strong>20% chance</strong> (50% with Hustler Guild Evolution) to get 2 Ultra Points from Oracle Fish quest</li>
+        <li>Alternative: trade <strong>1m True Levels = 1 Ultra Point</strong></li>
+        <li class="t-red"><strong>Ultra Points cap at 30</strong></li>
+      </ul>
+    </div>
+
+    <!-- NON-PERM TRANS -->
+    <div class="section-header">🔀 Non-Permanent Race Transformations</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Race / Gene</th><th>Forms</th><th>PL Requirements</th><th>Other</th></tr></thead>
+        <tbody>
+          <tr><td>Changeling *Frieza*</td><td>Form 1/2/3/4/Metal</td><td class="t-mono">75k / 400k / 1.5m / 3m / 5m</td><td>Metal: Level 35k + King Cold</td></tr>
+          <tr><td>Changeling *Frost*</td><td>Form 1/2/3/4/Metal</td><td class="t-mono">100k / 450k / 2.4m / 5m / 6m</td><td>Metal: Level 35k + King Cold</td></tr>
+          <tr><td>Half Saiyan *Rage*</td><td>SS / USS / SS2 / ASS2 / SS Rage</td><td class="t-mono">75k / 400k / 1.5m / 3m / 4m</td><td>SS2: witnessed 1 death</td></tr>
+          <tr><td>Half Saiyan *Mystic*</td><td>SS / USS / SS2 / ASS2 / Mystic</td><td class="t-mono">100k / 500k / 2m / 3m / 5m</td><td>Mystic: Elder Kai</td></tr>
+          <tr><td>Half Saiyan *God*</td><td>SS / USS / SS2 / ASS2 / Saiyan Demi-God</td><td class="t-mono">150k / 600k / 2m / 3.5m / 7.5m</td><td>Demi-God: Elder Kai</td></tr>
+          <tr><td>Saiyan *Honour*</td><td>Giji SSJ / SS / USS / SS2 / SS3 / Golden Oozaru / SS4 / SSJ4 LB</td><td class="t-mono">40k / 100k / 500k / 1.5m / 3m / 4m / 5m</td><td>SS4: Tail; SSJ4 LB: L75k+5/3</td></tr>
+          <tr><td>Saiyan *Pride*</td><td>SS / USS / SS2 / ASS2 / SS4 / SSJ4 LB</td><td class="t-mono">75k / 450k / 1.4m / 3m / 4.5m</td><td>ASS2+SS4: Tail; Babidi boost ×1.6</td></tr>
+          <tr><td>Saiyan *Legendary*</td><td>Locked SS / SS / USS / Legendary SS / Unleashed Legendary SS</td><td class="t-mono">150k / 600k / 1.75m / 4m / 6m</td><td>—</td></tr>
+          <tr><td>Saiyan Honour *God Gene*</td><td>SS / SS God / SS Blue / UI Saiyan / MUI</td><td class="t-mono">125k / 600k / 1.75m / 4m / 7.5m</td><td>SS: witnessed 1 death</td></tr>
+          <tr><td>Saiyan Pride *God Gene*</td><td>SS / SS2 Rage / SS God / SS Blue / SS Blue Evolved</td><td class="t-mono">125k / 550k / 2m / 4m / 7m</td><td>—</td></tr>
+          <tr><td>Human</td><td>Focus / High Tension / Advanced Focus / Super Human / Converted</td><td class="t-mono">60k / 300k / 1m / 3m / 5m</td><td>Converted: Dr. Gero quest (permanent)</td></tr>
+          <tr><td>Saibaman</td><td>Super / Ascended / SS2 / SS3</td><td class="t-mono">50k / 300k / 1m / 3m</td><td>—</td></tr>
+          <tr><td>Kai *Goku Black*</td><td>SS / SS2 / SS Rose</td><td class="t-mono">150k / 1m / 4.5m</td><td>—</td></tr>
+          <tr><td>Feline</td><td>God of Destruction</td><td class="t-mono">4,000,000</td><td>—</td></tr>
+          <tr><td>Galactic Warrior</td><td>Rage Form</td><td class="t-mono">3,000,000</td><td>—</td></tr>
+          <tr><td>Makyo</td><td>Star Powered Form</td><td class="t-mono">2,500,000</td><td>—</td></tr>
+          <tr><td>Yardrat</td><td>Final Form</td><td class="t-mono">3,500,000</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- PERM TRANS -->
+    <div class="section-header">🔒 Permanent Race Transformations</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Race</th><th>Forms</th><th>PL Requirements</th><th>Other</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Android</td><td>Super Android / Ultimate Android</td><td class="t-mono">5m / 50m</td><td>15 Chips / 30 Chips</td></tr>
+          <tr><td class="t-bold">Angel</td><td>Saintly Form</td><td class="t-mono">5m</td><td>Level 35,000</td></tr>
+          <tr><td class="t-bold">Assassin</td><td>Ultimate Assassin</td><td class="t-mono">5m</td><td>Level 35,000</td></tr>
+          <tr><td class="t-bold">Bio-Warrior</td><td>Mecha Upgrade / Cyborg Upgrade</td><td class="t-mono">5m / 30m</td><td>—</td></tr>
+          <tr><td class="t-bold">Hatchiyack</td><td>Super Hatchiyack</td><td class="t-mono">5m</td><td>Level 35,000</td></tr>
+          <tr><td class="t-bold">Konat</td><td>Brave Warrior / Legendary Warrior</td><td class="t-mono">5m / 30m</td><td>Tapion's Flute / Legendary Sword (7 Earth DBs via magic box). <span class="tag tag-new">v8.67.14</span> Legendary Sword strength boost <strong>buffed</strong>; PL drain <strong>removed</strong>. Quad Barrage + Thousand Slash damage <strong>buffed</strong>.</td></tr>
+          <tr><td class="t-bold">Majin</td><td>Fat Buu / Wicked Buu / Skinny Buu / Kid Buu</td><td class="t-mono">5m / 10m / 15m / 45m</td><td>100 / 250 / 500 / 1,000 Candy Eats</td></tr>
+          <tr><td class="t-bold">Namekian *Super Gene*</td><td>Super Namekian / Ascended Super Namekian</td><td class="t-mono">5m (L35k) / 50m</td><td>—</td></tr>
+          <tr><td class="t-bold">Ultimate Hybrid</td><td>Marred Imperfection</td><td class="t-mono">5m</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- SEMI-PERM TRANS -->
+    <div class="section-header">🔄 Semi-Permanent Race Transformations</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Race / Gene</th><th>Forms</th><th>PL Requirements</th><th>Other</th></tr></thead>
+        <tbody>
+          <tr><td>Angel *Daishinkan*</td><td>Heavenly / Divine / Grand Minister <em>(revertable)</em></td><td class="t-mono">5m / 10m / 25m</td><td>—</td></tr>
+          <tr><td>Bio-Android</td><td>Imperfect / Perfect / Fully Weighted <em>(revertable)</em></td><td class="t-mono">5m / 10m / 25m</td><td>10 / 20 / 30 Absorptions</td></tr>
+          <tr><td>Bio-Warrior *Bio-Saiyan*</td><td>Evolved / Complete Upgrade <em>(perm)</em> / False SSJ / Perfect SSJ</td><td class="t-mono">500k / 2m / 3m / 5m</td><td>Complete Upgrade: All Stats ×1.8</td></tr>
+          <tr><td>Dragon *Eis Gene*</td><td>Shadow Dragon / Super Form / Dark Shadow Dragon <em>(perm)</em></td><td class="t-mono">750k / 5m / 25m</td><td>—</td></tr>
+          <tr><td>Dragon *Nuova Gene*</td><td>Shadow Dragon / Super Form / Dark Shadow Dragon <em>(perm)</em></td><td class="t-mono">750k / 5m / 25m</td><td>—</td></tr>
+          <tr><td>Tuffle *Parasite*</td><td>Infected / Super Tuffle / Super Tuffle 2 <em>(perm)</em></td><td class="t-mono">5m / 10m / 30m</td><td>10 / 20 / 30 Infections</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- SUPER RACE TRANS -->
+    <div class="section-header">🌟 Super Race Transformations</div>
+    <div class="tip-box">💡 All Super Races require <strong>3/3 rebirths</strong> (unless noted) and Recommended Level 150,000. All forms permanent unless stated.</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Race / Gene</th><th>Forms</th><th>PL Requirements</th><th>Access</th></tr></thead>
+        <tbody>
+          <tr><td>Alien *Legendary Jiren*</td><td>Full Powered</td><td class="t-mono">50m</td><td>Jiren Portal (3/3)</td></tr>
+          <tr><td>Alien *Legendary Sealas* <span class="tag tag-zeno">ZENO</span></td><td>Full Release Form</td><td class="t-mono">100m</td><td>5/3 via Zeno</td></tr>
+          <tr><td>Android *Super 17*</td><td>Super 17 / Cell Absorbed / Timebreaker</td><td class="t-mono">15m / 30m / 60m</td><td>Via Super 17 Portal</td></tr>
+          <tr><td>Android *Legendary 21*</td><td>Super Android / Hunger / True Form <em>(revertable)</em></td><td class="t-mono">50m / 75m / 150m</td><td>Via 21 Portal</td></tr>
+          <tr><td>Assassin *Legendary Fu*</td><td>Super Form / Dark King / Super Dark King</td><td class="t-mono">25m / 100m / 200m</td><td>Via Assassin Portal</td></tr>
+          <tr><td>Assassin *Legendary Hit* <span class="tag tag-pvp">PvP</span></td><td>Pure Progression</td><td class="t-mono">500m</td><td>4/3 via PvP Broker</td></tr>
+          <tr><td>Bio-Android *Legendary Golden*</td><td>Imperfect / Weighted Perfect / Imperfect Golden / Legendary Golden <em>(perm)</em></td><td class="t-mono">15m / 25m / 50m / 150m</td><td>Via Cell Portal</td></tr>
+          <tr><td>Bio-Warrior *Legendary Mira*</td><td>Berserker / Super Form / Mira Unleashed <em>(perm)</em></td><td class="t-mono">15m / 40m / 100m</td><td>Via Mira Portal</td></tr>
+          <tr><td>Cerealian *Legendary Granolah*</td><td>Sharpsight / Cosmic Marksman / Red Eye Awakened</td><td class="t-mono">30m / 75m / 90m</td><td>Via Granolah Portal</td></tr>
+          <tr><td>Changeling *Black Frieza* <span class="tag tag-zeno">ZENO</span></td><td>Form 1 / Golden / Golden Rage / Black Frieza</td><td class="t-mono">10m / 20m / 50m / 150m</td><td>5/3 via Zeno (needs 2/2 HBTC uses)</td></tr>
+          <tr><td>Changeling *Golden Cooler*</td><td>Form 1 / Form 2 / Legendary Golden Form</td><td class="t-mono">15m / 25m / 50m</td><td>Via Cooler Cave</td></tr>
+          <tr><td>Demon *Legendary Demigra*</td><td>Demigra Darkness Dragon / True Form <em>(perm)</em></td><td class="t-mono">15m / 50m</td><td>Via Demigra Portal</td></tr>
+          <tr><td>Demon *Dark King Demigra* <span class="tag tag-pvp">PvP</span></td><td>Demon King / Demon King Unleashed</td><td class="t-mono">50m / 100m</td><td>4/3 via PvP Broker</td></tr>
+          <tr><td>Dragon *Legendary Syn*</td><td>Omega Form / Dark Shadow Dragon / Dark Omega Form</td><td class="t-mono">50m / 150m / 250m</td><td>Via Syn Portal (needs Earth DBs)</td></tr>
+          <tr><td>Feline *Legendary Beerus*</td><td>Fury Form</td><td class="t-mono">50m</td><td>Via Feline Portal</td></tr>
+          <tr><td>Feline *Legendary Champa*</td><td>Fury Form</td><td class="t-mono">50m</td><td>Via Feline Portal</td></tr>
+          <tr><td>Galactic Warrior *Pirate King*</td><td>Rage Form / Imperfect Bojack / Unleashed Bojack <em>(perm)</em></td><td class="t-mono">10m / 20m / 35m</td><td>Via Super Bojack Portal</td></tr>
+          <tr><td>Half Saiyan *Legendary Gohan*</td><td>SS / SS2 / Ultimate Mystic / Ultimate God</td><td class="t-mono">15m / 25m / 50m / 75m</td><td>Via Gohan Portal</td></tr>
+          <tr><td>Half Saiyan *Gotenks Gene* <span class="tag tag-pvp">PvP</span></td><td>SS / SS3 / SS4</td><td class="t-mono">15m / 40m / 100m</td><td>4/3 via PvP Broker</td></tr>
+          <tr><td>Human *Legendary Herculean*</td><td>Focus / High Tension / Advanced Focus / Legendary Herculean</td><td class="t-mono">15m / 20m / 50m / 70m</td><td>Via Herculean Portal</td></tr>
+          <tr><td>Human *Legendary Master Roshi* <span class="tag tag-zeno">ZENO</span></td><td>Turtle Hermit Unleashed / Super Serious / MAX Power</td><td class="t-mono">20m / 50m / 90m</td><td>5/3 via Zeno</td></tr>
+          <tr><td>Kai *Legendary Corrupt Zamasu*</td><td>SS Rose / Corrupted Zamasu <em>(revertable)</em></td><td class="t-mono">25m / 75m</td><td>Via Zamasu Portal</td></tr>
+          <tr><td>Kai *Timebreaker Goku Black* <span class="tag tag-zeno">ZENO</span></td><td>SS / SS Rose / SS Rose 2 / SS Rose 3</td><td class="t-mono">15m / 30m / 50m / 75m</td><td>5/3 via Zeno</td></tr>
+          <tr><td>Konat *Legendary Tapion*</td><td>True Hero <em>(perm)</em></td><td class="t-mono">100m</td><td>Via Tapion Portal</td></tr>
+          <tr><td>Majin *Legendary Buu* <span class="tag tag-zeno">ZENO</span></td><td>Super Buu / SBGotenks / SBGohan / Kid Buu</td><td class="t-mono">50m / 100m / 150m / 250m</td><td>5/3 via Zeno</td></tr>
+          <tr><td>Majin *Legendary Uub*</td><td>Kid Buu Reincarnated / Majin Uub Unleashed <em>(perm)</em></td><td class="t-mono">40m / 150m</td><td>Via Uub Portal</td></tr>
+          <tr><td>Makyo *Legendary Garlic*</td><td>Unrestrained Form / Super Garlic Jr</td><td class="t-mono">20m / 60m</td><td>Via Garlic Portal</td></tr>
+          <tr><td>Namekian *Orange Piccolo* <span class="tag tag-pvp">PvP</span></td><td>Giant Namekian / Namekian Fusion / Orange Piccolo / Giant Orange Piccolo</td><td class="t-mono">18m / 45m / 90m / 150m</td><td>4/3 via PvP Broker</td></tr>
+          <tr><td>Namekian *Red-Eyes*</td><td>Great Namekian / Youth Restored / Giant Namekian / Red-Eyed Namekian</td><td class="t-mono">40m / 75m / 125m / 500m</td><td>Via Namekian Portal</td></tr>
+          <tr><td>Saibaman *Legendary Cauliflower*</td><td>Infected / Plague Spreader / Imperfect / Legendary Cauliflower</td><td class="t-mono">10m / 25m / 40m / 50m</td><td>Via Cauliflower Portal</td></tr>
+          <tr><td>Saiyan *Broly Gene*</td><td>SS / Wrathful Saiyan / Full Powered Saiyan</td><td class="t-mono">20m / 50m / 75m</td><td>Via Broly Cave</td></tr>
+          <tr><td>Saiyan *Broly Black* <span class="tag tag-pvp">PvP</span></td><td>SS Rose / Full Power SS Rose</td><td class="t-mono">30m / 70m</td><td>4/3 via PvP Broker</td></tr>
+          <tr><td>Saiyan *Gogeta Gene*</td><td>SS / SS3 / Golden Oozaru / SS4 / SS Blue</td><td class="t-mono">15m / 30m / 40m / 60m / 75m</td><td>Saiyan 3/3 + Supreme Kai Quest</td></tr>
+          <tr><td>Saiyan *Vegito Gene*</td><td>SS / SS3 / Golden Oozaru / SS Blue</td><td class="t-mono">15m / 40m / 50m / 75m</td><td>Saiyan 3/3 + Supreme Kai Quest</td></tr>
+          <tr><td>Tuffle *Bebi Gene*</td><td>SS / Super Bebi / Super Bebi 2 / True Form <em>(perm)</em></td><td class="t-mono">15m / 30m / 50m / 150m</td><td>Via Bebi Portal</td></tr>
+          <tr><td>Yardrat *Trapper Gene* <span class="tag tag-pvp">PvP</span></td><td>Trapper Form</td><td class="t-mono">30m</td><td>4/3 via PvP Broker</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- TIER LIST -->
+    <div class="section-header">📊 Race Tier List — 4/3 (by Aleister)</div>
+    <div class="tier-row tier-ss">
+      <div class="tier-label">SS</div>
+      <div class="tier-races"><strong>Gogeta, Vegito, Omega Shenron, Broly Black, Granolah</strong><br>
+      <span class="t-dim" style="font-size:12px">These have dominated for a long time. Gogeta/Vegito sit at the top together — Gogeta better for PvP, Vegito more popular due to STR-based mobbing. Omega: best semi-perm in the game. Broly Black: does everything Broly does + Kai perks + Android techs. Granolah: very strong techs, kit too good to ignore.</span></div>
+    </div>
+    <div class="tier-row tier-s">
+      <div class="tier-label">S</div>
+      <div class="tier-races"><strong>Android 21, Broly, Gohan, Jiren</strong><br>
+      <span class="t-dim" style="font-size:12px">A21: massive multi, access to all Android techs. Broly: Wrathful Spirit (2x all stats) extremely valuable; Blaster Shell+BBA in 2-tile PvP. Gohan: Z-Sword buffs + BBA + Saiyan techs; above Broly for Z-Sword. Jiren: highest-damage homing in game, powerful AoE, extremely Ki-focused.</span></div>
+    </div>
+    <div class="tier-row tier-a">
+      <div class="tier-label">A</div>
+      <div class="tier-races"><strong>Red Eyed Namekian, Fu, Cauliflower Saiba, Super 17</strong><br>
+      <span class="t-dim" style="font-size:12px">Strong and viable choices. Red Eyed has extremely high multis (after S tier consideration). Fu (similar multis to Bojack but better with Stone Spit + Time Skip). Super 17 benefits heavily from being Android with access to all Android techs.</span></div>
+    </div>
+    <div class="tier-row tier-b">
+      <div class="tier-label">B</div>
+      <div class="tier-races"><strong>Bojack, Herculean, Cooler</strong><br>
+      <span class="t-dim" style="font-size:12px">Solid but nothing special. Bojack: top of B due to stun + Stone Spit (homing). Herculean + Cooler: one is Ki-scaled, other is STR-scaled; pair that amplifies race techs.</span></div>
+    </div>
+    <div class="tier-row tier-c">
+      <div class="tier-label">C</div>
+      <div class="tier-races"><strong>Yadrat Trapper, Beerus, Champa, Orange Piccolo, Garlic, Gotenks</strong><br>
+      <span class="t-dim" style="font-size:12px">Just okay. No special tech that sets them apart. Missing special techs that could rank them higher.</span></div>
+    </div>
+    <div class="tier-row tier-d">
+      <div class="tier-label">D</div>
+      <div class="tier-races"><strong>Any ZR Race; anything that is a full perm or has a permanent last trans</strong><br>
+      <span class="t-dim" style="font-size:12px">Full perms are annoying to mob with — no way to reliably regenerate PL once it's lost. The only real options are healing items.</span></div>
+    </div>
+    <div class="tier-row tier-hit">
+      <div class="tier-label">HIT</div>
+      <div class="tier-races"><span class="t-dim"><strong>Hit</strong> — Worst unit in the game. PvP race with multis that fall off very quickly. Needs a massive overhaul to be viable.</span></div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       TAB 5 — MOB FARMING
+  ══════════════════════════════════════════════ -->
+  <section class="tab-panel" id="panel-mobfarming">
+
+    <div class="override-box" style="margin-top:16px">
+      <span class="badge">2026 CHANGELOG OVERRIDES</span>
+      <ul style="margin-top:6px;list-style:disc;padding-left:18px">
+        <li><strong>Mob Repop Time: 3 mins</strong> (was 4) <span class="tag tag-override">v8.67.10</span></li>
+        <li><strong>ZP Suit EXP buffs ENABLED</strong> for Lab 4 + Champion Tower <span class="tag tag-override">v8.67.8</span></li>
+        <li><strong>EK → TP rate: 750 TPs</strong> per exchange (was 500) <span class="tag tag-override">v8.67.10</span></li>
+        <li><strong>Scaled Mob EXP:</strong> Powered up (grey aura) = ×3; Scaled = ×2; Unscaled/killed off-screen = ×1 <span class="tag tag-override">v8.67.6</span></li>
+        <li>Scaled mobs "scream" in training output when scaling/powering up — indicates double/triple EXP</li>
+        <li>No longer need to relog to correct rank EXP gains <span class="tag tag-override">v8.66</span></li>
+      </ul>
+    </div>
+
+    <div class="section-header">🏛️ Labrynthian (Lab) Entrances</div>
+    <div class="tip-box">💡 Lab has 4 levels inside with varying mob strengths. Open to all players.</div>
+    <div class="card-grid">
+      <div class="stat-card"><div class="stat-label">Earth Entrance</div><div class="stat-value">North East of Tapion</div></div>
+      <div class="stat-card"><div class="stat-label">Namek Entrance</div><div class="stat-value">North East of Guru</div></div>
+      <div class="stat-card"><div class="stat-label">Future Earth Entrance</div><div class="stat-value">East of Gotenks</div></div>
+      <div class="stat-card"><div class="stat-label">Planet Vegeta Entrance</div><div class="stat-value">West of Yardrat Sensei</div></div>
+    </div>
+
+    <div class="section-header">🗺️ Caves &amp; Special Portals</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Location</th><th>Rec. Level</th><th>Level Cap</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Special Portal #1 (NE of Vegito)</td><td class="t-mono t-green">25,000</td><td class="t-dim">None</td></tr>
+          <tr><td class="t-bold">Videl's Cave</td><td class="t-mono t-green">35,000</td><td class="t-dim">None</td></tr>
+          <tr><td class="t-bold">Tapion's Cave</td><td class="t-mono t-green">35,000</td><td class="t-dim">None</td></tr>
+          <tr><td class="t-bold">Special Portal #2 (by NPC Yajirobe)</td><td class="t-mono t-green">35,000</td><td class="t-dim">None</td></tr>
+          <tr><td class="t-bold">Special Portal #3 (NE of Vegito, Center Cell Arena)</td><td class="t-mono t-orange">45,000</td><td class="t-dim">None</td></tr>
+          <tr><td class="t-bold">Future Earth's Cave (Bottom Left Island)</td><td class="t-mono t-orange">90,000</td><td class="t-dim">None</td></tr>
+          <tr><td class="t-bold">Z Cave</td><td class="t-mono t-red">115,000</td><td class="t-dim">None</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-header">🗼 Mob Towers</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Tower</th><th>Rec. Level</th><th>Level Cap</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Trunk's Tower</td><td class="t-mono t-green">15,000</td><td class="t-mono t-red">40,000</td></tr>
+          <tr><td class="t-bold">Saiba Tower (Oolong)</td><td class="t-mono t-green">20,000</td><td class="t-dim">None</td></tr>
+          <tr><td class="t-bold">Piccolo's Tower</td><td class="t-mono t-green">35,000</td><td class="t-mono t-red">100,000</td></tr>
+          <tr><td class="t-bold">Guru's Tower</td><td class="t-mono t-orange">40,000</td><td class="t-dim">None</td></tr>
+          <tr><td class="t-bold">King Vegeta's Tower</td><td class="t-mono t-orange">50,000</td><td class="t-mono t-red">150,000</td></tr>
+          <tr><td class="t-bold">West City Tower (Babidi)</td><td class="t-mono t-orange">65,000</td><td class="t-dim">None</td></tr>
+          <tr><td class="t-bold">Gotenks' Tower</td><td class="t-mono t-red">100,000</td><td class="t-dim">None</td></tr>
+          <tr><td class="t-bold">Planet of Divines Tower</td><td class="t-mono t-red">125,000</td><td class="t-dim">None</td></tr>
+          <tr><td class="t-bold">Space Tower</td><td class="t-mono t-dim">Varied</td><td class="t-dim">None</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-header">🌌 Space Star Planets</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Planet</th><th>Rec. Level</th><th>Coordinates</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold t-orange">Orange Star</td><td class="t-mono t-green">15,000</td><td class="t-mono">164, 286, 9</td></tr>
+          <tr><td class="t-bold" style="color:#cc88ff">Purple Star</td><td class="t-mono t-green">15,000</td><td class="t-mono">35, 206, 9</td></tr>
+          <tr><td class="t-bold t-blue">Blue Star</td><td class="t-mono t-orange">50,000</td><td class="t-mono">172, 380, 9</td></tr>
+          <tr><td class="t-bold t-dim">Dark Smoke</td><td class="t-mono t-orange">40,000</td><td class="t-mono">230, 37, 9</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-header">⭐ SR Portals (All Rec. Level 150,000 | No Cap)</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Portal Name</th><th>Location</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Android 21's Portal</td><td>Tuffle Soldiers Spawn</td></tr>
+          <tr><td class="t-bold">Broly Cave</td><td>Planet of Divines</td></tr>
+          <tr><td class="t-bold">Bebi's Base</td><td>Yardrat Sensei (South East)</td></tr>
+          <tr><td class="t-bold">Cauliflower Saibaman Portal</td><td>Oolong Island</td></tr>
+          <tr><td class="t-bold">Cooler's Cavern</td><td>Guru Gym (Namek)</td></tr>
+          <tr><td class="t-bold">Cell's Pit</td><td>Future Earth Zeno Tower (North)</td></tr>
+          <tr><td class="t-bold">Dark Syn Kingdom</td><td>Future Earth Broly/Shenron Island</td></tr>
+          <tr><td class="t-bold">Demigra's Dominion</td><td>HFIL</td></tr>
+          <tr><td class="t-bold">Fu's Fortress</td><td>South West from King Vegeta</td></tr>
+          <tr><td class="t-bold">Feline's Fissure</td><td>Beerus Planet North</td></tr>
+          <tr><td class="t-bold">Gogeta Island</td><td>Gold Oozaru Island, God Planet (Centre)</td></tr>
+          <tr><td class="t-bold">Gohan's Training Forest</td><td>Supreme Kai (Z Sword Rock Area)</td></tr>
+          <tr><td class="t-bold">Garlic's Grove</td><td>Above HBTC</td></tr>
+          <tr><td class="t-bold">Granolah's Gulag</td><td>Earth — Below NPC Tien</td></tr>
+          <tr><td class="t-bold">Jiren Portal</td><td>Future Earth</td></tr>
+          <tr><td class="t-bold">Herculean Warrior Cave</td><td>South of Whis</td></tr>
+          <tr><td class="t-bold">Majin Uub's Portal</td><td>Babidi Bridge</td></tr>
+          <tr><td class="t-bold">Mira's Dominion</td><td>Son Gohan (North East)</td></tr>
+          <tr><td class="t-bold">Namekian's Nether</td><td>North from Frieza</td></tr>
+          <tr><td class="t-bold">Super 17's Laboratory</td><td>NPC Enraged Trunks</td></tr>
+          <tr><td class="t-bold">Super Bojack's Territory</td><td>Planet of Divines (South West)</td></tr>
+          <tr><td class="t-bold">Tapion Ice Portal</td><td>North of Tapion</td></tr>
+          <tr><td class="t-bold">Zamasu's Otherworld Portal</td><td>Supreme Kai Planet by Shin</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-header">📈 Early Farming Buffs <span class="tag tag-new">Feb 27, 2026</span></div>
+    <div class="card">
+      <ul>
+        <li>Videl Cave + Tapion Cave: stats nerfed (easier to kill) + EXP slightly buffed</li>
+        <li>Master Roshi Training Island: Crocodile &amp; Wolf EXP buffed; mob density increased</li>
+        <li>Planet Vegeta: Outworld Oozaru + Tuffle Villager EXP buffed; stats nerfed</li>
+        <li>Ice and Fire Cave + Roshi Tigers: scaling effect nerfed (easier to farm)</li>
+        <li>Bebi Vegeta EXP buffed | Tuffle Soldiers SP buffed</li>
+        <li>Sub Room Mobs: EXP buffed, stats nerfed</li>
+        <li>Garlic Small Portal NPC: EXP buffed</li>
+        <li>Portal Mobs EXP buffed generally; Gogeta/Vegito Portal mobs given special buff <span class="tag tag-override">v8.67.3</span></li>
+        <li>Enraged Android 16 &amp; 17 EXP gains buffed <span class="tag tag-override">v8.67.1</span></li>
+      </ul>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       TAB 6 — RULES & CONDUCT
+  ══════════════════════════════════════════════ -->
+  <section class="tab-panel" id="panel-rules">
+
+    <div class="override-box" style="margin-top:16px"><span class="badge">OVERRIDE v8.67.12 — March 27, 2026</span> <strong>Rule 21 explicitly updated:</strong> Players are NOT permitted to use their alts if they have been Jailed or Hakai'd. This now counts as <strong>avoiding</strong>.</div>
+    <div class="warn-box">⚠️ Rule 16: Players are responsible for staying updated with rule changes. <strong>Ignorance of updated rules is NOT an excuse.</strong> Rule 23 is the Common Sense Rule — loopholes are punishable.</div>
+
+    <div class="section-header">📋 DB Asylum In-Game Rules</div>
+
+    <ol class="rules-list">
+      <li><span class="rule-num">01</span><span class="rule-text">Respect fellow players and all administrators.</span></li>
+      <li><span class="rule-num">02</span><span class="rule-text">Spamming is not acceptable.</span></li>
+      <li><span class="rule-num">03</span><span class="rule-text"><strong>No spam killing.</strong> Do not intentionally kill the same player (or their alts, including your own) 3+ times within one hour. Does NOT apply in competitive zones (areas with mobs or a PvP warning on entry).</span></li>
+      <li><span class="rule-num">04</span><span class="rule-text">Do not advertise or spam this or other games, BYOND or otherwise.</span></li>
+      <li><span class="rule-num">05</span><span class="rule-text">Do not use programs to assist Shadow Sparring, Focus Med Training, Mobbing, or any other form of training. This includes inside the casino.</span></li>
+      <li><span class="rule-num">06</span><span class="rule-text">Keep CAPS (shift/uppercase letters) to a minimum. Excessive caps will result in an <strong>automatic mute</strong>.</span></li>
+      <li><span class="rule-num">07</span><span class="rule-text">Do not link any form of adult websites in OOC or Local Chat.</span></li>
+      <li><span class="rule-num">08</span><span class="rule-text">Adjusting font sizes is <strong>forbidden</strong>.</span></li>
+      <li><span class="rule-num">09</span><span class="rule-text">Do not use/abuse any glitches or bugs. Rewards are given for reporting bugs; punishment for those who abuse them.</span></li>
+      <li><span class="rule-num">10</span><span class="rule-text">Do not disrupt events or matches. Do not interfere with arena challenges, tournaments, or player-run events. This includes <strong>blocking entrances/exits or camping mobbing zones</strong> (Lab, Towers, Caverns, Copies) to prevent others from playing.</span></li>
+      <li><span class="rule-num">11</span><span class="rule-text">Do not <strong>"throw"</strong> any team-based event. Includes: suiciding on purpose in Mayhem with no flags just to stop the capture, losing on purpose, encouraging someone to lose, or using alt accounts to change the outcome of an event.</span></li>
+      <li><span class="rule-num">12</span><span class="rule-text">Multi-Key IS allowed but <strong>NOT allowed</strong> to participate within multiple events simultaneously, or to join events with an alt while your main is currently Jailed or Hakai'd (or vice versa). Joining the same event with multiple accounts is NOT allowed.</span></li>
+      <li><span class="rule-num">13</span><span class="rule-text">No excessive racism or discriminatory remarks. Admins have discretion to punish as they see fit.</span></li>
+      <li><span class="rule-num">14</span><span class="rule-text">No improper icons. Off-centered, improperly sized, explicit, or full-body hiding icons (e.g., turf icons) are prohibited. If unsure, ask an admin before using a custom icon.</span></li>
+      <li><span class="rule-num">15</span><span class="rule-text">No door/pathway camping. Do not camp entrances such as HBTC, High Strain Gravity Room, Abyss Flag Room, etc.</span></li>
+      <li class="rule-critical"><span class="rule-num">16</span><span class="rule-text"><strong>Players are responsible for staying updated with rule changes. Ignorance of updated rules is NOT an excuse.</strong></span></li>
+      <li class="rule-critical"><span class="rule-num">17</span><span class="rule-text">Trying to find bypasses/loopholes in the rules is a <strong>bannable offence</strong>. This goes hand-in-hand with the Common Sense Rule.</span></li>
+      <li><span class="rule-num">18</span><span class="rule-text">You cannot Hakai a player leaving a safe zone. This includes leaving a Player House, Megamall, Guild Houses, etc.</span></li>
+      <li><span class="rule-num">19</span><span class="rule-text">Do not attempt to bypass or argue against staff decisions in-game. If you believe a decision was unfair, contact the Owners or open a <strong>Discord ticket</strong>.</span></li>
+      <li><span class="rule-num">20</span><span class="rule-text">Account sharing is only permitted for AFK purposes. Actively mobbing or farming for another player is <strong>prohibited</strong>.</span></li>
+      <li class="rule-critical"><span class="rule-num">21</span><span class="rule-text"><strong>Alt usage:</strong> Alts may be used for training assistance (e.g., dual training), guild ownership, or inviting your main. Alts may NOT be used for malicious purposes (alt killing or griefing). <strong>Alts are NOT permitted to have Hakai.</strong> If a character has been Hakai'd or Jailed, you are <strong>NOT allowed to play with their alt</strong> — this counts as avoiding Jail and Hakai. <span class="tag tag-override">EXPLICITLY UPDATED v8.67.12</span></span></li>
+      <li><span class="rule-num">22</span><span class="rule-text">Universe G.o.Ds must defend their ranks if challenged via the G.o.D challenge verb. They have <strong>two rejects</strong>. Rule updated to reflect the fully overhauled G.o.D system — the old system is no more. <span class="tag tag-override">UPDATED v8.67.14</span></span></li>
+      <li class="rule-critical"><span class="rule-num">23</span><span class="rule-text"><strong>Common Sense Rule.</strong> Attempting to exploit loopholes, bypass rules, or abuse unintended mechanics is punishable. Staff have final authority in ambiguous situations and must provide reasoning upon request.</span></li>
+    </ol>
+
+    <div style="margin-top:20px;padding:16px;background:var(--override-bg);border:1px solid var(--override-border);border-radius:8px;text-align:center;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:18px;color:var(--accent-red);letter-spacing:2px;">
+      CONSIDER YOURSELF WARNED.
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="margin-top:40px;padding:20px 0;border-top:1px solid var(--border-subtle);text-align:center;">
+    <p style="color:var(--text-dim);font-size:12px;font-family:'Share Tech Mono',monospace;">All Data comes from in game guides, player made guides in discord, and changelogs. V1.0 4.1.2026</p>
+  </footer>
+
+</div>
+
+<script>
+  function showTab(id, btn) {
+    // Hide all panels
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    // Show selected
+    document.getElementById('panel-' + id).classList.add('active');
+    btn.classList.add('active');
+    // Scroll to top of content
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>
