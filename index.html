@@ -137,17 +137,17 @@
 
   .tab-btn {
     flex: 1;
-    min-width: 130px;
+    min-width: 110px;
     background: var(--bg-card);
     border: 1px solid var(--border-subtle);
     border-radius: 6px;
     color: var(--text-secondary);
     font-family: 'Rajdhani', sans-serif;
     font-weight: 600;
-    font-size: 13px;
+    font-size: 12px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    padding: 10px 8px;
+    padding: 10px 6px;
     cursor: pointer;
     transition: all 0.2s ease;
     position: relative;
@@ -179,7 +179,7 @@
 
   .tab-btn.active::before { width: 100%; }
 
-  .tab-icon { margin-right: 6px; font-size: 14px; }
+  .tab-icon { margin-right: 4px; font-size: 13px; }
 
   /* ── TAB PANELS ── */
   .tab-panel { display: none; animation: fadeIn 0.25s ease; }
@@ -583,7 +583,6 @@
   }
 
   .tag-override { background: rgba(255,34,68,0.2); color: var(--accent-red); border: 1px solid rgba(255,34,68,0.3); }
-  .tag-new { background: rgba(0,255,136,0.15); color: var(--accent-green); border: 1px solid rgba(0,255,136,0.25); }
   .tag-perm { background: rgba(157,78,221,0.15); color: var(--accent-purple); border: 1px solid rgba(157,78,221,0.25); }
   .tag-zeno { background: rgba(255,215,0,0.15); color: var(--accent-gold); border: 1px solid rgba(255,215,0,0.25); }
   .tag-pvp { background: rgba(0,180,255,0.12); color: var(--accent-blue); border: 1px solid rgba(0,180,255,0.25); }
@@ -617,17 +616,19 @@
     <div class="header-eyebrow">★ Dragonball Asylum ★</div>
     <h1 class="header-title">Master Player Guide</h1>
     <div class="header-subtitle">Compiled by VsCactus from in game and discord guides</div>
-    <div class="version-badge">⚠ Latest: v8.67.14 · All Data comes from in game guides, player made guides in discord, and changelogs</div>
+    <div class="version-badge">⚠ Latest Changelog: v8.67.15 · Guide v1.2</div>
     <div class="header-divider"></div>
   </header>
 
   <!-- TAB NAV -->
   <nav class="tab-nav" id="tabNav">
     <button class="tab-btn active" onclick="showTab('newplayer',this)"><span class="tab-icon">🌱</span>New Player</button>
-    <button class="tab-btn" onclick="showTab('equipment',this)"><span class="tab-icon">⚔️</span>Techs &amp; Equips</button>
-    <button class="tab-btn" onclick="showTab('events',this)"><span class="tab-icon">🏆</span>Events</button>
-    <button class="tab-btn" onclick="showTab('transforms',this)"><span class="tab-icon">⚡</span>Transformations</button>
+    <button class="tab-btn" onclick="showTab('progression',this)"><span class="tab-icon">🏁</span>Progression</button>
+    <button class="tab-btn" onclick="showTab('items',this)"><span class="tab-icon">💰</span>Items &amp; Money</button>
+    <button class="tab-btn" onclick="showTab('races',this)"><span class="tab-icon">⚔️</span>Races &amp; Techs</button>
+    <button class="tab-btn" onclick="showTab('transforms',this)"><span class="tab-icon">⚡</span>Transforms</button>
     <button class="tab-btn" onclick="showTab('mobfarming',this)"><span class="tab-icon">🗺️</span>Mob Farming</button>
+    <button class="tab-btn" onclick="showTab('events',this)"><span class="tab-icon">🏆</span>Events</button>
     <button class="tab-btn" onclick="showTab('rules',this)"><span class="tab-icon">📋</span>Rules</button>
   </nav>
 
@@ -660,7 +661,7 @@
 
     <!-- CLASSES -->
     <div class="section-header">🎯 Classes</div>
-    <p>Change at Z Agent (Level 100,000) or any level at Rebirth 4/3 or 5/3 for <strong>25 ZP</strong>. <span class="tag tag-new">v8.66.2</span> Also changeable via <strong>Candy Broker NPC</strong> for Candy.</p>
+    <p>Change at Z Agent (Level 100,000) or any level at Rebirth 4/3 or 5/3 for <strong>25 ZP</strong>. Also changeable via <strong>Candy Broker NPC</strong> for Candy.</p>
     <div class="table-wrap">
       <table>
         <thead><tr><th>Class</th><th>Benefit</th><th>Best For</th></tr></thead>
@@ -679,7 +680,7 @@
       <div class="card">
         <div class="sub-sub-header">Core Stats</div>
         <ul>
-          <li><strong>Powerlevel (PL):</strong> Reaches 0 = KO/killed. Health/durability only <span class="tag tag-override">v8.66</span></li>
+          <li><strong>Powerlevel (PL):</strong> Reaches 0 = KO/killed. Health/durability only</li>
           <li><strong>Ki:</strong> Strength of ki attacks</li>
           <li><strong>Ki Defense:</strong> Defence vs. ki attacks</li>
           <li><strong>Strength:</strong> Strength of melee attacks</li>
@@ -720,9 +721,9 @@
         <thead><tr><th>Location</th><th>Multi</th><th>Notes</th></tr></thead>
         <tbody>
           <tr><td>Club House</td><td class="t-gold t-bold">x30</td><td>Limited: 30 min session (45 min Gym Bunny)</td></tr>
-          <tr><td>HBTC</td><td class="t-orange t-bold">x15 <span class="tag tag-override">v8.66</span></td><td>Limited: 3 uses × 2 hrs each; <strong>freezes TNL</strong></td></tr>
-          <tr><td>Sub Room</td><td class="t-orange t-bold">x15 <span class="tag tag-override">v8.66</span></td><td>Unlimited time</td></tr>
-          <tr><td>FCC (PvP)</td><td class="t-blue t-bold">x15 <span class="tag tag-override">v8.66</span></td><td>EXP Till Next Level does NOT rise here</td></tr>
+          <tr><td>HBTC</td><td class="t-orange t-bold">x15</td><td>Limited: 3 uses × 2 hrs each; <strong>freezes TNL</strong></td></tr>
+          <tr><td>Sub Room</td><td class="t-orange t-bold">x15</td><td>Unlimited time</td></tr>
+          <tr><td>FCC (PvP)</td><td class="t-blue t-bold">x15</td><td>EXP Till Next Level does NOT rise here</td></tr>
           <tr><td>High Strain SZ Chamber (PvP)</td><td class="t-blue t-bold">x20</td><td>PvP zone</td></tr>
           <tr><td>Normal Gravity</td><td class="t-dim">x2</td><td>—</td></tr>
         </tbody>
@@ -731,7 +732,7 @@
 
     <!-- RANKS -->
     <div class="section-header">🎖 Ranks &amp; Quest Medals</div>
-    <div class="tip-box">💡 <strong>Relog after hitting a new rank</strong> to activate gains. Use <code>Quest Medal Check</code> in Training tab. Easiest early medals: King Kai, Yamcha (Lvl 500), Dr. Briefs, Master Roshi (Kamehameha), Saiyaman.</div>
+    <div class="tip-box">💡 Use <code>Quest Medal Check</code> in Training tab. Easiest early medals: King Kai, Yamcha (Lvl 500), Dr. Briefs, Master Roshi (Kamehameha), Saiyaman.</div>
     <div class="table-wrap">
       <table>
         <thead><tr><th>Level</th><th>Rank</th><th>Quest Medals Required</th></tr></thead>
@@ -754,6 +755,203 @@
       </table>
     </div>
 
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       TAB 2 — PROGRESSION
+  ══════════════════════════════════════════════ -->
+  <section class="tab-panel" id="panel-progression">
+
+    <!-- ROAD TO 5/3 CHAMPION -->
+    <div class="section-header">🏁 Road to 5/3 Champion</div>
+
+    <!-- 0/3 to 1/3 -->
+    <div class="sub-header">0/3 → 1/3 (Level 1 → 50,000)</div>
+
+    <div class="rebirth-flow">
+      <div class="rebirth-step"><span class="step-num">1</span><div class="step-title">Level 1 → 10,000</div><div class="step-body">Pick <strong>Velocitor</strong> as your class. Race doesn't really matter as long as it's not a race with permanent transformations — they have a harder time early and are not advised. Talk to <strong>Yamcha</strong>, get to Level 500, talk to him again, then leave the house. If you have a season pass or a sub, use one of those boosts (preferably season pass — it also gives zenni). Use that zenni to buy <strong>ultra weights</strong>. Also buy a small <strong>EXP Shard</strong> if you have the zenni. Get <strong>Kaioken</strong> from <strong>King Kai</strong> and go to <strong>Master Roshi's Training Island</strong> or the <strong>Orange Star portal</strong> (right side of map). Only mob <strong>Crocodiles</strong> and <strong>Wolves</strong>. Be sure to use an EXP shard and Weights to boost your mobbing EXP. Another option is to go to <strong>sub house gravity or HBTC</strong> (must fly to Yajirobe if you don't have IT unlocked — IT can be unlocked at Level 2,000 by talking to Yamcha and clicking Learn Teleport). Either self train, dual train, or shadow spar. Shadow spar is fastest if you can keep it at x3 often. If you have a partner you can dual train instead.</div></div>
+
+      <div class="rebirth-step"><span class="step-num">2</span><div class="step-title">Level 10,000 → 20,000</div><div class="step-body">Once you hit Level 10,000 you can start doing sims inside safe zone house. Go down the stairs to the right, go past Hercule and down the 2nd set of stairs, once you're in the sim room access a computer, right click (or make a macro for it) and start spawning clones to farm. The best way to farm them is to power down to PL 1 and as soon as you spawn the clone, hold your attack macro and repeat. Macro to start clone → Enter → Hold attack macro → Repeat. This will roughly get you to around Level 20k if you're using weights and EXP shard/happy meals.</div></div>
+
+      <div class="rebirth-step"><span class="step-num">3</span><div class="step-title">Level 20,000 → 40,000</div><div class="step-body">From here we strongly recommend <strong>Focus Meditation</strong> and Shadow Spar the Focus Med to speed up the process. If you're fast enough you can complete it in roughly 5 or 6 hours. There really aren't that many options to mob with where you'll be stat wise.</div></div>
+
+      <div class="rebirth-step"><span class="step-num">4</span><div class="step-title">Level 40,000 → 50,000</div><div class="step-body">Once you're at 40,000 / finished your Focus Med, <strong>make sure you turn in your Focus Med quest to Roshi for your rewards</strong>. Use any TPs you have to evenly distribute your stats (except Ki). Since you're now at the level threshold you can boost your stats and start mobbing things like <strong>Glass Civilian Cave, Xeno Pan, Copy Vegetas, Universe Caves on Beerus Planet, Tuffle Civilian 2-4, the other 3 Space Portals</strong> (not Orange Star), <strong>Portal NE of Vegito</strong> (Center of Cell Arena in Future Earth), and <strong>Android Caves NW of Vegito</strong> until you're ready to Rebirth.</div></div>
+
+      <div class="rebirth-step"><span class="step-num">5</span><div class="step-title">Lazy/AFK Alternative: Level 2,000 → 50,000</div><div class="step-body">At Level 2,000 talk to Yamcha to get IT, then obtain your 5+ quest medals, make an alt or find someone to dual train with in HBTC using your weights (preferably ultra weights) and EXP shard until you reach 25,000. From here, go talk to <strong>Master Roshi</strong> to unlock <strong>Focus Meditation</strong> (unlocked at Level 10,000 — we do it at 25,000 so we can rebirth as soon as Focus Med is done). After talking to him, he gives you the key to his house. Go inside, hop on a pad and start Focus Meditating. Focus Meditation takes <strong>16 hours</strong> to complete and gives you ZP, a club ticket, and more. People advise doing this every rebirth because of the ZP you will need a lot of later. The only downside is you pretty much sit AFK for 16 hours every rebirth.</div></div>
+
+      <div class="rebirth-step"><span class="step-num">R</span><div class="step-title">Rebirth at Level 50,000</div><div class="step-body">Once you hit Level 50,000 you can rebirth by talking to <strong>King Kai</strong> or <strong>Dr. Gero</strong> depending on your race. Now you can choose another race to rebirth into and select a gene if they have any. Keep in mind you cannot select the same race you currently are. Once again, try not to pick a race that has permanent transformations. <strong>Do not forget to do ZP quests before you rebirth and to put all your items in a locker above the Yamcha NPC!</strong></div></div>
+    </div>
+
+    <!-- 1/3 to 3/3 -->
+    <div class="sub-header">0/3 → 3/3 (Level 75,000 at 1/3, Level 100,000 at 2/3)</div>
+    <div class="card">
+      <p>Simply follow the same steps as previous rebirth until you hit 3/3 Rebirth. <strong>You should be able to start mobbing earlier with each successive rebirth since you get more stats per rebirth.</strong> The only difference is that at 1/3 you need to hit Level 75,000 instead of 50,000, and at 2/3 you need Level 100,000.</p>
+      <p>(Optional) Before you rebirth from 1/3 to 2/3, don't forget to do <strong>Whis' quest</strong> for Whis weights and the second quest. The easiest way to complete the second quest is to go to Zeno, ask him to show you his powers, and do his tower replicas.</p>
+      <p><strong>Do not forget to do ZP quests before you rebirth and to put all your items in a locker above the Yamcha NPC!</strong></p>
+    </div>
+
+    <!-- 2/3 to 4/3 -->
+    <div class="sub-header">3/3 → 4/3 (Level 1 → 150,000)</div>
+
+    <div class="rebirth-flow">
+      <div class="rebirth-step"><span class="step-num">1</span><div class="step-title">Level 1 → 100,000</div><div class="step-body">(For 3/3) You follow the same steps as before, however this time you cannot boost until you have the stats to boost AND be able to kill the portal boss. You need <strong>150 million stats minimum</strong> before boosting (300m recommended weighted).</div></div>
+
+      <div class="rebirth-step"><span class="step-num">2</span><div class="step-title">Level 100,000 → 150,000</div><div class="step-body">Once you hit Level 100,000, it is time to buy your large shard. You 100% need to buy a <strong>large EXP shard</strong>. The Large Zenni shard can wait, so buy it later. Now you can purchase your first couple of Powerlevel candies and go into the <strong>Club Frog room</strong> and farm frogs (North of the white grave area). The other stats can be trained by using equipment — it doesn't take too long. You can kill portal bosses by having 150 million stats minimum. 300 million is recommended if you want to mob them weighted, but don't worry about it too much. You can farm regular portal mobs and get to Level 150,000 quite easily. You can also only focus on your PL and STR and boost that way, but you will be reverting/transforming and dying quite a lot when mobbing — but can still be easily done.</div></div>
+
+      <div class="rebirth-step"><span class="step-num">R</span><div class="step-title">Rebirth to 4/3</div><div class="step-body">You can rebirth once you have hit Level 150,000 and killed one of the SR portal bosses. You also need to have used the <strong>Super Dragon Balls</strong> once. You cannot rebirth unless your super wish says 1/1 in your skills tab (<strong>DO NOT RESET IT UNTIL YOU REBIRTH — YOU WILL NOT BE EDITED</strong>). When using Super Dragon Balls be sure to wish for <strong>ZP</strong>. It gives you a lot and you will need it. It is not advised to wish for anything else. If you wished for ZP you can buy a <strong>Pride Troopers Suit</strong> or <strong>Dark Robe</strong>, the choice is yours. Pride Troopers is useful early and mid game; Dark Robe is better late game. If you're short ZP, save your ZP for level cap increases if you intend to reach Champion at 5/3. To rebirth you have to talk to the NPC inside the SR portal of your choice. <strong>Do not forget to do ZP quests before you rebirth and to put all your items in a locker above the Yamcha NPC!</strong></div></div>
+    </div>
+
+    <!-- 4/3 to 5/3 -->
+    <div class="sub-header">4/3 → 5/3 (Level 1 → 250,000)</div>
+
+    <div class="rebirth-flow">
+      <div class="rebirth-step"><span class="step-num">1</span><div class="step-title">Level 1 → 250,000</div><div class="step-body">As with previous rebirths, you mostly follow the same steps. This time it is heavily advised to boost at <strong>300–350 million ALL stats</strong> before boosting to farm SR portal mobs and bosses for efficient EXP, since leveling to 250,000 can take some time. This rebirth you also most likely will use a TNL cut or more, depending on how much ZP you can afford to spend. It is recommended to only use one TNL cut around <strong>Level 190,000–200,000</strong>. If you do not want to spend ZP for TNL cuts then you can still mob till Level 250,000 but it takes more time. Another way would be to get the Level crystals in Ice/Fire cave but it usually takes longer, depending if there is an EXP event active or not.</div></div>
+
+      <div class="rebirth-step"><span class="step-num">R</span><div class="step-title">Rebirth to 5/3</div><div class="step-body">To rebirth to 5/3 you must get to Level 250,000 and complete <strong>Zeno's quest</strong>. The Zeno quest has you kill <strong>ALL SR portal bosses</strong>. When you talk to him again he'll give you the list of bosses you need to kill. Once all required bosses have been killed, talk to him to rebirth. <strong>Do not forget to do ZP quests before you rebirth and to put all your items in a locker above the Yamcha NPC!</strong></div></div>
+    </div>
+
+    <!-- 5/3 to End Game -->
+    <div class="sub-header">5/3 — Level 1 → 500,000 &amp; End Game</div>
+
+    <div class="rebirth-flow">
+      <div class="rebirth-step"><span class="step-num">1</span><div class="step-title">Level 1 → 500,000</div><div class="step-body">As always everything you do will be the same except you will <strong>not be boosting at all</strong>. You will boost before the End of Wipe tournament. This means you need to candy farm lots to start mobbing SR portals — but don't worry, it will not take long. Candy gains always increase with each rebirth, meaning at 5/3 your gains are a lot higher. Do not forget to enter events, especially <strong>Mystical Cavern</strong> and <strong>Grand Maze</strong> for club tickets. All the ZP will be needed as well for level caps and TNL cuts.</div></div>
+
+      <div class="rebirth-step"><span class="step-num">2</span><div class="step-title">Buy ALL Level Caps Before TNL Cuts</div><div class="step-body">TNL cutting will now cost you <strong>400 ZP</strong> instead of 500 ZP and can be used unlimited times. TNL cutting should be done around <strong>60 million TNL</strong> before Level 350,000. After Level 350,000, TNL cutting should be around <strong>100 million TNL</strong> (it all depends on how much ZP you have at this point — if you have a lot, you can cut earlier). If you're short on ZP, you can also exchange your UP at <strong>Agent X</strong> in the Zeno portal. However it's advised NOT to exchange UP for ZP and buy a house instead, as the exchange rate is 100:25 UP to ZP. The faster you get your house the better. If you're still short, farm EK from portals or towers and exchange them for ZP — the rate is <strong>2,500 EK for 200 ZP</strong> by talking to the Broker NPC inside the Mall.</div></div>
+
+      <div class="rebirth-step"><span class="step-num">3</span><div class="step-title">DBA Life After Level 500,000</div><div class="step-body">Congratulations, you've hit Level 500,000! Now it's time to sell down your levels for zenni and ZP by talking to <strong>Exchanger NPC</strong> and <strong>Z Agent</strong>. It's advised to sell at least <strong>200,000 or 300,000 levels</strong> for zenni (which gives you 2b or 3b zenni) and the rest for ZP. That all depends on how much ZP you have since you'll be spending ZP for TNL cuts.</div></div>
+
+      <div class="rebirth-step"><span class="step-num">4</span><div class="step-title">Portal Maze &amp; End Game Mobbing</div><div class="step-body">To start mobbing <strong>Portal Maze</strong>, you need <strong>1 million TL</strong>. It is recommended once you reach 1m TL to mob here until you can clear the higher end areas. To start mobbing <strong>Lab 4</strong> and <strong>Champion Tower</strong> and their replications, you need roughly <strong>2 trillion stats</strong> to clear everything (except Ace and Shredz). You can enter replications by talking to <strong>Zeno NPC</strong>. Mobs there give the most EXP at this point — that's where you'll be mobbing until you can mob <strong>Lab 5</strong> or <strong>ZR Portal</strong>.</div></div>
+
+      <div class="rebirth-step"><span class="step-num">5</span><div class="step-title">Stat Building &amp; Equipment</div><div class="step-body">Once your base stats are <strong>30b or higher</strong>, you can kill <strong>Golden Frieza</strong> in the <strong>Mystical Cavern crystal room</strong>. Frieza has a chance to drop a <strong>Cavern Pill</strong> which increases your stats gained per level. This is the pill you always want to use when mobbing. When you have a house, buy <strong>Legendary equipment</strong> from <strong>Real Estate Renji NPC</strong> — each piece costs <strong>10 billion zenni</strong>. Also unlock your other two mob floors in your house which you can farm each repop after you do your recommended mobbing rotation. When mobbing, you always want to mob between <strong>Level 35,000–100,000</strong>. At first you can also mob between 100k–200k and sell down levels for zenni to get your house equipment faster. You can also cut your TNL every time it hits <strong>40 million</strong> (30 million if you're a Universe GoD).</div></div>
+    </div>
+
+    <div class="sub-header">Why Should I Hit 5/3?</div>
+    <div class="card">
+      <p>You may be asking yourself, why would I ever want to hit 5/3 if I get a powerful super race at 4/3? Well, at 5/3 you also get access to the <strong>Zeno races</strong> which are super strong races with special skills. Additionally you also get access to <strong>Ultra Forms</strong> AND <strong>Dual Gene</strong>!</p>
+      <ul>
+        <li>If you're a semi-perm/perm race, you ONLY get access to <strong>Ultra Invert</strong></li>
+        <li>If you're a non-perm race, you get access to either <strong>Ultra Instinct</strong> or <strong>Ultra Ego</strong></li>
+        <li>Non-perms are able to change their Ultra Form at Oracle Fish for <strong>10,000 ZP</strong>, so choose very carefully on what ultra you want to proceed with as you will be stuck with that ultra for a while</li>
+        <li><strong>Ultra Forms</strong> work similar to UT in the aspect that you're able to put Ultra Points into your multis</li>
+      </ul>
+    </div>
+
+    <!-- REBIRTH SYSTEM -->
+    <div class="section-header">🔄 Rebirth System (0/3 → 6/3)</div>
+    <div class="tip-box">💡 <strong>Carries over:</strong> Club tickets, ZP, UP, locker items, banked zenni, super wish. <strong>Everything else resets.</strong> After 2 rebirths, talk to Whis for special genes (Daishinkan DNA, Saiyan God, Golden Frieza).</div>
+    <div class="warn-box">⚠️ <strong>DO NOT reset your Super Dragon Ball wish counter to 0 before rebirthing to 4/3.</strong> Your counter MUST show 1/1. You WILL NOT be edited if you break this.</div>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Rebirth</th><th>Level Required</th><th>Additional Requirement</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">1st (0/3 → 1/3)</td><td class="t-orange t-bold">50,000</td><td>Talk to King Kai (or Gero depending on race)</td></tr>
+          <tr><td class="t-bold">2nd (1/3 → 2/3)</td><td class="t-orange t-bold">75,000</td><td>Talk to King Kai (or Gero)</td></tr>
+          <tr><td class="t-bold">3rd (2/3 → 3/3)</td><td class="t-orange">100,000</td><td>Talk to King Kai (or Gero)</td></tr>
+          <tr><td class="t-bold">4th (3/3 → 4/3)</td><td class="t-orange">150,000</td><td>Super Dragon Balls used (1/1) + SR portal boss defeated + talk to NPC inside portal</td></tr>
+          <tr><td class="t-bold">5th (4/3 → 5/3)</td><td class="t-gold">250,000</td><td>Complete Zeno's quest — defeat ALL SR portal bosses</td></tr>
+          <tr><td class="t-bold">6th (5/3 → 6/3)</td><td class="t-gold">500,000</td><td>NPC Beerus quest — complete 3 trials (Instruction, Endurance, Growth)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sub-header">ZP Level Cap Costs</div>
+    <div class="card-grid">
+      <div class="stat-card"><div class="stat-label">3/3 Level Cap</div><div class="stat-value">500 ZP × 2 = 1,000 ZP → Level 150k</div></div>
+      <div class="stat-card"><div class="stat-label">4/3 Level Cap</div><div class="stat-value">500 ZP × 2 = 1,000 ZP → Level 250k</div></div>
+      <div class="stat-card"><div class="stat-label">5/3 Level Cap</div><div class="stat-value">5,000 ZP → Level 500k max</div></div>
+      <div class="stat-card"><div class="stat-label">TNL Cutting Cost (4/3)</div><div class="stat-value t-red">500 ZP per cut (3 cuts max)</div></div>
+      <div class="stat-card"><div class="stat-label">TNL Cutting Cost (5/3+)</div><div class="stat-value t-red">400 ZP (unlimited uses)</div></div>
+      <div class="stat-card"><div class="stat-label">Total ZP to Champion</div><div class="stat-value t-gold">7,000 ZP</div></div>
+    </div>
+
+    <!-- BEERUS 6/3 PATHS -->
+    <div class="sub-header">6th Rebirth / Beerus Paths</div>
+    <p>Quest from <strong>NPC Beerus</strong>. Complete 3 trials: Instruction, Endurance (survive Sentinel waves), Growth. Grants <strong>+30% EXP boost</strong>. Cannot change path without rerolling via Beerus again.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Path</th><th>Effect</th></tr></thead>
+        <tbody>
+          <tr><td class="t-orange t-bold">TPs Path</td><td>Extra stat gains from TP usage. Max Stat Gain per 1 TP spend = <strong class="t-red">7,500</strong></td></tr>
+          <tr><td class="t-orange t-bold">Gym Path</td><td>Extra stat gains from training equipment. Max Stat Gain per 1 Lift/Deflect/Hit/Run +105% (1 Weight Lift = 3.5m vs 1.7m)</td></tr>
+          <tr><td class="t-orange t-bold">Mob Farming Path</td><td>Extra stat gains from mob grinding/kills/leveling. Max Stat Gain from leveling = <strong>x6</strong> (5/3 base is x3)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <ul style="list-style:disc;padding-left:18px">
+        <li>AFK grace period reduced: <strong>30 min → 5 min</strong> (popup dialog box)</li>
+        <li><strong>G.o.Ds cannot rebirth or change their 6/3 path</strong> while holding a G.o.D title — doing so would void the title</li>
+        <li>If a Dual Gene is lost due to a 6/3 path change, it can be <strong>re-acquired for free</strong> at the Oracle Fish NPC</li>
+      </ul>
+    </div>
+
+    <!-- G.o.D SYSTEM -->
+    <div class="section-header">👑 G.o.D System</div>
+    <p>One G.o.D per universe (4 total). Elected via G.o.D tournament once per wipe. G.o.D can be challenged via <strong>Channels tab</strong> (1v1 same-stats). G.o.Ds have <strong>2 rejects</strong>.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Turnover Trigger</th><th>Chance</th></tr></thead>
+        <tbody>
+          <tr><td>Killed by NPC</td><td class="t-red t-bold">5%</td></tr>
+          <tr><td>Killed by Player / Hakai'd (outside events/tournaments/arenas)</td><td class="t-red t-bold">25%</td></tr>
+          <tr><td>8+ hours accumulated without defending</td><td class="t-orange">Must defend at least once to reset timer</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tip-box">💡 <strong>G.o.D Arena Spectate</strong> ability available via Tournament TV.</div>
+
+    <!-- NPC STAT BOOSTS -->
+    <div class="section-header">💪 NPC Stat Boosts</div>
+    <div class="warn-box">⚠️ One-time stat boost <strong>per rebirth</strong>! Set multipliers. Make sure you have desirable stats FIRST. All require Level 35,000 unless noted. Cannot Potara if you boost first (except Supreme Kai). Mystic/Human Convert/Changeling Convert = cannot Potara.</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>NPC</th><th>Boost</th><th>Requirements</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Son Goku</td><td class="t-green">PL ×1.2</td><td>Level 35,000</td></tr>
+          <tr><td class="t-bold">Krillin</td><td class="t-green">Ki ×1.2</td><td>Level 35,000 + 100,000,000 zenni</td></tr>
+          <tr><td class="t-bold">King Vegeta</td><td class="t-green">Ki Defense ×1.2</td><td>Kill 25 enemies</td></tr>
+          <tr><td class="t-bold">Hercule</td><td class="t-green">Strength ×1.2</td><td>Level 35,000</td></tr>
+          <tr><td class="t-bold">Piccolo</td><td class="t-green">Defense ×1.2</td><td>Level 35,000</td></tr>
+          <tr><td class="t-bold">Guru</td><td class="t-gold">All stats ×1.2</td><td>25% Good Karma + Kill 3 of Frieza's Henchmen</td></tr>
+          <tr><td class="t-bold">Frieza</td><td class="t-gold">All stats ×1.2</td><td>25% Evil Karma + Kill 3 Namekian Civilians</td></tr>
+          <tr><td class="t-bold">Babidi</td><td class="t-gold">All stats ×1.5 (×1.6 Pride Saiyan)</td><td>Level 35,000 + 100% Evil Karma</td></tr>
+          <tr><td class="t-bold">Supreme Kai (Potara)</td><td class="t-gold">Both players' stats added OR Self ×1.8</td><td>Level 35,000 + Kill (Saga) Shenron</td></tr>
+          <tr><td class="t-bold">Princess Snake</td><td class="t-orange">All stats ×2</td><td>None (hidden NPC)</td></tr>
+          <tr><td class="t-bold">Shin</td><td class="t-gold">All stats ×1.5</td><td>Level 35,000 + Perm races only</td></tr>
+          <tr><td class="t-bold">Toronbo Dragon</td><td class="t-orange">All stats ×2</td><td>Cereal Dragonball Wish</td></tr>
+          <tr><td class="t-bold">Dr. Gero – Convert</td><td class="t-gold">All stats ×1.8</td><td>Human only</td></tr>
+          <tr><td class="t-bold">King Cold – Convert</td><td class="t-gold">×1.8 (Metal=STR; Mecha=KI)</td><td>Changeling only</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- GUILD SYSTEM -->
+    <div class="section-header">🏰 Guild System</div>
+    <div class="sub-header">Guild Evolution Paths</div>
+    <p>Guilds with Evolution Path: <strong>24-hour join cooldown</strong> for new invitees.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Path</th><th>Perks</th></tr></thead>
+        <tbody>
+          <tr><td class="t-orange t-bold">Gym Bunny</td><td>Candy farming +50% | Stat Training w/ Equipment: +30% active / +20% AFK | Club House duration +50%</td></tr>
+          <tr><td class="t-orange t-bold">Mobsters</td><td>Mob Farming EXP +30% | Player Kill EXP +50% | Stat Pills: Red/Blue x2.5 (was x2); Cavern x3.5 (was x3)</td></tr>
+          <tr><td class="t-orange t-bold">Hustlers</td><td>Mob Farming w/ ZP Suits +50% | TP Gains when Spending +25% | Level Up Stat Gains +10% | Oracle Fish EXP chance 20%→50% | Stat Storage +10% per 100b</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tip-box">💡 <strong>Ignore System</strong> available in <strong>Channels tab</strong> — add, remove, and view ignored players. Removes them from OOC, Local, and Universe chats.</div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       TAB 3 — ITEMS & MONEY
+  ══════════════════════════════════════════════ -->
+  <section class="tab-panel" id="panel-items">
+
     <!-- CURRENCIES -->
     <div class="section-header">💰 Currencies</div>
     <div class="card-grid">
@@ -764,8 +962,7 @@
       <div class="card">
         <div class="sub-sub-header">ZP (Z Points)</div>
         <p>Used at Z Agent, special suit store, sword vendor. Critical for progression.<br>
-        <span class="tag tag-override">v8.67.1</span> SDB Zenni Purchase <strong>REMOVED</strong> from DBA Store.<br>
-        <span class="tag tag-override">v8.67.1</span> Z Agent ZP Skill Trees gated behind <strong>5/3 rebirths</strong>.</p>
+        Z Agent ZP Skill Trees gated behind <strong>5/3 rebirths</strong>.</p>
       </div>
       <div class="card">
         <div class="sub-sub-header">UP (Universe Points)</div>
@@ -782,9 +979,22 @@
       </div>
     </div>
 
-    <div class="override-box"><span class="badge">OVERRIDE v8.67.6</span> RBA Points → ZP = <strong>10 ZP</strong> (was 4 ZP)</div>
-    <div class="override-box"><span class="badge">OVERRIDE v8.66.2</span> Candy → TP rate = <strong>10 Candies for 1,000,000 TPs</strong> (was 100,000)</div>
-    <div class="override-box"><span class="badge">OVERRIDE v8.67.10</span> Oracle Fish Prophecy: static <strong>2.5m TPs</strong> (no longer TL-scaled); costs 1,500 EK; 3× per 18 hrs</div>
+    <!-- CONVERSION RATES -->
+    <div class="sub-header">💱 Currency Conversion Rates</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>From</th><th>To</th><th>Rate</th><th>Where</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">RBA Points</td><td>ZP</td><td class="t-green t-bold">10 ZP per exchange</td><td>RBA Broker NPC (Mall)</td></tr>
+          <tr><td class="t-bold">Candy</td><td>TPs</td><td class="t-green t-bold">10 Candies → 1,000,000 TPs</td><td>Candy Broker NPC</td></tr>
+          <tr><td class="t-bold">EK</td><td>TPs</td><td class="t-green">750 TPs per exchange</td><td>Oracle Fish / Hunter NPC</td></tr>
+          <tr><td class="t-bold">EK</td><td>ZP</td><td class="t-green">2,500 EK → 200 ZP</td><td>Broker NPC (Mall)</td></tr>
+          <tr><td class="t-bold">UP</td><td>ZP</td><td class="t-orange">100 UP → 25 ZP</td><td>Agent X (Zeno Portal)</td></tr>
+          <tr><td class="t-bold">TL</td><td>Ultra Points</td><td class="t-green">1m TL → 1 Ultra Point</td><td>Oracle Fish</td></tr>
+          <tr><td class="t-bold">Oracle Fish Prophecy</td><td>TPs</td><td class="t-green">Static 2.5m TPs; costs 1,500 EK; 3× per 18 hrs</td><td>Oracle Fish</td></tr>
+        </tbody>
+      </table>
+    </div>
 
     <!-- SHARDS -->
     <div class="sub-header">Shards</div>
@@ -799,155 +1009,9 @@
       </table>
     </div>
 
-    <!-- REBIRTHS -->
-    <div class="section-header">🔄 Rebirth System</div>
-    <div class="tip-box">💡 <strong>Carries over:</strong> Club tickets, ZP, UP, locker items, banked zenni, super wish. <strong>Everything else resets.</strong> After 2 rebirths, talk to Whis for special genes (Daishinkan DNA, Saiyan God, Golden Frieza).</div>
-    <div class="warn-box">⚠️ <strong>DO NOT reset your Super Dragon Ball wish counter to 0 before rebirthing to 4/3.</strong> Your counter MUST show 1/1. You WILL NOT be edited if you break this.</div>
-
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Rebirth</th><th>Level Required</th><th>Additional Requirement</th></tr></thead>
-        <tbody>
-          <tr><td class="t-bold">1st (0/3 → 1/3)</td><td class="t-orange t-bold">50,000</td><td>Talk to King Kai (or Gero depending on race)</td></tr>
-          <tr><td class="t-bold">2nd (1/3 → 2/3)</td><td class="t-orange t-bold">75,000</td><td>Talk to King Kai (or Gero)</td></tr>
-          <tr><td class="t-bold">3rd (2/3 → 3/3)</td><td class="t-orange">100,000</td><td>Talk to King Kai (or Gero)</td></tr>
-          <tr><td class="t-bold">4th</td><td class="t-orange">150,000</td><td>Super Dragon Balls used (1/1) + SR portal boss defeated + talk to NPC inside portal</td></tr>
-          <tr><td class="t-bold">5th</td><td class="t-gold">250,000</td><td>Complete Zeno's quest — defeat ALL SR portal bosses</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="sub-header">ZP Level Cap Costs</div>
-    <div class="card-grid">
-      <div class="stat-card"><div class="stat-label">3/3 Level Cap</div><div class="stat-value">500 ZP × 2 = 1,000 ZP → Level 150k</div></div>
-      <div class="stat-card"><div class="stat-label">4/3 Level Cap</div><div class="stat-value">500 ZP × 2 = 1,000 ZP → Level 250k</div></div>
-      <div class="stat-card"><div class="stat-label">5/3 Level Cap</div><div class="stat-value">5,000 ZP → Level 500k max</div></div>
-      <div class="stat-card"><div class="stat-label">TNL Cutting Cost</div><div class="stat-value t-red">400 ZP <span class="tag tag-override">OVERRIDE</span> (was 500)</div></div>
-      <div class="stat-card"><div class="stat-label">Total ZP to Champion</div><div class="stat-value t-gold">7,000 ZP</div></div>
-    </div>
-
-    <!-- BEERUS PATHS -->
-    <div class="section-header">⚡ Sixth Rebirth / Beerus Paths <span class="tag tag-new">v8.66.5</span></div>
-    <p>Quest from <strong>NPC Beerus</strong>. Complete 3 trials: Instruction, Endurance (survive Sentinel waves), Growth. Grants <strong>+30% EXP boost</strong>. Cannot change path without rerolling via Beerus again.</p>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Path</th><th>Effect</th></tr></thead>
-        <tbody>
-          <tr><td class="t-orange t-bold">TPs Path</td><td>Extra stat gains from TP usage. Max Stat Gain per 1 TP spend = <strong class="t-red">7,500</strong> <span class="tag tag-override">v8.67.10</span> (was 12,000)</td></tr>
-          <tr><td class="t-orange t-bold">Gym Path</td><td>Extra stat gains from training equipment. Max Stat Gain per 1 Lift/Deflect/Hit/Run +105% (1 Weight Lift = 3.5m vs 1.7m)</td></tr>
-          <tr><td class="t-orange t-bold">Mob Farming Path</td><td>Extra stat gains from mob grinding/kills/leveling. Max Stat Gain from leveling = <strong>x6</strong> (5/3 base is x3)</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- ROAD TO 5/3 -->
-    <div class="section-header">🏁 Road to 5/3 Champion</div>
-
-    <div class="sub-header">0/3 → 1/3 (Level 1 → 75,000)</div>
-    <div class="rebirth-flow">
-      <div class="rebirth-step"><span class="step-num">1</span><div class="step-title">Start</div><div class="step-body">Pick <strong>Velocitor</strong>. Avoid permanent transformation races early. Talk to Yamcha → Level 500 → talk again → leave house. Buy <strong>ultra weights + small EXP Shard</strong>. Get <strong>Kaioken</strong> from King Kai.</div></div>
-      <div class="rebirth-step"><span class="step-num">2</span><div class="step-title">Level 1 → 10,000</div><div class="step-body">Mob Crocodiles &amp; Wolves at Master Roshi's Training Island or Orange Star portal (right side of map). Shadow spar at x3 OR dual train. Sub room gravity or HBTC.</div></div>
-      <div class="rebirth-step"><span class="step-num">3</span><div class="step-title">Level 10,000 → 20,000</div><div class="step-body">Sim room clones: safe zone house → down stairs past Hercule → 2nd set of stairs → computer → right click → spawn clones. Power down to PL 1 → hold attack macro → repeat. Gets you to ~20k.</div></div>
-      <div class="rebirth-step"><span class="step-num">4</span><div class="step-title">Level 20,000 → 40,000</div><div class="step-body">Start <strong>Focus Meditation</strong> (unlock from Master Roshi at Level 10,000). Shadow Spar the Focus Med. Takes ~5–6 hours. <strong>Highly recommended every rebirth for the ZP + club ticket rewards.</strong></div></div>
-      <div class="rebirth-step"><span class="step-num">5</span><div class="step-title">Level 40,000 → 50,000</div><div class="step-body">Turn in Focus Med to Roshi. Distribute stats with TPs (evenly, except Ki). Mob: Glass Civilian Cave, Xeno Pan, Copy Vegetas, Universe Caves (Beerus Planet), Tuffle Civilian 2-4, Space Portals, Portal NE of Vegito.</div></div>
-      <div class="rebirth-step"><span class="step-num">R</span><div class="step-title">Rebirth at Level 50,000</div><div class="step-body">Do ZP quests first. Put ALL items in locker above Yamcha NPC. Then rebirth.</div></div>
-    </div>
-
-    <div class="sub-header">2/3 → 4/3 (Level 1 → 150,000)</div>
-    <div class="override-box"><span class="badge">KEY NOTE</span> Cannot boost until you can kill the portal boss. Need <strong>150m stats minimum</strong> before boosting (300m recommended weighted). Super Dragon Balls: wish for <strong>ZP</strong>. Buy Dark Robe (better late game) or Pride Troopers Suit.</div>
-
-    <div class="sub-header">4/3 → 5/3 (Level 1 → 250,000)</div>
-    <div class="override-box"><span class="badge">OVERRIDE v8.67</span> TNL Cutting = <strong>400 ZP (unlimited uses)</strong>. Buy ALL level caps FIRST before any TNL cuts. Target ~60m TNL before Level 350k; ~100m TNL after Level 350k.</div>
-
-    <div class="sub-header">5/3 End Game</div>
-    <div class="card">
-      <ul>
-        <li><strong>No boosting</strong> until End of Wipe tournament. Candy farm heavily early.</li>
-        <li>After Level 500,000: sell 200k–300k levels for zenni (~2–3b). Rest for ZP.</li>
-        <li>Portal Maze: requires <strong>1 million TL</strong>.</li>
-        <li>Lab 4 + Champion Tower: ~<strong>2 trillion stats</strong> to clear (except Ace and Shredz).</li>
-        <li>Enter replications via Zeno NPC for best EXP at this stage.</li>
-        <li>Kill Golden Frieza in Mystical Cavern crystal room once you have <strong>30b+ base stats</strong> → drops Cavern Pill <span class="tag tag-override">50% drop — v8.67.9</span></li>
-        <li>Legendary equipment from Real Estate Renji NPC: <strong>10b zenni per piece</strong>.</li>
-        <li>Cut TNL when it hits <strong>40m</strong> (30m if Universe GoD).</li>
-      </ul>
-    </div>
-
-    <!-- G.o.D SYSTEM -->
-    <div class="section-header">👑 G.o.D System <span class="tag tag-override">Overhauled v8.66</span></div>
-    <p>One G.o.D per universe (4 total). Elected via G.o.D tournament once per wipe. G.o.D can be challenged via <strong>Channels tab</strong> (1v1 same-stats). G.o.Ds have <strong>2 rejects</strong>.</p>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Turnover Trigger</th><th>Chance</th></tr></thead>
-        <tbody>
-          <tr><td>Killed by NPC</td><td class="t-red t-bold">5% <span class="tag tag-override">v8.67.13</span> (was 10%)</td></tr>
-          <tr><td>Killed by Player / Hakai'd (outside events/tournaments/arenas)</td><td class="t-red t-bold">25% <span class="tag tag-override">v8.67.13</span> (was 20%)</td></tr>
-          <tr><td>8+ hours accumulated without defending</td><td class="t-orange">Must defend at least once to reset timer</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="new-box">
-      <span class="badge">v8.67.14</span>
-      <ul style="margin-top:6px;list-style:disc;padding-left:18px">
-        <li>AFK grace period reduced: <strong>30 min → 5 min</strong> (popup dialog box)</li>
-        <li><strong>G.o.Ds cannot rebirth or change their 6/3 path</strong> while holding a G.o.D title — doing so would void the title</li>
-        <li>If a Dual Gene is lost due to a 6/3 path change, it can be <strong>re-acquired for free</strong> at the Oracle Fish NPC</li>
-        <li><strong>G.o.D Arena Spectate</strong> ability added to Tournament TV</li>
-      </ul>
-    </div>
-    <div class="new-box"><span class="badge">NEW v8.67.14</span> <strong>Ignore System</strong> added to <strong>Channels tab</strong> — add, remove, and view ignored players. Removes them from OOC, Local, and Universe chats.</div>
-
-
-    <!-- GUILD SYSTEM -->
-    <div class="section-header">🏰 Guild System</div>
-    <div class="sub-header">Guild Evolution Paths</div>
-    <p><span class="tag tag-override">v8.66.8</span> Guilds with Evolution Path: <strong>24-hour join cooldown</strong> for new invitees.</p>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Path</th><th>Perks</th></tr></thead>
-        <tbody>
-          <tr><td class="t-orange t-bold">Gym Bunny</td><td>Candy farming +50% | Stat Training w/ Equipment: +30% active / +20% AFK | Club House duration +50%</td></tr>
-          <tr><td class="t-orange t-bold">Mobsters</td><td>Mob Farming EXP +30% | Player Kill EXP +50% | Stat Pills: Red/Blue x2.5 (was x2); Cavern x3.5 (was x3)</td></tr>
-          <tr><td class="t-orange t-bold">Hustlers</td><td>Mob Farming w/ ZP Suits +50% | TP Gains when Spending +25% | Level Up Stat Gains +10% | Oracle Fish EXP chance 20%→50% | Stat Storage +10% per 100b</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- NPC BOOSTS -->
-    <div class="section-header">💪 NPC Stat Boosts</div>
-    <div class="warn-box">⚠️ One-time only! Set multipliers. Make sure you have desirable stats FIRST. All require Level 35,000 unless noted. Cannot Potara if you boost first (except Supreme Kai). Mystic/Human Convert/Changeling Convert = cannot Potara.</div>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>NPC</th><th>Boost</th><th>Requirements</th></tr></thead>
-        <tbody>
-          <tr><td class="t-bold">Son Goku</td><td class="t-green">PL ×1.2</td><td>Level 35,000</td></tr>
-          <tr><td class="t-bold">Krillin</td><td class="t-green">Ki ×1.2</td><td>Level 35,000 + 100,000,000 zenni</td></tr>
-          <tr><td class="t-bold">King Vegeta</td><td class="t-green">Ki Defense ×1.2</td><td>Kill 25 enemies</td></tr>
-          <tr><td class="t-bold">Hercule</td><td class="t-green">Strength ×1.2</td><td>Level 35,000</td></tr>
-          <tr><td class="t-bold">Piccolo</td><td class="t-green">Defense ×1.2</td><td>Level 35,000</td></tr>
-          <tr><td class="t-bold">Guru</td><td class="t-gold">All stats ×1.2</td><td>25% Good Karma + Kill 3 of Frieza's Henchmen</td></tr>
-          <tr><td class="t-bold">Frieza</td><td class="t-gold">All stats ×1.2</td><td>25% Evil Karma + Kill 3 Namekian Civilians</td></tr>
-          <tr><td class="t-bold">Babidi</td><td class="t-gold">All stats ×1.5 (×1.6 Pride Saiyan)</td><td>Level 35,000 + 100% Evil Karma</td></tr>
-          <tr><td class="t-bold">Supreme Kai (Potara)</td><td class="t-gold">Both players' stats added OR Self ×1.8</td><td>Level 35,000 + Kill (Saga) Shenron</td></tr>
-          <tr><td class="t-bold">Princess Snake <span class="tag tag-new">HIDDEN</span></td><td class="t-orange">All stats ×2</td><td>None</td></tr>
-          <tr><td class="t-bold">Shin</td><td class="t-gold">All stats ×1.5</td><td>Level 35,000 + Perm races only</td></tr>
-          <tr><td class="t-bold">Toronbo Dragon</td><td class="t-orange">All stats ×2</td><td>Cereal Dragonball Wish</td></tr>
-          <tr><td class="t-bold">Dr. Gero – Convert</td><td class="t-gold">All stats ×1.8</td><td>Human only</td></tr>
-          <tr><td class="t-bold">King Cold – Convert</td><td class="t-gold">×1.8 (Metal=STR; Mecha=KI)</td><td>Changeling only</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-  </section>
-
-  <!-- ══════════════════════════════════════════════
-       TAB 2 — EQUIPMENT & ITEMS
-  ══════════════════════════════════════════════ -->
-  <section class="tab-panel" id="panel-equipment">
-
-    <div class="new-box"><span class="badge">OVERRIDE v8.67.8</span> ZP Suit EXP buffs now <strong>ENABLED</strong> for Lab 4 and Champion Tower.</div>
-
+    <!-- EQUIPMENT -->
     <div class="section-header">🥋 Z-Suits (ZP Store)</div>
+    <div class="tip-box">💡 ZP Suit EXP buffs are <strong>ENABLED</strong> for Lab 4 and Champion Tower.</div>
     <div class="table-wrap">
       <table>
         <thead><tr><th>Item</th><th>ZP Cost</th><th>Bonus</th></tr></thead>
@@ -963,53 +1027,57 @@
           <tr><td class="t-bold">Z Fighter Gi</td><td class="t-mono">200</td><td>+10% EXP training</td></tr>
           <tr><td class="t-bold">Full Cape</td><td class="t-mono">200</td><td>Small chance to gain double epic kill when mobbing</td></tr>
           <tr><td class="t-bold">Side Cape</td><td class="t-mono">200</td><td>+10% EXP during sagas</td></tr>
-          <tr><td class="t-bold">Ninja Suit <span class="tag tag-override">v8.67</span></td><td class="t-mono">180</td><td>No longer slowed by weights; speed boost even while weighted</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="sub-header">Accessories</div>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Item</th><th>Cost</th><th>Bonus</th></tr></thead>
-        <tbody>
-          <tr><td class="t-bold">Tagoma Scouter</td><td class="t-mono">500 ZP</td><td>Scans stats + functions as scouter radio</td></tr>
-          <tr><td class="t-bold">Potara Earrings</td><td class="t-mono">400 ZP</td><td>+15% Ki Boost</td></tr>
-          <tr><td class="t-bold">Z Fighter Half Gi</td><td class="t-mono">80 ZP</td><td>+25% TPs while training</td></tr>
+          <tr><td class="t-bold">Ninja Suit</td><td class="t-mono">180</td><td>No longer slowed by weights; speed boost even while weighted</td></tr>
+          <tr><td class="t-bold">Z Fighter Half Gi</td><td class="t-mono">80</td><td>+25% TPs while training</td></tr>
+          <tr><td class="t-bold">Tagoma Scouter</td><td class="t-mono">500</td><td>Scans stats + functions as scouter radio</td></tr>
+          <tr><td class="t-bold">Potara Earrings</td><td class="t-mono">400</td><td>+15% Ki Boost</td></tr>
           <tr><td class="t-bold">Lucky Charm</td><td class="t-mono">10m Casino Coins</td><td>Improves casino game luck</td></tr>
         </tbody>
       </table>
     </div>
 
-    <!-- LEVEL UP TECHS -->
-    <div class="section-header">📈 Level-Up Techniques</div>
-    <div class="sub-header">Universal (All Races)</div>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Technique</th><th>Level</th><th>Race Note</th></tr></thead>
-        <tbody>
-          <tr><td>Sense Energy</td><td class="t-mono t-green">25</td><td>All</td></tr>
-          <tr><td>Fly</td><td class="t-mono">75</td><td>All</td></tr>
-          <tr><td>Power Up</td><td class="t-mono">100</td><td>All</td></tr>
-          <tr><td>Fusion Dance</td><td class="t-mono">1,000</td><td>Non-Perm only</td></tr>
-          <tr><td>Sonic Speed</td><td class="t-mono">1,500</td><td>All</td></tr>
-          <tr><td>Zap Cannon</td><td class="t-mono">1,500</td><td>All</td></tr>
-          <tr><td>Water Jet Blast</td><td class="t-mono">2,500</td><td>All</td></tr>
-          <tr><td>Nova Heat Blast</td><td class="t-mono">4,000</td><td>All</td></tr>
-          <tr><td>Invert Power</td><td class="t-mono">5,000</td><td>Non-Revertable races</td></tr>
-          <tr><td>Instant Kamehameha</td><td class="t-mono">7,500</td><td>All</td></tr>
-          <tr><td>Combo Attack</td><td class="t-mono">8,500</td><td>All</td></tr>
-          <tr><td>Skip Forms</td><td class="t-mono">9,500</td><td>Non-Perm only</td></tr>
-          <tr><td>Shine Missile</td><td class="t-mono">20,000</td><td>Non-Perm only</td></tr>
-          <tr><td>Ki Shower</td><td class="t-mono">20,000</td><td>Perm only</td></tr>
-          <tr><td>Omega Blast</td><td class="t-mono">25,000</td><td>All</td></tr>
-          <tr><td>Godly Blast</td><td class="t-mono">30,000</td><td>All</td></tr>
-          <tr><td>Kamehameha Charge Attack</td><td class="t-mono">35,000</td><td>All</td></tr>
-          <tr><td>Double Edge Blast</td><td class="t-mono">35,500</td><td>All</td></tr>
-          <tr><td>Scatter Shot</td><td class="t-mono">45,000</td><td>All</td></tr>
-          <tr><td>Burning Star</td><td class="t-mono">55,000</td><td>All</td></tr>
-        </tbody>
-      </table>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       TAB 4 — RACES & TECHS
+  ══════════════════════════════════════════════ -->
+  <section class="tab-panel" id="panel-races">
+
+    <!-- TIER LIST -->
+    <div class="section-header">📊 Race Tier List — 4/3 (by Aleister)</div>
+    <div class="tier-row tier-ss">
+      <div class="tier-label">SS</div>
+      <div class="tier-races"><strong>Gogeta, Vegito, Omega Shenron, Broly Black, Granolah</strong><br>
+      <span class="t-dim" style="font-size:12px">These have dominated for a long time. Gogeta/Vegito sit at the top together — Gogeta better for PvP, Vegito more popular due to STR-based mobbing. Omega: best semi-perm in the game. Broly Black: does everything Broly does + Kai perks + Android techs. Granolah: very strong techs, kit too good to ignore.</span></div>
+    </div>
+    <div class="tier-row tier-s">
+      <div class="tier-label">S</div>
+      <div class="tier-races"><strong>Android 21, Broly, Gohan, Jiren</strong><br>
+      <span class="t-dim" style="font-size:12px">A21: massive multi, access to all Android techs. Broly: Wrathful Spirit (2x all stats) extremely valuable; Blaster Shell+BBA in 2-tile PvP. Gohan: Z-Sword buffs + BBA + Saiyan techs; above Broly for Z-Sword. Jiren: highest-damage homing in game, powerful AoE, extremely Ki-focused.</span></div>
+    </div>
+    <div class="tier-row tier-a">
+      <div class="tier-label">A</div>
+      <div class="tier-races"><strong>Red Eyed Namekian, Fu, Cauliflower Saiba, Super 17</strong><br>
+      <span class="t-dim" style="font-size:12px">Strong and viable choices. Red Eyed has extremely high multis (after S tier consideration). Fu (similar multis to Bojack but better with Stone Spit + Time Skip). Super 17 benefits heavily from being Android with access to all Android techs.</span></div>
+    </div>
+    <div class="tier-row tier-b">
+      <div class="tier-label">B</div>
+      <div class="tier-races"><strong>Bojack, Herculean, Cooler</strong><br>
+      <span class="t-dim" style="font-size:12px">Solid but nothing special. Bojack: top of B due to stun + Stone Spit (homing). Herculean + Cooler: one is Ki-scaled, other is STR-scaled; pair that amplifies race techs.</span></div>
+    </div>
+    <div class="tier-row tier-c">
+      <div class="tier-label">C</div>
+      <div class="tier-races"><strong>Yadrat Trapper, Beerus, Champa, Orange Piccolo, Garlic, Gotenks</strong><br>
+      <span class="t-dim" style="font-size:12px">Just okay. No special tech that sets them apart. Missing special techs that could rank them higher.</span></div>
+    </div>
+    <div class="tier-row tier-d">
+      <div class="tier-label">D</div>
+      <div class="tier-races"><strong>Any ZR Race; anything that is a full perm or has a permanent last trans</strong><br>
+      <span class="t-dim" style="font-size:12px">Full perms are annoying to mob with — no way to reliably regenerate PL once it's lost. The only real options are healing items.</span></div>
+    </div>
+    <div class="tier-row tier-hit">
+      <div class="tier-label">HIT</div>
+      <div class="tier-races"><span class="t-dim"><strong>Hit</strong> — Worst unit in the game. PvP race with multis that fall off very quickly. Needs a massive overhaul to be viable.</span></div>
     </div>
 
     <!-- NPC TECHNIQUES -->
@@ -1042,10 +1110,41 @@
           <tr><td class="t-bold">Destructo Disk</td><td>Human, Half Saiyan, Saiyan</td><td>Krillin</td></tr>
           <tr><td class="t-bold">Super Speed Attack</td><td>All</td><td>Mr. Popo</td></tr>
           <tr><td class="t-bold">Super Speed Block</td><td>All</td><td>Mr. Popo</td></tr>
-          <tr><td class="t-bold t-green">Legendary Dragon Fist <span class="tag tag-new">NEW</span></td><td>All</td><td>Agent X</td></tr>
-          <tr><td class="t-bold t-green">Fly Kick <span class="tag tag-new">NEW</span></td><td>All</td><td>Combat Utility NPC</td></tr>
-          <tr><td class="t-bold t-green">Burning Lotus <span class="tag tag-new">NEW</span></td><td>All</td><td>Combat Utility NPC</td></tr>
-          <tr><td class="t-bold t-green">Wind Gust <span class="tag tag-new">NEW</span></td><td>All</td><td>Combat Utility NPC</td></tr>
+          <tr><td class="t-bold">Legendary Dragon Fist</td><td>All</td><td>Agent X</td></tr>
+          <tr><td class="t-bold">Fly Kick</td><td>All</td><td>Combat Utility NPC</td></tr>
+          <tr><td class="t-bold">Burning Lotus</td><td>All</td><td>Combat Utility NPC</td></tr>
+          <tr><td class="t-bold">Wind Gust</td><td>All</td><td>Combat Utility NPC</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- LEVEL-UP TECHNIQUES -->
+    <div class="section-header">📈 Level-Up Techniques</div>
+    <div class="sub-header">Universal (All Races)</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Technique</th><th>Level</th><th>Race Note</th></tr></thead>
+        <tbody>
+          <tr><td>Sense Energy</td><td class="t-mono t-green">25</td><td>All</td></tr>
+          <tr><td>Fly</td><td class="t-mono">75</td><td>All</td></tr>
+          <tr><td>Power Up</td><td class="t-mono">100</td><td>All</td></tr>
+          <tr><td>Fusion Dance</td><td class="t-mono">1,000</td><td>Non-Perm only</td></tr>
+          <tr><td>Sonic Speed</td><td class="t-mono">1,500</td><td>All</td></tr>
+          <tr><td>Zap Cannon</td><td class="t-mono">1,500</td><td>All</td></tr>
+          <tr><td>Water Jet Blast</td><td class="t-mono">2,500</td><td>All</td></tr>
+          <tr><td>Nova Heat Blast</td><td class="t-mono">4,000</td><td>All</td></tr>
+          <tr><td>Invert Power</td><td class="t-mono">5,000</td><td>Non-Revertable races</td></tr>
+          <tr><td>Instant Kamehameha</td><td class="t-mono">7,500</td><td>All</td></tr>
+          <tr><td>Combo Attack</td><td class="t-mono">8,500</td><td>All</td></tr>
+          <tr><td>Skip Forms</td><td class="t-mono">9,500</td><td>Non-Perm only</td></tr>
+          <tr><td>Shine Missile</td><td class="t-mono">20,000</td><td>Non-Perm only</td></tr>
+          <tr><td>Ki Shower</td><td class="t-mono">20,000</td><td>Perm only</td></tr>
+          <tr><td>Omega Blast</td><td class="t-mono">25,000</td><td>All</td></tr>
+          <tr><td>Godly Blast</td><td class="t-mono">30,000</td><td>All</td></tr>
+          <tr><td>Kamehameha Charge Attack</td><td class="t-mono">35,000</td><td>All</td></tr>
+          <tr><td>Double Edge Blast</td><td class="t-mono">35,500</td><td>All</td></tr>
+          <tr><td>Scatter Shot</td><td class="t-mono">45,000</td><td>All</td></tr>
+          <tr><td>Burning Star</td><td class="t-mono">55,000</td><td>All</td></tr>
         </tbody>
       </table>
     </div>
@@ -1086,14 +1185,17 @@
           <tr><td>Saiyan</td><td class="t-bold">Kami Wave ×10</td><td>Super fast and high powered Ki beam</td></tr>
           <tr><td>Saiyan *Vegito*</td><td class="t-bold">Spirit Sword</td><td>Sword that increases melee damage dealt</td></tr>
           <tr><td>Saiyan *Broly Black*</td><td class="t-bold">Saiba Shockwave</td><td>High Power Multi AoE</td></tr>
+          <tr><td class="t-green">Saiyan *Evil Cumber* <span class="tag tag-override">v8.67.15</span></td><td class="t-bold">Désastre Eraser</td><td>Devastating blast of dark ki that engulfs and erases everything in its path</td></tr>
+          <tr><td class="t-green">Saiyan *Evil Cumber* <span class="tag tag-override">v8.67.15</span></td><td class="t-bold">Désastre Compress</td><td>Condenses destructive Evil energy into powerful Melee Punches that overwhelm the enemy</td></tr>
+          <tr><td class="t-green">Saiyan *Evil Cumber* <span class="tag tag-override">v8.67.15</span></td><td class="t-bold">Savage Wave</td><td>Feral surge of chaotic beam energy that overwhelms opponents with relentless force</td></tr>
+          <tr><td class="t-green">Saiyan *Evil Cumber* <span class="tag tag-override">v8.67.15</span></td><td class="t-bold">Savage Tyrant</td><td>Spirit Form — primal spirit-fueled state that amplifies power; enables Désastre Claw</td></tr>
         </tbody>
       </table>
     </div>
 
-    <div class="section-header">⚡ SSA Technique Balance <span class="tag tag-new">v8.67.14</span></div>
-    <div class="new-box">
-      <span class="badge">v8.67.14</span>
-      <ul style="margin-top:6px;list-style:disc;padding-left:18px">
+    <div class="section-header">⚡ SSA Technique Balance</div>
+    <div class="card">
+      <ul style="list-style:disc;padding-left:18px">
         <li>SSA-style techniques now have a <strong>damage cap</strong> and <strong>increased cooldowns</strong> in all skill-based events and arenas</li>
         <li>Previously-banned SSA techniques (PPS, Madness Rush, etc.) are now <strong>UNBANNED</strong> for skill-based events (RBA, G.o.D Arena, RR Battle Tower)</li>
         <li><strong>Paralyze duration</strong> nerfed: 5 seconds → <strong>2.5 seconds</strong> in normalised/skill-based events only</li>
@@ -1104,122 +1206,7 @@
   </section>
 
   <!-- ══════════════════════════════════════════════
-       TAB 3 — EVENTS
-  ══════════════════════════════════════════════ -->
-  <section class="tab-panel" id="panel-events">
-
-    <div class="section-header">🚩 Mayhem</div>
-    <p>Guild-based. Ki ONLY. Friendly fire ON. 10 total flags; each flag captured = <strong>10× boost</strong> (must be online). Flag order changes every Mayhem — <strong>Abyss always stays at the bottom</strong>. Stat boosts based on your CURRENT base stats (including stat-modifying items).</p>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Flag</th><th>Benefit</th><th>Cap</th></tr></thead>
-        <tbody>
-          <tr><td class="t-bold">Palace of Powerlevel</td><td>Increases PL</td><td>1b gains/tick</td></tr>
-          <tr><td class="t-bold">Kingdom of Ki</td><td>Increases Ki + Ki-Defense</td><td>1b gains/tick</td></tr>
-          <tr><td class="t-bold">Stronghold of Strength</td><td>Increases Str</td><td>1b gains/tick</td></tr>
-          <tr><td class="t-bold">Dungeon of Defense</td><td>Increases Defense</td><td>1b gains/tick</td></tr>
-          <tr><td class="t-bold">Tower of Training Points</td><td>Fixed TP amount</td><td>—</td></tr>
-          <tr><td class="t-bold">Zenith of Zenni</td><td>Fixed zenni amount</td><td>—</td></tr>
-          <tr><td class="t-bold">Loft of Levels</td><td>Gives levels</td><td>—</td></tr>
-          <tr><td class="t-bold">Gulag of Guild Points</td><td>Gives guild points</td><td>—</td></tr>
-          <tr><td class="t-bold">Zone of Z Points</td><td>Gives ZP</td><td>—</td></tr>
-          <tr class="rule-critical"><td class="t-gold t-bold">Abyss of All Stats ⭐</td><td>All stats — double vs. regular stat flags</td><td class="t-red">Must be Level 100k (not TL); 1b gains/tick; ALWAYS at bottom</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="section-header">🥊 Tournaments</div>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Tournament</th><th>Type</th><th>Rewards</th></tr></thead>
-        <tbody>
-          <tr><td class="t-bold">World Tournament</td><td>Open to all</td><td>Levels (win or loss)</td></tr>
-          <tr><td class="t-bold">Baba Tournament</td><td>Team: red vs. blue (1v1)</td><td>Levels + TPs (win) / Levels (loss)</td></tr>
-          <tr><td class="t-bold">Galactic Tournament</td><td>Open to all</td><td>Levels + TPs (win) / Levels (loss)</td></tr>
-          <tr><td class="t-bold">FFA Tournament</td><td>Free-for-all</td><td>Levels (win or loss)</td></tr>
-          <tr><td class="t-bold">Guild Tournament</td><td>Guild-based; fixed stats</td><td>Levels + guild points (win)</td></tr>
-          <tr><td class="t-bold">Tournament of Power</td><td>Universe-based; rules change (melee or ki only)</td><td>Levels + ZP + UP (win) / Levels + UP (loss)</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="section-header">🏴 Capture the Flag (CTF)</div>
-    <div class="card">
-      <ul>
-        <li>Team-based; min <strong>4 players</strong> to start; max 6 (talk to mall mascot)</li>
-        <li>5th player is thrown into a random team</li>
-        <li>Flag holders: reduced movement + reduced attack speed</li>
-        <li>Rewards: <strong>Levels + ZP</strong> for winning AND losing (less for loss)</li>
-      </ul>
-    </div>
-
-    <div class="section-header">🕳️ Mystical Cavern Event</div>
-    <div class="warn-box">⚠️ Must be in <strong>BASE FORM</strong> to enter. Location: safe zone house → bottom right past 2 sets of stairs → large hole in wall.</div>
-    <div class="card">
-      <ul>
-        <li>Only event where <strong>mobs scale to your stats</strong></li>
-        <li>Treasure chests throughout: levels, ZP, zenni, club tickets (or bomb traps!)</li>
-        <li>Each ladder = random point in maze; <strong>10% chance to reach Crystal Room</strong></li>
-        <li><strong>Crystal Room:</strong> need 30b base stats to kill Golden Frieza → drops <strong>Cavern Pill</strong>
-          <div class="override-box" style="margin-top:6px"><span class="badge">OVERRIDE v8.67.9</span> Drop chance: <strong>50%</strong> (was 10%) | Duration: <strong>30 mins</strong> (was 60) | Hold <strong>only 1</strong> at a time | Effect: 6× stat increase while leveling</div>
-          <div class="new-box" style="margin-top:6px"><span class="badge">v8.67.14</span> Cavern Pill now costs <strong>12 tokens</strong> in the Daily Reward Store (was 25)</div>
-        </li>
-        </li>
-        <li class="t-blue"><strong>TIP:</strong> Bring up to 10 Crocodile Meats from Roshi's Training Island for full heals inside</li>
-      </ul>
-    </div>
-
-    <div class="section-header">🌿 Conquest</div>
-    <p>Universe-based; halts repop. Up to 4 teams. Capture banners by standing on conquest pad. Warp via Channels tab. <strong>Buffs last until next Conquest.</strong></p>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Banner</th><th>Buff</th></tr></thead>
-        <tbody>
-          <tr><td class="t-bold t-green">Earth</td><td>+10% EXP on all Saga Mobs</td></tr>
-          <tr><td class="t-bold t-blue">Namek</td><td>+10% Zenni on all Mobs</td></tr>
-          <tr><td class="t-bold t-orange">Vegeta</td><td>+10% EXP on all Portal + Mob Tower Mobs <em>(also affects Lab4 + Champion Tower)</em></td></tr>
-          <tr><td class="t-bold t-purple">Future Earth</td><td>+10% EXP on all Standard Cave Mobs + all other world mobs + players</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="tip-box">💡 Lab mobs are a combination of all mob types. Capping all 4 banners improves your overall EXP from Lab mobs. <strong>Vegeta flag</strong> affects Lab4 and Champion Tower. Future Earth flag does NOT affect Lab4.</div>
-
-    <div class="section-header">✨ Golden Hour Event <span class="tag tag-new">NEW</span></div>
-    <div class="new-box"><span class="badge">NEW</span> EXP Event + Zenni Event + Crystal Event combined!<br>
-    <strong>+50% EXP gain | +100% Zenni gain</strong> | Special Crystals scattered across all worlds → 10× stats based on TL (100 TL = +1,000 to all stats) | <strong>+50% extra stat gain per level up</strong></div>
-
-    <div class="section-header">⚔️ Ranked Battle Arena (RBA)</div>
-    <div class="card">
-      <p>Admin-hosted. Join via <strong>Channels tab → Ranked Battle Arena verb</strong>. Matched 1v1 against another player.</p>
-      <ul>
-        <li><strong>Win:</strong> levels + ZP + zenni + RBA points</li>
-        <li><span class="tag tag-override">OVERRIDE v8.67.6</span> RBA Points → ZP = <strong>10 ZP</strong> per exchange (was 4)</li>
-        <li>RBA Broker NPC: Mall → IT to Mall Mascot → inside → bottom left</li>
-      </ul>
-    </div>
-
-    <div class="section-header">💎 Crystal Event</div>
-    <div class="card"><p>Crystals spawn across all worlds. Higher level = more power from crystals. Held once every few hours in-game.</p></div>
-
-    <div class="section-header">🎰 Gamba Event <span class="tag tag-new">NEW v8.67.5</span></div>
-    <div class="new-box"><span class="badge">NEW</span> NEW Gamba Event Room — no outside interference. Gamba Warp verb in Channels tab when Gamba Machine spawned. Admin-hosted + automated. <span class="tag tag-override">v8.67.3</span> Chest Trap probability = 50%.</div>
-
-    <div class="section-header">📅 Daily Quests &amp; Stamps</div>
-    <div class="card-grid">
-      <div class="card">
-        <div class="sub-sub-header">Daily Quest</div>
-        <p>Every <strong>18 hours</strong>. Complete for quest tokens. <strong>Relog = lose quest.</strong><br>Redeem tokens: Rewards → DQ Rewards Store (top-left of client).</p>
-      </div>
-      <div class="card">
-        <div class="sub-sub-header">Daily Stamps</div>
-        <p>Every <strong>24 hours</strong>. 5 stamps = weekly rewards (levels, TPs, zenni).<br>⚠️ <strong>Do NOT accumulate more than 5 stamps before claiming</strong> — you'll lose them all!</p>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- ══════════════════════════════════════════════
-       TAB 4 — TRANSFORMATIONS
+       TAB 5 — TRANSFORMATIONS
   ══════════════════════════════════════════════ -->
   <section class="tab-panel" id="panel-transforms">
 
@@ -1270,7 +1257,7 @@
     <div class="section-header">🧬 Dual Gene</div>
     <div class="card">
       <p>Requires <strong>10.5m TL</strong>. Exchange 10m TL → 2nd gene. Benefits: increased stat gains, increased multis for ultra form, learn ALL races' techs including Super and Zeno race techs. Best to obtain at max True Level.</p>
-      <p><span class="tag tag-new">v8.67.14</span> If your Dual Gene is lost (e.g., due to changing your 6/3 path), it can be <strong>re-acquired for free</strong> at the Oracle Fish NPC.</p>
+      <p>If your Dual Gene is lost (e.g., due to changing your 6/3 path), it can be <strong>re-acquired for free</strong> at the Oracle Fish NPC.</p>
       <p><strong>Available Dual Genes:</strong> Bio-android, Assassin, Changeling, Kai, Human, Dragon, Feline, Majin</p>
     </div>
     <div class="sub-header">Ultra Points</div>
@@ -1288,9 +1275,6 @@
       <table>
         <thead><tr><th>Race / Gene</th><th>Forms</th><th>PL Requirements</th><th>Other</th></tr></thead>
         <tbody>
-          <tr><td>Changeling *Frieza*</td><td>Form 1/2/3/4/Metal</td><td class="t-mono">75k / 400k / 1.5m / 3m / 5m</td><td>Metal: Level 35k + King Cold</td></tr>
-          <tr><td>Changeling *Frost*</td><td>Form 1/2/3/4/Metal</td><td class="t-mono">100k / 450k / 2.4m / 5m / 6m</td><td>Metal: Level 35k + King Cold</td></tr>
-          <tr><td>Half Saiyan *Rage*</td><td>SS / USS / SS2 / ASS2 / SS Rage</td><td class="t-mono">75k / 400k / 1.5m / 3m / 4m</td><td>SS2: witnessed 1 death</td></tr>
           <tr><td>Half Saiyan *Mystic*</td><td>SS / USS / SS2 / ASS2 / Mystic</td><td class="t-mono">100k / 500k / 2m / 3m / 5m</td><td>Mystic: Elder Kai</td></tr>
           <tr><td>Half Saiyan *God*</td><td>SS / USS / SS2 / ASS2 / Saiyan Demi-God</td><td class="t-mono">150k / 600k / 2m / 3.5m / 7.5m</td><td>Demi-God: Elder Kai</td></tr>
           <tr><td>Saiyan *Honour*</td><td>Giji SSJ / SS / USS / SS2 / SS3 / Golden Oozaru / SS4 / SSJ4 LB</td><td class="t-mono">40k / 100k / 500k / 1.5m / 3m / 4m / 5m</td><td>SS4: Tail; SSJ4 LB: L75k+5/3</td></tr>
@@ -1320,7 +1304,7 @@
           <tr><td class="t-bold">Assassin</td><td>Ultimate Assassin</td><td class="t-mono">5m</td><td>Level 35,000</td></tr>
           <tr><td class="t-bold">Bio-Warrior</td><td>Mecha Upgrade / Cyborg Upgrade</td><td class="t-mono">5m / 30m</td><td>—</td></tr>
           <tr><td class="t-bold">Hatchiyack</td><td>Super Hatchiyack</td><td class="t-mono">5m</td><td>Level 35,000</td></tr>
-          <tr><td class="t-bold">Konat</td><td>Brave Warrior / Legendary Warrior</td><td class="t-mono">5m / 30m</td><td>Tapion's Flute / Legendary Sword (7 Earth DBs via magic box). <span class="tag tag-new">v8.67.14</span> Legendary Sword strength boost <strong>buffed</strong>; PL drain <strong>removed</strong>. Quad Barrage + Thousand Slash damage <strong>buffed</strong>.</td></tr>
+          <tr><td class="t-bold">Konat</td><td>Brave Warrior / Legendary Warrior</td><td class="t-mono">5m / 30m</td><td>Tapion's Flute / Legendary Sword (7 Earth DBs via magic box). Legendary Sword strength boost <strong>buffed</strong>; PL drain <strong>removed</strong>. Quad Barrage + Thousand Slash damage <strong>buffed</strong>.</td></tr>
           <tr><td class="t-bold">Majin</td><td>Fat Buu / Wicked Buu / Skinny Buu / Kid Buu</td><td class="t-mono">5m / 10m / 15m / 45m</td><td>100 / 250 / 500 / 1,000 Candy Eats</td></tr>
           <tr><td class="t-bold">Namekian *Super Gene*</td><td>Super Namekian / Ascended Super Namekian</td><td class="t-mono">5m (L35k) / 50m</td><td>—</td></tr>
           <tr><td class="t-bold">Ultimate Hybrid</td><td>Marred Imperfection</td><td class="t-mono">5m</td><td>—</td></tr>
@@ -1387,63 +1371,26 @@
           <tr><td>Saiyan *Vegito Gene*</td><td>SS / SS3 / Golden Oozaru / SS Blue</td><td class="t-mono">15m / 40m / 50m / 75m</td><td>Saiyan 3/3 + Supreme Kai Quest</td></tr>
           <tr><td>Tuffle *Bebi Gene*</td><td>SS / Super Bebi / Super Bebi 2 / True Form <em>(perm)</em></td><td class="t-mono">15m / 30m / 50m / 150m</td><td>Via Bebi Portal</td></tr>
           <tr><td>Yardrat *Trapper Gene* <span class="tag tag-pvp">PvP</span></td><td>Trapper Form</td><td class="t-mono">30m</td><td>4/3 via PvP Broker</td></tr>
+          <tr><td class="t-green">Saiyan *Legendary Evil Cumber* <span class="tag tag-zeno">ZENO</span> <span class="tag tag-override">v8.67.15</span></td><td>—</td><td class="t-mono">—</td><td>5/3 via Zeno / 6/3 via Beerus (Non-Perm)</td></tr>
         </tbody>
       </table>
-    </div>
-
-    <!-- TIER LIST -->
-    <div class="section-header">📊 Race Tier List — 4/3 (by Aleister)</div>
-    <div class="tier-row tier-ss">
-      <div class="tier-label">SS</div>
-      <div class="tier-races"><strong>Gogeta, Vegito, Omega Shenron, Broly Black, Granolah</strong><br>
-      <span class="t-dim" style="font-size:12px">These have dominated for a long time. Gogeta/Vegito sit at the top together — Gogeta better for PvP, Vegito more popular due to STR-based mobbing. Omega: best semi-perm in the game. Broly Black: does everything Broly does + Kai perks + Android techs. Granolah: very strong techs, kit too good to ignore.</span></div>
-    </div>
-    <div class="tier-row tier-s">
-      <div class="tier-label">S</div>
-      <div class="tier-races"><strong>Android 21, Broly, Gohan, Jiren</strong><br>
-      <span class="t-dim" style="font-size:12px">A21: massive multi, access to all Android techs. Broly: Wrathful Spirit (2x all stats) extremely valuable; Blaster Shell+BBA in 2-tile PvP. Gohan: Z-Sword buffs + BBA + Saiyan techs; above Broly for Z-Sword. Jiren: highest-damage homing in game, powerful AoE, extremely Ki-focused.</span></div>
-    </div>
-    <div class="tier-row tier-a">
-      <div class="tier-label">A</div>
-      <div class="tier-races"><strong>Red Eyed Namekian, Fu, Cauliflower Saiba, Super 17</strong><br>
-      <span class="t-dim" style="font-size:12px">Strong and viable choices. Red Eyed has extremely high multis (after S tier consideration). Fu (similar multis to Bojack but better with Stone Spit + Time Skip). Super 17 benefits heavily from being Android with access to all Android techs.</span></div>
-    </div>
-    <div class="tier-row tier-b">
-      <div class="tier-label">B</div>
-      <div class="tier-races"><strong>Bojack, Herculean, Cooler</strong><br>
-      <span class="t-dim" style="font-size:12px">Solid but nothing special. Bojack: top of B due to stun + Stone Spit (homing). Herculean + Cooler: one is Ki-scaled, other is STR-scaled; pair that amplifies race techs.</span></div>
-    </div>
-    <div class="tier-row tier-c">
-      <div class="tier-label">C</div>
-      <div class="tier-races"><strong>Yadrat Trapper, Beerus, Champa, Orange Piccolo, Garlic, Gotenks</strong><br>
-      <span class="t-dim" style="font-size:12px">Just okay. No special tech that sets them apart. Missing special techs that could rank them higher.</span></div>
-    </div>
-    <div class="tier-row tier-d">
-      <div class="tier-label">D</div>
-      <div class="tier-races"><strong>Any ZR Race; anything that is a full perm or has a permanent last trans</strong><br>
-      <span class="t-dim" style="font-size:12px">Full perms are annoying to mob with — no way to reliably regenerate PL once it's lost. The only real options are healing items.</span></div>
-    </div>
-    <div class="tier-row tier-hit">
-      <div class="tier-label">HIT</div>
-      <div class="tier-races"><span class="t-dim"><strong>Hit</strong> — Worst unit in the game. PvP race with multis that fall off very quickly. Needs a massive overhaul to be viable.</span></div>
     </div>
 
   </section>
 
   <!-- ══════════════════════════════════════════════
-       TAB 5 — MOB FARMING
+       TAB 6 — MOB FARMING
   ══════════════════════════════════════════════ -->
   <section class="tab-panel" id="panel-mobfarming">
 
     <div class="override-box" style="margin-top:16px">
-      <span class="badge">2026 CHANGELOG OVERRIDES</span>
+      <span class="badge">CHANGELOG NOTES</span>
       <ul style="margin-top:6px;list-style:disc;padding-left:18px">
-        <li><strong>Mob Repop Time: 3 mins</strong> (was 4) <span class="tag tag-override">v8.67.10</span></li>
-        <li><strong>ZP Suit EXP buffs ENABLED</strong> for Lab 4 + Champion Tower <span class="tag tag-override">v8.67.8</span></li>
-        <li><strong>EK → TP rate: 750 TPs</strong> per exchange (was 500) <span class="tag tag-override">v8.67.10</span></li>
-        <li><strong>Scaled Mob EXP:</strong> Powered up (grey aura) = ×3; Scaled = ×2; Unscaled/killed off-screen = ×1 <span class="tag tag-override">v8.67.6</span></li>
+        <li><strong>Mob Repop Time: 3 mins</strong> (was 4)</li>
+        <li><strong>ZP Suit EXP buffs ENABLED</strong> for Lab 4 + Champion Tower</li>
+        <li><strong>EK → TP rate: 750 TPs</strong> per exchange (was 500)</li>
+        <li><strong>Scaled Mob EXP:</strong> Powered up (grey aura) = ×3; Scaled = ×2; Unscaled/killed off-screen = ×1</li>
         <li>Scaled mobs "scream" in training output when scaling/powering up — indicates double/triple EXP</li>
-        <li>No longer need to relog to correct rank EXP gains <span class="tag tag-override">v8.66</span></li>
       </ul>
     </div>
 
@@ -1481,7 +1428,7 @@
           <tr><td class="t-bold">Saiba Tower (Oolong)</td><td class="t-mono t-green">20,000</td><td class="t-dim">None</td></tr>
           <tr><td class="t-bold">Piccolo's Tower</td><td class="t-mono t-green">35,000</td><td class="t-mono t-red">100,000</td></tr>
           <tr><td class="t-bold">Guru's Tower</td><td class="t-mono t-orange">40,000</td><td class="t-dim">None</td></tr>
-          <tr><td class="t-bold">King Vegeta's Tower</td><td class="t-mono t-orange">50,000</td><td class="t-mono t-red">150,000</td></tr>
+          <tr><td class="t-bold">King Vegeta's Tower</td><td class="t-mono t-orange">50,000</td><td class="t-dim">None</td></tr>
           <tr><td class="t-bold">West City Tower (Babidi)</td><td class="t-mono t-orange">65,000</td><td class="t-dim">None</td></tr>
           <tr><td class="t-bold">Gotenks' Tower</td><td class="t-mono t-red">100,000</td><td class="t-dim">None</td></tr>
           <tr><td class="t-bold">Planet of Divines Tower</td><td class="t-mono t-red">125,000</td><td class="t-dim">None</td></tr>
@@ -1535,29 +1482,126 @@
       </table>
     </div>
 
-    <div class="section-header">📈 Early Farming Buffs <span class="tag tag-new">Feb 27, 2026</span></div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       TAB 7 — EVENTS
+  ══════════════════════════════════════════════ -->
+  <section class="tab-panel" id="panel-events">
+
+    <div class="section-header">🚩 Mayhem</div>
+    <p>Guild-based. Ki ONLY. Friendly fire ON. 10 total flags; each flag captured = <strong>10× boost</strong> (must be online). Flag order changes every Mayhem — <strong>Abyss always stays at the bottom</strong>. Stat boosts based on your CURRENT base stats (including stat-modifying items).</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Flag</th><th>Benefit</th><th>Cap</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Palace of Powerlevel</td><td>Increases PL</td><td>1b gains/tick</td></tr>
+          <tr><td class="t-bold">Kingdom of Ki</td><td>Increases Ki + Ki-Defense</td><td>1b gains/tick</td></tr>
+          <tr><td class="t-bold">Stronghold of Strength</td><td>Increases Str</td><td>1b gains/tick</td></tr>
+          <tr><td class="t-bold">Dungeon of Defense</td><td>Increases Defense</td><td>1b gains/tick</td></tr>
+          <tr><td class="t-bold">Tower of Training Points</td><td>Fixed TP amount</td><td>—</td></tr>
+          <tr><td class="t-bold">Zenith of Zenni</td><td>Fixed zenni amount</td><td>—</td></tr>
+          <tr><td class="t-bold">Loft of Levels</td><td>Gives levels</td><td>—</td></tr>
+          <tr><td class="t-bold">Gulag of Guild Points</td><td>Gives guild points</td><td>—</td></tr>
+          <tr><td class="t-bold">Zone of Z Points</td><td>Gives ZP</td><td>—</td></tr>
+          <tr class="rule-critical"><td class="t-gold t-bold">Abyss of All Stats ⭐</td><td>All stats — double vs. regular stat flags</td><td class="t-red">Must be Level 100k (not TL); 1b gains/tick; ALWAYS at bottom</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-header">🥊 Tournaments</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Tournament</th><th>Type</th><th>Rewards</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">World Tournament</td><td>Open to all</td><td>Levels (win or loss)</td></tr>
+          <tr><td class="t-bold">Baba Tournament</td><td>Team: red vs. blue (1v1)</td><td>Levels + TPs (win) / Levels (loss)</td></tr>
+          <tr><td class="t-bold">Galactic Tournament</td><td>Open to all</td><td>Levels + TPs (win) / Levels (loss)</td></tr>
+          <tr><td class="t-bold">FFA Tournament</td><td>Free-for-all</td><td>Levels (win or loss)</td></tr>
+          <tr><td class="t-bold">Guild Tournament</td><td>Guild-based; fixed stats</td><td>Levels + guild points (win)</td></tr>
+          <tr><td class="t-bold">Tournament of Power</td><td>Universe-based; rules change (melee or ki only)</td><td>Levels + ZP + UP (win) / Levels + UP (loss)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-header">🏴 Capture the Flag (CTF)</div>
     <div class="card">
       <ul>
-        <li>Videl Cave + Tapion Cave: stats nerfed (easier to kill) + EXP slightly buffed</li>
-        <li>Master Roshi Training Island: Crocodile &amp; Wolf EXP buffed; mob density increased</li>
-        <li>Planet Vegeta: Outworld Oozaru + Tuffle Villager EXP buffed; stats nerfed</li>
-        <li>Ice and Fire Cave + Roshi Tigers: scaling effect nerfed (easier to farm)</li>
-        <li>Bebi Vegeta EXP buffed | Tuffle Soldiers SP buffed</li>
-        <li>Sub Room Mobs: EXP buffed, stats nerfed</li>
-        <li>Garlic Small Portal NPC: EXP buffed</li>
-        <li>Portal Mobs EXP buffed generally; Gogeta/Vegito Portal mobs given special buff <span class="tag tag-override">v8.67.3</span></li>
-        <li>Enraged Android 16 &amp; 17 EXP gains buffed <span class="tag tag-override">v8.67.1</span></li>
+        <li>Team-based; min <strong>4 players</strong> to start; max 6 (talk to mall mascot)</li>
+        <li>5th player is thrown into a random team</li>
+        <li>Flag holders: reduced movement + reduced attack speed</li>
+        <li>Rewards: <strong>Levels + ZP</strong> for winning AND losing (less for loss)</li>
       </ul>
+    </div>
+
+    <div class="section-header">🕳️ Mystical Cavern Event</div>
+    <div class="warn-box">⚠️ Must be in <strong>BASE FORM</strong> to enter. Location: safe zone house → bottom right past 2 sets of stairs → large hole in wall.</div>
+    <div class="card">
+      <ul>
+        <li>Only event where <strong>mobs scale to your stats</strong></li>
+        <li>Treasure chests throughout: levels, ZP, zenni, club tickets (or bomb traps!)</li>
+        <li>Each ladder = random point in maze; <strong>10% chance to reach Crystal Room</strong></li>
+        <li><strong>Crystal Room:</strong> need 30b base stats to kill Golden Frieza → drops <strong>Cavern Pill</strong> (50% drop chance; 30 min duration; hold only 1 at a time; 6× stat increase while leveling)</li>
+        <li>Cavern Pill now costs <strong>12 tokens</strong> in the Daily Reward Store (was 25)</li>
+        <li class="t-blue"><strong>TIP:</strong> Bring up to 10 Crocodile Meats from Roshi's Training Island for full heals inside</li>
+      </ul>
+    </div>
+
+    <div class="section-header">🌿 Conquest</div>
+    <p>Universe-based; halts repop. Up to 4 teams. Capture banners by standing on conquest pad. Warp via Channels tab. <strong>Buffs last until next Conquest.</strong></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Banner</th><th>Buff</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold t-green">Earth</td><td>+10% EXP on all Saga Mobs</td></tr>
+          <tr><td class="t-bold t-blue">Namek</td><td>+10% Zenni on all Mobs</td></tr>
+          <tr><td class="t-bold t-orange">Vegeta</td><td>+10% EXP on all Portal + Mob Tower Mobs <em>(also affects Lab4 + Champion Tower)</em></td></tr>
+          <tr><td class="t-bold t-purple">Future Earth</td><td>+10% EXP on all Standard Cave Mobs + all other world mobs + players</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tip-box">💡 Lab mobs are a combination of all mob types. Capping all 4 banners improves your overall EXP from Lab mobs. <strong>Vegeta flag</strong> affects Lab4 and Champion Tower. Future Earth flag does NOT affect Lab4.</div>
+
+    <div class="section-header">✨ Golden Hour Event</div>
+    <div class="card"><p>EXP Event + Zenni Event + Crystal Event combined!<br>
+    <strong>+50% EXP gain | +100% Zenni gain</strong> | Special Crystals scattered across all worlds → 10× stats based on TL (100 TL = +1,000 to all stats) | <strong>+50% extra stat gain per level up</strong></p></div>
+
+    <div class="section-header">⚔️ Ranked Battle Arena (RBA)</div>
+    <div class="card">
+      <p>Admin-hosted. Join via <strong>Channels tab → Ranked Battle Arena verb</strong>. Matched 1v1 against another player.</p>
+      <ul>
+        <li><strong>Win:</strong> levels + ZP + zenni + RBA points</li>
+        <li>RBA Points → ZP = <strong>10 ZP</strong> per exchange</li>
+        <li>RBA Broker NPC: Mall → IT to Mall Mascot → inside → bottom left</li>
+      </ul>
+    </div>
+
+    <div class="section-header">💎 Crystal Event</div>
+    <div class="card"><p>Crystals spawn across all worlds. Higher level = more power from crystals. Held once every few hours in-game.</p></div>
+
+    <div class="section-header">🎰 Gamba Event</div>
+    <div class="card"><p>Gamba Event Room — no outside interference. Gamba Warp verb in Channels tab when Gamba Machine spawned. Admin-hosted + automated. Chest Trap probability = 50%.</p></div>
+
+    <div class="section-header">📅 Daily Quests &amp; Stamps</div>
+    <div class="card-grid">
+      <div class="card">
+        <div class="sub-sub-header">Daily Quest</div>
+        <p>Every <strong>18 hours</strong>. Complete for quest tokens. <strong>Relog = lose quest.</strong><br>Redeem tokens: Rewards → DQ Rewards Store (top-left of client).</p>
+      </div>
+      <div class="card">
+        <div class="sub-sub-header">Daily Stamps</div>
+        <p>Every <strong>24 hours</strong>. 5 stamps = weekly rewards (levels, TPs, zenni).<br>⚠️ <strong>Do NOT accumulate more than 5 stamps before claiming</strong> — you'll lose them all!</p>
+      </div>
     </div>
 
   </section>
 
   <!-- ══════════════════════════════════════════════
-       TAB 6 — RULES & CONDUCT
+       TAB 8 — RULES & CONDUCT
   ══════════════════════════════════════════════ -->
   <section class="tab-panel" id="panel-rules">
 
-    <div class="override-box" style="margin-top:16px"><span class="badge">OVERRIDE v8.67.12 — March 27, 2026</span> <strong>Rule 21 explicitly updated:</strong> Players are NOT permitted to use their alts if they have been Jailed or Hakai'd. This now counts as <strong>avoiding</strong>.</div>
+    <div class="warn-box" style="margin-top:16px">⚠️ <strong>Rule 21 reminder:</strong> Players are NOT permitted to use their alts if they have been Jailed or Hakai'd. This counts as <strong>avoiding</strong>.</div>
     <div class="warn-box">⚠️ Rule 16: Players are responsible for staying updated with rule changes. <strong>Ignorance of updated rules is NOT an excuse.</strong> Rule 23 is the Common Sense Rule — loopholes are punishable.</div>
 
     <div class="section-header">📋 DB Asylum In-Game Rules</div>
@@ -1583,8 +1627,8 @@
       <li><span class="rule-num">18</span><span class="rule-text">You cannot Hakai a player leaving a safe zone. This includes leaving a Player House, Megamall, Guild Houses, etc.</span></li>
       <li><span class="rule-num">19</span><span class="rule-text">Do not attempt to bypass or argue against staff decisions in-game. If you believe a decision was unfair, contact the Owners or open a <strong>Discord ticket</strong>.</span></li>
       <li><span class="rule-num">20</span><span class="rule-text">Account sharing is only permitted for AFK purposes. Actively mobbing or farming for another player is <strong>prohibited</strong>.</span></li>
-      <li class="rule-critical"><span class="rule-num">21</span><span class="rule-text"><strong>Alt usage:</strong> Alts may be used for training assistance (e.g., dual training), guild ownership, or inviting your main. Alts may NOT be used for malicious purposes (alt killing or griefing). <strong>Alts are NOT permitted to have Hakai.</strong> If a character has been Hakai'd or Jailed, you are <strong>NOT allowed to play with their alt</strong> — this counts as avoiding Jail and Hakai. <span class="tag tag-override">EXPLICITLY UPDATED v8.67.12</span></span></li>
-      <li><span class="rule-num">22</span><span class="rule-text">Universe G.o.Ds must defend their ranks if challenged via the G.o.D challenge verb. They have <strong>two rejects</strong>. Rule updated to reflect the fully overhauled G.o.D system — the old system is no more. <span class="tag tag-override">UPDATED v8.67.14</span></span></li>
+      <li class="rule-critical"><span class="rule-num">21</span><span class="rule-text"><strong>Alt usage:</strong> Alts may be used for training assistance (e.g., dual training), guild ownership, or inviting your main. Alts may NOT be used for malicious purposes (alt killing or griefing). <strong>Alts are NOT permitted to have Hakai.</strong> If a character has been Hakai'd or Jailed, you are <strong>NOT allowed to play with their alt</strong> — this counts as avoiding Jail and Hakai.</span></li>
+      <li><span class="rule-num">22</span><span class="rule-text">Universe G.o.Ds must defend their ranks if challenged via the G.o.D challenge verb. They have <strong>two rejects</strong>. Rule updated to reflect the fully overhauled G.o.D system — the old system is no more.</span></li>
       <li class="rule-critical"><span class="rule-num">23</span><span class="rule-text"><strong>Common Sense Rule.</strong> Attempting to exploit loopholes, bypass rules, or abuse unintended mechanics is punishable. Staff have final authority in ambiguous situations and must provide reasoning upon request.</span></li>
     </ol>
 
@@ -1596,20 +1640,17 @@
 
   <!-- FOOTER -->
   <footer style="margin-top:40px;padding:20px 0;border-top:1px solid var(--border-subtle);text-align:center;">
-    <p style="color:var(--text-dim);font-size:12px;font-family:'Share Tech Mono',monospace;">All Data comes from in game guides, player made guides in discord, and changelogs. V1.0 4.1.2026</p>
+    <p style="color:var(--text-dim);font-size:12px;font-family:'Share Tech Mono',monospace;">All Data comes from in game guides, player made guides in discord, and changelogs. V1.2 4.2.2026</p>
   </footer>
 
 </div>
 
 <script>
   function showTab(id, btn) {
-    // Hide all panels
     document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    // Show selected
     document.getElementById('panel-' + id).classList.add('active');
     btn.classList.add('active');
-    // Scroll to top of content
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 </script>
