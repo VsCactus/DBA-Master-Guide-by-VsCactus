@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DB Asylum | Master Player Guide</title>
+<title>DB Asylum | DBA Wiki</title>
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&family=Exo+2:wght@300;400;600;800&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -629,9 +629,9 @@
   <!-- HEADER -->
   <header class="site-header">
     <div class="header-eyebrow">★ Dragonball Asylum ★</div>
-    <h1 class="header-title">Master Player Guide</h1>
-    <div class="header-subtitle">Compiled by VsCactus from in game and discord guides</div>
-    <div class="version-badge">⚠ Latest Changelog: v8.67.15 · Guide v1.5</div>
+    <h1 class="header-title">DBA Wiki</h1>
+    <div class="header-subtitle">Managed by VsCactus</div>
+    <div class="version-badge">⚠ Latest Changelog: v8.67.15 · Wiki v1.0</div>
     <div class="header-divider"></div>
   </header>
 
@@ -648,6 +648,9 @@
     <button class="tab-btn" onclick="showTab('rules',this)"><span class="tab-icon">📋</span>Rules</button>
     <button class="tab-btn" onclick="showTab('shop',this)"><span class="tab-icon">💎</span>Pay to Win</button>
     <button class="tab-btn" onclick="showTab('npcs',this)"><span class="tab-icon">🧑‍🤝‍🧑</span>Important NPCs</button>
+    <button class="tab-btn" onclick="showTab('buildings',this)"><span class="tab-icon">🏗️</span>Buildings</button>
+    <button class="tab-btn" onclick="showTab('guilds',this)"><span class="tab-icon">🏰</span>Guilds</button>
+    <button class="tab-btn" onclick="showTab('medals',this)"><span class="tab-icon">🏅</span>Ranks & Quest Medals</button>
   </nav>
 
   <!-- ══════════════════════════════════════════════
@@ -656,8 +659,8 @@
   <section class="tab-panel active" id="panel-landing">
 
     <div style="text-align:center;padding:28px 0 12px;">
-      <div style="font-family:'Rajdhani',sans-serif;font-weight:700;font-size:28px;color:#ffffff;letter-spacing:2px;text-transform:uppercase;text-shadow:2px 2px 0 var(--pixel-shadow);">Welcome to the Master Guide</div>
-      <p style="color:var(--text-secondary);margin-top:8px;max-width:640px;display:inline-block;">Hi, welcome to the Master Guide! This guide was created and is managed by <strong style="color:var(--accent-green)">VsCactus</strong>. The goal of this guide is to have as much publicly available information in one space. This is more of a "wiki," so enjoy the information, and thank your local houseplant. 🌿</p>
+      <div style="font-family:'Rajdhani',sans-serif;font-weight:700;font-size:28px;color:#ffffff;letter-spacing:2px;text-transform:uppercase;text-shadow:2px 2px 0 var(--pixel-shadow);">Welcome to the DBA Wiki</div>
+      <p style="color:var(--text-secondary);margin-top:8px;max-width:640px;display:inline-block;">Hi, welcome to the DBA Wiki! This wiki is managed by <strong style="color:var(--accent-green)">VsCactus</strong>. The goal is to have as much publicly available information in one space. Enjoy the information, and thank your local houseplant. 🌿</p>
     </div>
 
     <div class="section-header">📑 What's Inside</div>
@@ -665,11 +668,11 @@
     <div class="card-grid">
       <div class="card" style="cursor:pointer" onclick="showTab('newplayer',document.querySelectorAll('.tab-btn')[1])">
         <div class="sub-sub-header" style="color:var(--accent-green)">🌱 Getting Started</div>
-        <p>Movement &amp; macros, classes, stats &amp; abilities, training methods, gravity multipliers, ranks &amp; quest medals, karma system, Training Point multipliers, and Hakai mechanics. Start here if you're brand new.</p>
+        <p>Movement &amp; macros, classes, stats &amp; abilities, training methods, gravity multipliers, Training Point multipliers, and the Ignore system. Start here if you're brand new.</p>
       </div>
       <div class="card" style="cursor:pointer" onclick="showTab('progression',document.querySelectorAll('.tab-btn')[2])">
         <div class="sub-sub-header" style="color:var(--accent-orange)">🏁 How to Win the Game</div>
-        <p>Road to Champion with self-contained walkthroughs for every rebirth tier (0/3 → 6/3), rebirth system reference table, ZP level cap costs, Beerus 6/3 paths, G.o.D system, NPC stat boosts, and guild evolution paths.</p>
+        <p>Road to Champion with self-contained walkthroughs for every rebirth tier (0/3 → 6/3), rebirth system reference table, ZP level cap costs, and Beerus 6/3 paths.</p>
       </div>
       <div class="card" style="cursor:pointer" onclick="showTab('items',document.querySelectorAll('.tab-btn')[3])">
         <div class="sub-sub-header" style="color:var(--accent-gold)">💰 Equipment &amp; Economy</div>
@@ -677,11 +680,11 @@
       </div>
       <div class="card" style="cursor:pointer" onclick="showTab('races',document.querySelectorAll('.tab-btn')[4])">
         <div class="sub-sub-header" style="color:var(--accent-blue)">⚔️ Race &amp; Transformations</div>
-        <p>Race tier list (4/3), universal transformations, Ultra techniques (UE/UI/Ultra Invert), Dual Gene info, and every race transformation table: non-perm, perm, semi-perm, and super race.</p>
+        <p>Race tier list (4/3), universal transformations, Ultra techniques (UE/UI/Ultra Invert), Dual Gene info, and every race's transformation table organized by race with gene types, race types, and requirements.</p>
       </div>
       <div class="card" style="cursor:pointer" onclick="showTab('techniques',document.querySelectorAll('.tab-btn')[5])">
         <div class="sub-sub-header" style="color:var(--accent-purple)">📜 Techniques</div>
-        <p>NPC-taught techniques, level-up technique unlock list, race-specific special techniques, and SSA technique balance notes.</p>
+        <p>NPC-taught techniques, level-up technique unlock list, race-specific special techniques, Hakai mechanics, and SSA technique balance notes.</p>
       </div>
       <div class="card" style="cursor:pointer" onclick="showTab('mobfarming',document.querySelectorAll('.tab-btn')[6])">
         <div class="sub-sub-header">🗺️ Mob Farming</div>
@@ -689,7 +692,7 @@
       </div>
       <div class="card" style="cursor:pointer" onclick="showTab('events',document.querySelectorAll('.tab-btn')[7])">
         <div class="sub-sub-header" style="color:var(--accent-orange)">🏆 Events</div>
-        <p>Mayhem, tournaments, CTF, Mystical Cavern, Conquest, Golden Hour, RBA, Crystal Event, Casino, Gamba, daily quests &amp; stamps.</p>
+        <p>Mayhem, tournaments, CTF, Mystical Cavern, Conquest, Golden Hour, RBA, Crystal Event, Casino, Gamba, daily quests &amp; stamps, and the G.o.D system.</p>
       </div>
       <div class="card" style="cursor:pointer" onclick="showTab('rules',document.querySelectorAll('.tab-btn')[8])">
         <div class="sub-sub-header" style="color:var(--accent-red)">📋 Rules</div>
@@ -701,11 +704,23 @@
       </div>
       <div class="card" style="cursor:pointer" onclick="showTab('npcs',document.querySelectorAll('.tab-btn')[10])">
         <div class="sub-sub-header" style="color:var(--accent-green)">🧑‍🤝‍🧑 Important NPCs</div>
-        <p>Every important NPC organized by category: shops, progression, Z Agent, utility, casino, and weapons (Lazer the Blacksmith).</p>
+        <p>Every important NPC organized by category: shops, progression, Z Agent, utility, casino, weapons (Lazer the Blacksmith), and NPC stat boosts.</p>
+      </div>
+      <div class="card" style="cursor:pointer" onclick="showTab('buildings',document.querySelectorAll('.tab-btn')[11])">
+        <div class="sub-sub-header" style="color:var(--accent-orange)">🏗️ Buildings</div>
+        <p>Player House, Casino, FCC, Mall, Wackdonalds, Hall of Fame, Sub Room, and Club House — all major in-game locations and what's inside them.</p>
+      </div>
+      <div class="card" style="cursor:pointer" onclick="showTab('guilds',document.querySelectorAll('.tab-btn')[12])">
+        <div class="sub-sub-header" style="color:var(--accent-purple)">🏰 Guilds</div>
+        <p>Guild evolution paths (Gym Bunny, Mobsters, Hustlers) with full perk breakdowns. Guild update coming soon!</p>
+      </div>
+      <div class="card" style="cursor:pointer" onclick="showTab('medals',document.querySelectorAll('.tab-btn')[13])">
+        <div class="sub-sub-header" style="color:var(--accent-gold)">🏅 Ranks &amp; Quest Medals</div>
+        <p>Rank progression table from Easy to Champion, and all 51 Quest Medals: who gives them, what to do, and what rewards you earn.</p>
       </div>
     </div>
 
-    <div class="tip-box" style="margin-top:16px">💡 This guide is updated regularly, roughly <strong>every 5 changelogs</strong>. If something seems outdated, check the latest changelog in-game or on Discord.</div>
+    <div class="tip-box" style="margin-top:16px">💡 This wiki is updated regularly, roughly <strong>every 5 changelogs</strong>. If something seems outdated, check the latest changelog in-game or on Discord.</div>
 
   </section>
 
@@ -714,27 +729,22 @@
   ══════════════════════════════════════════════ -->
   <section class="tab-panel" id="panel-newplayer">
 
+    <div class="tip-box" style="margin-top:16px">💡 <strong>Ignore System</strong> available in <strong>Channels tab</strong>: add, remove, and view ignored players. Removes them from OOC, Local, and Universe chats. Use this to avoid toxic behavior and keep your chat experience clean!</div>
+
     <div class="section-header">⌨ Movement &amp; Macros</div>
 
     <div class="card">
       <div class="sub-sub-header">Movement</div>
       <p><strong>Arrow Keys:</strong> Left=West | Up=North | Right=East | Down=South. Combine 2 for diagonals.<br>
-      <strong>Numpad (Num Lock OFF):</strong> 1=SW &nbsp; 2=S &nbsp; 3=SE &nbsp; 4=W &nbsp; 6=E &nbsp; 7=NW &nbsp; 8=N &nbsp; 9=NE</p>
-    </div>
-    <div class="card">
+      <strong>Numpad (Num Lock OFF):</strong> 1=SW · 2=S · 3=SE · 4=W · 6=E · 7=NW · 8=N · 9=NE</p>
+
       <div class="sub-sub-header">Macro Setup</div>
-      <p>Commands (top-left) → Set Macros<br>
-      Multi-word: use hyphen → <code>ki-blast</code><br>
-      <code>.click z-sword</code> = equip/unequip without inventory<br>
-      <code>.click gi\nhide gi</code> = equip + hide in one key</p>
-    </div>
-    <div class="card">
+      <p>Commands (top-left) → Set Macros. Multi-word: use hyphen → <code>ki-blast</code><br>
+      <code>.click z-sword</code> = equip/unequip without inventory · <code>.click gi\nhide gi</code> = equip + hide in one key</p>
+
       <div class="sub-sub-header">Skill Bar &amp; Skillcards</div>
       <p>Techniques use the <strong>Skill Bar</strong> and <strong>Skillcard</strong> GUI. Skillcards appear at the bottom of your screen.</p>
-      <p><strong>Assign:</strong> Click an empty slot → select technique<br>
-      <strong>Remove:</strong> Click an occupied slot → Remove<br>
-      <strong>Use:</strong> Press <code>1</code>–<code>9</code> for the corresponding slot<br>
-      <strong>Target:</strong> <code>Spacebar</code> &nbsp;|&nbsp; <strong>Untarget:</strong> <code>U</code></p>
+      <p><strong>Assign:</strong> Click an empty slot → select technique · <strong>Remove:</strong> Click an occupied slot → Remove · <strong>Use:</strong> Press <code>1</code>–<code>9</code> for the corresponding slot · <strong>Target:</strong> <code>Spacebar</code> · <strong>Untarget:</strong> <code>U</code></p>
       <p><em>Keys 1–9, Spacebar, and U are hard-coded. Delete any macros bound to these keys to avoid conflicts.</em></p>
     </div>
 
@@ -745,9 +755,9 @@
       <table>
         <thead><tr><th>Class</th><th>Benefit</th><th>Best For</th></tr></thead>
         <tbody>
-          <tr><td class="t-orange t-bold">Mystic</td><td>Better stat gains on Ki (level gains & equipment)</td><td>Ki builds</td></tr>
-          <tr><td class="t-orange t-bold">Aggressor</td><td>Better stat gains on Str (level gains & equipment)</td><td>STR builds</td></tr>
-          <tr><td class="t-orange t-bold">Guardian</td><td>Better stat gains on Def (level gains & equipment)</td><td>Tank builds</td></tr>
+          <tr><td class="t-orange t-bold">Mystic</td><td>Ki builds</td></tr>
+          <tr><td class="t-orange t-bold">Aggressor</td><td>STR builds</td></tr>
+          <tr><td class="t-orange t-bold">Guardian</td><td>Tank builds</td></tr>
           <tr><td class="t-orange t-bold">Velocitor</td><td>+5% EXP while mobbing + increased EXP while training</td><td class="t-green">⭐ Best for new players</td></tr>
         </tbody>
       </table>
@@ -783,15 +793,14 @@
     <div class="section-header">🏋️ Training Methods</div>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>Method</th><th>Description</th><th>Notes</th></tr></thead>
+        <thead><tr><th>Method</th><th>Description</th></tr></thead>
         <tbody>
-          <tr><td class="t-bold">Self Train</td><td>Levels + stats; stamina depletes</td><td>Use treadmills to restore stamina</td></tr>
-          <tr><td class="t-bold">Dual Train</td><td>Partner next to you; more levels than self train</td><td>Less TPs than self train</td></tr>
-          <tr><td class="t-bold">Shadow Spar</td><td>Press arrows in order; 2x–3x EXP/TP multi</td><td class="t-green">Best EXP/TP method; improves each rebirth</td></tr>
-          <tr><td class="t-bold">Meditation</td><td>Gains karma, stats, EXP</td><td>Pads can double gains. Sets karma Good or Evil (used for quests and NPC boosts)</td></tr>
-          <tr><td class="t-bold">Weight Train</td><td>Weighted gear; halves stats + slows movement</td><td>Extra stamina + EXP bonus</td></tr>
-          <tr><td class="t-bold">Killing Mobs</td><td>EXP multiplied by mode</td><td>Noob x1 → Easy x2 → Medium x3 → +1x per mode</td></tr>
-          <tr><td class="t-bold t-green">Focus Meditation</td><td>Quest from Master Roshi. Enter his house, use Focus Meditate verb on a Med Pad. Takes ~16 hours</td><td class="t-green">Gives ZP + club ticket + more. Use "Focus Harder" verb for a DDR minigame to complete faster. Turn in at 100%</td></tr>
+          <tr><td class="t-bold">Self Train</td><td>Auto Training to gain Levels, Training Point Chance</td></tr>
+          <tr><td class="t-bold">Dual Train</td><td>Self Train, but with a partner. Less Training points, but better stat gains</td></tr>
+          <tr><td class="t-bold">Shadow Spar</td><td>DDR style Minigame with Multipliers for correct stages. Best EXP/TP Method</td></tr>
+          <tr><td class="t-bold">Meditation</td><td>Pads can double gains. Sets karma Good or Evil (used for quests and NPC boosts). Guru requires 25% Good Karma, Babidi requires 100% Evil. Gain karma by killing mobs or players of the opposite alignment</td></tr>
+          <tr><td class="t-bold">Killing Mobs</td><td>Gain EXP and Zenni defeating mobs</td></tr>
+          <tr><td class="t-bold t-green">Focus Meditation</td><td>A special meditation to raise stats over time, or a DDR minigame to go faster. Limited. Tied to a Quest</td></tr>
         </tbody>
       </table>
     </div>
@@ -811,43 +820,10 @@
       </table>
     </div>
 
-    <!-- RANKS -->
-    <div class="section-header">🎖 Ranks &amp; Quest Medals</div>
-    <div class="tip-box">💡 Use <code>Quest Medal Check</code> in Training tab. Easiest early medals: King Kai, Yamcha (Lvl 500), Dr. Briefs, Master Roshi (Kamehameha), Saiyaman.</div>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Level</th><th>Rank</th><th>Quest Medals Required</th></tr></thead>
-        <tbody>
-          <tr><td class="t-mono">2,000</td><td class="t-bold">Easy</td><td class="t-dim">-</td></tr>
-          <tr><td class="t-mono">7,500</td><td class="t-bold">Medium</td><td class="t-dim">-</td></tr>
-          <tr><td class="t-mono">15,000</td><td class="t-bold">Hard</td><td class="t-dim">-</td></tr>
-          <tr><td class="t-mono">25,000</td><td class="t-bold">Extreme</td><td class="t-orange">3</td></tr>
-          <tr><td class="t-mono">35,000</td><td class="t-bold">Immortal</td><td class="t-orange">5</td></tr>
-          <tr><td class="t-mono">50,000</td><td class="t-bold">Renegade</td><td class="t-orange">7</td></tr>
-          <tr><td class="t-mono">75,000</td><td class="t-bold">King</td><td class="t-orange">9</td></tr>
-          <tr><td class="t-mono">100,000</td><td class="t-bold">Divine</td><td class="t-orange">11</td></tr>
-          <tr><td class="t-mono">150,000</td><td class="t-bold">Deity</td><td class="t-orange">13</td></tr>
-          <tr><td class="t-mono">200,000</td><td class="t-bold">Berserker</td><td class="t-dim">-</td></tr>
-          <tr><td class="t-mono">250,000</td><td class="t-bold">Sentinel</td><td class="t-orange">15</td></tr>
-          <tr><td class="t-mono">300,000</td><td class="t-bold">Shogun</td><td class="t-orange">20 at 350k</td></tr>
-          <tr><td class="t-mono">400,000</td><td class="t-bold">Sage</td><td class="t-orange">25 (30 to pass 450k)</td></tr>
-          <tr><td class="t-mono">500,000</td><td class="t-gold t-bold">Champion</td><td class="t-green">Max Rank</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- KARMA SYSTEM -->
-    <div class="section-header">☯ Karma System</div>
-    <div class="card">
-      <p><strong>Meditate</strong> to shift your karma toward Good or Evil. Karma direction matters for some NPC quests and stat boosts (e.g. Guru requires 25% Good Karma, Babidi requires 100% Evil). You also gain karma by killing mobs or players of the opposite alignment.</p>
-    </div>
-
     <!-- TRAINING POINTS -->
     <div class="section-header">📈 Training Points (TPs)</div>
-    <div class="card">
-      <p>Spend TPs on: <strong>Powerlevel, Ki, Ki Defense, Strength, Defense, Stamina,</strong> or <strong>EXP</strong>. Each TP is worth a base amount, multiplied by every applicable multiplier below.</p>
-    </div>
     <div class="sub-header">TP Multipliers</div>
+    <div class="tip-box">💡 Spend TPs on: <strong>Powerlevel, Ki, Ki Defense, Strength, Defense, Stamina,</strong> or <strong>EXP</strong>. Each TP is worth a base amount, multiplied by every applicable multiplier below.</div>
     <div class="table-wrap">
       <table>
         <thead><tr><th>Source</th><th>Multiplier</th><th>Notes</th></tr></thead>
@@ -857,21 +833,10 @@
           <tr><td class="t-bold">True Level Multiplier</td><td class="t-green">Up to x16</td><td>x1 per 1 million TL, capped at 16m TL</td></tr>
           <tr><td class="t-bold">Beerus TPs Path</td><td class="t-orange t-bold">x5</td><td>Only applies after 200,000 True Level (6/3 path)</td></tr>
           <tr><td class="t-bold">G.o.D Leader</td><td class="t-orange">x1.5</td><td>Must hold a G.o.D title</td></tr>
-          <tr><td class="t-bold">Season Pass</td><td>x1.25</td><td>Requires active season pass</td></tr>
-          <tr><td class="t-bold">Hustlers Guild Evo</td><td>x1.25</td><td>Hustlers guild evolution path</td></tr>
+          <tr><td class="t-bold">Season Pass</td><td class="t-green t-bold">x1.25</td><td>Requires active season pass</td></tr>
+          <tr><td class="t-bold">Hustlers Guild Evo</td><td class="t-green t-bold">x1.25</td><td>Hustlers guild evolution path</td></tr>
         </tbody>
       </table>
-    </div>
-
-    <!-- HAKAI -->
-    <div class="section-header">💀 Hakai</div>
-    <div class="card">
-      <p><strong>Hakai</strong> obliterates the target and sends them to jail for <strong>30 minutes</strong>. Used to pause another player's progression. Has a <strong>1 day cooldown</strong>. The jailed player cannot log out while the timer is active, or the timer resets.</p>
-      <ul>
-        <li><strong>Purchase Hakai:</strong> Z Agent (costs ZP)</li>
-        <li><strong>Hakai Safety:</strong> Granted automatically for <strong>2 hours</strong> after leaving jail. Can also be purchased at the Z Agent</li>
-        <li><strong>Reset Hakai Cooldown:</strong> Z Agent (ZP) or Daily Quest Rewards Store (10 tokens)</li>
-      </ul>
     </div>
 
   </section>
@@ -990,16 +955,7 @@
     <div class="new-box"><span class="badge">6/3</span> Once you've mastered 5/3, the next frontier is <strong>6/3 via Beerus</strong>. You'll need Level 500,000 and must complete 3 trials (Instruction, Endurance, Growth). Grants a <strong>+30% EXP boost</strong> and a choice of powerful path: TPs, Gym, or Mob Farming. See the Rebirth System section below for full details.</div>
 
 
-    <!-- HOUSING -->
-    <div class="section-header">🏠 Housing</div>
-    <div class="card">
-      <p>Walk up to any available house and buy it. Houses include an <strong>open area</strong> for equipment and decorations, a <strong>gravity room</strong>, and a <strong>mob room</strong> (unlock additional mob floors as you progress).</p>
-      <ul>
-        <li><strong>Cost:</strong> 2,500 UP at 5/3</li>
-        <li><strong>Legendary House Equipment:</strong> Buy from <strong>Real Estate Renji NPC</strong> (10b zenni per piece). Best gym equipment outside of Club House</li>
-        <li>Farm your mob floors each repop for extra EXP alongside your regular mobbing rotation</li>
-      </ul>
-    </div>
+    <div class="tip-box">💡 Housing, Casino, and other building info has moved to the <strong>Buildings</strong> tab!</div>
 
     <div class="sub-header">Why Push to 5/3?</div>
     <div class="card">
@@ -1062,64 +1018,6 @@
         <li>If a Dual Gene is lost due to a 6/3 path change, it can be <strong>re-acquired for free</strong> at the Oracle Fish NPC</li>
       </ul>
     </div>
-
-    <!-- G.o.D SYSTEM -->
-    <div class="section-header">👑 G.o.D System</div>
-    <p>One G.o.D per universe (4 total). Elected via G.o.D tournament once per wipe. G.o.D can be challenged via <strong>Channels tab</strong> (1v1 same-stats). G.o.Ds have <strong>2 rejects</strong>.</p>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Turnover Trigger</th><th>Chance</th></tr></thead>
-        <tbody>
-          <tr><td>Killed by NPC</td><td class="t-red t-bold">5%</td></tr>
-          <tr><td>Killed by Player / Hakai'd (outside events/tournaments/arenas)</td><td class="t-red t-bold">25%</td></tr>
-          <tr><td>8+ hours accumulated without defending</td><td class="t-orange">Must defend at least once to reset timer</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="tip-box">💡 <strong>G.o.D Arena Spectate</strong> ability available via Tournament TV.</div>
-
-    <!-- NPC STAT BOOSTS -->
-    <div class="section-header">💪 NPC Stat Boosts</div>
-    <div class="warn-box">⚠️ One-time stat boost <strong>per rebirth</strong>! Set multipliers. Make sure you have desirable stats FIRST. All require Level 35,000 unless noted. Cannot Potara if you boost first (except Supreme Kai). Mystic/Human Convert/Changeling Convert = cannot Potara.</div>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>NPC</th><th>Boost</th><th>Requirements</th></tr></thead>
-        <tbody>
-          <tr><td class="t-bold">Son Goku</td><td class="t-green">PL ×1.2</td><td>Level 35,000</td></tr>
-          <tr><td class="t-bold">Krillin</td><td class="t-green">Ki ×1.2</td><td>Level 35,000 + 100,000,000 zenni</td></tr>
-          <tr><td class="t-bold">King Vegeta</td><td class="t-green">Ki Defense ×1.2</td><td>Kill 25 enemies</td></tr>
-          <tr><td class="t-bold">Hercule</td><td class="t-green">Strength ×1.2</td><td>Level 35,000</td></tr>
-          <tr><td class="t-bold">Piccolo</td><td class="t-green">Defense ×1.2</td><td>Level 35,000</td></tr>
-          <tr><td class="t-bold">Guru</td><td class="t-gold">All stats ×1.2</td><td>25% Good Karma + Kill 3 of Frieza's Henchmen</td></tr>
-          <tr><td class="t-bold">Frieza</td><td class="t-gold">All stats ×1.2</td><td>25% Evil Karma + Kill 3 Namekian Civilians</td></tr>
-          <tr><td class="t-bold">Babidi</td><td class="t-gold">All stats ×1.5 (×1.6 Pride Saiyan)</td><td>Level 35,000 + 100% Evil Karma</td></tr>
-          <tr><td class="t-bold">Supreme Kai (Potara)</td><td class="t-gold">Both players' stats added OR Self ×1.8</td><td>Level 35,000 + Kill (Saga) Shenron</td></tr>
-          <tr><td class="t-bold">Princess Snake</td><td class="t-orange">All stats ×2</td><td>None (hidden NPC)</td></tr>
-          <tr><td class="t-bold">Shin</td><td class="t-gold">All stats ×1.5</td><td>Level 35,000 + Perm races only</td></tr>
-          <tr><td class="t-bold">Toronbo Dragon</td><td class="t-orange">All stats ×2</td><td>Cereal Dragonball Wish</td></tr>
-          <tr><td class="t-bold">Dr. Gero – Convert</td><td class="t-gold">All stats ×1.8</td><td>Human only</td></tr>
-          <tr><td class="t-bold">King Cold – Convert</td><td class="t-gold">×1.8 (Metal=STR; Mecha=KI)</td><td>Changeling only</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- GUILD SYSTEM -->
-    <div class="section-header">🏰 Guild System</div>
-    <div class="sub-header">Guild Evolution Paths</div>
-    <p>Guilds with Evolution Path: <strong>24-hour join cooldown</strong> for new invitees.</p>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Path</th><th>Perks</th></tr></thead>
-        <tbody>
-          <tr><td class="t-orange t-bold">Gym Bunny</td><td>Candy farming +50% | Stat Training w/ Equipment: +30% active / +20% AFK | Club House duration +50%</td></tr>
-          <tr><td class="t-orange t-bold">Mobsters</td><td>Mob Farming EXP +30% | Player Kill EXP +50% | Stat Pills: Red/Blue x2.5 (was x2); Cavern x3.5 (was x3)</td></tr>
-          <tr><td class="t-orange t-bold">Hustlers</td><td>Mob Farming w/ ZP Suits +50% | TP Gains when Spending +25% | Level Up Stat Gains +10% | Oracle Fish EXP chance 20%→50% | Stat Storage +10% per 100b</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="tip-box">💡 <strong>Ignore System</strong> available in <strong>Channels tab</strong>: add, remove, and view ignored players. Removes them from OOC, Local, and Universe chats.</div>
 
   </section>
 
@@ -1221,11 +1119,11 @@
       <table>
         <thead><tr><th>Set</th><th>Balls</th><th>Wishes</th><th>Location</th><th>Available Wishes</th></tr></thead>
         <tbody>
-          <tr><td class="t-bold t-orange">Earth</td><td class="t-mono">7</td><td class="t-mono">7 per rebirth</td><td>Earth</td><td>Level, Power, Ki, Karma, TPs, Zenni, Casino Tokens, Safe Training Time, Reset EXP Shards (6hr CD), Free Wish (doesn't count, subtracts one use)</td></tr>
-          <tr><td class="t-bold t-green">Namek</td><td class="t-mono">7</td><td class="t-mono">5 per rebirth</td><td>Namek</td><td>Level, Power, Defense, Strength, Ki, Karma, TPs, Zenni</td></tr>
-          <tr><td class="t-bold t-red">Black Star</td><td class="t-mono">7</td><td class="t-mono">1 per rebirth</td><td>Planet Vegeta</td><td>Level, Power, Defense, Strength, Ki, TPs, Zenni, Reset PL/KI Cave Use</td></tr>
-          <tr><td class="t-bold t-blue">Cereal</td><td class="t-mono">2</td><td class="t-mono">1 per rebirth</td><td>Earth</td><td>Levels, Sacrifice Lifespan, Cerealian Unlock</td></tr>
-          <tr><td class="t-bold t-gold">Super</td><td class="t-mono">7</td><td class="t-mono">1 per character</td><td>Space</td><td>Levels, Z-Points</td></tr>
+          <tr><td class="t-bold t-orange">Earth</td><td class="t-mono">7</td><td class="t-mono">7 per rebirth</td><td>Level, Power, Ki, Karma, TPs, Zenni, Casino Tokens, Safe Training Time, Reset EXP Shards (6hr CD), Free Wish (doesn't count, subtracts one use)</td></tr>
+          <tr><td class="t-bold t-green">Namek</td><td class="t-mono">7</td><td class="t-mono">5 per rebirth</td><td>Level, Power, Defense, Strength, Ki, Karma, TPs, Zenni</td></tr>
+          <tr><td class="t-bold t-red">Black Star</td><td class="t-mono">7</td><td class="t-mono">1 per rebirth</td><td>Level, Power, Defense, Strength, Ki, TPs, Zenni, Reset PL/KI Cave Use</td></tr>
+          <tr><td class="t-bold t-blue">Cereal</td><td class="t-mono">2</td><td class="t-mono">1 per rebirth</td><td>Levels, Sacrifice Lifespan, Cerealian Unlock</td></tr>
+          <tr><td class="t-bold t-gold">Super</td><td class="t-mono">7</td><td class="t-mono">1 per character</td><td>Levels, Z-Points</td></tr>
         </tbody>
       </table>
     </div>
@@ -1330,16 +1228,16 @@
       <table>
         <thead><tr><th>Transformation</th><th>PL Required</th><th>Other Requirement</th><th>Eligible Races</th></tr></thead>
         <tbody>
-          <tr><td class="t-bold">Invert Power</td><td class="t-mono">Level 10,000 PL</td><td>-</td><td>Perm races only</td></tr>
-          <tr><td class="t-bold">Super Invert Power</td><td class="t-mono">Level 30,000 PL</td><td>King Vegeta's Special Training</td><td>Perm races only</td></tr>
-          <tr><td class="t-bold">Kaioken</td><td class="t-mono">Level 2,000 PL</td><td>Speak to King Kai</td><td>All races</td></tr>
-          <tr><td class="t-bold">Advanced Kaioken</td><td class="t-mono">Level 10,000 PL</td><td>Speak to King Kai</td><td>Aliens, Cerealians, Felines, Kais, Makyos, Bojacks, Yardrats, Super 17</td></tr>
+          <tr><td class="t-bold">Invert Power</td><td class="t-mono">Level 10,000 PL</td><td>Perm races only</td></tr>
+          <tr><td class="t-bold">Super Invert Power</td><td class="t-mono">Level 30,000 PL</td><td>Perm races only</td></tr>
+          <tr><td class="t-bold">Kaioken</td><td class="t-mono">Level 2,000 PL</td><td>All races</td></tr>
+          <tr><td class="t-bold">Advanced Kaioken</td><td class="t-mono">Level 10,000 PL</td><td>Aliens, Cerealians, Felines, Kais, Makyos, Bojacks, Yardrats, Super 17</td></tr>
           <tr><td class="t-bold t-gold">UT (Ultimate Transformation)</td><td class="t-mono t-orange">10,000,000 PL</td><td>150 Epic Kills</td><td class="t-green">ANY race. Stackable on current form!</td></tr>
-          <tr><td class="t-bold">Ultra Instinct Sign</td><td class="t-mono">500,000,000 PL</td><td>Level 200,000</td><td>Any non-perm race</td></tr>
-          <tr><td class="t-bold">Mastered Invert</td><td class="t-mono">500,000,000 PL</td><td>Level 200,000</td><td>Any non-transed PERM race</td></tr>
-          <tr><td class="t-bold t-blue">Ultra Instinct (Unlocked)</td><td class="t-mono t-orange">1,000,000,000 PL</td><td>Level 500,000 + 5/3 + 1,000 EK</td><td>Any non-perm race</td></tr>
-          <tr><td class="t-bold t-red">Ultra Ego</td><td class="t-mono t-orange">1,000,000,000 PL</td><td>Level 500,000 + 5/3 + 1,000 EK</td><td>Any non-perm race</td></tr>
-          <tr><td class="t-bold t-purple">Ultra Invert</td><td class="t-mono t-orange">1,000,000,000 PL</td><td>Level 500,000 + 5/3</td><td>Any non-transed PERM race</td></tr>
+          <tr><td class="t-bold">Ultra Instinct Sign</td><td class="t-mono">500,000,000 PL</td><td>Any non-perm race</td></tr>
+          <tr><td class="t-bold">Mastered Invert</td><td class="t-mono">500,000,000 PL</td><td>Any non-transed PERM race</td></tr>
+          <tr><td class="t-bold t-blue">Ultra Instinct (Unlocked)</td><td class="t-mono t-orange">1,000,000,000 PL</td><td>Any non-perm race</td></tr>
+          <tr><td class="t-bold t-red">Ultra Ego</td><td class="t-mono t-orange">1,000,000,000 PL</td><td>Any non-perm race</td></tr>
+          <tr><td class="t-bold t-purple">Ultra Invert</td><td class="t-mono t-orange">1,000,000,000 PL</td><td>Any non-transed PERM race</td></tr>
         </tbody>
       </table>
     </div>
@@ -1384,109 +1282,348 @@
       </ul>
     </div>
 
-    <!-- NON-PERM TRANS -->
-    <div class="section-header">🔀 Non-Permanent Race Transformations</div>
+    <!-- RACE TRANSFORMATION TABLES -->
+    <div class="section-header">🔀 All Race Transformations</div>
+    <div class="tip-box">💡 <strong>Race Types:</strong> Standard = base game race | Super = requires 3/3 rebirths (unless noted) | PvP = 4/3 via PvP Broker | Zeno = 5/3 via NPC Zeno<br>
+    <strong>Trans Types:</strong> Non-Perm = revertable | Perm = permanent, only transform with desirable stats | Semi-Perm = some forms revertable, final form often permanent</div>
+
+    <!-- ALIEN -->
+    <div class="sub-header">Alien</div>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>Race / Gene</th><th>Forms</th><th>PL Requirements</th><th>Other</th></tr></thead>
+        <thead><tr><th>Gene Type</th><th>Race Type</th><th>Trans Type</th><th>Forms</th><th>PL Requirements</th><th>Notes</th></tr></thead>
         <tbody>
-          <tr><td>Half Saiyan *Mystic*</td><td>SS / USS / SS2 / ASS2 / Mystic</td><td class="t-mono">100k / 500k / 2m / 3m / 5m</td><td>Mystic: Elder Kai</td></tr>
-          <tr><td>Half Saiyan *God*</td><td>SS / USS / SS2 / ASS2 / Saiyan Demi-God</td><td class="t-mono">150k / 600k / 2m / 3.5m / 7.5m</td><td>Demi-God: Elder Kai</td></tr>
-          <tr><td>Saiyan *Honour*</td><td>Giji SSJ / SS / USS / SS2 / SS3 / Golden Oozaru / SS4 / SSJ4 LB</td><td class="t-mono">40k / 100k / 500k / 1.5m / 3m / 4m / 5m</td><td>SS4: Tail; SSJ4 LB: L75k+5/3</td></tr>
-          <tr><td>Saiyan *Pride*</td><td>SS / USS / SS2 / ASS2 / SS4 / SSJ4 LB</td><td class="t-mono">75k / 450k / 1.4m / 3m / 4.5m</td><td>ASS2+SS4: Tail; Babidi boost ×1.6</td></tr>
-          <tr><td>Saiyan *Legendary*</td><td>Locked SS / SS / USS / Legendary SS / Unleashed Legendary SS</td><td class="t-mono">150k / 600k / 1.75m / 4m / 6m</td><td>-</td></tr>
-          <tr><td>Saiyan Honour *God Gene*</td><td>SS / SS God / SS Blue / UI Saiyan / MUI</td><td class="t-mono">125k / 600k / 1.75m / 4m / 7.5m</td><td>SS: witnessed 1 death</td></tr>
-          <tr><td>Saiyan Pride *God Gene*</td><td>SS / SS2 Rage / SS God / SS Blue / SS Blue Evolved</td><td class="t-mono">125k / 550k / 2m / 4m / 7m</td><td>-</td></tr>
-          <tr><td>Human</td><td>Focus / High Tension / Advanced Focus / Super Human / Converted</td><td class="t-mono">60k / 300k / 1m / 3m / 5m</td><td>Converted: Dr. Gero quest (permanent)</td></tr>
-          <tr><td>Saibaman</td><td>Super / Ascended / SS2 / SS3</td><td class="t-mono">50k / 300k / 1m / 3m</td><td>-</td></tr>
-          <tr><td>Kai *Goku Black*</td><td>SS / SS2 / SS Rose</td><td class="t-mono">150k / 1m / 4.5m</td><td>-</td></tr>
-          <tr><td>Feline</td><td>God of Destruction</td><td class="t-mono">4,000,000</td><td>-</td></tr>
-          <tr><td>Galactic Warrior</td><td>Rage Form</td><td class="t-mono">3,000,000</td><td>-</td></tr>
-          <tr><td>Makyo</td><td>Star Powered Form</td><td class="t-mono">2,500,000</td><td>-</td></tr>
-          <tr><td>Yardrat</td><td>Final Form</td><td class="t-mono">3,500,000</td><td>-</td></tr>
+          <tr><td class="t-bold">Legendary Jiren</td><td class="t-orange">Super</td><td>Perm</td><td>Full Powered</td><td class="t-mono">50m</td><td>Jiren Portal (3/3)</td></tr>
+          <tr><td class="t-bold">Legendary Sealas</td><td class="t-green">Zeno</td><td>Perm</td><td>Full Release Form</td><td class="t-mono">100m</td><td>5/3 via Zeno</td></tr>
+          <tr><td class="t-bold">Metalman Gene</td><td>Standard</td><td>Non-Perm</td><td>Power Up</td><td class="t-mono">1,500,000</td><td>-</td></tr>
+          <tr><td class="t-bold">Toppo Gene</td><td>Standard</td><td>Non-Perm</td><td>Unleashed Alien</td><td class="t-mono">2,000,000</td><td>-</td></tr>
         </tbody>
       </table>
     </div>
 
-    <!-- PERM TRANS -->
-    <div class="section-header">🔒 Permanent Race Transformations</div>
+    <!-- ANDROID -->
+    <div class="sub-header">Android</div>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>Race</th><th>Forms</th><th>PL Requirements</th><th>Other</th></tr></thead>
+        <thead><tr><th>Gene Type</th><th>Race Type</th><th>Trans Type</th><th>Forms</th><th>PL Requirements</th><th>Notes</th></tr></thead>
         <tbody>
-          <tr><td class="t-bold">Android</td><td>Super Android / Ultimate Android</td><td class="t-mono">5m / 50m</td><td>15 Chips / 30 Chips</td></tr>
-          <tr><td class="t-bold">Angel</td><td>Saintly Form</td><td class="t-mono">5m</td><td>Level 35,000</td></tr>
-          <tr><td class="t-bold">Assassin</td><td>Ultimate Assassin</td><td class="t-mono">5m</td><td>Level 35,000</td></tr>
-          <tr><td class="t-bold">Bio-Warrior</td><td>Mecha Upgrade / Cyborg Upgrade</td><td class="t-mono">5m / 30m</td><td>-</td></tr>
-          <tr><td class="t-bold">Hatchiyack</td><td>Super Hatchiyack</td><td class="t-mono">5m</td><td>Level 35,000</td></tr>
-          <tr><td class="t-bold">Konat</td><td>Brave Warrior / Legendary Warrior</td><td class="t-mono">5m / 30m</td><td>Tapion's Flute / Legendary Sword (7 Earth DBs via magic box). Legendary Sword strength boost <strong>buffed</strong>; PL drain <strong>removed</strong>. Quad Barrage + Thousand Slash damage <strong>buffed</strong>.</td></tr>
-          <tr><td class="t-bold">Majin</td><td>Fat Buu / Wicked Buu / Skinny Buu / Kid Buu</td><td class="t-mono">5m / 10m / 15m / 45m</td><td>100 / 250 / 500 / 1,000 Candy Eats</td></tr>
-          <tr><td class="t-bold">Namekian *Super Gene*</td><td>Super Namekian / Ascended Super Namekian</td><td class="t-mono">5m (L35k) / 50m</td><td>-</td></tr>
-          <tr><td class="t-bold">Ultimate Hybrid</td><td>Marred Imperfection</td><td class="t-mono">5m</td><td>-</td></tr>
+          <tr><td class="t-bold">Base</td><td>Standard</td><td>Perm</td><td>Super Android / Ultimate Android</td><td class="t-mono">5m / 50m</td><td>15 / 30 Chips</td></tr>
+          <tr><td class="t-bold">Legendary 21</td><td class="t-orange">Super</td><td>Semi-Perm</td><td>Super Android / Hunger / True Form <em>(revertable)</em></td><td class="t-mono">50m / 75m / 150m</td><td>Via 21 Portal; 50 / 100 / 200 Eats; True Form: L100k</td></tr>
+          <tr><td class="t-bold">Super 17</td><td class="t-orange">Super</td><td>Perm</td><td>Super 17 / Cell Absorbed / Timebreaker</td><td class="t-mono">15m / 30m / 60m</td><td>Via Super 17 Portal; 50 / 100 / 250 Chips</td></tr>
         </tbody>
       </table>
     </div>
 
-    <!-- SEMI-PERM TRANS -->
-    <div class="section-header">🔄 Semi-Permanent Race Transformations</div>
+    <!-- ANGEL -->
+    <div class="sub-header">Angel</div>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>Race / Gene</th><th>Forms</th><th>PL Requirements</th><th>Other</th></tr></thead>
+        <thead><tr><th>Gene Type</th><th>Race Type</th><th>Trans Type</th><th>Forms</th><th>PL Requirements</th><th>Notes</th></tr></thead>
         <tbody>
-          <tr><td>Angel *Daishinkan*</td><td>Heavenly / Divine / Grand Minister <em>(revertable)</em></td><td class="t-mono">5m / 10m / 25m</td><td>-</td></tr>
-          <tr><td>Bio-Android</td><td>Imperfect / Perfect / Fully Weighted <em>(revertable)</em></td><td class="t-mono">5m / 10m / 25m</td><td>10 / 20 / 30 Absorptions</td></tr>
-          <tr><td>Bio-Warrior *Bio-Saiyan*</td><td>Evolved / Complete Upgrade <em>(perm)</em> / False SSJ / Perfect SSJ</td><td class="t-mono">500k / 2m / 3m / 5m</td><td>Complete Upgrade: All Stats ×1.8</td></tr>
-          <tr><td>Dragon *Eis Gene*</td><td>Shadow Dragon / Super Form / Dark Shadow Dragon <em>(perm)</em></td><td class="t-mono">750k / 5m / 25m</td><td>-</td></tr>
-          <tr><td>Dragon *Nuova Gene*</td><td>Shadow Dragon / Super Form / Dark Shadow Dragon <em>(perm)</em></td><td class="t-mono">750k / 5m / 25m</td><td>-</td></tr>
-          <tr><td>Tuffle *Parasite*</td><td>Infected / Super Tuffle / Super Tuffle 2 <em>(perm)</em></td><td class="t-mono">5m / 10m / 30m</td><td>10 / 20 / 30 Infections</td></tr>
+          <tr><td class="t-bold">Base</td><td>Standard</td><td>Perm</td><td>Saintly Form</td><td class="t-mono">5,000,000</td><td>Level 35,000</td></tr>
+          <tr><td class="t-bold">Daishinkan Gene</td><td>Standard</td><td>Semi-Perm</td><td>Heavenly / Divine / Grand Minister <em>(perm)</em></td><td class="t-mono">5m / 10m / 25m</td><td>All forms except Grand Minister are revertable</td></tr>
         </tbody>
       </table>
     </div>
 
-    <!-- SUPER RACE TRANS -->
-    <div class="section-header">🌟 Super Race Transformations</div>
-    <div class="tip-box">💡 All Super Races require <strong>3/3 rebirths</strong> (unless noted) and Recommended Level 150,000. All forms permanent unless stated.</div>
+    <!-- ASSASSIN -->
+    <div class="sub-header">Assassin</div>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>Race / Gene</th><th>Forms</th><th>PL Requirements</th><th>Access</th></tr></thead>
+        <thead><tr><th>Gene Type</th><th>Race Type</th><th>Trans Type</th><th>Forms</th><th>PL Requirements</th><th>Notes</th></tr></thead>
         <tbody>
-          <tr><td>Alien *Legendary Jiren*</td><td>Full Powered</td><td class="t-mono">50m</td><td>Jiren Portal (3/3)</td></tr>
-          <tr><td>Alien *Legendary Sealas* <span class="tag tag-zeno">ZENO</span></td><td>Full Release Form</td><td class="t-mono">100m</td><td>5/3 via Zeno</td></tr>
-          <tr><td>Android *Super 17*</td><td>Super 17 / Cell Absorbed / Timebreaker</td><td class="t-mono">15m / 30m / 60m</td><td>Via Super 17 Portal</td></tr>
-          <tr><td>Android *Legendary 21*</td><td>Super Android / Hunger / True Form <em>(revertable)</em></td><td class="t-mono">50m / 75m / 150m</td><td>Via 21 Portal</td></tr>
-          <tr><td>Assassin *Legendary Fu*</td><td>Super Form / Dark King / Super Dark King</td><td class="t-mono">25m / 100m / 200m</td><td>Via Assassin Portal</td></tr>
-          <tr><td>Assassin *Legendary Hit* <span class="tag tag-pvp">PvP</span></td><td>Pure Progression</td><td class="t-mono">500m</td><td>4/3 via PvP Broker</td></tr>
-          <tr><td>Bio-Android *Legendary Golden*</td><td>Imperfect / Weighted Perfect / Imperfect Golden / Legendary Golden <em>(perm)</em></td><td class="t-mono">15m / 25m / 50m / 150m</td><td>Via Cell Portal</td></tr>
-          <tr><td>Bio-Warrior *Legendary Mira*</td><td>Berserker / Super Form / Mira Unleashed <em>(perm)</em></td><td class="t-mono">15m / 40m / 100m</td><td>Via Mira Portal</td></tr>
-          <tr><td>Cerealian *Legendary Granolah*</td><td>Sharpsight / Cosmic Marksman / Red Eye Awakened</td><td class="t-mono">30m / 75m / 90m</td><td>Via Granolah Portal</td></tr>
-          <tr><td>Changeling *Black Frieza* <span class="tag tag-zeno">ZENO</span></td><td>Form 1 / Golden / Golden Rage / Black Frieza</td><td class="t-mono">10m / 20m / 50m / 150m</td><td>5/3 via Zeno (needs 2/2 HBTC uses)</td></tr>
-          <tr><td>Changeling *Golden Cooler*</td><td>Form 1 / Form 2 / Legendary Golden Form</td><td class="t-mono">15m / 25m / 50m</td><td>Via Cooler Cave</td></tr>
-          <tr><td>Demon *Legendary Demigra*</td><td>Demigra Darkness Dragon / True Form <em>(perm)</em></td><td class="t-mono">15m / 50m</td><td>Via Demigra Portal</td></tr>
-          <tr><td>Demon *Dark King Demigra* <span class="tag tag-pvp">PvP</span></td><td>Demon King / Demon King Unleashed</td><td class="t-mono">50m / 100m</td><td>4/3 via PvP Broker</td></tr>
-          <tr><td>Dragon *Legendary Syn*</td><td>Omega Form / Dark Shadow Dragon / Dark Omega Form</td><td class="t-mono">50m / 150m / 250m</td><td>Via Syn Portal (needs Earth DBs)</td></tr>
-          <tr><td>Feline *Legendary Beerus*</td><td>Fury Form</td><td class="t-mono">50m</td><td>Via Feline Portal</td></tr>
-          <tr><td>Feline *Legendary Champa*</td><td>Fury Form</td><td class="t-mono">50m</td><td>Via Feline Portal</td></tr>
-          <tr><td>Galactic Warrior *Pirate King*</td><td>Rage Form / Imperfect Bojack / Unleashed Bojack <em>(perm)</em></td><td class="t-mono">10m / 20m / 35m</td><td>Via Super Bojack Portal</td></tr>
-          <tr><td>Half Saiyan *Legendary Gohan*</td><td>SS / SS2 / Ultimate Mystic / Ultimate God</td><td class="t-mono">15m / 25m / 50m / 75m</td><td>Via Gohan Portal</td></tr>
-          <tr><td>Half Saiyan *Gotenks Gene* <span class="tag tag-pvp">PvP</span></td><td>SS / SS3 / SS4</td><td class="t-mono">15m / 40m / 100m</td><td>4/3 via PvP Broker</td></tr>
-          <tr><td>Human *Legendary Herculean*</td><td>Focus / High Tension / Advanced Focus / Legendary Herculean</td><td class="t-mono">15m / 20m / 50m / 70m</td><td>Via Herculean Portal</td></tr>
-          <tr><td>Human *Legendary Master Roshi* <span class="tag tag-zeno">ZENO</span></td><td>Turtle Hermit Unleashed / Super Serious / MAX Power</td><td class="t-mono">20m / 50m / 90m</td><td>5/3 via Zeno</td></tr>
-          <tr><td>Kai *Legendary Corrupt Zamasu*</td><td>SS Rose / Corrupted Zamasu <em>(revertable)</em></td><td class="t-mono">25m / 75m</td><td>Via Zamasu Portal</td></tr>
-          <tr><td>Kai *Timebreaker Goku Black* <span class="tag tag-zeno">ZENO</span></td><td>SS / SS Rose / SS Rose 2 / SS Rose 3</td><td class="t-mono">15m / 30m / 50m / 75m</td><td>5/3 via Zeno</td></tr>
-          <tr><td>Konat *Legendary Tapion*</td><td>True Hero <em>(perm)</em></td><td class="t-mono">100m</td><td>Via Tapion Portal</td></tr>
-          <tr><td>Majin *Legendary Buu* <span class="tag tag-zeno">ZENO</span></td><td>Super Buu / SBGotenks / SBGohan / Kid Buu</td><td class="t-mono">50m / 100m / 150m / 250m</td><td>5/3 via Zeno</td></tr>
-          <tr><td>Majin *Legendary Uub*</td><td>Kid Buu Reincarnated / Majin Uub Unleashed <em>(perm)</em></td><td class="t-mono">40m / 150m</td><td>Via Uub Portal</td></tr>
-          <tr><td>Makyo *Legendary Garlic*</td><td>Unrestrained Form / Super Garlic Jr</td><td class="t-mono">20m / 60m</td><td>Via Garlic Portal</td></tr>
-          <tr><td>Namekian *Orange Piccolo* <span class="tag tag-pvp">PvP</span></td><td>Giant Namekian / Namekian Fusion / Orange Piccolo / Giant Orange Piccolo</td><td class="t-mono">18m / 45m / 90m / 150m</td><td>4/3 via PvP Broker</td></tr>
-          <tr><td>Namekian *Red-Eyes*</td><td>Great Namekian / Youth Restored / Giant Namekian / Red-Eyed Namekian</td><td class="t-mono">40m / 75m / 125m / 500m</td><td>Via Namekian Portal</td></tr>
-          <tr><td>Saibaman *Legendary Cauliflower*</td><td>Infected / Plague Spreader / Imperfect / Legendary Cauliflower</td><td class="t-mono">10m / 25m / 40m / 50m</td><td>Via Cauliflower Portal</td></tr>
-          <tr><td>Saiyan *Broly Gene*</td><td>SS / Wrathful Saiyan / Full Powered Saiyan</td><td class="t-mono">20m / 50m / 75m</td><td>Via Broly Cave</td></tr>
-          <tr><td>Saiyan *Broly Black* <span class="tag tag-pvp">PvP</span></td><td>SS Rose / Full Power SS Rose</td><td class="t-mono">30m / 70m</td><td>4/3 via PvP Broker</td></tr>
-          <tr><td>Saiyan *Gogeta Gene*</td><td>SS / SS3 / Golden Oozaru / SS4 / SS Blue</td><td class="t-mono">15m / 30m / 40m / 60m / 75m</td><td>Saiyan 3/3 + Supreme Kai Quest</td></tr>
-          <tr><td>Saiyan *Vegito Gene*</td><td>SS / SS3 / Golden Oozaru / SS Blue</td><td class="t-mono">15m / 40m / 50m / 75m</td><td>Saiyan 3/3 + Supreme Kai Quest</td></tr>
-          <tr><td>Tuffle *Bebi Gene*</td><td>SS / Super Bebi / Super Bebi 2 / True Form <em>(perm)</em></td><td class="t-mono">15m / 30m / 50m / 150m</td><td>Via Bebi Portal</td></tr>
-          <tr><td>Yardrat *Trapper Gene* <span class="tag tag-pvp">PvP</span></td><td>Trapper Form</td><td class="t-mono">30m</td><td>4/3 via PvP Broker</td></tr>
-          <tr><td class="t-green">Saiyan *Legendary Cumber* <span class="tag tag-zeno">ZENO</span> <span class="tag tag-override">v8.67.15</span></td><td>SS / SS3 / SS3 Full Power / Savage Tyrant Spirit</td><td class="t-mono">25m / 60m / 100m / 150m</td><td>5/3 via Zeno / 6/3 via Beerus (Non-Perm)</td></tr>
+          <tr><td class="t-bold">Base</td><td>Standard</td><td>Perm</td><td>Ultimate Assassin</td><td class="t-mono">5,000,000</td><td>Level 35,000</td></tr>
+          <tr><td class="t-bold">Legendary Fu</td><td class="t-orange">Super</td><td>Semi-Perm</td><td>Super Form / Dark King / Super Dark King</td><td class="t-mono">25m / 100m / 200m</td><td>Via Assassin Portal; Dark King: L100k</td></tr>
+          <tr><td class="t-bold">Legendary Hit</td><td class="t-red">PvP</td><td>Non-Perm</td><td>Pure Progression</td><td class="t-mono">500,000,000</td><td>Level 100,000; 4/3 via PvP Broker</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- BIO-ANDROID -->
+    <div class="sub-header">Bio-Android</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Gene Type</th><th>Race Type</th><th>Trans Type</th><th>Forms</th><th>PL Requirements</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Base</td><td>Standard</td><td>Semi-Perm</td><td>Imperfect / Perfect / Fully Weighted <em>(perm)</em></td><td class="t-mono">5m / 10m / 25m</td><td>10 / 20 / 30 Absorptions</td></tr>
+          <tr><td class="t-bold">Legendary Golden</td><td class="t-orange">Super</td><td>Semi-Perm</td><td>Imperfect / Weighted Perfect / Imperfect Golden / Legendary Golden <em>(perm)</em></td><td class="t-mono">15m / 25m / 50m / 150m</td><td>Via Cell Portal; Golden: 500 Absorbs &amp; L100k</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- BIO-WARRIOR -->
+    <div class="sub-header">Bio-Warrior</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Gene Type</th><th>Race Type</th><th>Trans Type</th><th>Forms</th><th>PL Requirements</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Base</td><td>Standard</td><td>Perm</td><td>Mecha Upgrade / Cyborg Upgrade</td><td class="t-mono">5m / 30m</td><td>-</td></tr>
+          <tr><td class="t-bold">Bio-Saiyan</td><td>Standard</td><td>Semi-Perm</td><td>Evolved / Complete Upgrade <em>(perm)</em> / False SSJ / Perfect SSJ</td><td class="t-mono">500k / 2m / 3m / 5m</td><td>Complete Upgrade: All Stats ×1.8</td></tr>
+          <tr><td class="t-bold">Legendary Mira</td><td class="t-orange">Super</td><td>Semi-Perm</td><td>Berserker / Super Form / Mira Unleashed <em>(perm)</em></td><td class="t-mono">15m / 40m / 100m</td><td>Via Mira Portal; Unleashed: L100k</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- CEREALIAN -->
+    <div class="sub-header">Cerealian</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Gene Type</th><th>Race Type</th><th>Trans Type</th><th>Forms</th><th>PL Requirements</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Flayk Gene</td><td>Standard</td><td>Non-Perm</td><td>Sharpshooter / Red Eye Awakened</td><td class="t-mono">2m / 3m</td><td>Red Eye: Cereal Dragonballs</td></tr>
+          <tr><td class="t-bold">Legendary Granolah</td><td class="t-orange">Super</td><td>Perm</td><td>Sharpsight / Cosmic Marksman / Red Eye Awakened</td><td class="t-mono">30m / 75m / 90m</td><td>Via Granolah Portal; Red Eye: Cereal Dragonballs</td></tr>
+          <tr><td class="t-bold">Muezli Gene</td><td>Standard</td><td>Non-Perm</td><td>Advanced Sniper / Red Eye Awakened</td><td class="t-mono">2.4m / 3.5m</td><td>Red Eye: Cereal Dragonballs</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- CHANGELING -->
+    <div class="sub-header">Changeling</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Gene Type</th><th>Race Type</th><th>Trans Type</th><th>Forms</th><th>PL Requirements</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Black Frieza</td><td class="t-green">Zeno</td><td>Perm</td><td>Form 1 / Golden / Golden Rage / Black Frieza</td><td class="t-mono">10m / 20m / 50m / 150m</td><td>5/3 via Zeno; needs 2/2 HBTC uses</td></tr>
+          <tr><td class="t-bold">Frieza Gene</td><td>Standard</td><td>Non-Perm</td><td>Form 1 / Form 2 / Form 3 / Form 4 / Metal/Mecha Form</td><td class="t-mono">75k / 400k / 1.5m / 3m / 5m</td><td>Metal/Mecha: L35k + King Cold (permanent)</td></tr>
+          <tr><td class="t-bold">Frost Gene</td><td>Standard</td><td>Non-Perm</td><td>Form 1 / Form 2 / Form 3 / Form 4 / Metal/Mecha Form</td><td class="t-mono">100k / 450k / 2.4m / 5m / 6m</td><td>Metal/Mecha: L35k + King Cold (permanent)</td></tr>
+          <tr><td class="t-bold">Golden Cooler</td><td class="t-orange">Super</td><td>Perm</td><td>Form 1 / Form 2 / Legendary Golden Form</td><td class="t-mono">15m / 25m / 50m</td><td>Via Cooler Cave</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- DEMON -->
+    <div class="sub-header">Demon</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Gene Type</th><th>Race Type</th><th>Trans Type</th><th>Forms</th><th>PL Requirements</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Dabura Gene</td><td>Standard</td><td>Non-Perm</td><td>Demonic Will / Pure Evil / Devil's Advocate</td><td class="t-mono">75k / 400k / 2m</td><td>-</td></tr>
+          <tr><td class="t-bold">Dark King Demigra</td><td class="t-red">PvP</td><td>Perm</td><td>Demon King / Demon King Unleashed</td><td class="t-mono">50m / 100m</td><td>4/3 via PvP Broker</td></tr>
+          <tr><td class="t-bold">Janemba Gene</td><td>Standard</td><td>Non-Perm</td><td>Devil Pure Evil / Pure Evil / Pure Evil Unleashed / Devil's Advocate</td><td class="t-mono">100k / 500k / 2m / 4m</td><td>-</td></tr>
+          <tr><td class="t-bold">Legendary Demigra</td><td class="t-orange">Super</td><td>Semi-Perm</td><td>Demigra Darkness Dragon / True Form <em>(perm)</em></td><td class="t-mono">15m / 50m</td><td>Via Demigra Portal; True Form: L100k</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- DRAGON -->
+    <div class="sub-header">Dragon</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Gene Type</th><th>Race Type</th><th>Trans Type</th><th>Forms</th><th>PL Requirements</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Eis Gene</td><td>Standard</td><td>Semi-Perm</td><td>Shadow Dragon / Super Form / Dark Shadow Dragon <em>(perm)</em></td><td class="t-mono">750k / 5m / 25m</td><td>-</td></tr>
+          <tr><td class="t-bold">Legendary Syn</td><td class="t-orange">Super</td><td>Semi-Perm</td><td>Omega Form / Dark Shadow Dragon / Dark Omega Form</td><td class="t-mono">50m / 150m / 250m</td><td>Via Syn Portal; Omega: 7 Earth DBs; Dark Shadow: 7 Black DBs &amp; L100k; Dark Omega: L100k</td></tr>
+          <tr><td class="t-bold">Nuova Gene</td><td>Standard</td><td>Semi-Perm</td><td>Shadow Dragon / Super Form / Dark Shadow Dragon <em>(perm)</em></td><td class="t-mono">750k / 5m / 25m</td><td>-</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- FELINE -->
+    <div class="sub-header">Feline</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Gene Type</th><th>Race Type</th><th>Trans Type</th><th>Forms</th><th>PL Requirements</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Base</td><td>Standard</td><td>Non-Perm</td><td>God of Destruction</td><td class="t-mono">4,000,000</td><td>-</td></tr>
+          <tr><td class="t-bold">Legendary Beerus</td><td class="t-orange">Super</td><td>Perm</td><td>Fury Form</td><td class="t-mono">50,000,000</td><td>Via Feline Portal</td></tr>
+          <tr><td class="t-bold">Legendary Champa</td><td class="t-orange">Super</td><td>Perm</td><td>Fury Form</td><td class="t-mono">50,000,000</td><td>Via Feline Portal</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- GALACTIC WARRIOR -->
+    <div class="sub-header">Galactic Warrior</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Gene Type</th><th>Race Type</th><th>Trans Type</th><th>Forms</th><th>PL Requirements</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Base</td><td>Standard</td><td>Non-Perm</td><td>Rage Form</td><td class="t-mono">3,000,000</td><td>-</td></tr>
+          <tr><td class="t-bold">Pirate King</td><td class="t-orange">Super</td><td>Semi-Perm</td><td>Rage Form / Imperfect Bojack / Unleashed Bojack <em>(perm)</em></td><td class="t-mono">10m / 20m / 35m</td><td>Via Super Bojack Portal; Rage: L100k</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- GLASS TRIBE -->
+    <div class="sub-header">Glass Tribe</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Gene Type</th><th>Race Type</th><th>Trans Type</th><th>Forms</th><th>PL Requirements</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Base</td><td>Standard</td><td>Non-Perm</td><td>Glass Armor Form / Glass Helmet Form</td><td class="t-mono">100k / 3m</td><td>-</td></tr>
+          <tr><td class="t-bold">Fractured Gene</td><td>Standard</td><td>Non-Perm</td><td>Glass Armor Form / Glass Helmet Form / Glass Fractured Sword Form</td><td class="t-mono">120k / 3m / 5m</td><td>-</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- HALF SAIYAN -->
+    <div class="sub-header">Half Saiyan</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Gene Type</th><th>Race Type</th><th>Trans Type</th><th>Forms</th><th>PL Requirements</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">God Gene</td><td>Standard</td><td>Non-Perm</td><td>SS / USS / SS2 / ASS2 / Saiyan Demi-God</td><td class="t-mono">150k / 600k / 2m / 3.5m / 7.5m</td><td>Demi-God: Training (Elder Kai)</td></tr>
+          <tr><td class="t-bold">Gotenks Gene</td><td class="t-red">PvP</td><td>Perm</td><td>SS / SS3 / SS4</td><td class="t-mono">15m / 40m / 100m</td><td>4/3 via PvP Broker</td></tr>
+          <tr><td class="t-bold">Legendary Gohan</td><td class="t-orange">Super</td><td>Perm</td><td>SS / SS2 / Ultimate Mystic / Ultimate God</td><td class="t-mono">15m / 25m / 50m / 75m</td><td>Via Gohan Portal</td></tr>
+          <tr><td class="t-bold">Mystic Gene</td><td>Standard</td><td>Non-Perm</td><td>SS / USS / SS2 / ASS2 / Mystic</td><td class="t-mono">100k / 500k / 2m / 3m / 5m</td><td>Mystic: Elder Kai</td></tr>
+          <tr><td class="t-bold">Rage Gene</td><td>Standard</td><td>Non-Perm</td><td>SS / USS / SS2 / ASS2 / Super Saiyan Rage</td><td class="t-mono">75k / 400k / 1.5m / 3m / 4m</td><td>SS2: Witnessed 1 death</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- HATCHIYACK -->
+    <div class="sub-header">Hatchiyack</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Gene Type</th><th>Race Type</th><th>Trans Type</th><th>Forms</th><th>PL Requirements</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Base</td><td>Standard</td><td>Perm</td><td>Super Hatchiyack</td><td class="t-mono">5,000,000</td><td>Level 35,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- HUMAN -->
+    <div class="sub-header">Human</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Gene Type</th><th>Race Type</th><th>Trans Type</th><th>Forms</th><th>PL Requirements</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Base</td><td>Standard</td><td>Non-Perm</td><td>Focus / High Tension / Advanced Focus / Super Human / Converted Human</td><td class="t-mono">60k / 300k / 1m / 3m / 5m</td><td>Converted: Dr. Gero quest (permanent)</td></tr>
+          <tr><td class="t-bold">Legendary Herculean</td><td class="t-orange">Super</td><td>Perm</td><td>Focus / High Tension / Advanced Focus / Legendary Herculean</td><td class="t-mono">15m / 20m / 50m / 70m</td><td>Via Herculean Portal</td></tr>
+          <tr><td class="t-bold">Legendary Master Roshi</td><td class="t-green">Zeno</td><td>Perm</td><td>Turtle Hermit Unleashed / Super Serious / MAX Power</td><td class="t-mono">20m / 50m / 90m</td><td>5/3 via Zeno</td></tr>
+          <tr><td class="t-bold">Warlock Gene</td><td>Standard</td><td>Non-Perm</td><td>Focus / High Tension / Advanced Focus / Super Human / Converted Human</td><td class="t-mono">75k / 350k / 1.5m / 4m / 5m</td><td>Converted: Dr. Gero quest (permanent)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- KAI -->
+    <div class="sub-header">Kai</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Gene Type</th><th>Race Type</th><th>Trans Type</th><th>Forms</th><th>PL Requirements</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Base</td><td>Standard</td><td>Non-Perm</td><td>Advanced Kaioken / Ultimate Kaioken</td><td class="t-mono">300k / 2.5m</td><td>Requires 300k Ki / 2.5m Ki</td></tr>
+          <tr><td class="t-bold">God Gene</td><td>Standard</td><td>Non-Perm</td><td>Full Form</td><td class="t-mono">3,000,000</td><td>-</td></tr>
+          <tr><td class="t-bold">Goku Black</td><td>Standard</td><td>Non-Perm</td><td>SS / SS2 / SS Rose</td><td class="t-mono">150k / 1m / 4.5m</td><td>-</td></tr>
+          <tr><td class="t-bold">Legendary Corrupt Zamasu</td><td class="t-orange">Super</td><td>Semi-Perm</td><td>SS Rose / Corrupted Zamasu <em>(revertable)</em></td><td class="t-mono">25m / 75m</td><td>Via Zamasu Portal; Corrupted: L100k</td></tr>
+          <tr><td class="t-bold">Timebreaker Goku Black</td><td class="t-green">Zeno</td><td>Perm</td><td>SS / SS Rose / SS Rose 2 / SS Rose 3</td><td class="t-mono">15m / 30m / 50m / 75m</td><td>5/3 via Zeno</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- KONAT -->
+    <div class="sub-header">Konat</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Gene Type</th><th>Race Type</th><th>Trans Type</th><th>Forms</th><th>PL Requirements</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Base</td><td>Standard</td><td>Perm</td><td>Brave Warrior / Legendary Warrior</td><td class="t-mono">5m / 30m</td><td>Tapion's Flute / Legendary Sword (7 Earth DBs via magic box)</td></tr>
+          <tr><td class="t-bold">Legendary Tapion</td><td class="t-orange">Super</td><td>Perm</td><td>True Hero</td><td class="t-mono">100,000,000</td><td>Via Tapion Portal; L100k</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- MAJIN -->
+    <div class="sub-header">Majin</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Gene Type</th><th>Race Type</th><th>Trans Type</th><th>Forms</th><th>PL Requirements</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Base</td><td>Standard</td><td>Perm</td><td>Fat Buu / Wicked Buu / Skinny Buu / Kid Buu</td><td class="t-mono">5m / 10m / 15m / 45m</td><td>100 / 250 / 500 / 1,000 Candy Eats</td></tr>
+          <tr><td class="t-bold">Legendary Buu</td><td class="t-green">Zeno</td><td>Perm</td><td>Super Buu / SBGotenks / SBGohan / Kid Buu</td><td class="t-mono">50m / 100m / 150m / 250m</td><td>5/3 via Zeno; 100 / 250 / 500 / 1,000 Candy Eats</td></tr>
+          <tr><td class="t-bold">Legendary Uub</td><td class="t-orange">Super</td><td>Semi-Perm</td><td>Kid Buu Reincarnated / Majin Uub Unleashed <em>(perm)</em></td><td class="t-mono">40m / 150m</td><td>Via Uub Portal; Unleashed: L100k</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- MAKYO -->
+    <div class="sub-header">Makyo</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Gene Type</th><th>Race Type</th><th>Trans Type</th><th>Forms</th><th>PL Requirements</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Base</td><td>Standard</td><td>Non-Perm</td><td>Star Powered Form</td><td class="t-mono">2,500,000</td><td>-</td></tr>
+          <tr><td class="t-bold">Legendary Garlic</td><td class="t-orange">Super</td><td>Perm</td><td>Unrestrained Form / Super Garlic Jr</td><td class="t-mono">20m / 60m</td><td>Via Garlic Portal</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- NAMEKIAN -->
+    <div class="sub-header">Namekian</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Gene Type</th><th>Race Type</th><th>Trans Type</th><th>Forms</th><th>PL Requirements</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Orange Piccolo</td><td class="t-red">PvP</td><td>Perm</td><td>Giant Namekian / Namekian Fusion / Orange Piccolo / Giant Orange Piccolo</td><td class="t-mono">18m / 45m / 90m / 150m</td><td>4/3 via PvP Broker</td></tr>
+          <tr><td class="t-bold">Red-Eyes</td><td class="t-orange">Super</td><td>Perm</td><td>Great Namekian / Youth Restored / Giant Namekian / Red-Eyed Namekian</td><td class="t-mono">40m / 75m / 125m / 500m</td><td>Via Namekian Portal</td></tr>
+          <tr><td class="t-bold">Super Gene</td><td>Standard</td><td>Perm</td><td>Super Namekian / Ascended Super Namekian</td><td class="t-mono">5m (L35k) / 50m</td><td>-</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- SAIBAMAN -->
+    <div class="sub-header">Saibaman</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Gene Type</th><th>Race Type</th><th>Trans Type</th><th>Forms</th><th>PL Requirements</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Base</td><td>Standard</td><td>Non-Perm</td><td>Super / Ascended Super / SS2 / SS3</td><td class="t-mono">50k / 300k / 1m / 3m</td><td>-</td></tr>
+          <tr><td class="t-bold">Legendary Cauliflower</td><td class="t-orange">Super</td><td>Perm</td><td>Infected / Plague Spreader / Imperfect / Legendary Cauliflower</td><td class="t-mono">10m / 25m / 40m / 50m</td><td>Via Cauliflower Portal</td></tr>
+          <tr><td class="t-bold">Metal</td><td>Standard</td><td>Non-Perm</td><td>Super Saibaman / Saiba Metal Tennen / Saiba Metal Silver / Saiba Metal Gold</td><td class="t-mono">75k / 400k / 2m / 4m</td><td>Gold: Dr Gero Metal Quest &amp; L20k</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- SAIYAN -->
+    <div class="sub-header">Saiyan</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Gene Type</th><th>Race Type</th><th>Trans Type</th><th>Forms</th><th>PL Requirements</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Broly Black</td><td class="t-red">PvP</td><td>Perm</td><td>SS Rose / Full Power SS Rose</td><td class="t-mono">30m / 70m</td><td>4/3 via PvP Broker</td></tr>
+          <tr><td class="t-bold">Broly Gene</td><td class="t-orange">Super</td><td>Perm</td><td>SS / Wrathful Saiyan / Full Powered Saiyan</td><td class="t-mono">20m / 50m / 75m</td><td>Via Broly Cave</td></tr>
+          <tr><td class="t-bold">Gogeta Gene</td><td class="t-orange">Super</td><td>Perm</td><td>SS / SS3 / Golden Oozaru / SS4 / SS Blue</td><td class="t-mono">15m / 30m / 40m / 60m / 75m</td><td>Saiyan 3/3 + Supreme Kai Quest</td></tr>
+          <tr><td class="t-bold">Honour Gene</td><td>Standard</td><td>Non-Perm</td><td>Giji SS / SS / USS / SS2 / SS3 / Golden Oozaru / SS4 / SSJ4 LB</td><td class="t-mono">40k / 100k / 500k / 1.5m / 3m / 4m / 5m</td><td>SS3: Tail; Oozaru: SSJ3 &amp; Fake Moon; SS4: Tail; SSJ4 LB: L75k + 5/3</td></tr>
+          <tr><td class="t-bold">Honour God Gene</td><td>Standard</td><td>Non-Perm</td><td>SS / SS God / SS Blue / Saiyan Ultra Instinct / Saiyan MUI</td><td class="t-mono">125k / 600k / 1.75m / 4m / 7.5m</td><td>SS: Witnessed 1 death</td></tr>
+          <tr><td class="t-bold t-green">Legendary Cumber <span class="tag tag-zeno">ZENO</span> <span class="tag tag-override">v8.67.15</span></td><td class="t-green">Zeno</td><td>Non-Perm</td><td>SS / SS3 / SS3 Full Power / Savage Tyrant Spirit</td><td class="t-mono">25m / 60m / 100m / 150m</td><td>5/3 via Zeno / 6/3 via Beerus</td></tr>
+          <tr><td class="t-bold">Legendary Gene</td><td>Standard</td><td>Non-Perm</td><td>Locked SS / SS / USS / Legendary SS / Unleashed Legendary SS</td><td class="t-mono">150k / 600k / 1.75m / 4m / 6m</td><td>-</td></tr>
+          <tr><td class="t-bold">Pride Gene</td><td>Standard</td><td>Non-Perm</td><td>SS / USS / SS2 / ASS2 / SS4 / SSJ4 LB</td><td class="t-mono">75k / 450k / 1.4m / 3m / 4.5m</td><td>ASS2+SS4: Tail; Babidi boost ×1.6; SSJ4 LB: L75k + 5/3</td></tr>
+          <tr><td class="t-bold">Pride God Gene</td><td>Standard</td><td>Non-Perm</td><td>SS / SS2 Rage / SS God / SS Blue / SS Blue Evolved</td><td class="t-mono">125k / 550k / 2m / 4m / 7m</td><td>-</td></tr>
+          <tr><td class="t-bold">Vegito Gene</td><td class="t-orange">Super</td><td>Perm</td><td>SS / SS3 / Golden Oozaru / SS Blue</td><td class="t-mono">15m / 40m / 50m / 75m</td><td>Saiyan 3/3 + Supreme Kai Quest; Oozaru: Fake Moon in SSJ3</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- TUFFLE -->
+    <div class="sub-header">Tuffle</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Gene Type</th><th>Race Type</th><th>Trans Type</th><th>Forms</th><th>PL Requirements</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Bebi Gene</td><td class="t-orange">Super</td><td>Semi-Perm</td><td>SS / Super Bebi / Super Bebi 2 / True Form <em>(perm)</em></td><td class="t-mono">15m / 30m / 50m / 150m</td><td>Via Bebi Portal; 10 / 25 / 50 / 150 Infections</td></tr>
+          <tr><td class="t-bold">Parasite</td><td>Standard</td><td>Semi-Perm</td><td>Infected / Super Tuffle / Super Tuffle 2 <em>(perm)</em></td><td class="t-mono">5m / 10m / 30m</td><td>10 / 20 / 30 Infections</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ULTIMATE HYBRID -->
+    <div class="sub-header">Ultimate Hybrid</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Gene Type</th><th>Race Type</th><th>Trans Type</th><th>Forms</th><th>PL Requirements</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Base</td><td>Standard</td><td>Perm</td><td>Marred Imperfection</td><td class="t-mono">5,000,000</td><td>-</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- YARDRAT -->
+    <div class="sub-header">Yardrat</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Gene Type</th><th>Race Type</th><th>Trans Type</th><th>Forms</th><th>PL Requirements</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Base</td><td>Standard</td><td>Non-Perm</td><td>Final Form</td><td class="t-mono">3,500,000</td><td>-</td></tr>
+          <tr><td class="t-bold">Trapper Gene</td><td class="t-red">PvP</td><td>Perm</td><td>Trapper Form</td><td class="t-mono">30,000,000</td><td>4/3 via PvP Broker</td></tr>
         </tbody>
       </table>
     </div>
@@ -1504,34 +1641,34 @@
       <table>
         <thead><tr><th>Technique</th><th>Race</th><th>Giver NPC</th></tr></thead>
         <tbody>
-          <tr><td class="t-bold">Zanzoken Warp</td><td>All</td><td>Piccolo (Zanzoken Mastery)</td></tr>
-          <tr><td class="t-bold">Kamehameha</td><td>All</td><td>Master Roshi</td></tr>
-          <tr><td class="t-bold">Death Beam</td><td>Changeling</td><td>Frieza</td></tr>
-          <tr><td class="t-bold">Super Ghost Kamikaze Attack</td><td>Half Saiyan, Saiyan, Human</td><td>Gotenks</td></tr>
-          <tr><td class="t-bold">Zanzoken</td><td>All</td><td>Piccolo</td></tr>
-          <tr><td class="t-bold">Light Grenade</td><td>Namekian</td><td>Piccolo</td></tr>
-          <tr><td class="t-bold">Special Beam Cannon</td><td>Namekian</td><td>Piccolo</td></tr>
-          <tr><td class="t-bold">Solar Flare</td><td>All</td><td>Tien</td></tr>
-          <tr><td class="t-bold">Trinity Beam</td><td>Human</td><td>Tien</td></tr>
-          <tr><td class="t-bold">Galick Gun</td><td>Saiyan &amp; Half Saiyan</td><td>Vegeta</td></tr>
-          <tr><td class="t-bold">Final Flash</td><td>Saiyan</td><td>Vegeta</td></tr>
-          <tr><td class="t-bold">Hyper Tornado</td><td>All</td><td>Pikkon</td></tr>
-          <tr><td class="t-bold">Instant Transmission</td><td>All</td><td>Yardrat Sensei or Trainer NPC</td></tr>
-          <tr><td class="t-bold">Big Bang Attack</td><td>All</td><td>Vegeta</td></tr>
-          <tr><td class="t-bold">SS Deadly Bomber</td><td>Android</td><td>Dr. Gero</td></tr>
-          <tr><td class="t-bold">Death Ball</td><td>All</td><td>Dabura</td></tr>
-          <tr><td class="t-bold">Quad Barrage</td><td>Human</td><td>Tien</td></tr>
-          <tr><td class="t-bold">After Image</td><td>All</td><td>Son Goku</td></tr>
-          <tr><td class="t-bold">Big Bang Kamehameha</td><td>Gogeta or Vegito</td><td>Gogeta</td></tr>
-          <tr><td class="t-bold">Final Kamehameha</td><td>Saiyan</td><td>Vegito</td></tr>
-          <tr><td class="t-bold">Dragon Fist</td><td>Saiyan</td><td>Son Goku</td></tr>
-          <tr><td class="t-bold">Destructo Disk</td><td>Human, Half Saiyan, Saiyan</td><td>Krillin</td></tr>
-          <tr><td class="t-bold">Super Speed Attack</td><td>All</td><td>Mr. Popo</td></tr>
-          <tr><td class="t-bold">Super Speed Block</td><td>All</td><td>Mr. Popo</td></tr>
-          <tr><td class="t-bold">Legendary Dragon Fist</td><td>All</td><td>Agent X</td></tr>
-          <tr><td class="t-bold">Fly Kick</td><td>All</td><td>Combat Utility NPC</td></tr>
-          <tr><td class="t-bold">Burning Lotus</td><td>All</td><td>Combat Utility NPC</td></tr>
-          <tr><td class="t-bold">Wind Gust</td><td>All</td><td>Combat Utility NPC</td></tr>
+          <tr><td class="t-bold">Zanzoken Warp</td><td>Piccolo (Zanzoken Mastery)</td></tr>
+          <tr><td class="t-bold">Kamehameha</td><td>Master Roshi</td></tr>
+          <tr><td class="t-bold">Death Beam</td><td>Frieza</td></tr>
+          <tr><td class="t-bold">Super Ghost Kamikaze Attack</td><td>Gotenks</td></tr>
+          <tr><td class="t-bold">Zanzoken</td><td>Piccolo</td></tr>
+          <tr><td class="t-bold">Light Grenade</td><td>Piccolo</td></tr>
+          <tr><td class="t-bold">Special Beam Cannon</td><td>Piccolo</td></tr>
+          <tr><td class="t-bold">Solar Flare</td><td>Tien</td></tr>
+          <tr><td class="t-bold">Trinity Beam</td><td>Tien</td></tr>
+          <tr><td class="t-bold">Galick Gun</td><td>Vegeta</td></tr>
+          <tr><td class="t-bold">Final Flash</td><td>Vegeta</td></tr>
+          <tr><td class="t-bold">Hyper Tornado</td><td>Pikkon</td></tr>
+          <tr><td class="t-bold">Instant Transmission</td><td>Yardrat Sensei or Trainer NPC</td></tr>
+          <tr><td class="t-bold">Big Bang Attack</td><td>Vegeta</td></tr>
+          <tr><td class="t-bold">SS Deadly Bomber</td><td>Dr. Gero</td></tr>
+          <tr><td class="t-bold">Death Ball</td><td>Dabura</td></tr>
+          <tr><td class="t-bold">Quad Barrage</td><td>Tien</td></tr>
+          <tr><td class="t-bold">After Image</td><td>Son Goku</td></tr>
+          <tr><td class="t-bold">Big Bang Kamehameha</td><td>Gogeta</td></tr>
+          <tr><td class="t-bold">Final Kamehameha</td><td>Vegito</td></tr>
+          <tr><td class="t-bold">Dragon Fist</td><td>Son Goku</td></tr>
+          <tr><td class="t-bold">Destructo Disk</td><td>Krillin</td></tr>
+          <tr><td class="t-bold">Super Speed Attack</td><td>Mr. Popo</td></tr>
+          <tr><td class="t-bold">Super Speed Block</td><td>Mr. Popo</td></tr>
+          <tr><td class="t-bold">Legendary Dragon Fist</td><td>Agent X</td></tr>
+          <tr><td class="t-bold">Fly Kick</td><td>Combat Utility NPC</td></tr>
+          <tr><td class="t-bold">Burning Lotus</td><td>Combat Utility NPC</td></tr>
+          <tr><td class="t-bold">Wind Gust</td><td>Combat Utility NPC</td></tr>
         </tbody>
       </table>
     </div>
@@ -1618,6 +1755,17 @@
         <li>Previously-banned SSA techniques (PPS, Madness Rush, etc.) are now <strong>UNBANNED</strong> for skill-based events (RBA, G.o.D Arena, RR Battle Tower)</li>
         <li><strong>Paralyze duration</strong> nerfed: 5 seconds → <strong>2.5 seconds</strong> in normalised/skill-based events only</li>
         <li>The full tech list will be reviewed in upcoming updates: new techs, face-lifts, and more ban-list removals coming</li>
+      </ul>
+    </div>
+
+    <!-- HAKAI -->
+    <div class="section-header">💀 Hakai</div>
+    <div class="card">
+      <p><strong>Hakai</strong> obliterates the target and sends them to jail for <strong>30 minutes</strong>. Used to pause another player's progression. Has a <strong>1 day cooldown</strong>. The jailed player cannot log out while the timer is active, or the timer resets.</p>
+      <ul>
+        <li><strong>Purchase Hakai:</strong> Z Agent (costs ZP)</li>
+        <li><strong>Hakai Safety:</strong> Granted automatically for <strong>2 hours</strong> after leaving jail. Can also be purchased at the Z Agent</li>
+        <li><strong>Reset Hakai Cooldown:</strong> Z Agent (ZP) or Daily Quest Rewards Store (10 tokens)</li>
       </ul>
     </div>
 
@@ -1742,15 +1890,15 @@
       <table>
         <thead><tr><th>Flag</th><th>Benefit</th><th>Cap</th></tr></thead>
         <tbody>
-          <tr><td class="t-bold">Palace of Powerlevel</td><td>Increases PL</td><td>1b gains/tick</td></tr>
-          <tr><td class="t-bold">Kingdom of Ki</td><td>Increases Ki + Ki-Defense</td><td>1b gains/tick</td></tr>
-          <tr><td class="t-bold">Stronghold of Strength</td><td>Increases Str</td><td>1b gains/tick</td></tr>
-          <tr><td class="t-bold">Dungeon of Defense</td><td>Increases Defense</td><td>1b gains/tick</td></tr>
-          <tr><td class="t-bold">Tower of Training Points</td><td>Fixed TP amount</td><td>-</td></tr>
-          <tr><td class="t-bold">Zenith of Zenni</td><td>Fixed zenni amount</td><td>-</td></tr>
-          <tr><td class="t-bold">Loft of Levels</td><td>Gives levels</td><td>-</td></tr>
-          <tr><td class="t-bold">Gulag of Guild Points</td><td>Gives guild points</td><td>-</td></tr>
-          <tr><td class="t-bold">Zone of Z Points</td><td>Gives ZP</td><td>-</td></tr>
+          <tr><td class="t-bold">Palace of Powerlevel</td><td>1b gains/tick</td></tr>
+          <tr><td class="t-bold">Kingdom of Ki</td><td>1b gains/tick</td></tr>
+          <tr><td class="t-bold">Stronghold of Strength</td><td>1b gains/tick</td></tr>
+          <tr><td class="t-bold">Dungeon of Defense</td><td>1b gains/tick</td></tr>
+          <tr><td class="t-bold">Tower of Training Points</td><td>-</td></tr>
+          <tr><td class="t-bold">Zenith of Zenni</td><td>-</td></tr>
+          <tr><td class="t-bold">Loft of Levels</td><td>-</td></tr>
+          <tr><td class="t-bold">Gulag of Guild Points</td><td>-</td></tr>
+          <tr><td class="t-bold">Zone of Z Points</td><td>-</td></tr>
           <tr class="rule-critical"><td class="t-gold t-bold">Abyss of All Stats ⭐</td><td>All stats (double vs. regular stat flags)</td><td class="t-red">Must be Level 100k (not TL); 1b gains/tick; ALWAYS at bottom</td></tr>
         </tbody>
       </table>
@@ -1761,12 +1909,12 @@
       <table>
         <thead><tr><th>Tournament</th><th>Type</th><th>Rewards</th></tr></thead>
         <tbody>
-          <tr><td class="t-bold">World Tournament</td><td>Open to all</td><td>Levels (win or loss)</td></tr>
-          <tr><td class="t-bold">Baba Tournament</td><td>Team: red vs. blue (1v1)</td><td>Levels + TPs (win) / Levels (loss)</td></tr>
-          <tr><td class="t-bold">Galactic Tournament</td><td>Open to all</td><td>Levels + TPs (win) / Levels (loss)</td></tr>
-          <tr><td class="t-bold">FFA Tournament</td><td>Free-for-all</td><td>Levels (win or loss)</td></tr>
-          <tr><td class="t-bold">Guild Tournament</td><td>Guild-based; fixed stats</td><td>Levels + guild points (win)</td></tr>
-          <tr><td class="t-bold">Tournament of Power</td><td>Universe-based; rules change (melee or ki only)</td><td>Levels + ZP + UP (win) / Levels + UP (loss)</td></tr>
+          <tr><td class="t-bold">World Tournament</td><td>Levels (win or loss)</td></tr>
+          <tr><td class="t-bold">Baba Tournament</td><td>Levels + TPs (win) / Levels (loss)</td></tr>
+          <tr><td class="t-bold">Galactic Tournament</td><td>Levels + TPs (win) / Levels (loss)</td></tr>
+          <tr><td class="t-bold">FFA Tournament</td><td>Levels (win or loss)</td></tr>
+          <tr><td class="t-bold">Guild Tournament</td><td>Levels + guild points (win)</td></tr>
+          <tr><td class="t-bold">Tournament of Power</td><td>Levels + ZP + UP (win) / Levels + UP (loss)</td></tr>
         </tbody>
       </table>
     </div>
@@ -1829,19 +1977,7 @@
     <div class="section-header">🎰 Gamba Event</div>
     <div class="card"><p>Gamba Event Room. No outside interference. Gamba Warp verb in Channels tab when Gamba Machine spawned. Admin-hosted + automated. Chest Trap probability = 50%.</p></div>
 
-    <!-- CASINO -->
-    <div class="section-header">🎰 Casino</div>
-    <div class="card">
-      <p>Located behind the <strong>Mall Mascot</strong>. Walk down the carpet to find two main rooms: the <strong>standard Casino room</strong> and the <strong>Sub Casino room</strong>.</p>
-      <ul>
-        <li>Games include <strong>slot machines, blackjack,</strong> and more</li>
-        <li>Earn <strong>Casino Tokens</strong> by playing, then spend them at Oolong's NPCs (all located inside the Casino)</li>
-        <li><strong>Oolong's Shop:</strong> Techniques, Special Suits, Buffs, Currencies, Items</li>
-        <li><strong>Oolong's Exchange:</strong> Convert ZP and UP into Casino Tokens</li>
-        <li><strong>Oolong's Lottery:</strong> Buy lotto tickets (automatically redeems)</li>
-        <li><strong>Casino Manager:</strong> All casino rules, leaderboard, and the Black Book</li>
-      </ul>
-    </div>
+    <div class="tip-box">💡 Casino info has moved to the <strong>Buildings</strong> tab!</div>
 
     <div class="section-header">📅 Daily Quests &amp; Stamps</div>
     <div class="card-grid">
@@ -1854,6 +1990,21 @@
         <p>Every <strong>24 hours</strong>. 5 stamps = weekly rewards (levels, TPs, zenni).<br>⚠️ <strong>Do NOT accumulate more than 5 stamps before claiming</strong>: you'll lose them all!</p>
       </div>
     </div>
+
+    <!-- G.o.D SYSTEM -->
+    <div class="section-header">👑 G.o.D System</div>
+    <p>One G.o.D per universe (4 total). Elected via G.o.D tournament once per wipe. G.o.D can be challenged via <strong>Channels tab</strong> (1v1 same-stats). G.o.Ds have <strong>2 rejects</strong>.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Turnover Trigger</th><th>Chance</th></tr></thead>
+        <tbody>
+          <tr><td>Killed by NPC</td><td class="t-red t-bold">5%</td></tr>
+          <tr><td>Killed by Player / Hakai'd (outside events/tournaments/arenas)</td><td class="t-red t-bold">25%</td></tr>
+          <tr><td>8+ hours accumulated without defending</td><td class="t-orange">Must defend at least once to reset timer</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tip-box">💡 <strong>G.o.D Arena Spectate</strong> ability available via Tournament TV.</div>
 
   </section>
 
@@ -2053,11 +2204,261 @@
       </div>
     </div>
 
+    <!-- NPC STAT BOOSTS -->
+    <div class="section-header">💪 NPC Stat Boosts</div>
+    <div class="warn-box">⚠️ One-time stat boost <strong>per rebirth</strong>! Set multipliers. Make sure you have desirable stats FIRST. All require Level 35,000 unless noted. Cannot Potara if you boost first (except Supreme Kai). Mystic/Human Convert/Changeling Convert = cannot Potara.</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>NPC</th><th>Boost</th><th>Requirements</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Son Goku</td><td class="t-green">PL ×1.2</td><td>Level 35,000</td></tr>
+          <tr><td class="t-bold">Krillin</td><td class="t-green">Ki ×1.2</td><td>Level 35,000 + 100,000,000 zenni</td></tr>
+          <tr><td class="t-bold">King Vegeta</td><td class="t-green">Ki Defense ×1.2</td><td>Kill 25 enemies</td></tr>
+          <tr><td class="t-bold">Hercule</td><td class="t-green">Strength ×1.2</td><td>Level 35,000</td></tr>
+          <tr><td class="t-bold">Piccolo</td><td class="t-green">Defense ×1.2</td><td>Level 35,000</td></tr>
+          <tr><td class="t-bold">Guru</td><td class="t-gold">All stats ×1.2</td><td>25% Good Karma + Kill 3 of Frieza's Henchmen</td></tr>
+          <tr><td class="t-bold">Frieza</td><td class="t-gold">All stats ×1.2</td><td>25% Evil Karma + Kill 3 Namekian Civilians</td></tr>
+          <tr><td class="t-bold">Babidi</td><td class="t-gold">All stats ×1.5 (×1.6 Pride Saiyan)</td><td>Level 35,000 + 100% Evil Karma</td></tr>
+          <tr><td class="t-bold">Supreme Kai (Potara)</td><td class="t-gold">Both players' stats added OR Self ×1.8</td><td>Level 35,000 + Kill (Saga) Shenron</td></tr>
+          <tr><td class="t-bold">Princess Snake</td><td class="t-orange">All stats ×2</td><td>None (hidden NPC)</td></tr>
+          <tr><td class="t-bold">Shin</td><td class="t-gold">All stats ×1.5</td><td>Level 35,000 + Perm races only</td></tr>
+          <tr><td class="t-bold">Toronbo Dragon</td><td class="t-orange">All stats ×2</td><td>Cereal Dragonball Wish</td></tr>
+          <tr><td class="t-bold">Dr. Gero – Convert</td><td class="t-gold">All stats ×1.8</td><td>Human only</td></tr>
+          <tr><td class="t-bold">King Cold – Convert</td><td class="t-gold">×1.8 (Metal=STR; Mecha=KI)</td><td>Changeling only</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       TAB 11: BUILDINGS
+  ══════════════════════════════════════════════ -->
+  <section class="tab-panel" id="panel-buildings">
+
+    <div class="tip-box" style="margin-top:16px">💡 Major in-game buildings and locations. Each has unique NPCs, equipment, or activities.</div>
+
+    <!-- PLAYER HOUSE -->
+    <div class="section-header">🏠 Player House</div>
+    <div class="card">
+      <p>Walk up to any available house and buy it. Houses include an <strong>open area</strong> for equipment and decorations, a <strong>gravity room</strong>, and a <strong>mob room</strong> (unlock additional mob floors as you progress).</p>
+      <ul>
+        <li><strong>Cost:</strong> 2,500 UP at 5/3</li>
+        <li><strong>Legendary House Equipment:</strong> Buy from <strong>Real Estate Renji NPC</strong> (10b zenni per piece). Best gym equipment outside of Club House</li>
+        <li>Farm your mob floors each repop for extra EXP alongside your regular mobbing rotation</li>
+      </ul>
+    </div>
+
+    <!-- CASINO -->
+    <div class="section-header">🎰 Casino</div>
+    <div class="card">
+      <p>Located behind the <strong>Mall Mascot</strong>. Walk down the carpet to find two main rooms: the <strong>standard Casino room</strong> and the <strong>Sub Casino room</strong>.</p>
+      <ul>
+        <li>Games include <strong>slot machines, blackjack,</strong> and more</li>
+        <li>Earn <strong>Casino Tokens</strong> by playing, then spend them at Oolong's NPCs (all located inside the Casino)</li>
+        <li><strong>Oolong's Shop:</strong> Techniques, Special Suits, Buffs, Currencies, Items</li>
+        <li><strong>Oolong's Exchange:</strong> Convert ZP and UP into Casino Tokens</li>
+        <li><strong>Oolong's Lottery:</strong> Buy lotto tickets (automatically redeems)</li>
+        <li><strong>Casino Manager:</strong> All casino rules, leaderboard, and the Black Book</li>
+      </ul>
+    </div>
+
+    <!-- FCC -->
+    <div class="section-header">🏋️ FCC (Future Capsule Corp.)</div>
+    <div class="card">
+      <p>Located on <strong>Future Earth</strong>. A special training facility unlocked through <strong>Gogeta's quest</strong>.</p>
+      <ul>
+        <li><strong>Gravity Room:</strong> High-level gravity training</li>
+        <li><strong>Equipment Room:</strong> Separate room with training equipment</li>
+        <li><strong>Access:</strong> Complete Gogeta's quest to unlock</li>
+      </ul>
+    </div>
+
+    <!-- MALL -->
+    <div class="section-header">🛒 Mall (Megamall)</div>
+    <div class="card">
+      <p>The central shopping hub of DB Asylum. The <strong>Mall Mascot NPC</strong> sits outside the building for easy Instant Transmission access.</p>
+      <ul>
+        <li><strong>Casino</strong> &amp; <strong>Sub Casino</strong> — accessed through the Mall</li>
+        <li><strong>PVP Broker</strong> — PvP-related services</li>
+        <li><strong>Special Shop Keeper</strong> — sells ZSuits</li>
+        <li><strong>Combat Shop Keeper</strong> — sells special Techniques</li>
+        <li><strong>Towa</strong></li>
+        <li><strong>Lazer the Blacksmith</strong> — weapon crafting</li>
+        <li><strong>Bounty Hunter</strong></li>
+      </ul>
+    </div>
+
+    <!-- WACKDONALDS -->
+    <div class="section-header">🍔 Wackdonalds</div>
+    <div class="card">
+      <p>The in-game restaurant where you can purchase food items for training buffs and stat gains.</p>
+      <ul>
+        <li><strong>Happy Meals:</strong> Grants a <strong>50% EXP buff</strong> for a short duration</li>
+        <li><strong>Other Foods:</strong> Various meals that provide stat gains</li>
+      </ul>
+    </div>
+
+    <!-- HALL OF FAME -->
+    <div class="section-header">🏆 Hall of Fame</div>
+    <div class="card">
+      <p>A monument to DB Asylum's history. Contains statues of all important <strong>legacy players</strong> and <strong>End of Wipe statues</strong>.</p>
+      <div class="new-box"><span class="badge">EASTER EGG</span> You can <strong>vandalize Perfection's statue</strong> to summon Perf to chat!</div>
+    </div>
+
+    <!-- SUB ROOM -->
+    <div class="section-header">💎 Sub Room</div>
+    <div class="card">
+      <p>An exclusive area available to subscribers with special training benefits.</p>
+      <ul>
+        <li><strong>Sub Gravity:</strong> Zero strain gravity (best gravity in the game)</li>
+        <li><strong>Sub Med Pads:</strong> Best meditation gains available</li>
+        <li>Special Mob Room Access for exclusive farming zones</li>
+      </ul>
+      <div class="warn-box">⚠️ More details coming soon — check back for updates!</div>
+    </div>
+
+    <!-- CLUB -->
+    <div class="section-header">🎪 Club (Club House)</div>
+    <div class="card">
+      <p>A premium gravity training location with the highest multiplier available.</p>
+      <ul>
+        <li><strong>Gravity:</strong> x30 multiplier</li>
+        <li><strong>Access:</strong> Requires a <strong>Club Ticket</strong> (purchase from Z Agent for ZP)</li>
+        <li><strong>Session Duration:</strong> 30 minutes (45 minutes with Gym Bunny race)</li>
+      </ul>
+      <div class="warn-box">⚠️ More details coming soon — check back for updates!</div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       TAB: GUILDS
+  ══════════════════════════════════════════════ -->
+  <section class="tab-panel" id="panel-guilds">
+
+    <div class="section-header">🏰 Guild System</div>
+    <div class="warn-box" style="margin-top:8px">⚠️ Guild update coming soon with more information!</div>
+    <div class="sub-header">Guild Evolution Paths</div>
+    <p>Guilds with Evolution Path: <strong>24-hour join cooldown</strong> for new invitees.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Path</th><th>Perks</th></tr></thead>
+        <tbody>
+          <tr><td class="t-orange t-bold">Gym Bunny</td><td>Candy farming +50% | Stat Training w/ Equipment: +30% active / +20% AFK | Club House duration +50%</td></tr>
+          <tr><td class="t-orange t-bold">Mobsters</td><td>Mob Farming EXP +30% | Player Kill EXP +50% | Stat Pills: Red/Blue x2.5 (was x2); Cavern x3.5 (was x3)</td></tr>
+          <tr><td class="t-orange t-bold">Hustlers</td><td>Mob Farming w/ ZP Suits +50% | TP Gains when Spending +25% | Level Up Stat Gains +10% | Oracle Fish EXP chance 20%→50% | Stat Storage +10% per 100b</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       TAB 12: QUEST MEDALS
+  ══════════════════════════════════════════════ -->
+  <section class="tab-panel" id="panel-medals">
+
+    <!-- RANKS -->
+    <div class="section-header">🎖 Ranks</div>
+    <div class="tip-box">💡 Use <code>Quest Medal Check</code> in Training tab. Easiest early medals: King Kai, Yamcha (Lvl 500), Dr. Briefs, Master Roshi (Kamehameha), Saiyaman.</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Level</th><th>Rank</th><th>Quest Medals Required</th></tr></thead>
+        <tbody>
+          <tr><td class="t-mono">2,000</td><td class="t-bold">Easy</td><td class="t-dim">-</td></tr>
+          <tr><td class="t-mono">7,500</td><td class="t-bold">Medium</td><td class="t-dim">-</td></tr>
+          <tr><td class="t-mono">15,000</td><td class="t-bold">Hard</td><td class="t-dim">-</td></tr>
+          <tr><td class="t-mono">25,000</td><td class="t-bold">Extreme</td><td class="t-orange">3</td></tr>
+          <tr><td class="t-mono">35,000</td><td class="t-bold">Immortal</td><td class="t-orange">5</td></tr>
+          <tr><td class="t-mono">50,000</td><td class="t-bold">Renegade</td><td class="t-orange">7</td></tr>
+          <tr><td class="t-mono">75,000</td><td class="t-bold">King</td><td class="t-orange">9</td></tr>
+          <tr><td class="t-mono">100,000</td><td class="t-bold">Divine</td><td class="t-orange">11</td></tr>
+          <tr><td class="t-mono">150,000</td><td class="t-bold">Deity</td><td class="t-orange">13</td></tr>
+          <tr><td class="t-mono">200,000</td><td class="t-bold">Berserker</td><td class="t-dim">-</td></tr>
+          <tr><td class="t-mono">250,000</td><td class="t-bold">Sentinel</td><td class="t-orange">15</td></tr>
+          <tr><td class="t-mono">300,000</td><td class="t-bold">Shogun</td><td class="t-orange">20 at 350k</td></tr>
+          <tr><td class="t-mono">400,000</td><td class="t-bold">Sage</td><td class="t-orange">25 (30 to pass 450k)</td></tr>
+          <tr><td class="t-mono">500,000</td><td class="t-gold t-bold">Champion</td><td class="t-green">Max Rank</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tip-box" style="margin-top:16px">💡 There are <strong>51 Quest Medals</strong> to collect. Complete the quest objectives for each NPC to earn their medal and rewards. Some reward info is still being gathered — blanks will be filled in over time.</div>
+
+    <div class="section-header">🏅 All Quest Medals (51 Total)</div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Medal</th>
+            <th>Type</th>
+            <th>Objective</th>
+            <th>Reward</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="t-bold t-orange">Astro</td><td>Tower</td><td>Mob Tower Competition (Get Spacepod back from Bergamo)</td><td class="t-green">EXP +1,000,000,000 · ZP +50 · TP +500,000</td></tr>
+          <tr><td class="t-bold t-orange">Babidi</td><td>Kill</td><td>Kill 50 Oolongs/Puars in the Portal Above Babidi</td><td class="t-green">EXP +50,000,000 · Zenni +20,000,000 · TP +75,000</td></tr>
+          <tr><td class="t-bold t-orange">Beerus</td><td>Cave</td><td>Kill 50 Universe 6 members in cave</td><td class="t-green">EXP +1,000,000,000 · Zenni +25,000,000</td></tr>
+          <tr><td class="t-bold t-orange">Briefs</td><td>Kill</td><td>Kill 50 Simulation Clones in Capsule Corp</td><td class="t-green">EXP +1,000,000,000 · Zenni +10,000,000 · ZP +25</td></tr>
+          <tr><td class="t-bold t-orange">Bulma</td><td>Fetch</td><td>Deliver Broken Parts to Dr. Briefs</td><td>Capsule (Item) — Increases Inventory space by 25!</td></tr>
+          <tr><td class="t-bold t-orange">Cell</td><td>Kill</td><td>Kill Saga Trunks</td><td class="t-green">EXP +15,000,000 · Zenni +500,000</td></tr>
+          <tr><td class="t-bold t-orange">Champa</td><td>Cave</td><td>Kill 50 Universe 7 Members in Cave</td><td class="t-green">EXP +1,000,000,000 · Zenni +25,000,000</td></tr>
+          <tr><td class="t-bold t-orange">Enraged Trunks(1)</td><td>Kill</td><td>Kill 30 Androids 16 and 17 on Future Earth</td><td class="t-green">EXP +150,000,000</td></tr>
+          <tr><td class="t-bold t-orange">Enraged Trunks(2)</td><td>Kill</td><td>Kill Nuova and Eis Shenron</td><td class="t-green">Zenni +50,000,000 · ZP +150 · TP +500,000</td></tr>
+          <tr><td class="t-bold t-orange">Frieza</td><td>Kill</td><td>Kill 15 Namekian Villagers</td><td>Frieza Boost</td></tr>
+          <tr><td class="t-bold t-orange">Gero Metal</td><td class="t-dim">—</td><td class="t-dim">—</td><td class="t-dim">—</td></tr>
+          <tr><td class="t-bold t-orange">Glass Civilian(1)</td><td>Kill</td><td>Defeat Vidro in the cave above</td><td class="t-green">EXP +500,000,000 · Zenni +25,000,000</td></tr>
+          <tr><td class="t-bold t-orange">Glass Civilian(2)</td><td>Kill</td><td>Collect 25 Glass Fragments (Kill Glass Soldiers)</td><td class="t-green">EXP +750,000,000 · Zenni +15,000,000</td></tr>
+          <tr><td class="t-bold t-orange">Glass Civilian(3)</td><td>Kill</td><td>Kill 15 'Namekian in Black'</td><td class="t-green">EXP +1,000,000,000 · Zenni +15,000,000</td></tr>
+          <tr><td class="t-bold t-orange">Gogeta</td><td>Kill</td><td>Kill Broly and Shenron</td><td class="t-green">Strength +500,000 · Defense +500,000 · Access to FCC</td></tr>
+          <tr><td class="t-bold t-orange">Gohan</td><td>Kill</td><td>Kill 50 Bebi Vegeta Soldiers</td><td class="t-green">EXP +500,000,000 · Zenni +25,000,000</td></tr>
+          <tr><td class="t-bold t-orange">Goku</td><td>Guild</td><td>Kill 2000 Labyrinth Mobs as a Guild</td><td class="t-green">EXP +250,000,000 · Zenni +20,000,000 · ZP +200</td></tr>
+          <tr><td class="t-bold t-orange">Gotenks</td><td>Tower</td><td>Kill all mobs in the tower</td><td class="t-green">EXP +500,000,000 · Zenni +25,000,000</td></tr>
+          <tr><td class="t-bold t-orange">Guru</td><td>Kill</td><td>Kill 3 Henchman (must have 25% good karma)</td><td>Guru Boost</td></tr>
+          <tr><td class="t-bold t-orange">Hell Fruit</td><td>Train</td><td>Talk to Dabura and reach 50% Evil Karma</td><td>Hell Fruit (Item)</td></tr>
+          <tr><td class="t-bold t-orange">King Kai</td><td>Fetch</td><td>Catch Bubbles and Gregory</td><td>Kaioken (Transformation)</td></tr>
+          <tr><td class="t-bold t-orange">King Vegeta</td><td>Kill</td><td>Kill 25 Enemies</td><td>King Vegeta Boost</td></tr>
+          <tr><td class="t-bold t-orange">Korin</td><td>Kill</td><td>Kill 10 Saibamen</td><td>5 Senzu Bean (Item)</td></tr>
+          <tr><td class="t-bold t-orange">Master Roshi(1)</td><td>Fetch</td><td>Find and Grab Roshi Rock (pretty close)</td><td>Kamehameha (Technique)</td></tr>
+          <tr><td class="t-bold t-orange">Master Roshi(2)</td><td>Train</td><td>Reach 100% Focus Meditation</td><td class="t-green">EXP +5,000,000,000 · Zenni +50,000,000 · ZP +500 · TP +250,000 · Club Ticket +1</td></tr>
+          <tr><td class="t-bold t-orange">Master Roshi(4)</td><td>Train</td><td>Collect 20 Crocodile Meat and return to Roshi</td><td class="t-green">EXP +100,000,000 · Zenni +250,000</td></tr>
+          <tr><td class="t-bold t-orange">Master Roshi(5)</td><td>Kill</td><td>Kill 50 Masked Bandits on The Training Island</td><td class="t-green">EXP +250,000,000 · Zenni +2,500,000</td></tr>
+          <tr><td class="t-bold t-orange">Oolong(1)</td><td>Forest</td><td>Kill 25 Saibamen in the forest surrounding Oolong</td><td class="t-green">EXP +15,000,000 · Zenni +500,000</td></tr>
+          <tr><td class="t-bold t-orange">Oolong(2)</td><td>Tower</td><td>Kill All Mobs in Tower</td><td class="t-green">EXP +50,000,000 · Zenni +10,000,000</td></tr>
+          <tr><td class="t-bold t-orange">Piccolo(1)</td><td>Guild</td><td>Kill Behemoth (Located on Namek)</td><td class="t-green">EXP +1,000,000,000 · Zenni +500,000,000 · ZP +100 · TP +100,000</td></tr>
+          <tr><td class="t-bold t-orange">Piccolo(2)</td><td>Tower</td><td>Kill all Tower Mobs</td><td class="t-green">EXP +100,000,000 · Zenni +20,000,000</td></tr>
+          <tr><td class="t-bold t-orange">Saiyaman</td><td>Fetch</td><td>Catch Son Goten and get back Gohan's Helmet</td><td>Helmet (Item)</td></tr>
+          <tr><td class="t-bold t-orange">Sensei</td><td>Kill</td><td>Kill 100 Tuffle or Oozaru in total</td><td class="t-green">EXP +200,000,000 · Zenni +20,000,000 · TP +150,000</td></tr>
+          <tr><td class="t-bold t-orange">Skinny Buu</td><td>Maze</td><td>Clear the maze and kill Skinny Buu</td><td>Medal only</td></tr>
+          <tr><td class="t-bold t-orange">Supreme Kai</td><td>Kill</td><td>Kill Saga Shenron</td><td>Potara Earrings (in-game Boost flag)</td></tr>
+          <tr><td class="t-bold t-orange">Tapion</td><td>Cave</td><td>Kill 100 mobs in the caves above Tapion</td><td class="t-green">EXP +250,000,000 · Zenni +20,000,000</td></tr>
+          <tr><td class="t-bold t-orange">Trunks(1)</td><td>Kill</td><td>Kill Cell (below Trunks)</td><td>Sharp Dagger (Item)</td></tr>
+          <tr><td class="t-bold t-orange">Trunks(2)</td><td>Kill</td><td>Kill 30 Android 16s and 17s</td><td class="t-green">EXP +50,000,000 · Zenni +10,000,000</td></tr>
+          <tr><td class="t-bold t-orange">Tuffle Civilian(1)</td><td>Kill</td><td>Kill 30 Yardrat Soldiers</td><td class="t-green">EXP +500,000,000 · Zenni +15,000,000</td></tr>
+          <tr><td class="t-bold t-orange">Tuffle Civilian(2)</td><td>Fetch</td><td>Enter the Cave and retrieve the Key from the Chest</td><td class="t-green">EXP +750,000,000 · Zenni +15,000,000</td></tr>
+          <tr><td class="t-bold t-orange">Tuffle Civilian(3)</td><td>Fetch</td><td>Enter the Portal and save the human trapped inside</td><td class="t-green">EXP +750,000,000 · Zenni +15,000,000</td></tr>
+          <tr><td class="t-bold t-orange">Tuffle Civilian(4)</td><td>Fetch</td><td>Collect 25 Herb Fragments from the Portal</td><td class="t-green">EXP +750,000,000 · Zenni +15,000,000</td></tr>
+          <tr><td class="t-bold t-orange">Vegeta</td><td>Guild</td><td>Acquire 500 Tower Mob Kills as a Guild</td><td class="t-green">EXP +75,000,000 · Zenni +15,000,000 · TP +75,000</td></tr>
+          <tr><td class="t-bold t-orange">Videl</td><td>Cave</td><td>Kill 100 mobs in the caves below</td><td class="t-green">EXP +250,000,000 · Zenni +20,000,000</td></tr>
+          <tr><td class="t-bold t-orange">Whis</td><td>Kill</td><td>Finish Babidi Tower and Kill the Oozaru</td><td class="t-green">All 4 Stats +2,000,000 · Stamina +100,000</td></tr>
+          <tr><td class="t-bold t-orange">Xeno Pan</td><td>Kill</td><td>Kill Aeos in the Cave Above Xeno Pan</td><td class="t-green">EXP +500,000,000 · Zenni +25,000,000</td></tr>
+          <tr><td class="t-bold t-orange">Yamcha(1)</td><td>Train</td><td>Level up 500 times</td><td class="t-green">EXP +1,000,000 · Zenni +250,000 · Stamina +5,000</td></tr>
+          <tr><td class="t-bold t-orange">Yamcha(2)</td><td>Kill</td><td>Kill 5 Saibaman</td><td class="t-green">Basic Weights (Item) · EXP +1,200,000</td></tr>
+          <tr><td class="t-bold t-orange">Yamcha(3)</td><td>Kill</td><td>Kill 100 Saga Mobs</td><td>25% Zenni Boost (Leveling, Mobbing, Dragonballs)</td></tr>
+          <tr><td class="t-bold t-orange">Yamcha(4)</td><td>Kill</td><td>Kill 30 Saibamen</td><td class="t-green">EXP +15,000,000 · Zenni +500,000</td></tr>
+          <tr><td class="t-bold t-orange">Yardrat</td><td>Kill</td><td>Kill 50 Tuffle Soldiers</td><td class="t-green">EXP +500,000,000 · Zenni +15,000,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+
   </section>
 
   <!-- FOOTER -->
   <footer style="margin-top:40px;padding:20px 0;border-top:2px solid var(--border-frame);text-align:center;">
-    <p style="color:var(--text-dim);font-size:12px;font-family:'Share Tech Mono',monospace;">All Data comes from in game guides, player made guides in discord, and changelogs. V1.5 4.3.2026</p>
+    <p style="color:var(--text-dim);font-size:12px;font-family:'Share Tech Mono',monospace;">All Data comes from in game guides, player made guides in discord, and changelogs. V1.0 4.7.2026</p>
   </footer>
 
 </div>
