@@ -640,7 +640,8 @@
     <button class="tab-btn active" onclick="showTab('landing',this)"><span class="tab-icon">🏠</span>Home</button>
     <button class="tab-btn" onclick="showTab('newplayer',this)"><span class="tab-icon">🌱</span>Getting Started</button>
     <button class="tab-btn" onclick="showTab('progression',this)"><span class="tab-icon">🏁</span>How to Win</button>
-    <button class="tab-btn" onclick="showTab('items',this)"><span class="tab-icon">💰</span>Equipment &amp; Economy</button>
+    <button class="tab-btn" onclick="showTab('items',this)"><span class="tab-icon">💰</span>Economy</button>
+    <button class="tab-btn" onclick="showTab('itemslist',this)"><span class="tab-icon">🎒</span>Items</button>
     <button class="tab-btn" onclick="showTab('races',this)"><span class="tab-icon">⚔️</span>Race &amp; Transformations</button>
     <button class="tab-btn" onclick="showTab('techniques',this)"><span class="tab-icon">📜</span>Techniques</button>
     <button class="tab-btn" onclick="showTab('mobfarming',this)"><span class="tab-icon">🗺️</span>Mob Farming</button>
@@ -675,46 +676,50 @@
         <p>Road to Champion with self-contained walkthroughs for every rebirth tier (0/3 → 6/3), rebirth system reference table, ZP level cap costs, and Beerus 6/3 paths.</p>
       </div>
       <div class="card" style="cursor:pointer" onclick="showTab('items',document.querySelectorAll('.tab-btn')[3])">
-        <div class="sub-sub-header" style="color:var(--accent-gold)">💰 Equipment &amp; Economy</div>
-        <p>All currencies explained, Dragon Ball wish sets, full conversion rate table with NPC locations, training items (shards &amp; stat candies), Z-Suit equipment, and the Daily Quest Rewards Store.</p>
+        <div class="sub-sub-header" style="color:var(--accent-gold)">💰 Economy</div>
+        <p>All currencies explained, full conversion rate table with NPC locations.</p>
       </div>
-      <div class="card" style="cursor:pointer" onclick="showTab('races',document.querySelectorAll('.tab-btn')[4])">
+      <div class="card" style="cursor:pointer" onclick="showTab('itemslist',document.querySelectorAll('.tab-btn')[4])">
+        <div class="sub-sub-header" style="color:var(--accent-orange)">🎒 Items</div>
+        <p>Dragon Ball wish sets, training items (shards &amp; stat candies), Z-Suit equipment, and weapons from Lazer the Blacksmith.</p>
+      </div>
+      <div class="card" style="cursor:pointer" onclick="showTab('races',document.querySelectorAll('.tab-btn')[5])">
         <div class="sub-sub-header" style="color:var(--accent-blue)">⚔️ Race &amp; Transformations</div>
         <p>Race tier list (4/3), universal transformations, Ultra techniques (UE/UI/Ultra Invert), Dual Gene info, and every race's transformation table organized by race with gene types, race types, and requirements.</p>
       </div>
-      <div class="card" style="cursor:pointer" onclick="showTab('techniques',document.querySelectorAll('.tab-btn')[5])">
+      <div class="card" style="cursor:pointer" onclick="showTab('techniques',document.querySelectorAll('.tab-btn')[6])">
         <div class="sub-sub-header" style="color:var(--accent-purple)">📜 Techniques</div>
         <p>NPC-taught techniques, level-up technique unlock list, race-specific special techniques, Hakai mechanics, and SSA technique balance notes.</p>
       </div>
-      <div class="card" style="cursor:pointer" onclick="showTab('mobfarming',document.querySelectorAll('.tab-btn')[6])">
+      <div class="card" style="cursor:pointer" onclick="showTab('mobfarming',document.querySelectorAll('.tab-btn')[7])">
         <div class="sub-sub-header">🗺️ Mob Farming</div>
         <p>Sagas system, Lab entrances, caves &amp; special portals, mob towers, space star planets, and SR portal locations with recommended levels.</p>
       </div>
-      <div class="card" style="cursor:pointer" onclick="showTab('events',document.querySelectorAll('.tab-btn')[7])">
+      <div class="card" style="cursor:pointer" onclick="showTab('events',document.querySelectorAll('.tab-btn')[8])">
         <div class="sub-sub-header" style="color:var(--accent-orange)">🏆 Events</div>
         <p>Mayhem, tournaments, CTF, Mystical Cavern, Conquest, Golden Hour, RBA, Crystal Event, Casino, Gamba, daily quests &amp; stamps, and the G.o.D system.</p>
       </div>
-      <div class="card" style="cursor:pointer" onclick="showTab('rules',document.querySelectorAll('.tab-btn')[8])">
+      <div class="card" style="cursor:pointer" onclick="showTab('rules',document.querySelectorAll('.tab-btn')[9])">
         <div class="sub-sub-header" style="color:var(--accent-red)">📋 Rules</div>
         <p>All 23 in-game rules. Read them. Follow them. Rule 23 is the Common Sense Rule. Loopholes are punishable.</p>
       </div>
-      <div class="card" style="cursor:pointer" onclick="showTab('shop',document.querySelectorAll('.tab-btn')[9])">
+      <div class="card" style="cursor:pointer" onclick="showTab('shop',document.querySelectorAll('.tab-btn')[10])">
         <div class="sub-sub-header" style="color:var(--accent-blue)">💎 Pay to Win</div>
         <p>Subscriber benefits (gravity, med pads, warp, gene, remakes, and more) plus the DBA Official Store link.</p>
       </div>
-      <div class="card" style="cursor:pointer" onclick="showTab('npcs',document.querySelectorAll('.tab-btn')[10])">
+      <div class="card" style="cursor:pointer" onclick="showTab('npcs',document.querySelectorAll('.tab-btn')[11])">
         <div class="sub-sub-header" style="color:var(--accent-green)">🧑‍🤝‍🧑 Important NPCs</div>
-        <p>Every important NPC organized by category: shops, progression, Z Agent, utility, casino, weapons (Lazer the Blacksmith), and NPC stat boosts.</p>
+        <p>Every important NPC organized by category: shops, progression, Z Agent, utility, casino, and NPC stat boosts.</p>
       </div>
-      <div class="card" style="cursor:pointer" onclick="showTab('buildings',document.querySelectorAll('.tab-btn')[11])">
+      <div class="card" style="cursor:pointer" onclick="showTab('buildings',document.querySelectorAll('.tab-btn')[12])">
         <div class="sub-sub-header" style="color:var(--accent-orange)">🏗️ Buildings</div>
         <p>Player House, Casino, FCC, Mall, Wackdonalds, Hall of Fame, Sub Room, and Club House — all major in-game locations and what's inside them.</p>
       </div>
-      <div class="card" style="cursor:pointer" onclick="showTab('guilds',document.querySelectorAll('.tab-btn')[12])">
+      <div class="card" style="cursor:pointer" onclick="showTab('guilds',document.querySelectorAll('.tab-btn')[13])">
         <div class="sub-sub-header" style="color:var(--accent-purple)">🏰 Guilds</div>
         <p>Guild evolution paths (Gym Bunny, Mobsters, Hustlers) with full perk breakdowns. Guild update coming soon!</p>
       </div>
-      <div class="card" style="cursor:pointer" onclick="showTab('medals',document.querySelectorAll('.tab-btn')[13])">
+      <div class="card" style="cursor:pointer" onclick="showTab('medals',document.querySelectorAll('.tab-btn')[14])">
         <div class="sub-sub-header" style="color:var(--accent-gold)">🏅 Ranks &amp; Quest Medals</div>
         <p>Rank progression table from Easy to Champion, and all 51 Quest Medals: who gives them, what to do, and what rewards you earn.</p>
       </div>
@@ -1028,34 +1033,26 @@
 
     <!-- CURRENCIES & EXCHANGE -->
     <div class="section-header">💰 Currencies</div>
-    <div class="card-grid">
-      <div class="card">
-        <div class="sub-sub-header">Zenni</div>
-        <p>Main currency; transferable between players.<br>Sources: mobbing, quests, selling items, mall lottery, events.</p>
-        <p class="t-blue" style="margin-top:4px"><strong>Banker NPC:</strong> Withdraw/Deposit. Can transfer banked zenni to other players.</p>
-      </div>
-      <div class="card">
-        <div class="sub-sub-header">ZP (Z Points)</div>
-        <p>Used at Z Agent, special suit store, sword vendor. Critical for progression.<br>
-        Z Agent ZP Skill Trees gated behind <strong>5/3 rebirths</strong>.</p>
-        <p class="t-blue" style="margin-top:4px"><strong>Z Agent:</strong> Primary ZP sink. See Important NPCs tab for full list.</p>
-      </div>
-      <div class="card">
-        <div class="sub-sub-header">UP (Universe Points)</div>
-        <p>Used at Agent X (Level 250k+, <strong>orange</strong> portal by Zeno). Buy house at 5/3: <strong>2,500 UP</strong>.<br>
-        Sources: Conquest, Tournament of Power, Pillar, Vegeta quest.</p>
-        <p class="t-blue" style="margin-top:4px"><strong>Agent X:</strong> Convert UP → ZP, GP, or TPs (see rates below).</p>
-      </div>
-      <div class="card">
-        <div class="sub-sub-header">TL (True Level)</div>
-        <p>Required for Oracle Fish Ultra Points &amp; Dual Gene (10.5m TL threshold).<br>Selling levels and re-leveling still counts toward TL.</p>
-        <p class="t-blue" style="margin-top:4px"><strong>Oracle Fish:</strong> Exchange TL for Ultra Points (1m TL = 1 UP).</p>
-      </div>
-      <div class="card">
-        <div class="sub-sub-header">EK (Epic Kills)</div>
-        <p>Sources: sagas, portal mobs, tower mobs, Champion Tower, Lab 4.</p>
-        <p class="t-blue" style="margin-top:4px"><strong>Oracle Fish / Hunter NPC:</strong> Exchange for TPs. <strong>Broker NPC (Mall):</strong> Exchange for ZP.</p>
-      </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Currency</th><th>Description</th><th>Sources / Where to Spend</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold t-purple">Casino Tokens (C)</td><td>Spent at the Casino Shop (Oolong) for techniques, suits, items, and buffs</td><td>Casino games (slots, blackjack); exchange ZP/UP at Oolong's Exchange</td></tr>
+          <tr><td class="t-bold t-gold">Club Tickets</td><td>Grants a single session in the Club House (x30 gravity for 30 min / 45 min Gym Bunny)</td><td>Z Agent (400 ZP); Bounty Hunter (300 kills); DQ Store (10 tokens); events</td></tr>
+          <tr><td class="t-bold">Custom Points</td><td>Used for character customization options</td><td>In-game activities</td></tr>
+          <tr><td class="t-bold t-green">Daily Quest Tokens (DQ)</td><td>Spent at the DQ Rewards Store for stat boosts, TNL modifiers, pills, and more</td><td>Completing Daily Quests (every 18 hours)</td></tr>
+          <tr><td class="t-bold t-orange">EK (Epic Kills)</td><td>Exchangeable for TPs, ZP, or used toward UT (150 EK required)</td><td>Sagas, portal mobs, tower mobs, Champion Tower, Lab 4</td></tr>
+          <tr><td class="t-bold t-blue">GP (Guild Points)</td><td>Used for guild upgrades and guild evolution paths</td><td>Guild Tournament, Mayhem, Agent X (100 UP → 25 GP)</td></tr>
+          <tr><td class="t-bold">PVP Tokens</td><td>Spent at the PVP Broker in the Mall for PvP-related rewards</td><td>PvP activities; Candy Broker Buu (candy → PVP tokens)</td></tr>
+          <tr><td class="t-bold">RBA Tokens</td><td>Exchangeable for ZP (10 ZP per exchange) at the PVP Broker</td><td>Winning Ranked Battle Arena (RBA) matches</td></tr>
+          <tr><td class="t-bold">Skill Points</td><td>Spent on skill upgrades and abilities</td><td>Leveling up; exchangeable at Exchanger NPC</td></tr>
+          <tr><td class="t-bold t-dim">TL (True Level)</td><td>Cumulative levels earned across all rebirths. Required for Oracle Fish Ultra Points (1m TL = 1 UP) and Dual Gene (10.5m TL)</td><td>Leveling up; selling levels and re-leveling still counts</td></tr>
+          <tr><td class="t-bold t-green">TP (Training Points)</td><td>Spent on Powerlevel, Ki, Ki Defense, Strength, Defense, Stamina, or EXP. Multiplied by rank, TL, and other bonuses</td><td>Training (Shadow Spar, Self Train); events; candy exchange; Agent X (100 UP → 50k TPs)</td></tr>
+          <tr><td class="t-bold t-orange">UP (Universe Points)</td><td>Used at Agent X, God Universe Pool, Combat Shop Keeper, and to buy a house (2,500 UP at 5/3)</td><td>Conquest, Tournament of Power, Pillar, Vegeta quest</td></tr>
+          <tr><td class="t-bold t-gold">Zenni</td><td>Main currency; transferable between players via Banker NPC. Used for food, items, equipment, and Wackdonalds</td><td>Mobbing, quests, selling items, mall lottery, events, selling levels at Exchanger</td></tr>
+          <tr><td class="t-bold t-red">ZP (Z Points)</td><td>Critical progression currency. Used at Z Agent, Special Shop Keeper (ZSuits), Lazer the Blacksmith (weapons), and for level caps / TNL cuts</td><td>Quests, Focus Med, events, RBA tokens, EK exchange, selling levels at Z Agent</td></tr>
+        </tbody>
+      </table>
     </div>
 
     <div class="section-header">💱 Currency Conversions &amp; Exchange NPCs</div>
@@ -1081,32 +1078,57 @@
       </table>
     </div>
 
-    <div class="sub-header">Other Currency NPCs</div>
-    <div class="card-grid">
-      <div class="card">
-        <div class="sub-sub-header">Towa</div>
-        <p>Store and withdraw stats. Useful for saving stats before rebirth or restructuring your build.</p>
-      </div>
-      <div class="card">
-        <div class="sub-sub-header">Exchanger</div>
-        <p>Exchange Levels, Zenni, or Skill Points for other rewards. Key NPC for selling down levels at 5/3.</p>
-      </div>
-      <div class="card">
-        <div class="sub-sub-header">Bounty Hunter</div>
-        <p>Claim Kill Rewards and Sell Epic Kills for zenni and ZP.</p>
-      </div>
-    </div>
+  </section>
 
-    <!-- TRAINING ITEMS -->
-    <div class="sub-header">Training Items</div>
+  <!-- ══════════════════════════════════════════════
+       TAB: ITEMS
+  ══════════════════════════════════════════════ -->
+  <section class="tab-panel" id="panel-itemslist">
+
+    <div class="tip-box" style="margin-top:16px">💡 All in-game items: consumables, equipment, food, weapons, and Dragon Ball wish sets.</div>
+
+    <!-- CASINO SHOP -->
+    <div class="section-header">🎰 Casino Shop (Oolong)</div>
+    <div class="tip-box">💡 Located inside the <strong>Casino</strong> (behind Mall Mascot). Spend Casino Tokens earned from slots, blackjack, and other games.</div>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>Item</th><th>Normal Bonus</th><th>Large Bonus</th><th>Source</th></tr></thead>
+        <thead><tr><th>Item</th><th>Casino Token Cost</th></tr></thead>
         <tbody>
-          <tr><td class="t-bold">EXP Shard</td><td class="t-green">+50% EXP</td><td class="t-green">+75% EXP</td><td>Z Agent / God Planet (75 ZP)</td></tr>
-          <tr><td class="t-bold">Zenni Shard</td><td class="t-gold">+25% Zenni</td><td class="t-gold">+50% Zenni</td><td>Z Agent / God Planet (75 ZP)</td></tr>
-          <tr><td class="t-bold">TP Shard</td><td class="t-blue">+50% TPs</td><td class="t-blue">+100% TPs</td><td>Z Agent / God Planet (75 ZP)</td></tr>
-          <tr><td class="t-bold">Stat Candies</td><td class="t-orange" colspan="2">Consumable. Boosts stats directly. Gains scale with True Level.</td><td>Candy farming; exchange at <strong>Candy Broker Buu</strong> for TPs, class changes, and other rewards</td></tr>
+          <tr><td class="t-bold t-gold">Big Bang Kamehameha (Technique)</td><td class="t-mono">C 15,000,000</td></tr>
+          <tr><td class="t-bold">Blue Stat Pill</td><td class="t-mono">C 10,000,000</td></tr>
+          <tr><td class="t-bold">Crystal Scan</td><td class="t-mono">C 4,000,000</td></tr>
+          <tr><td class="t-bold">Disable Slot Machine Lose Sound</td><td class="t-mono">C 500</td></tr>
+          <tr><td class="t-bold">50M Zenni Pack</td><td class="t-mono">C 5,000,000</td></tr>
+          <tr><td class="t-bold">500k TPs</td><td class="t-mono">C 2,500,000</td></tr>
+          <tr><td class="t-bold t-red">Hakai</td><td class="t-mono">C 25,000,000</td></tr>
+          <tr><td class="t-bold">Increase Automate Max Bet</td><td class="t-mono">C 2,500,000</td></tr>
+          <tr><td class="t-bold">Increase Blackjack Max Bet</td><td class="t-mono">C 3,000,000</td></tr>
+          <tr><td class="t-bold">Infinite Ki Machine</td><td class="t-mono">C 100,000</td></tr>
+          <tr><td class="t-bold">Infinite Ki Machine – Advanced</td><td class="t-mono">C 500,000</td></tr>
+          <tr><td class="t-bold t-gold">Legendary Dragon Fist (Technique)</td><td class="t-mono">C 15,000,000</td></tr>
+          <tr><td class="t-bold">Lucky Charm</td><td class="t-mono">C 10,000,000</td></tr>
+          <tr><td class="t-bold">Reset Black Star Wish</td><td class="t-mono">C 2,500,000</td></tr>
+          <tr><td class="t-bold t-orange">Robe of the Dark Lord (Suit)</td><td class="t-mono">C 10,000,000</td></tr>
+          <tr><td class="t-bold">TNL Modifier</td><td class="t-mono">C 10,000,000</td></tr>
+          <tr><td class="t-bold">Ultimate Dragon Radar</td><td class="t-mono">C 500,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- CONSUMABLES -->
+    <div class="section-header">💊 Consumables &amp; Misc Items</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Item</th><th>Effect</th><th>Source</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold t-green">Capsule</td><td>Increases inventory space by 25</td><td>Bulma quest medal reward</td></tr>
+          <tr><td class="t-bold t-green">Cavern Stat Pill</td><td>6× stat increase while leveling (30 min duration; hold only 1 at a time)</td><td>Golden Frieza in Mystical Cavern (50% drop); DQ Store (12 tokens)</td></tr>
+          <tr><td class="t-bold">Crocodile Meat</td><td>Full heal consumable (useful inside Mystical Cavern)</td><td>Kill Crocodiles on Roshi's Training Island</td></tr>
+          <tr><td class="t-bold">Dragon Radar</td><td>Locates Dragon Balls in the world</td><td>Misc Shop Keeper; upgradeable via Bulma</td></tr>
+          <tr><td class="t-bold t-orange">Hell Fruit</td><td>Special item from Dabura's quest</td><td>Hell Fruit quest medal (talk to Dabura at 50% Evil Karma)</td></tr>
+          <tr><td class="t-bold">Saiyaman Helmet</td><td>Equippable helmet; +5% PL boost when paired with Saiyaman's Sword</td><td>Saiyaman quest medal reward</td></tr>
+          <tr><td class="t-bold t-green">Senzu Bean</td><td>Fully heals your character</td><td>Korin NPC; Korin quest medal (5 beans)</td></tr>
+          <tr><td class="t-bold">Sharp Dagger</td><td>Equippable weapon from Trunks</td><td>Trunks(1) quest medal reward</td></tr>
         </tbody>
       </table>
     </div>
@@ -1114,24 +1136,97 @@
     <!-- DRAGON BALLS -->
     <div class="section-header">🐉 Dragon Balls</div>
     <div class="tip-box">💡 All Dragon Ball sets have tracked cooldowns in-game. Wishes reset per rebirth unless noted.</div>
-
     <div class="table-wrap">
       <table>
-        <thead><tr><th>Set</th><th>Balls</th><th>Wishes</th><th>Location</th><th>Available Wishes</th></tr></thead>
+        <thead><tr><th>Set</th><th>Balls</th><th>Wishes</th><th>Available Wishes</th></tr></thead>
         <tbody>
-          <tr><td class="t-bold t-orange">Earth</td><td class="t-mono">7</td><td class="t-mono">7 per rebirth</td><td>Level, Power, Ki, Karma, TPs, Zenni, Casino Tokens, Safe Training Time, Reset EXP Shards (6hr CD), Free Wish (doesn't count, subtracts one use)</td></tr>
-          <tr><td class="t-bold t-green">Namek</td><td class="t-mono">7</td><td class="t-mono">5 per rebirth</td><td>Level, Power, Defense, Strength, Ki, Karma, TPs, Zenni</td></tr>
           <tr><td class="t-bold t-red">Black Star</td><td class="t-mono">7</td><td class="t-mono">1 per rebirth</td><td>Level, Power, Defense, Strength, Ki, TPs, Zenni, Reset PL/KI Cave Use</td></tr>
           <tr><td class="t-bold t-blue">Cereal</td><td class="t-mono">2</td><td class="t-mono">1 per rebirth</td><td>Levels, Sacrifice Lifespan, Cerealian Unlock</td></tr>
+          <tr><td class="t-bold t-orange">Earth</td><td class="t-mono">7</td><td class="t-mono">7 per rebirth</td><td>Level, Power, Ki, Karma, TPs, Zenni, Casino Tokens, Safe Training Time, Reset EXP Shards (6hr CD), Free Wish (doesn't count, subtracts one use)</td></tr>
+          <tr><td class="t-bold t-green">Namek</td><td class="t-mono">7</td><td class="t-mono">5 per rebirth</td><td>Level, Power, Defense, Strength, Ki, Karma, TPs, Zenni</td></tr>
           <tr><td class="t-bold t-gold">Super</td><td class="t-mono">7</td><td class="t-mono">1 per character</td><td>Levels, Z-Points</td></tr>
         </tbody>
       </table>
     </div>
     <div class="warn-box">⚠️ <strong>Super Dragon Balls</strong> are required for the 4/3 rebirth. Your wish counter must show 1/1. Wish for ZP!</div>
 
-    <!-- EQUIPMENT -->
+    <!-- FOOD -->
+    <div class="section-header">🍔 Food (Wackdonalds)</div>
+    <div class="tip-box">💡 Talk to the <strong>Cashier</strong> NPC inside Wackdonalds.</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Item</th><th>Zenni Cost</th><th>Effect</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold t-gold">Happy Meal</td><td class="t-mono">5,000,000</td><td class="t-green">50% EXP Buff for a short time</td></tr>
+          <tr><td class="t-bold">Burger</td><td class="t-mono">25,000,000</td><td>Gives PL and KI</td></tr>
+          <tr><td class="t-bold">Cola</td><td class="t-mono">10,000,000</td><td>Gives Stamina</td></tr>
+          <tr><td class="t-bold">Fries</td><td class="t-mono">10,000,000</td><td>Gives Ki</td></tr>
+          <tr><td class="t-bold">Ice Cream</td><td class="t-mono">10,000,000</td><td>Gives PL</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- TRAINING ITEMS -->
+    <div class="section-header">🧪 Training Items</div>
+
+    <div class="sub-header">Shards</div>
+    <div class="tip-box">💡 Normal Shards are bought from the <strong>Training Items Shop Keeper</strong>. Large Shards are bought from the <strong>Z Agent</strong> (75 ZP each).</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Shard</th><th>Normal Bonus</th><th>Large Bonus</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">EXP Shard</td><td class="t-green">+50% EXP</td><td class="t-green">+75% EXP</td></tr>
+          <tr><td class="t-bold">TP Shard</td><td class="t-blue">+50% TPs</td><td class="t-blue">+100% TPs</td></tr>
+          <tr><td class="t-bold">Zenni Shard</td><td class="t-gold">+25% Zenni</td><td class="t-gold">+50% Zenni</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sub-header">Stat Candies</div>
+    <div class="tip-box">💡 All candies are bought from the <strong>Training Items Shop Keeper</strong>. Each candy grants a bonus to its corresponding stat <strong>with every kill</strong> for a <strong>30 minute</strong> duration.</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Candy</th><th>Stat Boosted</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold t-orange">Brute Candy</td><td>Strength (STR)</td></tr>
+          <tr><td class="t-bold t-blue">Energy Candy</td><td>Ki (KI)</td></tr>
+          <tr><td class="t-bold t-green">Iron Candy</td><td>Defense (DEF)</td></tr>
+          <tr><td class="t-bold t-red">Vitality Candy</td><td>Powerlevel (PL)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sub-header">Weights</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Weights</th><th>Tier</th><th>Source</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Basic Weights</td><td>Starter</td><td>Yamcha quest reward; Training Shop Keeper</td></tr>
+          <tr><td class="t-bold">Advanced Weights</td><td>Mid</td><td>Advanced Shop Keeper</td></tr>
+          <tr><td class="t-bold t-orange">Ultra Weights</td><td>High</td><td>Advanced Shop Keeper</td></tr>
+          <tr><td class="t-bold t-gold">Whis Weights</td><td>Best</td><td>Complete Whis' quest (1/3 rebirth recommended)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- WEAPONS -->
+    <div class="section-header">⚔️ Weapons (Lazer the Blacksmith)</div>
+    <div class="tip-box">💡 Located inside the <strong>Mall</strong>. Lazer sells special swords with unique abilities.</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Weapon</th><th>ZP Cost</th><th>Effect</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold t-orange">Fu's Time Cutter</td><td class="t-mono">2,500</td><td>Fastest sword; also damages opponent's Ki reserves</td></tr>
+          <tr><td class="t-bold">Saiyaman's Sword</td><td class="t-mono">1,000</td><td>Slightly faster sword; +5% PL boost when used with Saiyaman Helmet</td></tr>
+          <tr><td class="t-bold t-gold">Shula's Golden Demon Blade</td><td class="t-mono">3,000</td><td>Summon Demon monsters that attack the enemy</td></tr>
+          <tr><td class="t-bold">Yajirobe's Katana</td><td class="t-mono">500</td><td>Slightly fast sword; induces bleed damage 100% of the time</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Z-SUITS -->
     <div class="section-header">🥋 Z-Suits (ZP Store)</div>
-    <div class="tip-box">💡 ZP Suit EXP buffs are <strong>ENABLED</strong> for Lab 4 and Champion Tower.</div>
+    <div class="tip-box">💡 Purchased from the <strong>Special Shop Keeper</strong>.</div>
     <div class="table-wrap">
       <table>
         <thead><tr><th>Item</th><th>ZP Cost</th><th>Bonus</th></tr></thead>
@@ -1142,38 +1237,15 @@
           <tr><td class="t-orange t-bold">Zamasu Gi</td><td class="t-mono">1,000</td><td>Chance to gain ZP on level up</td></tr>
           <tr><td class="t-bold">Hermit Shell</td><td class="t-mono">800</td><td>+25% Ki Boost</td></tr>
           <tr><td class="t-bold">King Vegeta Armor</td><td class="t-mono">700</td><td>+15% EXP mobbing</td></tr>
-          <tr><td class="t-bold">Vegito Gi</td><td class="t-mono">400</td><td>+15% PL Boost</td></tr>
-          <tr><td class="t-bold">Tuxedo</td><td class="t-mono">300</td><td>+15% Zenni mobbing</td></tr>
-          <tr><td class="t-bold">Z Fighter Gi</td><td class="t-mono">200</td><td>+10% EXP training</td></tr>
-          <tr><td class="t-bold">Full Cape</td><td class="t-mono">200</td><td>Small chance to gain double epic kill when mobbing</td></tr>
-          <tr><td class="t-bold">Side Cape</td><td class="t-mono">200</td><td>+10% EXP during sagas</td></tr>
-          <tr><td class="t-bold">Ninja Suit</td><td class="t-mono">180</td><td>No longer slowed by weights; speed boost even while weighted</td></tr>
-          <tr><td class="t-bold">Z Fighter Half Gi</td><td class="t-mono">80</td><td>+25% TPs while training</td></tr>
           <tr><td class="t-bold">Tagoma Scouter</td><td class="t-mono">500</td><td>Scans stats + functions as scouter radio</td></tr>
           <tr><td class="t-bold">Potara Earrings</td><td class="t-mono">400</td><td>+15% Ki Boost</td></tr>
-          <tr><td class="t-bold">Lucky Charm</td><td class="t-mono">10m Casino Coins</td><td>Improves casino game luck</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- DAILY QUEST REWARDS STORE -->
-    <div class="section-header">🎫 Daily Quest Rewards Store</div>
-    <div class="card">
-      <p>Earn <strong>DQ Tokens</strong> by completing Daily Quests (access via the Navigation Bar at the top of the game window). Spend tokens in the DQ Rewards Store:</p>
-    </div>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Reward</th><th>Token Cost</th></tr></thead>
-        <tbody>
-          <tr><td class="t-bold t-gold">5% All Stat Boost</td><td class="t-mono">100</td></tr>
-          <tr><td class="t-bold">EXP TNL Modifier</td><td class="t-mono">30</td></tr>
-          <tr><td class="t-bold">Personal EXP Event</td><td class="t-mono">20</td></tr>
-          <tr><td class="t-bold">Re-Select Universe</td><td class="t-mono">15</td></tr>
-          <tr><td class="t-bold">Temp ZP Boost</td><td class="t-mono">15</td></tr>
-          <tr><td class="t-bold t-green">Cavern Stat Pill</td><td class="t-mono">12</td></tr>
-          <tr><td class="t-bold">Hakai Reset</td><td class="t-mono">10</td></tr>
-          <tr><td class="t-bold">Temp Zenni Boost</td><td class="t-mono">10</td></tr>
-          <tr><td class="t-bold">Club Ticket</td><td class="t-mono">10</td></tr>
+          <tr><td class="t-bold">Vegito Gi</td><td class="t-mono">400</td><td>+15% PL Boost</td></tr>
+          <tr><td class="t-bold">Tuxedo</td><td class="t-mono">300</td><td>+15% Zenni mobbing</td></tr>
+          <tr><td class="t-bold">Full Cape</td><td class="t-mono">200</td><td>Small chance to gain double epic kill when mobbing</td></tr>
+          <tr><td class="t-bold">Side Cape</td><td class="t-mono">200</td><td>+10% EXP during sagas</td></tr>
+          <tr><td class="t-bold">Z Fighter Gi</td><td class="t-mono">200</td><td>+10% EXP training</td></tr>
+          <tr><td class="t-bold">Ninja Suit</td><td class="t-mono">180</td><td>No longer slowed by weights; speed boost even while weighted</td></tr>
+          <tr><td class="t-bold">Z Fighter Half Gi</td><td class="t-mono">80</td><td>+25% TPs while training</td></tr>
         </tbody>
       </table>
     </div>
@@ -1639,7 +1711,7 @@
     <div class="section-header">📜 NPC Techniques</div>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>Technique</th><th>Race</th><th>Giver NPC</th></tr></thead>
+        <thead><tr><th>Technique</th><th>Giver NPC</th></tr></thead>
         <tbody>
           <tr><td class="t-bold">Zanzoken Warp</td><td>Piccolo (Zanzoken Mastery)</td></tr>
           <tr><td class="t-bold">Kamehameha</td><td>Master Roshi</td></tr>
@@ -1748,16 +1820,6 @@
       </table>
     </div>
 
-    <div class="section-header">⚡ SSA Technique Balance</div>
-    <div class="card">
-      <ul style="list-style:disc;padding-left:18px">
-        <li>SSA-style techniques now have a <strong>damage cap</strong> and <strong>increased cooldowns</strong> in all skill-based events and arenas</li>
-        <li>Previously-banned SSA techniques (PPS, Madness Rush, etc.) are now <strong>UNBANNED</strong> for skill-based events (RBA, G.o.D Arena, RR Battle Tower)</li>
-        <li><strong>Paralyze duration</strong> nerfed: 5 seconds → <strong>2.5 seconds</strong> in normalised/skill-based events only</li>
-        <li>The full tech list will be reviewed in upcoming updates: new techs, face-lifts, and more ban-list removals coming</li>
-      </ul>
-    </div>
-
     <!-- HAKAI -->
     <div class="section-header">💀 Hakai</div>
     <div class="card">
@@ -1778,6 +1840,52 @@
 
     <div class="tip-box" style="margin-top:16px">💡 <strong>Mob Repop Time: 3 minutes</strong></div>
 
+    <!-- CAVES -->
+    <div class="section-header">🗺️ Caves &amp; Special Portals</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Location</th><th>Rec. Level</th><th>Level Cap</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Special Portal #1 (NE of Vegito)</td><td class="t-mono t-green">25,000</td><td class="t-dim">None</td></tr>
+          <tr><td class="t-bold">Special Portal #2 (by NPC Yajirobe)</td><td class="t-mono t-green">35,000</td><td class="t-dim">None</td></tr>
+          <tr><td class="t-bold">Tapion's Cave</td><td class="t-mono t-green">35,000</td><td class="t-mono t-red">25,000</td></tr>
+          <tr><td class="t-bold">Videl's Cave</td><td class="t-mono t-green">35,000</td><td class="t-mono t-red">25,000</td></tr>
+          <tr><td class="t-bold">Special Portal #3 (NE of Vegito, Center Cell Arena)</td><td class="t-mono t-orange">45,000</td><td class="t-dim">None</td></tr>
+          <tr><td class="t-bold">Future Earth's Cave (Bottom Left Island)</td><td class="t-mono t-orange">90,000</td><td class="t-dim">None</td></tr>
+          <tr><td class="t-bold">Z Cave</td><td class="t-mono t-red">115,000</td><td class="t-dim">None</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- LABS -->
+    <div class="section-header">🏛️ Labrynthian (Lab) Entrances</div>
+    <div class="tip-box">💡 Lab has 4 levels inside with varying mob strengths. Open to all players.</div>
+    <div class="card-grid">
+      <div class="stat-card"><div class="stat-label">Earth Entrance</div><div class="stat-value">North East of Tapion</div></div>
+      <div class="stat-card"><div class="stat-label">Future Earth Entrance</div><div class="stat-value">East of Gotenks</div></div>
+      <div class="stat-card"><div class="stat-label">Namek Entrance</div><div class="stat-value">North East of Guru</div></div>
+      <div class="stat-card"><div class="stat-label">Planet Vegeta Entrance</div><div class="stat-value">West of Yardrat Sensei</div></div>
+    </div>
+
+    <!-- MOB TOWERS -->
+    <div class="section-header">🗼 Mob Towers</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Tower</th><th>Rec. Level</th><th>Level Cap</th><th>Location</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Trunk's Tower</td><td class="t-mono t-green">15,000</td><td class="t-mono t-red">40,000</td><td class="t-dim">—</td></tr>
+          <tr><td class="t-bold">Saiba Tower (Oolong)</td><td class="t-mono t-green">20,000</td><td class="t-dim">None</td><td class="t-dim">—</td></tr>
+          <tr><td class="t-bold">Piccolo's Tower</td><td class="t-mono t-green">35,000</td><td class="t-mono t-red">100,000</td><td class="t-dim">—</td></tr>
+          <tr><td class="t-bold">Guru's Tower</td><td class="t-mono t-orange">40,000</td><td class="t-dim">None</td><td class="t-dim">—</td></tr>
+          <tr><td class="t-bold">King Vegeta's Tower</td><td class="t-mono t-orange">50,000</td><td class="t-dim">None</td><td class="t-dim">—</td></tr>
+          <tr><td class="t-bold">West City Tower (Babidi)</td><td class="t-mono t-orange">65,000</td><td class="t-dim">None</td><td class="t-dim">—</td></tr>
+          <tr><td class="t-bold">Gotenks' Tower</td><td class="t-mono t-red">100,000</td><td class="t-dim">None</td><td class="t-dim">—</td></tr>
+          <tr><td class="t-bold">Planet of Divines Tower</td><td class="t-mono t-red">125,000</td><td class="t-dim">None</td><td class="t-dim">—</td></tr>
+          <tr><td class="t-bold">Space Tower</td><td class="t-mono t-dim">Varied</td><td class="t-dim">None</td><td class="t-dim">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+
     <!-- SAGAS -->
     <div class="section-header">📖 Sagas</div>
     <div class="card">
@@ -1789,83 +1897,42 @@
       </ul>
     </div>
 
-    <div class="section-header">🏛️ Labrynthian (Lab) Entrances</div>
-    <div class="tip-box">💡 Lab has 4 levels inside with varying mob strengths. Open to all players.</div>
-    <div class="card-grid">
-      <div class="stat-card"><div class="stat-label">Earth Entrance</div><div class="stat-value">North East of Tapion</div></div>
-      <div class="stat-card"><div class="stat-label">Namek Entrance</div><div class="stat-value">North East of Guru</div></div>
-      <div class="stat-card"><div class="stat-label">Future Earth Entrance</div><div class="stat-value">East of Gotenks</div></div>
-      <div class="stat-card"><div class="stat-label">Planet Vegeta Entrance</div><div class="stat-value">West of Yardrat Sensei</div></div>
-    </div>
-
-    <div class="section-header">🗺️ Caves &amp; Special Portals</div>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Location</th><th>Rec. Level</th><th>Level Cap</th></tr></thead>
-        <tbody>
-          <tr><td class="t-bold">Special Portal #1 (NE of Vegito)</td><td class="t-mono t-green">25,000</td><td class="t-dim">None</td></tr>
-          <tr><td class="t-bold">Videl's Cave</td><td class="t-mono t-green">35,000</td><td class="t-dim">None</td></tr>
-          <tr><td class="t-bold">Tapion's Cave</td><td class="t-mono t-green">35,000</td><td class="t-dim">None</td></tr>
-          <tr><td class="t-bold">Special Portal #2 (by NPC Yajirobe)</td><td class="t-mono t-green">35,000</td><td class="t-dim">None</td></tr>
-          <tr><td class="t-bold">Special Portal #3 (NE of Vegito, Center Cell Arena)</td><td class="t-mono t-orange">45,000</td><td class="t-dim">None</td></tr>
-          <tr><td class="t-bold">Future Earth's Cave (Bottom Left Island)</td><td class="t-mono t-orange">90,000</td><td class="t-dim">None</td></tr>
-          <tr><td class="t-bold">Z Cave</td><td class="t-mono t-red">115,000</td><td class="t-dim">None</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="section-header">🗼 Mob Towers</div>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Tower</th><th>Rec. Level</th><th>Level Cap</th></tr></thead>
-        <tbody>
-          <tr><td class="t-bold">Trunk's Tower</td><td class="t-mono t-green">15,000</td><td class="t-mono t-red">40,000</td></tr>
-          <tr><td class="t-bold">Saiba Tower (Oolong)</td><td class="t-mono t-green">20,000</td><td class="t-dim">None</td></tr>
-          <tr><td class="t-bold">Piccolo's Tower</td><td class="t-mono t-green">35,000</td><td class="t-mono t-red">100,000</td></tr>
-          <tr><td class="t-bold">Guru's Tower</td><td class="t-mono t-orange">40,000</td><td class="t-dim">None</td></tr>
-          <tr><td class="t-bold">King Vegeta's Tower</td><td class="t-mono t-orange">50,000</td><td class="t-dim">None</td></tr>
-          <tr><td class="t-bold">West City Tower (Babidi)</td><td class="t-mono t-orange">65,000</td><td class="t-dim">None</td></tr>
-          <tr><td class="t-bold">Gotenks' Tower</td><td class="t-mono t-red">100,000</td><td class="t-dim">None</td></tr>
-          <tr><td class="t-bold">Planet of Divines Tower</td><td class="t-mono t-red">125,000</td><td class="t-dim">None</td></tr>
-          <tr><td class="t-bold">Space Tower</td><td class="t-mono t-dim">Varied</td><td class="t-dim">None</td></tr>
-        </tbody>
-      </table>
-    </div>
-
+    <!-- SPACE STAR PLANETS -->
     <div class="section-header">🌌 Space Star Planets</div>
     <div class="table-wrap">
       <table>
         <thead><tr><th>Planet</th><th>Rec. Level</th><th>Coordinates</th></tr></thead>
         <tbody>
-          <tr><td class="t-bold t-orange">Orange Star</td><td class="t-mono t-green">15,000</td><td class="t-mono">164, 286, 9</td></tr>
-          <tr><td class="t-bold" style="color:#9BADB7">Purple Star</td><td class="t-mono t-green">15,000</td><td class="t-mono">35, 206, 9</td></tr>
           <tr><td class="t-bold t-blue">Blue Star</td><td class="t-mono t-orange">50,000</td><td class="t-mono">172, 380, 9</td></tr>
           <tr><td class="t-bold t-dim">Dark Smoke</td><td class="t-mono t-orange">40,000</td><td class="t-mono">230, 37, 9</td></tr>
+          <tr><td class="t-bold t-orange">Orange Star</td><td class="t-mono t-green">15,000</td><td class="t-mono">164, 286, 9</td></tr>
+          <tr><td class="t-bold" style="color:#9BADB7">Purple Star</td><td class="t-mono t-green">15,000</td><td class="t-mono">35, 206, 9</td></tr>
         </tbody>
       </table>
     </div>
 
+    <!-- SR PORTALS -->
     <div class="section-header">⭐ SR Portals (All Rec. Level 150,000 | No Cap)</div>
     <div class="table-wrap">
       <table>
         <thead><tr><th>Portal Name</th><th>Location</th></tr></thead>
         <tbody>
           <tr><td class="t-bold">Android 21's Portal</td><td>Tuffle Soldiers Spawn</td></tr>
-          <tr><td class="t-bold">Broly Cave</td><td>Planet of Divines</td></tr>
           <tr><td class="t-bold">Bebi's Base</td><td>Yardrat Sensei (South East)</td></tr>
+          <tr><td class="t-bold">Broly Cave</td><td>Planet of Divines</td></tr>
           <tr><td class="t-bold">Cauliflower Saibaman Portal</td><td>Oolong Island</td></tr>
-          <tr><td class="t-bold">Cooler's Cavern</td><td>Guru Gym (Namek)</td></tr>
           <tr><td class="t-bold">Cell's Pit</td><td>Future Earth Zeno Tower (North)</td></tr>
+          <tr><td class="t-bold">Cooler's Cavern</td><td>Guru Gym (Namek)</td></tr>
           <tr><td class="t-bold">Dark Syn Kingdom</td><td>Future Earth Broly/Shenron Island</td></tr>
           <tr><td class="t-bold">Demigra's Dominion</td><td>HFIL</td></tr>
-          <tr><td class="t-bold">Fu's Fortress</td><td>South West from King Vegeta</td></tr>
           <tr><td class="t-bold">Feline's Fissure</td><td>Beerus Planet North</td></tr>
+          <tr><td class="t-bold">Fu's Fortress</td><td>South West from King Vegeta</td></tr>
+          <tr><td class="t-bold">Garlic's Grove</td><td>Above HBTC</td></tr>
           <tr><td class="t-bold">Gogeta Island</td><td>Gold Oozaru Island, God Planet (Centre)</td></tr>
           <tr><td class="t-bold">Gohan's Training Forest</td><td>Supreme Kai (Z Sword Rock Area)</td></tr>
-          <tr><td class="t-bold">Garlic's Grove</td><td>Above HBTC</td></tr>
           <tr><td class="t-bold">Granolah's Gulag</td><td>Earth, below NPC Tien</td></tr>
-          <tr><td class="t-bold">Jiren Portal</td><td>Future Earth</td></tr>
           <tr><td class="t-bold">Herculean Warrior Cave</td><td>South of Whis</td></tr>
+          <tr><td class="t-bold">Jiren Portal</td><td>Future Earth</td></tr>
           <tr><td class="t-bold">Majin Uub's Portal</td><td>Babidi Bridge</td></tr>
           <tr><td class="t-bold">Mira's Dominion</td><td>Son Gohan (North East)</td></tr>
           <tr><td class="t-bold">Namekian's Nether</td><td>North from Frieza</td></tr>
@@ -1884,41 +1951,7 @@
   ══════════════════════════════════════════════ -->
   <section class="tab-panel" id="panel-events">
 
-    <div class="section-header">🚩 Mayhem</div>
-    <p>Guild-based. Ki ONLY. Friendly fire ON. 10 total flags; each flag captured = <strong>10× boost</strong> (must be online). Flag order changes every Mayhem, but <strong>Abyss always stays at the bottom</strong>. Stat boosts based on your CURRENT base stats (including stat-modifying items).</p>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Flag</th><th>Benefit</th><th>Cap</th></tr></thead>
-        <tbody>
-          <tr><td class="t-bold">Palace of Powerlevel</td><td>1b gains/tick</td></tr>
-          <tr><td class="t-bold">Kingdom of Ki</td><td>1b gains/tick</td></tr>
-          <tr><td class="t-bold">Stronghold of Strength</td><td>1b gains/tick</td></tr>
-          <tr><td class="t-bold">Dungeon of Defense</td><td>1b gains/tick</td></tr>
-          <tr><td class="t-bold">Tower of Training Points</td><td>-</td></tr>
-          <tr><td class="t-bold">Zenith of Zenni</td><td>-</td></tr>
-          <tr><td class="t-bold">Loft of Levels</td><td>-</td></tr>
-          <tr><td class="t-bold">Gulag of Guild Points</td><td>-</td></tr>
-          <tr><td class="t-bold">Zone of Z Points</td><td>-</td></tr>
-          <tr class="rule-critical"><td class="t-gold t-bold">Abyss of All Stats ⭐</td><td>All stats (double vs. regular stat flags)</td><td class="t-red">Must be Level 100k (not TL); 1b gains/tick; ALWAYS at bottom</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="section-header">🥊 Tournaments</div>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Tournament</th><th>Type</th><th>Rewards</th></tr></thead>
-        <tbody>
-          <tr><td class="t-bold">World Tournament</td><td>Levels (win or loss)</td></tr>
-          <tr><td class="t-bold">Baba Tournament</td><td>Levels + TPs (win) / Levels (loss)</td></tr>
-          <tr><td class="t-bold">Galactic Tournament</td><td>Levels + TPs (win) / Levels (loss)</td></tr>
-          <tr><td class="t-bold">FFA Tournament</td><td>Levels (win or loss)</td></tr>
-          <tr><td class="t-bold">Guild Tournament</td><td>Levels + guild points (win)</td></tr>
-          <tr><td class="t-bold">Tournament of Power</td><td>Levels + ZP + UP (win) / Levels + UP (loss)</td></tr>
-        </tbody>
-      </table>
-    </div>
-
+    <!-- CAPTURE THE FLAG -->
     <div class="section-header">🏴 Capture the Flag (CTF)</div>
     <div class="card">
       <ul>
@@ -1929,6 +1962,142 @@
       </ul>
     </div>
 
+    <!-- CONQUEST -->
+    <div class="section-header">🌿 Conquest</div>
+    <div class="card">
+      <p>Universe-based; halts repop. Up to 4 teams. Capture banners by standing on conquest pad. Warp via Channels tab. <strong>Buffs last until next Conquest.</strong></p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Banner</th><th>Buff</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold t-green">Earth</td><td>+10% EXP on all Saga Mobs</td></tr>
+          <tr><td class="t-bold t-orange">Future Earth</td><td>+10% EXP on all Standard Cave Mobs + all other world mobs + players</td></tr>
+          <tr><td class="t-bold t-blue">Namek</td><td>+10% Zenni on all Mobs</td></tr>
+          <tr><td class="t-bold t-orange">Vegeta</td><td>+10% EXP on all Portal + Mob Tower Mobs <em>(also affects Lab4 + Champion Tower)</em></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tip-box">💡 Lab mobs are a combination of all mob types. Capping all 4 banners improves your overall EXP from Lab mobs. <strong>Vegeta flag</strong> affects Lab4 and Champion Tower. Future Earth flag does NOT affect Lab4.</div>
+
+    <!-- CRYSTAL EVENT -->
+    <div class="section-header">💎 Crystal Event</div>
+    <div class="card">
+      <p>Crystals spawn across all worlds. Higher level = more power from crystals. Held once every few hours in-game.</p>
+    </div>
+
+    <!-- DAILY QUESTS & STAMPS -->
+    <div class="section-header">📅 Daily Quests &amp; Stamps</div>
+    <div class="card-grid">
+      <div class="card">
+        <div class="sub-sub-header">Daily Quest</div>
+        <p>Every <strong>18 hours</strong>. Complete for quest tokens. <strong>Relog = lose quest.</strong><br>Redeem tokens: Rewards → DQ Rewards Store (top-left of client).</p>
+      </div>
+      <div class="card">
+        <div class="sub-sub-header">Daily Stamps</div>
+        <p>Every <strong>24 hours</strong>. 5 stamps = weekly rewards (levels, TPs, zenni).<br>⚠️ <strong>Do NOT accumulate more than 5 stamps before claiming</strong>: you'll lose them all!</p>
+      </div>
+    </div>
+    <div class="sub-header">DQ Rewards Store</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Reward</th><th>Token Cost</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold t-gold">5% All Stat Boost</td><td class="t-mono">100</td></tr>
+          <tr><td class="t-bold">EXP TNL Modifier</td><td class="t-mono">30</td></tr>
+          <tr><td class="t-bold">Personal EXP Event</td><td class="t-mono">20</td></tr>
+          <tr><td class="t-bold">Re-Select Universe</td><td class="t-mono">15</td></tr>
+          <tr><td class="t-bold">Temp ZP Boost</td><td class="t-mono">15</td></tr>
+          <tr><td class="t-bold t-green">Cavern Stat Pill</td><td class="t-mono">12</td></tr>
+          <tr><td class="t-bold">Club Ticket</td><td class="t-mono">10</td></tr>
+          <tr><td class="t-bold">Hakai Reset</td><td class="t-mono">10</td></tr>
+          <tr><td class="t-bold">Temp Zenni Boost</td><td class="t-mono">10</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- G.o.D SYSTEM -->
+    <div class="section-header">👑 G.o.D System</div>
+    <div class="card">
+      <p>One G.o.D per universe (4 total). Elected via G.o.D tournament once per wipe. G.o.D can be challenged via <strong>Channels tab</strong> (1v1 same-stats). G.o.Ds have <strong>2 rejects</strong>.</p>
+    </div>
+    <div class="sub-header">G.o.D Perks</div>
+    <div class="card">
+      <ul>
+        <li><strong class="t-green">Improved EXP gains</strong> from Mob Farming</li>
+        <li><strong class="t-green">Improved TP spending gains</strong></li>
+        <li><strong class="t-green">Improved Run speed</strong> in Spirit mode</li>
+        <li><strong class="t-green">TNL will no longer rise above 100m</strong>, allowing you to train faster</li>
+        <li><strong class="t-green">TNL can be cut further</strong> — down to <strong>15 million</strong></li>
+        <li><strong class="t-gold">Unlocked G.o.D Spirit Technique &amp; Destruction Blast</strong></li>
+        <li><strong class="t-gold">Unlocked Unleash God of Destruction technique</strong></li>
+      </ul>
+    </div>
+    <div class="sub-header">Title Defense &amp; Turnover</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Turnover Trigger</th><th>Chance</th></tr></thead>
+        <tbody>
+          <tr><td>Killed by NPC</td><td class="t-red t-bold">10%</td></tr>
+          <tr><td>Killed by Player / Hakai'd</td><td class="t-red t-bold">20%</td></tr>
+          <tr><td>8+ hours without defending (online AND offline time)</td><td class="t-orange">Must defend — use manual <code>start challenge</code> verb in Channels tab, or it auto-starts at end of 8-hour timer</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tip-box">💡 <strong>G.o.D Arena Spectate</strong> ability available via Tournament TV.</div>
+    <div class="sub-header">God Universe Pool</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Service</th><th>UP Cost</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Check UP Pool Status</td><td class="t-dim">Free</td></tr>
+          <tr><td class="t-bold t-gold">Grant TNL Bonus</td><td class="t-mono">10,000</td></tr>
+          <tr><td class="t-bold t-green">Activate EXP Bonus</td><td class="t-mono">7,500</td></tr>
+          <tr><td class="t-bold">Grant Level Bonus</td><td class="t-mono">5,000</td></tr>
+          <tr><td class="t-bold">Grant Zenni Bonus</td><td class="t-mono">5,000</td></tr>
+          <tr><td class="t-bold">Universe Scramble</td><td class="t-mono">5,000</td></tr>
+          <tr><td class="t-bold">Universe Skill Tree</td><td class="t-dim">Varies</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- GAMBA -->
+    <div class="section-header">🎰 Gamba Event</div>
+    <div class="card">
+      <p>Gamba Event Room. No outside interference. Gamba Warp verb in Channels tab when Gamba Machine spawned. Admin-hosted + automated. Chest Trap probability = 50%.</p>
+    </div>
+
+    <!-- GOLDEN HOUR -->
+    <div class="section-header">✨ Golden Hour Event</div>
+    <div class="card">
+      <p>EXP Event + Zenni Event + Crystal Event combined!<br>
+      <strong>+50% EXP gain | +100% Zenni gain</strong> | Special Crystals scattered across all worlds → 10× stats based on TL (100 TL = +1,000 to all stats) | <strong>+50% extra stat gain per level up</strong></p>
+    </div>
+
+    <!-- MAYHEM -->
+    <div class="section-header">🚩 Mayhem</div>
+    <div class="card">
+      <p>Guild-based. Ki ONLY. Friendly fire ON. 10 total flags; each flag captured = <strong>10× boost</strong> (must be online). Flag order changes every Mayhem, but <strong>Abyss always stays at the bottom</strong>. Stat boosts based on your CURRENT base stats (including stat-modifying items).</p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Flag</th><th>Benefit</th><th>Cap</th></tr></thead>
+        <tbody>
+          <tr class="rule-critical"><td class="t-gold t-bold">Abyss of All Stats ⭐</td><td>All stats (double vs. regular stat flags)</td><td class="t-red">Must be Level 100k (not TL); 1b gains/tick; ALWAYS at bottom</td></tr>
+          <tr><td class="t-bold">Dungeon of Defense</td><td>1b gains/tick</td><td></td></tr>
+          <tr><td class="t-bold">Gulag of Guild Points</td><td>-</td><td></td></tr>
+          <tr><td class="t-bold">Kingdom of Ki</td><td>1b gains/tick</td><td></td></tr>
+          <tr><td class="t-bold">Loft of Levels</td><td>-</td><td></td></tr>
+          <tr><td class="t-bold">Palace of Powerlevel</td><td>1b gains/tick</td><td></td></tr>
+          <tr><td class="t-bold">Stronghold of Strength</td><td>1b gains/tick</td><td></td></tr>
+          <tr><td class="t-bold">Tower of Training Points</td><td>-</td><td></td></tr>
+          <tr><td class="t-bold">Zenith of Zenni</td><td>-</td><td></td></tr>
+          <tr><td class="t-bold">Zone of Z Points</td><td>-</td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- MYSTICAL CAVERN -->
     <div class="section-header">🕳️ Mystical Cavern Event</div>
     <div class="warn-box">⚠️ Must be in <strong>BASE FORM</strong> to enter. Location: safe zone house → bottom right past 2 sets of stairs → large hole in wall.</div>
     <div class="card">
@@ -1942,25 +2111,7 @@
       </ul>
     </div>
 
-    <div class="section-header">🌿 Conquest</div>
-    <p>Universe-based; halts repop. Up to 4 teams. Capture banners by standing on conquest pad. Warp via Channels tab. <strong>Buffs last until next Conquest.</strong></p>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Banner</th><th>Buff</th></tr></thead>
-        <tbody>
-          <tr><td class="t-bold t-green">Earth</td><td>+10% EXP on all Saga Mobs</td></tr>
-          <tr><td class="t-bold t-blue">Namek</td><td>+10% Zenni on all Mobs</td></tr>
-          <tr><td class="t-bold t-orange">Vegeta</td><td>+10% EXP on all Portal + Mob Tower Mobs <em>(also affects Lab4 + Champion Tower)</em></td></tr>
-          <tr><td class="t-bold t-purple">Future Earth</td><td>+10% EXP on all Standard Cave Mobs + all other world mobs + players</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="tip-box">💡 Lab mobs are a combination of all mob types. Capping all 4 banners improves your overall EXP from Lab mobs. <strong>Vegeta flag</strong> affects Lab4 and Champion Tower. Future Earth flag does NOT affect Lab4.</div>
-
-    <div class="section-header">✨ Golden Hour Event</div>
-    <div class="card"><p>EXP Event + Zenni Event + Crystal Event combined!<br>
-    <strong>+50% EXP gain | +100% Zenni gain</strong> | Special Crystals scattered across all worlds → 10× stats based on TL (100 TL = +1,000 to all stats) | <strong>+50% extra stat gain per level up</strong></p></div>
-
+    <!-- RBA -->
     <div class="section-header">⚔️ Ranked Battle Arena (RBA)</div>
     <div class="card">
       <p>Admin-hosted. Join via <strong>Channels tab → Ranked Battle Arena verb</strong>. Matched 1v1 against another player.</p>
@@ -1971,40 +2122,21 @@
       </ul>
     </div>
 
-    <div class="section-header">💎 Crystal Event</div>
-    <div class="card"><p>Crystals spawn across all worlds. Higher level = more power from crystals. Held once every few hours in-game.</p></div>
-
-    <div class="section-header">🎰 Gamba Event</div>
-    <div class="card"><p>Gamba Event Room. No outside interference. Gamba Warp verb in Channels tab when Gamba Machine spawned. Admin-hosted + automated. Chest Trap probability = 50%.</p></div>
-
-    <div class="tip-box">💡 Casino info has moved to the <strong>Buildings</strong> tab!</div>
-
-    <div class="section-header">📅 Daily Quests &amp; Stamps</div>
-    <div class="card-grid">
-      <div class="card">
-        <div class="sub-sub-header">Daily Quest</div>
-        <p>Every <strong>18 hours</strong>. Complete for quest tokens. <strong>Relog = lose quest.</strong><br>Redeem tokens: Rewards → DQ Rewards Store (top-left of client).</p>
-      </div>
-      <div class="card">
-        <div class="sub-sub-header">Daily Stamps</div>
-        <p>Every <strong>24 hours</strong>. 5 stamps = weekly rewards (levels, TPs, zenni).<br>⚠️ <strong>Do NOT accumulate more than 5 stamps before claiming</strong>: you'll lose them all!</p>
-      </div>
-    </div>
-
-    <!-- G.o.D SYSTEM -->
-    <div class="section-header">👑 G.o.D System</div>
-    <p>One G.o.D per universe (4 total). Elected via G.o.D tournament once per wipe. G.o.D can be challenged via <strong>Channels tab</strong> (1v1 same-stats). G.o.Ds have <strong>2 rejects</strong>.</p>
+    <!-- TOURNAMENTS -->
+    <div class="section-header">🥊 Tournaments</div>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>Turnover Trigger</th><th>Chance</th></tr></thead>
+        <thead><tr><th>Tournament</th><th>Rewards</th></tr></thead>
         <tbody>
-          <tr><td>Killed by NPC</td><td class="t-red t-bold">5%</td></tr>
-          <tr><td>Killed by Player / Hakai'd (outside events/tournaments/arenas)</td><td class="t-red t-bold">25%</td></tr>
-          <tr><td>8+ hours accumulated without defending</td><td class="t-orange">Must defend at least once to reset timer</td></tr>
+          <tr><td class="t-bold">Baba Tournament</td><td>Levels + TPs (win) / Levels (loss)</td></tr>
+          <tr><td class="t-bold">FFA Tournament</td><td>Levels (win or loss)</td></tr>
+          <tr><td class="t-bold">Galactic Tournament</td><td>Levels + TPs (win) / Levels (loss)</td></tr>
+          <tr><td class="t-bold">Guild Tournament</td><td>Levels + guild points (win)</td></tr>
+          <tr><td class="t-bold">Tournament of Power</td><td>Levels + ZP + UP (win) / Levels + UP (loss)</td></tr>
+          <tr><td class="t-bold">World Tournament</td><td>Levels (win or loss)</td></tr>
         </tbody>
       </table>
     </div>
-    <div class="tip-box">💡 <strong>G.o.D Arena Spectate</strong> ability available via Tournament TV.</div>
 
   </section>
 
@@ -2101,107 +2233,20 @@
   ══════════════════════════════════════════════ -->
   <section class="tab-panel" id="panel-npcs">
 
-    <div class="tip-box" style="margin-top:16px">💡 These are Important NPCs, either for progression, shopping, or important mechanics. Listed in ABC order.</div>
+    <div class="tip-box" style="margin-top:16px">💡 These are Important NPCs, either for progression, shopping, or important mechanics. Sections listed in ABC order.</div>
 
-    <div class="section-header">🏪 Shops & Merchants</div>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>NPC</th><th>What They Do</th></tr></thead>
-        <tbody>
-          <tr><td class="t-bold t-orange">Advanced Shop Keeper</td><td>Sells Advanced and Ultra Weighted Clothing</td></tr>
-          <tr><td class="t-bold t-orange">Armor Shop Keeper</td><td>Sells Hench, Saiyan, and Heavy Armor</td></tr>
-          <tr><td class="t-bold t-orange">Clothing Shop Keeper</td><td>Sells 13 different types of clothing, some with custom colors!</td></tr>
-          <tr><td class="t-bold t-orange">Combat Shop Keeper</td><td>Sells some special Techniques</td></tr>
-          <tr><td class="t-bold t-orange">Korin</td><td>Sells Senzu Beans. Fully heals your character!</td></tr>
-          <tr><td class="t-bold t-orange">Misc Shop Keeper</td><td>Sells Dragon Radars and Scouters</td></tr>
-          <tr><td class="t-bold t-orange">Real Estate Renji</td><td>Buy things to put in your personal house</td></tr>
-          <tr><td class="t-bold t-orange">Space Shop Keeper</td><td>Buy a Space Pod</td></tr>
-          <tr><td class="t-bold t-orange">Special Shop Keeper</td><td>Sells the ZSuits</td></tr>
-          <tr><td class="t-bold t-orange">Training Shop Keeper</td><td>Sells a sword, basic shards, and stat candies</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="section-header">⚔️ Progression & Training NPCs</div>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>NPC</th><th>What They Do</th></tr></thead>
-        <tbody>
-          <tr><td class="t-bold t-gold">Yamcha</td><td>Change Saga Difficulty, learn Instant Transmission, spend Training Points. Also has a guide on Training Point multipliers (1 TP value)</td></tr>
-          <tr><td class="t-bold t-gold">Yardrat Sensei</td><td>Teaches Instant Transmission</td></tr>
-          <tr><td class="t-bold t-gold">Whis (Earth)</td><td>Perform Saiyan God Ritual, Perform Mixed God Ritual, Inject Daishinkan DNA, Quests for Whis Weights, and Ultra Instinct Training</td></tr>
-          <tr><td class="t-bold t-gold">Champa</td><td>Ultra Invert Training</td></tr>
-          <tr><td class="t-bold t-gold">Beerus</td><td>6/3 Rebirth, Ultra Ego Training, and Request Residence (change spawn location)</td></tr>
-          <tr><td class="t-bold t-gold">Zeno</td><td>Start your 5/3 Rebirth. Can also teleport you to copies of certain mob farming locations</td></tr>
-          <tr><td class="t-bold t-gold">Gogeta</td><td>Quest to unlock the FCC (Special gravity room)</td></tr>
-          <tr><td class="t-bold t-gold">Oracle Fish</td><td>Quests for Ultra Points, Change Ultra Form, Dual Gene-ing, and Exchanging True Levels</td></tr>
-          <tr><td class="t-bold t-gold">Bulma</td><td>Upgrades Dragon Radars</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="tip-box">💡 Currency &amp; Exchange NPCs have been merged into the <strong>Equipment &amp; Economy</strong> tab. See the Currency Conversions &amp; Exchange NPCs section there for all rates and NPC locations.</div>
-
-    <div class="section-header">⭐ Z Agent: Master NPC</div>
-    <div class="warn-box">⚠️ <strong>Everything at the Z Agent costs ZP!</strong> This is one of the most important NPCs in the game.</div>
-    <div class="card">
-      <ul>
-        <li><strong>Hakai</strong>: Obtain the Hakai ability</li>
-        <li><strong>Raise Stat Cap</strong>: Increase your stat ceiling</li>
-        <li><strong>Hakai Safety</strong>: Protect yourself from Hakai</li>
-        <li><strong>Raise Level Cap</strong>: Push past level limits</li>
-        <li><strong>Reset Hakai Cooldown</strong>: Use Hakai again sooner</li>
-        <li><strong>Club Ticket</strong>: Access the Club House gravity room</li>
-        <li><strong>Reset Black Star Dragon Ball Wish</strong></li>
-        <li><strong>Reset Namek Dragon Ball Wishes</strong></li>
-        <li><strong>Buy Red Stat Pill</strong>: Stat boost consumable</li>
-        <li><strong>Buy Large Shards</strong></li>
-        <li><strong>Change Class</strong>: Switch between Mystic, Aggressor, Guardian, Velocitor</li>
-        <li><strong>Purchase Skill Tree</strong></li>
-        <li><strong>TNL Cuts</strong>: Reduce your Till Next Level requirement</li>
-        <li><strong>Convert Levels</strong></li>
-      </ul>
-    </div>
-
-    <div class="section-header">🔧 Utility NPCs</div>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>NPC</th><th>What They Do</th></tr></thead>
-        <tbody>
-          <tr><td class="t-bold t-green">Fix</td><td>Simple fixes: PC Bug, Fix Skin Color, Fix Icon, Overlays/Underlays, Rest/Fly/IT, Lost Transform Verbs, Fix Gym Equipment</td></tr>
-          <tr><td class="t-bold t-green">Barber</td><td>Change your character's hair (if applicable)</td></tr>
-          <tr><td class="t-bold t-green">Mall Mascot</td><td>Change Saga Difficulty and change CTF limitation</td></tr>
-        </tbody>
-      </table>
-    </div>
-
+    <!-- CASINO NPCs -->
     <div class="section-header">🎰 Casino NPCs</div>
     <div class="table-wrap">
       <table>
         <thead><tr><th>NPC</th><th>What They Do</th></tr></thead>
         <tbody>
           <tr><td class="t-bold t-purple">Casino Manager</td><td>All Casino Rules, Casino Leaderboard, and the Black Book</td></tr>
-          <tr><td class="t-bold t-purple">Oolong's Shop</td><td>Purchase rewards with Casino Tokens: Techniques, Special Suits, Buffs, Currencies, Items, and Casino buffs</td></tr>
           <tr><td class="t-bold t-purple">Oolong's Exchange</td><td>Exchange ZP and UP for Casino Tokens</td></tr>
           <tr><td class="t-bold t-purple">Oolong's Lottery</td><td>Buy Lotto Tickets (automatically redeems)</td></tr>
+          <tr><td class="t-bold t-purple">Oolong's Shop</td><td>Purchase rewards with Casino Tokens: Techniques, Special Suits, Buffs, Currencies, Items, and Casino buffs</td></tr>
         </tbody>
       </table>
-    </div>
-
-    <div class="section-header">⚔️ Weapon NPCs</div>
-    <div class="card">
-      <div class="sub-sub-header">Lazer the Blacksmith</div>
-      <div class="table-wrap" style="margin-top:8px;">
-        <table>
-          <thead><tr><th>Weapon</th><th>Special Effect</th></tr></thead>
-          <tbody>
-            <tr><td class="t-bold t-orange">Shula's Golden Demon Blade</td><td>Summons Demon monsters that attack the enemy</td></tr>
-            <tr><td class="t-bold t-blue">Fu's Time Cutter</td><td>Fastest sword. Also damages the opponent's Ki reserves</td></tr>
-            <tr><td class="t-bold t-green">Saiyaman Sword</td><td>Slightly faster sword. +5% PL boost when used with Saiyaman Helmet</td></tr>
-            <tr><td class="t-bold t-purple">Yajirobe Katana</td><td>Slightly fast sword. Induces bleed damage 100% of the time</td></tr>
-          </tbody>
-        </table>
-      </div>
     </div>
 
     <!-- NPC STAT BOOSTS -->
@@ -2211,20 +2256,176 @@
       <table>
         <thead><tr><th>NPC</th><th>Boost</th><th>Requirements</th></tr></thead>
         <tbody>
-          <tr><td class="t-bold">Son Goku</td><td class="t-green">PL ×1.2</td><td>Level 35,000</td></tr>
-          <tr><td class="t-bold">Krillin</td><td class="t-green">Ki ×1.2</td><td>Level 35,000 + 100,000,000 zenni</td></tr>
-          <tr><td class="t-bold">King Vegeta</td><td class="t-green">Ki Defense ×1.2</td><td>Kill 25 enemies</td></tr>
-          <tr><td class="t-bold">Hercule</td><td class="t-green">Strength ×1.2</td><td>Level 35,000</td></tr>
-          <tr><td class="t-bold">Piccolo</td><td class="t-green">Defense ×1.2</td><td>Level 35,000</td></tr>
-          <tr><td class="t-bold">Guru</td><td class="t-gold">All stats ×1.2</td><td>25% Good Karma + Kill 3 of Frieza's Henchmen</td></tr>
-          <tr><td class="t-bold">Frieza</td><td class="t-gold">All stats ×1.2</td><td>25% Evil Karma + Kill 3 Namekian Civilians</td></tr>
           <tr><td class="t-bold">Babidi</td><td class="t-gold">All stats ×1.5 (×1.6 Pride Saiyan)</td><td>Level 35,000 + 100% Evil Karma</td></tr>
-          <tr><td class="t-bold">Supreme Kai (Potara)</td><td class="t-gold">Both players' stats added OR Self ×1.8</td><td>Level 35,000 + Kill (Saga) Shenron</td></tr>
+          <tr><td class="t-bold">Dr. Gero – Convert</td><td class="t-gold">All stats ×1.8</td><td>Human only</td></tr>
+          <tr><td class="t-bold">Frieza</td><td class="t-gold">All stats ×1.2</td><td>25% Evil Karma + Kill 3 Namekian Civilians</td></tr>
+          <tr><td class="t-bold">Guru</td><td class="t-gold">All stats ×1.2</td><td>25% Good Karma + Kill 3 of Frieza's Henchmen</td></tr>
+          <tr><td class="t-bold">Hercule</td><td class="t-green">Strength ×1.2</td><td>Level 35,000</td></tr>
+          <tr><td class="t-bold">King Cold – Convert</td><td class="t-gold">×1.8 (Metal=STR; Mecha=KI)</td><td>Changeling only</td></tr>
+          <tr><td class="t-bold">King Vegeta</td><td class="t-green">Ki Defense ×1.2</td><td>Kill 25 enemies</td></tr>
+          <tr><td class="t-bold">Krillin</td><td class="t-green">Ki ×1.2</td><td>Level 35,000 + 100,000,000 zenni</td></tr>
+          <tr><td class="t-bold">Piccolo</td><td class="t-green">Defense ×1.2</td><td>Level 35,000</td></tr>
           <tr><td class="t-bold">Princess Snake</td><td class="t-orange">All stats ×2</td><td>None (hidden NPC)</td></tr>
           <tr><td class="t-bold">Shin</td><td class="t-gold">All stats ×1.5</td><td>Level 35,000 + Perm races only</td></tr>
+          <tr><td class="t-bold">Son Goku</td><td class="t-green">PL ×1.2</td><td>Level 35,000</td></tr>
+          <tr><td class="t-bold">Supreme Kai (Potara)</td><td class="t-gold">Both players' stats added OR Self ×1.8</td><td>Level 35,000 + Kill (Saga) Shenron</td></tr>
           <tr><td class="t-bold">Toronbo Dragon</td><td class="t-orange">All stats ×2</td><td>Cereal Dragonball Wish</td></tr>
-          <tr><td class="t-bold">Dr. Gero – Convert</td><td class="t-gold">All stats ×1.8</td><td>Human only</td></tr>
-          <tr><td class="t-bold">King Cold – Convert</td><td class="t-gold">×1.8 (Metal=STR; Mecha=KI)</td><td>Changeling only</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- PROGRESSION & TRAINING -->
+    <div class="section-header">⚔️ Progression &amp; Training NPCs</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>NPC</th><th>What They Do</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold t-gold">Beerus</td><td>6/3 Rebirth, Ultra Ego Training, and Request Residence (change spawn location)</td></tr>
+          <tr><td class="t-bold t-gold">Bulma</td><td>Upgrades Dragon Radars</td></tr>
+          <tr><td class="t-bold t-gold">Champa</td><td>Ultra Invert Training</td></tr>
+          <tr><td class="t-bold t-gold">Gogeta</td><td>Quest to unlock the FCC (Special gravity room)</td></tr>
+          <tr><td class="t-bold t-gold">Oracle Fish</td><td>Quests for Ultra Points, Change Ultra Form, Dual Gene-ing, and Exchanging True Levels</td></tr>
+          <tr><td class="t-bold t-gold">Whis (Earth)</td><td>Perform Saiyan God Ritual, Perform Mixed God Ritual, Inject Daishinkan DNA, Quests for Whis Weights, and Ultra Instinct Training</td></tr>
+          <tr><td class="t-bold t-gold">Yamcha</td><td>Change Saga Difficulty, learn Instant Transmission, spend Training Points. Also has a guide on Training Point multipliers (1 TP value)</td></tr>
+          <tr><td class="t-bold t-gold">Yardrat Sensei</td><td>Teaches Instant Transmission</td></tr>
+          <tr><td class="t-bold t-gold">Zeno</td><td>Start your 5/3 Rebirth. Can also teleport you to copies of certain mob farming locations</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- SHOPS & MERCHANTS -->
+    <div class="section-header">🏪 Shops &amp; Merchants</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>NPC</th><th>What They Do</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold t-orange">Advanced Shop Keeper</td><td>Sells Advanced and Ultra Weighted Clothing</td></tr>
+          <tr><td class="t-bold t-orange">Armor Shop Keeper</td><td>Sells Hench, Saiyan, and Heavy Armor</td></tr>
+          <tr><td class="t-bold t-orange">Bounty Hunter</td><td>Claim Kill Rewards and Sell Epic Kills for Levels, TPs, ZP, or Club Tickets</td></tr>
+          <tr><td class="t-bold t-orange">Candy Broker Buu</td><td>Exchange Candy for EXP TNL Modifier, PVP Tokens, TPs, Candy, or Class Changes</td></tr>
+          <tr><td class="t-bold t-orange">Clothing Shop Keeper</td><td>Sells 13 different types of clothing, some with custom colors!</td></tr>
+          <tr><td class="t-bold t-orange">Combat Shop Keeper</td><td>Sells special Techniques for UP</td></tr>
+          <tr><td class="t-bold t-orange">Exchanger</td><td>Exchange Levels, Zenni, or Skill Points for other rewards. Key NPC for selling down levels at 5/3</td></tr>
+          <tr><td class="t-bold t-orange">Korin</td><td>Sells Senzu Beans. Fully heals your character!</td></tr>
+          <tr><td class="t-bold t-orange">Misc Shop Keeper</td><td>Sells Dragon Radars and Scouters</td></tr>
+          <tr><td class="t-bold t-orange">Real Estate Renji</td><td>Buy things to put in your personal house</td></tr>
+          <tr><td class="t-bold t-orange">Space Shop Keeper</td><td>Buy a Space Pod</td></tr>
+          <tr><td class="t-bold t-orange">Special Shop Keeper</td><td>Sells the ZSuits</td></tr>
+          <tr><td class="t-bold t-orange">Towa</td><td>Stat Sacrifice Broker — stores stats in 100b multiples, returns them +20% bonus (one-time withdrawal)</td></tr>
+          <tr><td class="t-bold t-orange">Training Shop Keeper</td><td>Sells a sword, basic shards, and stat candies</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sub-header">Bounty Hunter — Full Details</div>
+    <div class="sub-sub-header">Kill Reward Claims</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Reward</th><th>Kills Required</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Claim Zenni Gift</td><td class="t-mono">5</td></tr>
+          <tr><td class="t-bold">Claim Zenni Gift 2</td><td class="t-mono">25</td></tr>
+          <tr><td class="t-bold">Claim EXP Gift</td><td class="t-mono">30</td></tr>
+          <tr><td class="t-bold">Claim TPs Gift</td><td class="t-mono">40</td></tr>
+          <tr><td class="t-bold">Claim Guild Points Gift</td><td class="t-mono">50</td></tr>
+          <tr><td class="t-bold">Claim Zenni Gift 3</td><td class="t-mono">75</td></tr>
+          <tr><td class="t-bold">Claim Z Points Gift</td><td class="t-mono">100</td></tr>
+          <tr><td class="t-bold">Claim Z Points Gift 2</td><td class="t-mono">200</td></tr>
+          <tr><td class="t-bold">Claim UP Gift</td><td class="t-mono">250</td></tr>
+          <tr><td class="t-bold t-gold">Claim 5 Club Tickets</td><td class="t-mono">300</td></tr>
+          <tr><td class="t-bold t-gold">Claim Z Points Gift 3</td><td class="t-mono">500</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="sub-sub-header" style="padding-top:8px">Epic Kill Selling (Cash In Options)</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Cash In For</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Club Ticket</td></tr>
+          <tr><td class="t-bold">Levels</td></tr>
+          <tr><td class="t-bold">TPs</td></tr>
+          <tr><td class="t-bold">Z Points</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sub-header">Candy Broker Buu — Full Services</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Service</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Exchange Candy to Candy</td><td>Consolidate candy</td></tr>
+          <tr><td class="t-bold">Exchange Candy to Change Class</td><td>Change your class using candy instead of ZP</td></tr>
+          <tr><td class="t-bold">Exchange Candy to EXP TNL Modifier</td><td>Reduce your EXP to next level</td></tr>
+          <tr><td class="t-bold">Exchange Candy to PVP Tokens</td><td>Convert candy into PVP tokens</td></tr>
+          <tr><td class="t-bold">Exchange Candy to TP</td><td class="t-green">10 Candies → 1,000,000 TPs</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sub-header">Towa — Stat Sacrifice Broker</div>
+    <div class="card">
+      <p>Towa deducts stats from your current base stats in multiples of <strong>100 billion</strong> and stores them. When you withdraw, she grants them back <strong>plus an additional 20%</strong> bonus.</p>
+      <ul>
+        <li><strong class="t-red">Withdrawing is a one-time service!</strong> Once stats are withdrawn, you can no longer use Towa's services</li>
+        <li>Best to withdraw at <strong>End of Wipe</strong> or when you are finished stat gaining</li>
+      </ul>
+    </div>
+
+    <!-- UTILITY -->
+    <div class="section-header">🔧 Utility NPCs</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>NPC</th><th>What They Do</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold t-green">Barber</td><td>Change your character's hair (if applicable)</td></tr>
+          <tr><td class="t-bold t-green">Fix</td><td>Simple fixes: PC Bug, Fix Skin Color, Fix Icon, Overlays/Underlays, Rest/Fly/IT, Lost Transform Verbs, Fix Gym Equipment</td></tr>
+          <tr><td class="t-bold t-green">Mall Mascot</td><td>Change Saga Difficulty and change CTF limitation</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- TECHNIQUE NPCs -->
+    <div class="section-header">📜 Technique NPCs</div>
+    <div class="sub-header">Combat Shop Keeper</div>
+    <div class="tip-box">💡 Located inside the <strong>Mall</strong>. Sells techniques for UP (Universe Points).</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Technique</th><th>UP Cost</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Burning Lotus</td><td class="t-mono">100</td></tr>
+          <tr><td class="t-bold t-orange">Ki Fist</td><td class="t-mono">250</td></tr>
+          <tr><td class="t-bold t-gold">Prismatic Star</td><td class="t-mono">750</td></tr>
+          <tr><td class="t-bold">Replacement</td><td class="t-mono">50</td></tr>
+          <tr><td class="t-bold">Wind Gust</td><td class="t-mono">50</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Z AGENT -->
+    <div class="section-header">⭐ Z Agent: Master NPC</div>
+    <div class="warn-box">⚠️ <strong>Everything at the Z Agent costs ZP!</strong> This is one of the most important NPCs in the game. Located in the Safe Zone. Class changes available at Level 100,000 (or any level at 4/3+).</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Item / Service</th><th>ZP Cost</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold t-red">Unlock Hakai</td><td class="t-mono">2,500</td></tr>
+          <tr><td class="t-bold">Buy Red Stat Pill</td><td class="t-mono">1,000</td></tr>
+          <tr><td class="t-bold">Hakai Safety</td><td class="t-mono">1,000</td></tr>
+          <tr><td class="t-bold">Raise Stat Cap</td><td class="t-mono">1,000</td></tr>
+          <tr><td class="t-bold">Raise Level Cap</td><td class="t-mono">500</td></tr>
+          <tr><td class="t-bold">Reset Hakai CD</td><td class="t-mono">500</td></tr>
+          <tr><td class="t-bold">Purchase Club Ticket</td><td class="t-mono">400</td></tr>
+          <tr><td class="t-bold">Reset Black Star Wish</td><td class="t-mono">250</td></tr>
+          <tr><td class="t-bold">Reset Namek Wishes</td><td class="t-mono">200</td></tr>
+          <tr><td class="t-bold">Buy Large EXP Shard</td><td class="t-mono">75</td></tr>
+          <tr><td class="t-bold">Buy Large TP Shard</td><td class="t-mono">75</td></tr>
+          <tr><td class="t-bold">Buy Large Zenni Shard</td><td class="t-mono">75</td></tr>
+          <tr><td class="t-bold">Change Class</td><td class="t-mono">25</td></tr>
+          <tr><td class="t-bold">Convert Levels</td><td class="t-dim">Varies</td></tr>
+          <tr><td class="t-bold">EXP TNL Modifier</td><td class="t-dim">Varies</td></tr>
+          <tr><td class="t-bold">Purchase Skill Tree</td><td class="t-dim">Varies</td></tr>
         </tbody>
       </table>
     </div>
@@ -2238,28 +2439,28 @@
 
     <div class="tip-box" style="margin-top:16px">💡 Major in-game buildings and locations. Each has unique NPCs, equipment, or activities.</div>
 
-    <!-- PLAYER HOUSE -->
-    <div class="section-header">🏠 Player House</div>
-    <div class="card">
-      <p>Walk up to any available house and buy it. Houses include an <strong>open area</strong> for equipment and decorations, a <strong>gravity room</strong>, and a <strong>mob room</strong> (unlock additional mob floors as you progress).</p>
-      <ul>
-        <li><strong>Cost:</strong> 2,500 UP at 5/3</li>
-        <li><strong>Legendary House Equipment:</strong> Buy from <strong>Real Estate Renji NPC</strong> (10b zenni per piece). Best gym equipment outside of Club House</li>
-        <li>Farm your mob floors each repop for extra EXP alongside your regular mobbing rotation</li>
-      </ul>
-    </div>
-
     <!-- CASINO -->
     <div class="section-header">🎰 Casino</div>
     <div class="card">
       <p>Located behind the <strong>Mall Mascot</strong>. Walk down the carpet to find two main rooms: the <strong>standard Casino room</strong> and the <strong>Sub Casino room</strong>.</p>
       <ul>
         <li>Games include <strong>slot machines, blackjack,</strong> and more</li>
-        <li>Earn <strong>Casino Tokens</strong> by playing, then spend them at Oolong's NPCs (all located inside the Casino)</li>
-        <li><strong>Oolong's Shop:</strong> Techniques, Special Suits, Buffs, Currencies, Items</li>
+        <li>Earn <strong>Casino Tokens (C)</strong> by playing, then spend them at the Casino Shop or Oolong's NPCs</li>
         <li><strong>Oolong's Exchange:</strong> Convert ZP and UP into Casino Tokens</li>
         <li><strong>Oolong's Lottery:</strong> Buy lotto tickets (automatically redeems)</li>
         <li><strong>Casino Manager:</strong> All casino rules, leaderboard, and the Black Book</li>
+      </ul>
+    </div>
+    <div class="tip-box">💡 See the <strong>Items</strong> tab for the full Casino Shop item list with prices.</div>
+
+    <!-- CLUB -->
+    <div class="section-header">🎪 Club (Club House)</div>
+    <div class="card">
+      <p>A premium gravity training location with the highest multiplier available.</p>
+      <ul>
+        <li><strong>Gravity:</strong> x30 multiplier</li>
+        <li><strong>Access:</strong> Requires a <strong>Club Ticket</strong> (purchase from Z Agent for ZP)</li>
+        <li><strong>Session Duration:</strong> 30 minutes (45 minutes with Gym Bunny race)</li>
       </ul>
     </div>
 
@@ -2274,36 +2475,37 @@
       </ul>
     </div>
 
-    <!-- MALL -->
-    <div class="section-header">🛒 Mall (Megamall)</div>
-    <div class="card">
-      <p>The central shopping hub of DB Asylum. The <strong>Mall Mascot NPC</strong> sits outside the building for easy Instant Transmission access.</p>
-      <ul>
-        <li><strong>Casino</strong> &amp; <strong>Sub Casino</strong> — accessed through the Mall</li>
-        <li><strong>PVP Broker</strong> — PvP-related services</li>
-        <li><strong>Special Shop Keeper</strong> — sells ZSuits</li>
-        <li><strong>Combat Shop Keeper</strong> — sells special Techniques</li>
-        <li><strong>Towa</strong></li>
-        <li><strong>Lazer the Blacksmith</strong> — weapon crafting</li>
-        <li><strong>Bounty Hunter</strong></li>
-      </ul>
-    </div>
-
-    <!-- WACKDONALDS -->
-    <div class="section-header">🍔 Wackdonalds</div>
-    <div class="card">
-      <p>The in-game restaurant where you can purchase food items for training buffs and stat gains.</p>
-      <ul>
-        <li><strong>Happy Meals:</strong> Grants a <strong>50% EXP buff</strong> for a short duration</li>
-        <li><strong>Other Foods:</strong> Various meals that provide stat gains</li>
-      </ul>
-    </div>
-
     <!-- HALL OF FAME -->
     <div class="section-header">🏆 Hall of Fame</div>
     <div class="card">
       <p>A monument to DB Asylum's history. Contains statues of all important <strong>legacy players</strong> and <strong>End of Wipe statues</strong>.</p>
       <div class="new-box"><span class="badge">EASTER EGG</span> You can <strong>vandalize Perfection's statue</strong> to summon Perf to chat!</div>
+    </div>
+
+    <!-- MALL -->
+    <div class="section-header">🛒 Mall (Megamall)</div>
+    <div class="card">
+      <p>The central shopping hub of DB Asylum. The <strong>Mall Mascot NPC</strong> sits outside the building for easy Instant Transmission access.</p>
+      <ul>
+        <li><strong>Bounty Hunter</strong> — claim kill rewards &amp; sell epic kills (see Important NPCs tab)</li>
+        <li><strong>Casino</strong> &amp; <strong>Sub Casino</strong> — accessed through the Mall</li>
+        <li><strong>Combat Shop Keeper</strong> — sells techniques for UP (see Important NPCs tab)</li>
+        <li><strong>Lazer the Blacksmith</strong> — weapon crafting (see Important NPCs tab)</li>
+        <li><strong>PVP Broker</strong> — PvP-related services</li>
+        <li><strong>Special Shop Keeper</strong> — sells ZSuits</li>
+        <li><strong>Towa</strong> — Stat Sacrifice Broker (see Important NPCs tab)</li>
+      </ul>
+    </div>
+
+    <!-- PLAYER HOUSE -->
+    <div class="section-header">🏠 Player House</div>
+    <div class="card">
+      <p>Walk up to any available house and buy it. Houses include an <strong>open area</strong> for equipment and decorations, a <strong>gravity room</strong>, and a <strong>mob room</strong> (unlock additional mob floors as you progress).</p>
+      <ul>
+        <li><strong>Cost:</strong> 2,500 UP at 5/3</li>
+        <li><strong>Legendary House Equipment:</strong> Buy from <strong>Real Estate Renji NPC</strong> (10b zenni per piece). Best gym equipment outside of Club House</li>
+        <li>Farm your mob floors each repop for extra EXP alongside your regular mobbing rotation</li>
+      </ul>
     </div>
 
     <!-- SUB ROOM -->
@@ -2315,20 +2517,14 @@
         <li><strong>Sub Med Pads:</strong> Best meditation gains available</li>
         <li>Special Mob Room Access for exclusive farming zones</li>
       </ul>
-      <div class="warn-box">⚠️ More details coming soon — check back for updates!</div>
     </div>
 
-    <!-- CLUB -->
-    <div class="section-header">🎪 Club (Club House)</div>
+    <!-- WACKDONALDS -->
+    <div class="section-header">🍔 Wackdonalds</div>
     <div class="card">
-      <p>A premium gravity training location with the highest multiplier available.</p>
-      <ul>
-        <li><strong>Gravity:</strong> x30 multiplier</li>
-        <li><strong>Access:</strong> Requires a <strong>Club Ticket</strong> (purchase from Z Agent for ZP)</li>
-        <li><strong>Session Duration:</strong> 30 minutes (45 minutes with Gym Bunny race)</li>
-      </ul>
-      <div class="warn-box">⚠️ More details coming soon — check back for updates!</div>
+      <p>The in-game restaurant where you can purchase food items for training buffs and stat gains. Talk to the <strong>Cashier</strong> NPC inside.</p>
     </div>
+    <div class="tip-box">💡 See the <strong>Items</strong> tab for the full Wackdonalds menu with prices and effects.</div>
 
   </section>
 
