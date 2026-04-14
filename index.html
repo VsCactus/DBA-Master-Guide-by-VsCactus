@@ -631,7 +631,7 @@
     <div class="header-eyebrow">★ Dragonball Asylum ★</div>
     <h1 class="header-title">DBA Wiki</h1>
     <div class="header-subtitle">Managed by VsCactus</div>
-    <div class="version-badge">⚠ Latest Changelog: v8.67.15 · Wiki v1.0</div>
+    <div class="version-badge">⚠ Latest Changelog: v8.67.17 · Wiki v1.0</div>
     <div class="header-divider"></div>
   </header>
 
@@ -673,7 +673,7 @@
       </div>
       <div class="card" style="cursor:pointer" onclick="showTab('progression',document.querySelectorAll('.tab-btn')[2])">
         <div class="sub-sub-header" style="color:var(--accent-orange)">🏁 How to Win the Game</div>
-        <p>Road to Champion with self-contained walkthroughs for every rebirth tier (0/3 → 6/3), rebirth system reference table, ZP level cap costs, and Beerus 6/3 paths.</p>
+        <p>Road to Champion with step-by-step guides for every rebirth (0/3 → 6/3), rebirth rules checklist, quest medals, boosting thresholds, rebirth system reference table, ZP level cap costs, and Beerus 6/3 paths.</p>
       </div>
       <div class="card" style="cursor:pointer" onclick="showTab('items',document.querySelectorAll('.tab-btn')[3])">
         <div class="sub-sub-header" style="color:var(--accent-gold)">💰 Economy</div>
@@ -693,7 +693,7 @@
       </div>
       <div class="card" style="cursor:pointer" onclick="showTab('mobfarming',document.querySelectorAll('.tab-btn')[7])">
         <div class="sub-sub-header">🗺️ Mob Farming</div>
-        <p>Sagas system, Lab entrances, caves &amp; special portals, mob towers, space star planets, and SR portal locations with recommended levels.</p>
+        <p>Sagas system, Lab entrances, caves &amp; special portals, mob towers, space star planets, and SR portal locations with coordinates.</p>
       </div>
       <div class="card" style="cursor:pointer" onclick="showTab('events',document.querySelectorAll('.tab-btn')[8])">
         <div class="sub-sub-header" style="color:var(--accent-orange)">🏆 Events</div>
@@ -815,7 +815,7 @@
       <table>
         <thead><tr><th>Location</th><th>Multi</th><th>Notes</th></tr></thead>
         <tbody>
-          <tr><td>Club House</td><td class="t-gold t-bold">x30</td><td>Limited: 30 min session (45 min Gym Bunny)</td></tr>
+          <tr><td>Club House</td><td class="t-gold t-bold">x30</td><td>Limited: 30 min session (60 min Gym Bunny)</td></tr>
           <tr><td>HBTC</td><td class="t-orange t-bold">x15</td><td>Limited: 3 uses × 2 hrs each; <strong>freezes TNL</strong></td></tr>
           <tr><td>Sub Room</td><td class="t-orange t-bold">x15</td><td>Unlimited time</td></tr>
           <tr><td>FCC (PvP)</td><td class="t-blue t-bold">x15</td><td>EXP Till Next Level does NOT rise here</td></tr>
@@ -851,9 +851,15 @@
   ══════════════════════════════════════════════ -->
   <section class="tab-panel" id="panel-progression">
 
-    <!-- ROAD TO 5/3 CHAMPION -->
+    <!-- ROAD TO 6/3 -->
     <div class="section-header">🏁 Road to Champion</div>
-    <div class="tip-box">💡 Each rebirth section below is self-contained. Follow it from Level 1 to rebirth. Info repeats intentionally so you can reference just the section you're on.</div>
+
+    <!-- REBIRTH RULES -->
+    <div class="warn-box">⚠️ <strong>Before EVERY Rebirth — follow these rules:</strong><br>
+    1. Complete all Z-Point Quests to avoid having to grind for them later.<br>
+    2. Leave your Guild or Transfer Ownership.<br>
+    3. Unequip and store all your items in a Locker above Yamcha and Bank your Zenni.<br>
+    4. Use as many Dragon Ball Wishes as possible.</div>
 
     <!-- ────────── 0/3 → 1/3 ────────── -->
     <div class="sub-header">0/3 → 1/3</div>
@@ -862,16 +868,17 @@
       <div class="stat-card"><div class="stat-label">Target Level</div><div class="stat-value t-orange">50,000</div></div>
       <div class="stat-card"><div class="stat-label">Rebirth NPC</div><div class="stat-value">King Kai / Dr. Gero</div></div>
       <div class="stat-card"><div class="stat-label">Recommended Class</div><div class="stat-value t-green">Velocitor</div></div>
-      <div class="stat-card"><div class="stat-label">Race Advice</div><div class="stat-value">Avoid permanent transform races</div></div>
     </div>
 
     <div class="rebirth-flow">
-      <div class="rebirth-step"><span class="step-num">1</span><div class="step-title">Level 1 → 10,000</div><div class="step-body">Talk to <strong>Yamcha</strong>, get to Level 500, talk to him again, then leave the house. Use season pass / sub boost if available (season pass also gives zenni). Buy <strong>ultra weights</strong> and a small <strong>EXP Shard</strong>. Get <strong>Kaioken</strong> from <strong>King Kai</strong>. Mob <strong>Crocodiles</strong> and <strong>Wolves</strong> on Master Roshi's Training Island or the Orange Star portal. Alternatively: train in <strong>Sub gravity or HBTC</strong>: shadow spar is fastest at x3. IT unlocks at Level 2,000 via Yamcha → Learn Teleport (otherwise fly to Yajirobe).</div></div>
-      <div class="rebirth-step"><span class="step-num">2</span><div class="step-title">Level 10,000 → 20,000</div><div class="step-body">Start doing <strong>sims</strong> in safe zone house (stairs right → past Hercule → 2nd stairs → sim room). Access a computer, spawn clones: power down to PL 1, spawn clone, hold attack macro, repeat. With weights + EXP shard/happy meals this gets you to ~20k.</div></div>
-      <div class="rebirth-step"><span class="step-num">3</span><div class="step-title">Level 20,000 → 40,000</div><div class="step-body">Start <strong>Focus Meditation</strong> and Shadow Spar the Focus Med. Can be completed in roughly 5–6 hours. Limited mobbing options at this stat level.</div></div>
-      <div class="rebirth-step"><span class="step-num">4</span><div class="step-title">Level 40,000 → 50,000</div><div class="step-body"><strong>Turn in your Focus Med quest to Roshi</strong> for rewards. Spend TPs evenly on stats (except Ki). You can now boost and start mobbing: <strong>Glass Civilian Cave, Xeno Pan, Copy Vegetas, Universe Caves (Beerus Planet), Tuffle Civilian 2-4, Space Portals</strong> (not Orange Star), <strong>Portal NE of Vegito, Android Caves NW of Vegito</strong>.</div></div>
-      <div class="rebirth-step"><span class="step-num">💤</span><div class="step-title">Lazy/AFK Alternative</div><div class="step-body">At Level 2,000 get IT from Yamcha. Get 5+ quest medals. Dual train in HBTC with weights + EXP shard to Level 25,000. Then start <strong>Focus Meditation</strong> (unlocked at 10k; we wait to 25k so rebirth is ready when it finishes). Takes <strong>16 hours AFK</strong> but gives ZP + club ticket. Advisable every rebirth for the ZP.</div></div>
-      <div class="rebirth-step" style="border-left:3px solid var(--accent-green)"><span class="step-num">R</span><div class="step-title">Rebirth to 1/3</div><div class="step-body">Talk to <strong>King Kai</strong> or <strong>Dr. Gero</strong>. Choose a new race + gene (can't pick same race). Avoid perm transform races again. <strong>⚠️ Do ZP quests before rebirthing! Put items in locker above Yamcha!</strong></div></div>
+      <div class="rebirth-step"><span class="step-num">1</span><div class="step-title">Yamcha's Quest</div><div class="step-body">Talk to <strong>Yamcha</strong> and start his quest. You need to reach <strong>Level 500</strong> — just use the Self Train verb. Turn in the quest when done.</div></div>
+      <div class="rebirth-step"><span class="step-num">2</span><div class="step-title">Train to ~2,000</div><div class="step-body">Continue training to around <strong>Level 2,000</strong>. By now you should have become a permanent combatant and unlocked a ton of the main techniques.</div></div>
+      <div class="rebirth-step"><span class="step-num">3</span><div class="step-title">Unlock Instant Transmission</div><div class="step-body">Ask <strong>Yamcha</strong> about learning to Teleport. Complete his task to unlock <strong>Instant Transmission</strong>.</div></div>
+      <div class="rebirth-step"><span class="step-num">4</span><div class="step-title">Explore &amp; Experiment</div><div class="step-body">You can now experiment with <strong>Mobs</strong> on the Overworld, <strong>Mob Towers</strong>, and <strong>Events</strong> to gain EXP and learn the map.</div></div>
+      <div class="rebirth-step"><span class="step-num">5</span><div class="step-title">Earn 7 Quest Medals</div><div class="step-body">Your next focus is earning a total of <strong>7 Quest Medals</strong> so you can reach the 50k level cap. Easiest medals: <strong>King Kai, Yamcha (1, 2, &amp; 4), Dr. Briefs, Master Roshi (Kamehameha), and Saiyaman</strong>.</div></div>
+      <div class="rebirth-step"><span class="step-num">6</span><div class="step-title">Buy Gear</div><div class="step-body">Buy some <strong>Ultra Weights</strong> and <strong>Basic Shards</strong>. They will help multiply your gains significantly.</div></div>
+      <div class="rebirth-step"><span class="step-num">7</span><div class="step-title">ZP Quests</div><div class="step-body"><strong>Master Roshi's Focus Meditation Quest</strong> and <strong>Enraged Trunks 2 Quest</strong> should be finished for an extra <strong>650 ZP</strong>.</div></div>
+      <div class="rebirth-step" style="border-left:3px solid var(--accent-green)"><span class="step-num">R</span><div class="step-title">Rebirth to 1/3</div><div class="step-body">Upon reaching Level 50,000, follow the <strong>Rebirth Rules</strong> above and speak to <strong>King Kai</strong> or <strong>Dr. Gero</strong>. Congrats, you are now 1/3!</div></div>
     </div>
 
     <!-- ────────── 1/3 → 2/3 ────────── -->
@@ -880,14 +887,13 @@
     <div class="card-grid">
       <div class="stat-card"><div class="stat-label">Target Level</div><div class="stat-value t-orange">75,000</div></div>
       <div class="stat-card"><div class="stat-label">Rebirth NPC</div><div class="stat-value">King Kai / Dr. Gero</div></div>
-      <div class="stat-card"><div class="stat-label">Key Unlock</div><div class="stat-value t-blue">Whis Weights quest</div></div>
-      <div class="stat-card"><div class="stat-label">Stats Per Rebirth</div><div class="stat-value t-green">Higher than 0/3</div></div>
+      <div class="stat-card"><div class="stat-label">Key Unlock</div><div class="stat-value t-blue">Whis Weights</div></div>
     </div>
 
     <div class="rebirth-flow">
-      <div class="rebirth-step"><span class="step-num">1</span><div class="step-title">Level 1 → 75,000</div><div class="step-body">Follow the same training loop as 0/3: Yamcha → weights + shard → Kaioken → mob or train → Focus Med → boost → mob portals. You should be able to start mobbing <strong>earlier</strong> this time since each rebirth gives more stats. Same mob locations apply. Continue doing Focus Med each rebirth for ZP.</div></div>
-      <div class="rebirth-step"><span class="step-num">2</span><div class="step-title">Before You Rebirth: Whis Quest</div><div class="step-body">(Optional but recommended) Do <strong>Whis' quest</strong> for Whis weights. For the second Whis quest, the easiest method is: go to <strong>Zeno</strong>, ask him to show you his powers, and do his tower replicas.</div></div>
-      <div class="rebirth-step" style="border-left:3px solid var(--accent-green)"><span class="step-num">R</span><div class="step-title">Rebirth to 2/3</div><div class="step-body">Talk to <strong>King Kai</strong> or <strong>Dr. Gero</strong> at Level 75,000. Choose a new race + gene. <strong>⚠️ Do ZP quests before rebirthing! Put items in locker above Yamcha!</strong></div></div>
+      <div class="rebirth-step"><span class="step-num">1</span><div class="step-title">Repeat the 0/3 Loop</div><div class="step-body">Start by repeating everything you did for the previous rebirth. You have faster level and stat gains now, so you should be able to finish <strong>more quest medals</strong> this time.</div></div>
+      <div class="rebirth-step"><span class="step-num">2</span><div class="step-title">Before Rebirthing: Whis Quests</div><div class="step-body">Complete <strong>Whis' Quest</strong> for new weights — these are way better. For his <strong>2nd quest</strong> (faster movement), the recommended method is: talk to <strong>Zeno</strong>, use the <strong>"show me your powers"</strong> option, and run through towers that way. It's a bit faster.</div></div>
+      <div class="rebirth-step" style="border-left:3px solid var(--accent-green)"><span class="step-num">R</span><div class="step-title">Rebirth to 2/3</div><div class="step-body">Follow the <strong>Rebirth Rules</strong> and speak to <strong>King Kai</strong> or <strong>Dr. Gero</strong> at Level 75,000. Congrats, you are now 2/3!</div></div>
     </div>
 
     <!-- ────────── 2/3 → 3/3 ────────── -->
@@ -896,13 +902,15 @@
     <div class="card-grid">
       <div class="stat-card"><div class="stat-label">Target Level</div><div class="stat-value t-orange">100,000</div></div>
       <div class="stat-card"><div class="stat-label">Rebirth NPC</div><div class="stat-value">King Kai / Dr. Gero</div></div>
-      <div class="stat-card"><div class="stat-label">Key Unlock</div><div class="stat-value t-blue">Special Genes (after 2 rebirths, talk to Whis)</div></div>
-      <div class="stat-card"><div class="stat-label">Stats Per Rebirth</div><div class="stat-value t-green">Higher than 1/3</div></div>
+      <div class="stat-card"><div class="stat-label">Key Unlock</div><div class="stat-value t-blue">Special Genes (from Whis)</div></div>
     </div>
+    <div class="tip-box">💡 If you want to play as <strong>Vegito/Gogeta</strong> SR races for 4/3, you need to choose <strong>Saiyan</strong> when moving to 3/3.</div>
 
     <div class="rebirth-flow">
-      <div class="rebirth-step"><span class="step-num">1</span><div class="step-title">Level 1 → 100,000</div><div class="step-body">Same training loop. Stats are even higher now so mobbing starts sooner. Keep doing Focus Med for ZP. After 2 rebirths, talk to <strong>Whis</strong> for access to special genes (Daishinkan DNA, Saiyan God, Golden Frieza). Same mob locations; you can push into harder areas faster.</div></div>
-      <div class="rebirth-step" style="border-left:3px solid var(--accent-green)"><span class="step-num">R</span><div class="step-title">Rebirth to 3/3</div><div class="step-body">Talk to <strong>King Kai</strong> or <strong>Dr. Gero</strong> at Level 100,000. At 3/3 you unlock <strong>Super Races</strong>: choose your race carefully this time! <strong>⚠️ Do ZP quests before rebirthing! Put items in locker above Yamcha!</strong></div></div>
+      <div class="rebirth-step"><span class="step-num">1</span><div class="step-title">Same Loop, Higher Cap</div><div class="step-body">Same loop as above rebirths — only change is the level requirement to move up.</div></div>
+      <div class="rebirth-step"><span class="step-num">2</span><div class="step-title">Complete Medals &amp; Explore</div><div class="step-body">Try completing <strong>every Quest Medal</strong> and research all the maps. By now you should have accumulated a ton of special currencies, and you can freely spend almost all of them at Level 100k. Some new areas have unlocked.</div></div>
+      <div class="rebirth-step"><span class="step-num">3</span><div class="step-title">Buy Large Shards</div><div class="step-body">Buy <strong>Large Shards</strong> from <strong>Z Agent</strong>. These are unbreakable and have a better multiplier.</div></div>
+      <div class="rebirth-step" style="border-left:3px solid var(--accent-green)"><span class="step-num">R</span><div class="step-title">Rebirth to 3/3</div><div class="step-body">Follow the <strong>Rebirth Rules</strong> and speak to <strong>King Kai</strong> or <strong>Dr. Gero</strong> at Level 100,000. Congrats, you are now 3/3!</div></div>
     </div>
 
     <!-- ────────── 3/3 → 4/3 ────────── -->
@@ -911,15 +919,17 @@
     <div class="card-grid">
       <div class="stat-card"><div class="stat-label">Target Level</div><div class="stat-value t-orange">150,000</div></div>
       <div class="stat-card"><div class="stat-label">Rebirth NPC</div><div class="stat-value">NPC inside SR Portal</div></div>
-      <div class="stat-card"><div class="stat-label">ZP Level Cap Cost</div><div class="stat-value t-red">500 ZP × 2 = 1,000 ZP</div></div>
-      <div class="stat-card"><div class="stat-label">TNL Cutting</div><div class="stat-value t-red">500 ZP per cut (3 max)</div></div>
+      <div class="stat-card"><div class="stat-label">Stats Before Boosting</div><div class="stat-value t-red">150 Million Base</div></div>
+      <div class="stat-card"><div class="stat-label">Level Caps Needed</div><div class="stat-value t-red">2 (from ZP)</div></div>
     </div>
-    <div class="warn-box">⚠️ You MUST use <strong>Super Dragon Balls</strong> before rebirthing. Your wish counter must show <strong>1/1</strong> in skills tab. <strong>DO NOT RESET IT. YOU WILL NOT BE EDITED.</strong> Wish for ZP!</div>
+    <div class="warn-box">⚠️ You need to have completed a <strong>Super Dragon Ball</strong> wish to rebirth. In the Skills tab, your counter needs to say <strong>1/1</strong>. <strong>DO NOT RESET IT. YOU WILL NOT BE EDITED.</strong></div>
 
     <div class="rebirth-flow">
-      <div class="rebirth-step"><span class="step-num">1</span><div class="step-title">Level 1 → 100,000</div><div class="step-body">Same training loop as before. Key difference: you <strong>cannot boost until you have enough stats to kill portal bosses</strong>. Need <strong>150 million stats minimum</strong> before boosting (300m recommended for weighted mobbing).</div></div>
-      <div class="rebirth-step"><span class="step-num">2</span><div class="step-title">Level 100,000 → 150,000</div><div class="step-body">Buy a <strong>large EXP shard</strong> (large zenni shard can wait). Buy <strong>PL candies</strong> and farm <strong>Club Frog room</strong> (North of white grave area). Train other stats with equipment. With 150m+ stats you can kill portal bosses; 300m to mob them weighted. Can also focus PL + STR only and boost. You'll die more while mobbing but it's still viable.</div></div>
-      <div class="rebirth-step" style="border-left:3px solid var(--accent-green)"><span class="step-num">R</span><div class="step-title">Rebirth to 4/3</div><div class="step-body">Requirements: Level 150,000 + killed an SR portal boss + Super Dragon Balls used (1/1). Talk to the NPC <strong>inside the SR portal</strong> of your choice. If you wished for ZP, consider buying <strong>Pride Trooper Suit</strong> (early/mid game) or <strong>Dark Robe</strong> (late game). Save ZP for level caps if pushing to Champion. <strong>⚠️ Do ZP quests before rebirthing! Put items in locker above Yamcha!</strong></div></div>
+      <div class="rebirth-step"><span class="step-num">1</span><div class="step-title">Repeat the Loop</div><div class="step-body">Repeat above rebirth loops. You will need to start buying <strong>Level Cap increases</strong> (you need 2).</div></div>
+      <div class="rebirth-step"><span class="step-num">2</span><div class="step-title">Welcome to Boosting</div><div class="step-body">In order to defeat an SR Portal boss, you need to reach a certain amount of stats first. It's recommended to wait out boosting until you have <strong>150 Million in each of the 5 stats</strong> (without transforming).</div></div>
+      <div class="rebirth-step"><span class="step-num">3</span><div class="step-title">Raise Your Stats</div><div class="step-body">To raise your stats: kill Mobs with <strong>Stat Candies</strong>, use <strong>Gym Equipment</strong>, spend <strong>Training Points</strong>, and earn passive increases from certain events. Check out the <strong>Clubhouse</strong> for a special room full of fast-spawning frogs for easier stat candy training.</div></div>
+      <div class="rebirth-step"><span class="step-num">4</span><div class="step-title">Boost &amp; Choose Your SR Portal</div><div class="step-body">Once at 150M stats, use all the boosts you can. Your next goal is to search for which <strong>SR Portal</strong> you need to complete. This is the SR race you are going to rebirth into, so <strong>choose wisely</strong>.</div></div>
+      <div class="rebirth-step" style="border-left:3px solid var(--accent-green)"><span class="step-num">R</span><div class="step-title">Rebirth to 4/3</div><div class="step-body">Defeat the SR Portal Mob Boss. Before talking to the NPC to rebirth, follow the <strong>Rebirth Rules</strong>, then speak to them. Congrats, you are now 4/3 as a <strong>Super Race</strong>!</div></div>
     </div>
 
     <!-- ────────── 4/3 → 5/3 ────────── -->
@@ -928,49 +938,45 @@
     <div class="card-grid">
       <div class="stat-card"><div class="stat-label">Target Level</div><div class="stat-value t-gold">250,000</div></div>
       <div class="stat-card"><div class="stat-label">Rebirth NPC</div><div class="stat-value">Zeno</div></div>
-      <div class="stat-card"><div class="stat-label">ZP Level Cap Cost</div><div class="stat-value t-red">500 ZP × 2 = 1,000 ZP</div></div>
-      <div class="stat-card"><div class="stat-label">TNL Cutting</div><div class="stat-value t-red">500 ZP per cut (3 max)</div></div>
+      <div class="stat-card"><div class="stat-label">Stats Before Boosting</div><div class="stat-value t-red">300 Million Base</div></div>
+      <div class="stat-card"><div class="stat-label">Level Caps Needed</div><div class="stat-value t-red">2 (from ZP)</div></div>
     </div>
+    <div class="tip-box">💡 <strong>TNL Cuts</strong> are now unlocked. Same loop as above — just raising the level, stats needed before boosting, and you must complete <strong>ALL SR Portals</strong> to rebirth.</div>
 
     <div class="rebirth-flow">
-      <div class="rebirth-step"><span class="step-num">1</span><div class="step-title">Level 1 → 250,000</div><div class="step-body">Same training loop. Heavily advised to boost at <strong>300–350 million ALL stats</strong> to farm SR portal mobs/bosses efficiently. Level 250k is a longer grind. You'll likely use at least one <strong>TNL cut</strong>: recommended around <strong>Level 190,000–200,000</strong>. If you want to save ZP, you can mob to 250k without cuts, it just takes more time. Ice/Fire cave crystals are another option if an EXP event is active.</div></div>
-      <div class="rebirth-step" style="border-left:3px solid var(--accent-green)"><span class="step-num">R</span><div class="step-title">Rebirth to 5/3</div><div class="step-body">Requirements: Level 250,000 + complete <strong>Zeno's quest</strong> (kill ALL SR portal bosses. Talk to Zeno for the list). <strong>⚠️ Do ZP quests before rebirthing! Put items in locker above Yamcha!</strong></div></div>
+      <div class="rebirth-step"><span class="step-num">1</span><div class="step-title">Same Loop, Bigger Grind</div><div class="step-body">Same loop as 3/3 → 4/3. Raise your stats to <strong>300 Million base</strong> before boosting, and defeat <strong>ALL SR Portal bosses</strong> to qualify for rebirth.</div></div>
+      <div class="rebirth-step" style="border-left:3px solid var(--accent-green)"><span class="step-num">R</span><div class="step-title">Rebirth to 5/3</div><div class="step-body">Complete <strong>Zeno's quest</strong> (kill all SR portal bosses — talk to Zeno for the list). Follow the <strong>Rebirth Rules</strong> and speak to <strong>Zeno</strong> at Level 250,000. Congrats, you are now 5/3!</div></div>
     </div>
 
-    <!-- ────────── 5/3 ENDGAME ────────── -->
-    <div class="sub-header">5/3: Endgame &amp; Road to 6/3</div>
+    <!-- ────────── 5/3 → 6/3 ────────── -->
+    <div class="sub-header">5/3 → 6/3</div>
 
     <div class="card-grid">
-      <div class="stat-card"><div class="stat-label">Level Cap</div><div class="stat-value t-gold">500,000 (Champion)</div></div>
-      <div class="stat-card"><div class="stat-label">ZP Level Cap Cost</div><div class="stat-value t-red">5,000 ZP total</div></div>
-      <div class="stat-card"><div class="stat-label">TNL Cutting</div><div class="stat-value t-green">400 ZP (unlimited uses)</div></div>
-      <div class="stat-card"><div class="stat-label">Total ZP to Champion</div><div class="stat-value t-gold">~7,000 ZP</div></div>
+      <div class="stat-card"><div class="stat-label">Target Level</div><div class="stat-value t-gold">500,000 (Champion)</div></div>
+      <div class="stat-card"><div class="stat-label">Rebirth NPC</div><div class="stat-value">Beerus</div></div>
+      <div class="stat-card"><div class="stat-label">Stats Before Boosting</div><div class="stat-value t-red">~8 Billion Base</div></div>
+      <div class="stat-card"><div class="stat-label">Key Unlocks</div><div class="stat-value t-green">Zeno Races · Ultra Forms · Dual Gene</div></div>
     </div>
-
-    <div class="tip-box">💡 At 5/3 you unlock <strong>Zeno races</strong>, <strong>Ultra Forms</strong> (UI / UE / Ultra Invert), and <strong>Dual Gene</strong>! See the Race &amp; Transformations tab for details.</div>
+    <div class="tip-box">💡 Buy <strong>all Level Cap increases ASAP</strong>. This will make sure you don't get stuck later. <strong>Unlimited TNL Cuts</strong> are available at 5/3.</div>
 
     <div class="rebirth-flow">
-      <div class="rebirth-step"><span class="step-num">1</span><div class="step-title">Level 1 → 500,000</div><div class="step-body"><strong>Do NOT boost yet</strong>: save your boost for the End of Wipe tournament. Candy farm to start mobbing SR portals (candy gains are much higher at 5/3). Enter events, especially <strong>Mystical Cavern</strong> and <strong>Grand Maze</strong> for club tickets. You'll need a lot of ZP for level caps and TNL cuts.</div></div>
-      <div class="rebirth-step"><span class="step-num">2</span><div class="step-title">Buy ALL Level Caps Before TNL Cuts</div><div class="step-body">TNL cutting costs <strong>400 ZP</strong> (unlimited uses). Cut around <strong>60m TNL</strong> before Level 350k; around <strong>100m TNL</strong> after 350k. If short on ZP: exchange UP at <strong>Agent X</strong> (100 UP → 50 ZP). It's better to save UP for your house (2,500 UP). Farm EK from portals/towers and exchange at Broker NPC (<strong>2,500 EK → 200 ZP</strong>).</div></div>
-      <div class="rebirth-step"><span class="step-num">3</span><div class="step-title">Level 500,000: Sell Down &amp; Build Stats</div><div class="step-body">Sell <strong>200k–300k levels</strong> for zenni (2b–3b) at the <strong>Exchanger NPC</strong>; sell the rest for ZP at <strong>Z Agent</strong>. Mob between <strong>Level 35,000–100,000</strong> for optimal gains. Can also mob 100k–200k and sell for zenni to get house equipment faster. Cut TNL at <strong>40m</strong> (30m if Universe GoD).</div></div>
-      <div class="rebirth-step"><span class="step-num">4</span><div class="step-title">Portal Maze &amp; Endgame Mobbing</div><div class="step-body">At <strong>1m TL</strong>: start mobbing <strong>Portal Maze</strong>. At <strong>2 trillion stats</strong>: clear <strong>Lab 4</strong> and <strong>Champion Tower</strong> (and replications via <strong>Zeno NPC</strong>). Best EXP at this stage. Push toward <strong>Lab 5</strong> and <strong>ZR Portal</strong> as stats allow.</div></div>
-      <div class="rebirth-step"><span class="step-num">5</span><div class="step-title">Stat Building &amp; Equipment</div><div class="step-body">At <strong>30b+ base stats</strong>: kill <strong>Golden Frieza</strong> in Mystical Cavern for <strong>Cavern Pill</strong> (increased stat gains per level; always use while mobbing). Buy <strong>Legendary equipment</strong> from <strong>Real Estate Renji</strong> (10b zenni each). Unlock mob floors in your house for extra farm each repop.</div></div>
+      <div class="rebirth-step"><span class="step-num">1</span><div class="step-title">Same Loop, Buy Caps Early</div><div class="step-body">Once again the same loop. However, you need to buy all your <strong>Level Cap increases</strong> as soon as possible so you don't get stuck later.</div></div>
+      <div class="rebirth-step"><span class="step-num">2</span><div class="step-title">Wait to Boost</div><div class="step-body">You need to wait to boost until you have around <strong>8 Billion base stats</strong>. This is because Beerus' Trials are very hard.</div></div>
+      <div class="rebirth-step"><span class="step-num">3</span><div class="step-title">Sell Levels for ZP</div><div class="step-body">Once you've hit <strong>500k</strong>, you can start selling levels for ZP. Beerus only cares that you have reached <strong>500k True Level</strong> to start the trials.</div></div>
+      <div class="rebirth-step"><span class="step-num">4</span><div class="step-title">Get Hakai</div><div class="step-body">You will need <strong>Hakai</strong> if you haven't already purchased it.</div></div>
+      <div class="rebirth-step"><span class="step-num">5</span><div class="step-title">Boost &amp; Prep for Trials</div><div class="step-body">At <strong>8B base stats</strong>, boost and prep for Beerus' Trials (Instruction, Endurance, Growth).</div></div>
+      <div class="rebirth-step" style="border-left:3px solid var(--accent-green)"><span class="step-num">R</span><div class="step-title">Rebirth to 6/3</div><div class="step-body">Complete the 3 trials to rebirth. Don't forget your <strong>Rebirth Rules</strong>! Grants a <strong>+30% EXP boost</strong> and a choice of path: TPs, Gym, or Mob Farming. See the Rebirth System section below for details.</div></div>
     </div>
 
-    <div class="new-box"><span class="badge">6/3</span> Once you've mastered 5/3, the next frontier is <strong>6/3 via Beerus</strong>. You'll need Level 500,000 and must complete 3 trials (Instruction, Endurance, Growth). Grants a <strong>+30% EXP boost</strong> and a choice of powerful path: TPs, Gym, or Mob Farming. See the Rebirth System section below for full details.</div>
+    <!-- ────────── 6/3 ENDGAME ────────── -->
+    <div class="sub-header">6/3: Endgame</div>
 
+    <div class="card-grid">
+      <div class="stat-card"><div class="stat-label">Goal</div><div class="stat-value t-gold">Prep for End of Wipe</div></div>
+    </div>
 
-    <div class="tip-box">💡 Housing, Casino, and other building info has moved to the <strong>Buildings</strong> tab!</div>
-
-    <div class="sub-header">Why Push to 5/3?</div>
-    <div class="card">
-      <p>At 5/3 you unlock <strong>Zeno races</strong> (super strong races with special skills), <strong>Ultra Forms</strong>, AND <strong>Dual Gene</strong>!</p>
-      <ul>
-        <li>Semi-perm/perm races → <strong>Ultra Invert</strong></li>
-        <li>Non-perm races → <strong>Ultra Instinct</strong> or <strong>Ultra Ego</strong></li>
-        <li>Non-perms can change Ultra Form at Oracle Fish for <strong>10,000 ZP</strong>: choose carefully, you'll be stuck with it for a while</li>
-        <li><strong>Ultra Forms</strong> work like UT. Put Ultra Points into your multis</li>
-      </ul>
+    <div class="rebirth-flow">
+      <div class="rebirth-step" style="border-left:3px solid var(--accent-green)"><span class="step-num">💪</span><div class="step-title">Get As Strong As You Can</div><div class="step-body">You've reached the final rebirth. Focus on building stats, farming endgame content, and preparing for the <strong>End of Wipe tournament</strong>. Good luck, Champion.</div></div>
     </div>
 
     <!-- REBIRTH SYSTEM -->
@@ -1038,7 +1044,7 @@
         <thead><tr><th>Currency</th><th>Description</th><th>Sources / Where to Spend</th></tr></thead>
         <tbody>
           <tr><td class="t-bold t-purple">Casino Tokens (C)</td><td>Spent at the Casino Shop (Oolong) for techniques, suits, items, and buffs</td><td>Casino games (slots, blackjack); exchange ZP/UP at Oolong's Exchange</td></tr>
-          <tr><td class="t-bold t-gold">Club Tickets</td><td>Grants a single session in the Club House (x30 gravity for 30 min / 45 min Gym Bunny)</td><td>Z Agent (400 ZP); Bounty Hunter (300 kills); DQ Store (10 tokens); events</td></tr>
+          <tr><td class="t-bold t-gold">Club Tickets</td><td>Grants a single session in the Club House (x30 gravity for 30 min / 60 min Gym Bunny)</td><td>Z Agent (400 ZP); Bounty Hunter (300 kills); DQ Store (10 tokens); events</td></tr>
           <tr><td class="t-bold">Custom Points</td><td>Used for character customization options</td><td>In-game activities</td></tr>
           <tr><td class="t-bold t-green">Daily Quest Tokens (DQ)</td><td>Spent at the DQ Rewards Store for stat boosts, TNL modifiers, pills, and more</td><td>Completing Daily Quests (every 18 hours)</td></tr>
           <tr><td class="t-bold t-orange">EK (Epic Kills)</td><td>Exchangeable for TPs, ZP, or used toward UT (150 EK required)</td><td>Sagas, portal mobs, tower mobs, Champion Tower, Lab 4</td></tr>
@@ -1912,34 +1918,34 @@
     </div>
 
     <!-- SR PORTALS -->
-    <div class="section-header">⭐ SR Portals (All Rec. Level 150,000 | No Cap)</div>
+    <div class="section-header">⭐ SR Portals (Requires Level 150,000)</div>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>Portal Name</th><th>Location</th></tr></thead>
+        <thead><tr><th>Portal Name</th><th>Notes</th><th>Coordinates</th></tr></thead>
         <tbody>
-          <tr><td class="t-bold">Android 21's Portal</td><td>Tuffle Soldiers Spawn</td></tr>
-          <tr><td class="t-bold">Bebi's Base</td><td>Yardrat Sensei (South East)</td></tr>
-          <tr><td class="t-bold">Broly Cave</td><td>Planet of Divines</td></tr>
-          <tr><td class="t-bold">Cauliflower Saibaman Portal</td><td>Oolong Island</td></tr>
-          <tr><td class="t-bold">Cell's Pit</td><td>Future Earth Zeno Tower (North)</td></tr>
-          <tr><td class="t-bold">Cooler's Cavern</td><td>Guru Gym (Namek)</td></tr>
-          <tr><td class="t-bold">Dark Syn Kingdom</td><td>Future Earth Broly/Shenron Island</td></tr>
-          <tr><td class="t-bold">Demigra's Dominion</td><td>HFIL</td></tr>
-          <tr><td class="t-bold">Feline's Fissure</td><td>Beerus Planet North</td></tr>
-          <tr><td class="t-bold">Fu's Fortress</td><td>South West from King Vegeta</td></tr>
-          <tr><td class="t-bold">Garlic's Grove</td><td>Above HBTC</td></tr>
-          <tr><td class="t-bold">Gogeta Island</td><td>Gold Oozaru Island, God Planet (Centre)</td></tr>
-          <tr><td class="t-bold">Gohan's Training Forest</td><td>Supreme Kai (Z Sword Rock Area)</td></tr>
-          <tr><td class="t-bold">Granolah's Gulag</td><td>Earth, below NPC Tien</td></tr>
-          <tr><td class="t-bold">Herculean Warrior Cave</td><td>South of Whis</td></tr>
-          <tr><td class="t-bold">Jiren Portal</td><td>Future Earth</td></tr>
-          <tr><td class="t-bold">Majin Uub's Portal</td><td>Babidi Bridge</td></tr>
-          <tr><td class="t-bold">Mira's Dominion</td><td>Son Gohan (North East)</td></tr>
-          <tr><td class="t-bold">Namekian's Nether</td><td>North from Frieza</td></tr>
-          <tr><td class="t-bold">Super 17's Laboratory</td><td>NPC Enraged Trunks</td></tr>
-          <tr><td class="t-bold">Super Bojack's Territory</td><td>Planet of Divines (South West)</td></tr>
-          <tr><td class="t-bold">Tapion Ice Portal</td><td>North of Tapion</td></tr>
-          <tr><td class="t-bold">Zamasu's Otherworld Portal</td><td>Supreme Kai Planet by Shin</td></tr>
+          <tr><td class="t-bold">Android 21's Portal</td><td>Future Earth by Trunks Enraged</td><td class="t-mono">309, 148, 3</td></tr>
+          <tr><td class="t-bold">Bebi's Base</td><td>Planet Vegeta by Yardrat Sensei</td><td class="t-mono">334, 120, 4</td></tr>
+          <tr><td class="t-bold">Broly Cave</td><td>Planet of the Divines</td><td class="t-mono">362, 385, 10</td></tr>
+          <tr><td class="t-bold">Cauliflower Saibaman Portal</td><td>Earth by Oolong</td><td class="t-mono">376, 183, 1</td></tr>
+          <tr><td class="t-bold">Cell's Pit</td><td>Future Earth by Zeno Tower</td><td class="t-mono">260, 289, 3</td></tr>
+          <tr><td class="t-bold">Cooler's Cavern</td><td>Namek by Guru</td><td class="t-mono">188, 236, 2</td></tr>
+          <tr><td class="t-bold">Dark Syn Kingdom</td><td>Future Earth by Broly/Shenron</td><td class="t-mono">196, 333, 3</td></tr>
+          <tr><td class="t-bold">Demigra's Dominion</td><td>HFIL by Yemmas Helper</td><td class="t-mono">366, 354, 5</td></tr>
+          <tr><td class="t-bold">Feline's Fissure</td><td>Beerus Planet</td><td class="t-mono">268, 334, 15</td></tr>
+          <tr><td class="t-bold">Fu's Fortress</td><td>Planet Vegeta below King Vegeta</td><td class="t-mono">148, 152, 4</td></tr>
+          <tr><td class="t-bold">Garlic's Grove</td><td>Above HBTC</td><td class="t-mono">31, 180, 5</td></tr>
+          <tr><td class="t-bold">Gogeta Island</td><td>Planet of the Divines on Golden Oozaru Island</td><td class="t-mono">219, 247, 10</td></tr>
+          <tr><td class="t-bold">Gohan's Training Forest</td><td>Land of the Kais by Yemmas Helper</td><td class="t-mono">145, 385, 5</td></tr>
+          <tr><td class="t-bold">Granolah's Gulag</td><td>Planet Earth below Tien</td><td class="t-mono">264, 245, 1</td></tr>
+          <tr><td class="t-bold">Herculean Warrior Cave</td><td>Planet Earth below Whis</td><td class="t-mono">127, 303, 1</td></tr>
+          <tr><td class="t-bold">Jiren Portal</td><td>Future Earth in lower left portion of the map</td><td class="t-mono">44, 140, 3</td></tr>
+          <tr><td class="t-bold">Majin Uub's Portal</td><td>Planet Earth by Babidi</td><td class="t-mono">325, 148, 1</td></tr>
+          <tr><td class="t-bold">Mira's Dominion</td><td>Future Earth by Son Gohan</td><td class="t-mono">79, 376, 3</td></tr>
+          <tr><td class="t-bold">Namekian's Nether</td><td>Planet Namek above Frieza</td><td class="t-mono">337, 330, 2</td></tr>
+          <tr><td class="t-bold">Super 17's Laboratory</td><td>Future Earth by Trunks Enraged</td><td class="t-mono">309, 148, 3</td></tr>
+          <tr><td class="t-bold">Super Bojack's Territory</td><td>Planet of Divines</td><td class="t-mono">46, 255, 10</td></tr>
+          <tr><td class="t-bold">Tapion Ice Portal</td><td>Planet Earth above Tapion</td><td class="t-mono">206, 382, 1</td></tr>
+          <tr><td class="t-bold">Zamasu's Otherworld Portal</td><td>Land of the Kais by Shin</td><td class="t-mono">150, 313, 5</td></tr>
         </tbody>
       </table>
     </div>
@@ -2153,26 +2159,26 @@
     <ol class="rules-list">
       <li><span class="rule-num">01</span><span class="rule-text">Respect fellow players and all administrators.</span></li>
       <li><span class="rule-num">02</span><span class="rule-text">Spamming is not acceptable.</span></li>
-      <li><span class="rule-num">03</span><span class="rule-text"><strong>No spam killing.</strong> Do not intentionally kill the same player (or their alts, including your own) 3+ times within one hour. Does NOT apply in competitive zones (areas with mobs or a PvP warning on entry).</span></li>
-      <li><span class="rule-num">04</span><span class="rule-text">Do not advertise or spam this or other games, BYOND or otherwise.</span></li>
-      <li><span class="rule-num">05</span><span class="rule-text">Do not use programs to assist Shadow Sparring, Focus Med Training, Mobbing, or any other form of training. This includes inside the casino.</span></li>
-      <li><span class="rule-num">06</span><span class="rule-text">Keep CAPS (shift/uppercase letters) to a minimum. Excessive caps will result in an <strong>automatic mute</strong>.</span></li>
+      <li><span class="rule-num">03</span><span class="rule-text"><strong>No spam killing.</strong> Do not intentionally kill the same player (or their alts, including your own) 3 or more times within one hour. This does not apply in competitive zones (areas with mobs or a PvP warning on entry).</span></li>
+      <li><span class="rule-num">04</span><span class="rule-text">Do not advertise/spam this, or other games, BYOND or otherwise.</span></li>
+      <li><span class="rule-num">05</span><span class="rule-text">Do not use programs to assist Shadow Sparring, Focus Med Training, Mobbing, or any other form of training. This includes inside the casino as well!</span></li>
+      <li><span class="rule-num">06</span><span class="rule-text">Keep caps (shift/uppercase letters) to a minimum. Excessive caps will result in an <strong>automatic mute</strong>!</span></li>
       <li><span class="rule-num">07</span><span class="rule-text">Do not link any form of adult websites in OOC or Local Chat.</span></li>
       <li><span class="rule-num">08</span><span class="rule-text">Adjusting font sizes is <strong>forbidden</strong>.</span></li>
-      <li><span class="rule-num">09</span><span class="rule-text">Do not use/abuse any glitches or bugs. Rewards are given for reporting bugs; punishment for those who abuse them.</span></li>
-      <li><span class="rule-num">10</span><span class="rule-text">Do not disrupt events or matches. Do not interfere with arena challenges, tournaments, or player-run events. This includes <strong>blocking entrances/exits or camping mobbing zones</strong> (Lab, Towers, Caverns, Copies) to prevent others from playing.</span></li>
-      <li><span class="rule-num">11</span><span class="rule-text">Do not <strong>"throw"</strong> any team-based event. Includes: suiciding on purpose in Mayhem with no flags just to stop the capture, losing on purpose, encouraging someone to lose, or using alt accounts to change the outcome of an event.</span></li>
-      <li><span class="rule-num">12</span><span class="rule-text">Multi-Key IS allowed but <strong>NOT allowed</strong> to participate within multiple events simultaneously, or to join events with an alt while your main is currently Jailed or Hakai'd (or vice versa). Joining the same event with multiple accounts is NOT allowed.</span></li>
+      <li><span class="rule-num">09</span><span class="rule-text">Do not use/abuse any glitches or bugs. (Rewards are given for reporting bugs, or punishment for those who abuse them!)</span></li>
+      <li><span class="rule-num">10</span><span class="rule-text">Do not disrupt events or matches. Do not interfere with arena challenges, tournaments, or player-run events. This includes <strong>blocking entrances/exits or camping mobbing zones</strong> (e.g., Lab, Towers, Caverns, Copies) to prevent others from playing.</span></li>
+      <li><span class="rule-num">11</span><span class="rule-text">Do not <strong>"throw"</strong> any team-based event. This includes suiciding on purpose in Mayhem with no flags just to stop the capture, losing on purpose, encouraging someone to lose on purpose or using alt accounts to change the outcome of an event.</span></li>
+      <li><span class="rule-num">12</span><span class="rule-text">Multi-Key IS allowed but <strong>NOT allowed</strong> to participate within multiple events at the same time, along with joining events with an alt whilst your main is currently Jailed or Hakai'd or vice versa. Joining the same event with multiple accounts is <strong>NOT allowed</strong>!</span></li>
       <li><span class="rule-num">13</span><span class="rule-text">No excessive racism or discriminatory remarks. Admins have discretion to punish as they see fit.</span></li>
-      <li><span class="rule-num">14</span><span class="rule-text">No improper icons. Off-centered, improperly sized, explicit, or full-body hiding icons (e.g., turf icons) are prohibited. If unsure, ask an admin before using a custom icon.</span></li>
+      <li><span class="rule-num">14</span><span class="rule-text">No improper icons. Off-centered, improperly sized, explicit, or full-body hiding icons (e.g., turf icons) are prohibited. If unsure, ask an admin before using a custom icon!</span></li>
       <li><span class="rule-num">15</span><span class="rule-text">No door/pathway camping. Do not camp entrances such as HBTC, High Strain Gravity Room, Abyss Flag Room, etc.</span></li>
-      <li class="rule-critical"><span class="rule-num">16</span><span class="rule-text"><strong>Players are responsible for staying updated with rule changes. Ignorance of updated rules is NOT an excuse.</strong></span></li>
+      <li class="rule-critical"><span class="rule-num">16</span><span class="rule-text"><strong>Players are responsible for staying updated with rule changes. Ignorance of updated rules is not an excuse.</strong></span></li>
       <li class="rule-critical"><span class="rule-num">17</span><span class="rule-text">Trying to find bypasses/loopholes in the rules is a <strong>bannable offence</strong>. This goes hand-in-hand with the Common Sense Rule.</span></li>
       <li><span class="rule-num">18</span><span class="rule-text">You cannot Hakai a player leaving a safe zone. This includes leaving a Player House, Megamall, Guild Houses, etc.</span></li>
       <li><span class="rule-num">19</span><span class="rule-text">Do not attempt to bypass or argue against staff decisions in-game. If you believe a decision was unfair, contact the Owners or open a <strong>Discord ticket</strong>.</span></li>
       <li><span class="rule-num">20</span><span class="rule-text">Account sharing is only permitted for AFK purposes. Actively mobbing or farming for another player is <strong>prohibited</strong>.</span></li>
-      <li class="rule-critical"><span class="rule-num">21</span><span class="rule-text"><strong>Alt usage:</strong> Alts may be used for training assistance (e.g., dual training), guild ownership, or inviting your main. Alts may NOT be used for malicious purposes (alt killing or griefing). <strong>Alts are NOT permitted to have Hakai.</strong> If a character has been Hakai'd or Jailed, you are <strong>NOT allowed to play with their alt</strong>: this counts as avoiding Jail and Hakai.</span></li>
-      <li><span class="rule-num">22</span><span class="rule-text">Universe G.o.Ds must defend their ranks if challenged via the G.o.D challenge verb. They have <strong>two rejects</strong>. Rule updated to reflect the fully overhauled G.o.D system. The old system is no more.</span></li>
+      <li class="rule-critical"><span class="rule-num">21</span><span class="rule-text"><strong>Alt usage.</strong> Alts may be used for training assistance (e.g., dual training), <strong>SAME</strong> guild ownership, or inviting your main account. Alts may not be used for malicious purposes (e.g., alt killing, griefing, using multiple guild evo paths). <strong>Alts are not permitted to have Hakai.</strong> If a character has been Hakai'd or Jailed, a player is <strong>NOT allowed to play with their alt</strong> and this counts as avoiding Jail and Hakai.</span></li>
+      <li><span class="rule-num">22</span><span class="rule-text">Abuse of the Universe <strong>G.o.D system</strong> such as title trading or collusion is prohibited, regardless of guild affiliation. Guild members may however challenge fellow G.o.D members through the automated open challenge system. <strong>Alt usage interaction with this system is completely prohibited.</strong></span></li>
       <li class="rule-critical"><span class="rule-num">23</span><span class="rule-text"><strong>Common Sense Rule.</strong> Attempting to exploit loopholes, bypass rules, or abuse unintended mechanics is punishable. Staff have final authority in ambiguous situations and must provide reasoning upon request.</span></li>
     </ol>
 
@@ -2460,7 +2466,7 @@
       <ul>
         <li><strong>Gravity:</strong> x30 multiplier</li>
         <li><strong>Access:</strong> Requires a <strong>Club Ticket</strong> (purchase from Z Agent for ZP)</li>
-        <li><strong>Session Duration:</strong> 30 minutes (45 minutes with Gym Bunny race)</li>
+        <li><strong>Session Duration:</strong> 30 minutes (60 minutes with Gym Bunny)</li>
       </ul>
     </div>
 
@@ -2537,12 +2543,13 @@
     <div class="warn-box" style="margin-top:8px">⚠️ Guild update coming soon with more information!</div>
     <div class="sub-header">Guild Evolution Paths</div>
     <p>Guilds with Evolution Path: <strong>24-hour join cooldown</strong> for new invitees.</p>
+    <div class="tip-box">💡 Guild Evolution costs <strong>5,000 GP</strong>. Resetting your Guild Evolution costs <strong>1,000 GP</strong>.</div>
     <div class="table-wrap">
       <table>
         <thead><tr><th>Path</th><th>Perks</th></tr></thead>
         <tbody>
-          <tr><td class="t-orange t-bold">Gym Bunny</td><td>Candy farming +50% | Stat Training w/ Equipment: +30% active / +20% AFK | Club House duration +50%</td></tr>
-          <tr><td class="t-orange t-bold">Mobsters</td><td>Mob Farming EXP +30% | Player Kill EXP +50% | Stat Pills: Red/Blue x2.5 (was x2); Cavern x3.5 (was x3)</td></tr>
+          <tr><td class="t-orange t-bold">Gym Bunny</td><td>Candy farming +50% | Stat Training w/ Equipment: +30% active / +20% AFK | Club House duration +100% (60 min total) | 50% Zenni Discount on Stat Candies | 20% Zenni Discount on Legendary Gym Equipment</td></tr>
+          <tr><td class="t-orange t-bold">Mobsters</td><td>Mob Farming EXP +30% | Player Kill EXP +50% | Stat Pills: Red/Blue x2.5 (was x2); Cavern x3.5 (was x3) | +50% Stat Pill Duration | +10% Bonus if Active Mob Kill Boost awarded</td></tr>
           <tr><td class="t-orange t-bold">Hustlers</td><td>Mob Farming w/ ZP Suits +50% | TP Gains when Spending +25% | Level Up Stat Gains +10% | Oracle Fish EXP chance 20%→50% | Stat Storage +10% per 100b</td></tr>
         </tbody>
       </table>
