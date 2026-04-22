@@ -11,27 +11,27 @@
     --bg-secondary: #084050;
     --bg-card: #081E2D;
     --bg-card-hover: #0A5068;
-    --accent-orange: #D4872E;
-    --accent-gold: #D4872E;
-    --accent-blue: #9BADB7;
-    --accent-red: #CB5131;
-    --accent-green: #68E45F;
-    --accent-purple: #9BADB7;
+    --accent-orange: #F29F05;
+    --accent-gold: #F2B705;
+    --accent-blue: #418FBF;
+    --accent-red: #D95204;
+    --accent-green: #0BD904;
+    --accent-purple: #418FBF;
     --text-primary: #ffffff;
     --text-secondary: #B8CDD6;
     --text-dim: #7A9BAA;
-    --border-frame: #C17D3A;
-    --border-subtle: rgba(193,125,58,0.25);
+    --border-frame: #F29F05;
+    --border-subtle: rgba(242,159,5,0.25);
     --border-inner: rgba(255,255,255,0.06);
-    --override-bg: rgba(203,81,49,0.12);
-    --override-border: rgba(203,81,49,0.5);
-    --new-bg: rgba(104,228,95,0.08);
-    --new-border: rgba(104,228,95,0.35);
+    --override-bg: rgba(217,82,4,0.12);
+    --override-border: rgba(217,82,4,0.5);
+    --new-bg: rgba(11,217,4,0.08);
+    --new-border: rgba(11,217,4,0.35);
     --table-header: #061825;
     --table-row-alt: rgba(0,0,0,0.2);
-    --tab-active-bg: rgba(155,173,183,0.12);
+    --tab-active-bg: rgba(65,143,191,0.12);
     --btn-bg: #696A72;
-    --btn-highlight: #9BADB7;
+    --btn-highlight: #418FBF;
     --pixel-shadow: #052030;
   }
 
@@ -184,12 +184,12 @@
 
   .tab-btn:hover {
     color: var(--text-primary);
-    background: rgba(155,173,183,0.08);
-    border-left-color: rgba(193,125,58,0.4);
+    background: rgba(65,143,191,0.08);
+    border-left-color: rgba(242,159,5,0.4);
   }
 
   .tab-btn.active {
-    background: rgba(155,173,183,0.1);
+    background: rgba(65,143,191,0.1);
     border-left: 3px solid var(--accent-red);
     color: #ffffff;
     font-weight: 700;
@@ -238,7 +238,7 @@
     text-transform: uppercase;
     color: var(--accent-green);
     padding: 18px 0 8px;
-    border-bottom: 2px solid rgba(104,228,95,0.2);
+    border-bottom: 2px solid rgba(11,217,4,0.2);
     margin-bottom: 10px;
   }
 
@@ -263,7 +263,7 @@
     box-shadow: 3px 3px 0 var(--pixel-shadow);
   }
 
-  .card:hover { border-color: #D9A04E; }
+  .card:hover { border-color: #F2C633; }
 
   .card-grid {
     display: grid;
@@ -339,7 +339,7 @@
 
   .tip-box {
     background: rgba(8,30,45,0.7);
-    border: 2px solid rgba(155,173,183,0.35);
+    border: 2px solid rgba(65,143,191,0.35);
     border-left: 4px solid var(--btn-highlight);
     border-radius: 3px;
     padding: 10px 14px;
@@ -349,8 +349,8 @@
   }
 
   .warn-box {
-    background: rgba(203,81,49,0.08);
-    border: 2px solid rgba(203,81,49,0.3);
+    background: rgba(217,82,4,0.08);
+    border: 2px solid rgba(217,82,4,0.3);
     border-left: 4px solid var(--accent-red);
     border-radius: 3px;
     padding: 10px 14px;
@@ -401,7 +401,7 @@
   }
 
   tbody tr:nth-child(even) { background: var(--table-row-alt); }
-  tbody tr:hover { background: rgba(104,228,95,0.04); }
+  tbody tr:hover { background: rgba(11,217,4,0.04); }
   tbody tr:last-child td { border-bottom: none; }
 
   .t-orange { color: var(--accent-orange); font-weight: 600; }
@@ -437,10 +437,10 @@
     padding-top: 2px;
   }
 
-  .tier-ss .tier-label { color: var(--accent-red); text-shadow: 0 0 8px rgba(203,81,49,0.5); }
+  .tier-ss .tier-label { color: var(--accent-red); text-shadow: 0 0 8px rgba(217,82,4,0.5); }
   .tier-sss .tier-label { color: #FF4444; text-shadow: 0 0 12px rgba(255,68,68,0.7), 0 0 20px rgba(255,68,68,0.3); }
   .tier-s .tier-label { color: var(--accent-green); }
-  .tier-a .tier-label { color: #68E45F; }
+  .tier-a .tier-label { color: #0BD904; }
   .tier-b .tier-label { color: var(--btn-highlight); }
   .tier-c .tier-label { color: var(--text-dim); }
   .tier-d .tier-label { color: #5a6a72; }
@@ -561,7 +561,7 @@
   .prog-fill {
     height: 100%;
     border-radius: 2px;
-    background: linear-gradient(90deg, var(--accent-green), #A0F090);
+    background: linear-gradient(90deg, var(--accent-green), #4FE847);
   }
 
   /* ── CHANGELOG SUMMARY ── */
@@ -610,10 +610,10 @@
     vertical-align: middle;
   }
 
-  .tag-override { background: rgba(203,81,49,0.2); color: var(--accent-red); border: 1px solid rgba(203,81,49,0.4); }
-  .tag-perm { background: rgba(155,173,183,0.12); color: var(--btn-highlight); border: 1px solid rgba(155,173,183,0.3); }
-  .tag-zeno { background: rgba(104,228,95,0.1); color: var(--accent-green); border: 1px solid rgba(104,228,95,0.3); }
-  .tag-pvp { background: rgba(155,173,183,0.1); color: var(--btn-highlight); border: 1px solid rgba(155,173,183,0.25); }
+  .tag-override { background: rgba(217,82,4,0.2); color: var(--accent-red); border: 1px solid rgba(217,82,4,0.4); }
+  .tag-perm { background: rgba(65,143,191,0.12); color: var(--btn-highlight); border: 1px solid rgba(65,143,191,0.3); }
+  .tag-zeno { background: rgba(11,217,4,0.1); color: var(--accent-green); border: 1px solid rgba(11,217,4,0.3); }
+  .tag-pvp { background: rgba(65,143,191,0.1); color: var(--btn-highlight); border: 1px solid rgba(65,143,191,0.25); }
 
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
@@ -657,7 +657,7 @@
     }
     .tab-btn:hover {
       border-left-color: transparent;
-      border-bottom-color: rgba(193,125,58,0.4);
+      border-bottom-color: rgba(242,159,5,0.4);
     }
     .card-grid { grid-template-columns: 1fr; }
     th, td { padding: 7px 10px; }
@@ -667,7 +667,7 @@
   ::-webkit-scrollbar { width: 6px; height: 6px; }
   ::-webkit-scrollbar-track { background: var(--bg-primary); }
   ::-webkit-scrollbar-thumb { background: var(--border-frame); border-radius: 2px; }
-  ::-webkit-scrollbar-thumb:hover { background: #D9A04E; }
+  ::-webkit-scrollbar-thumb:hover { background: #F2C633; }
 
   .tab-nav::-webkit-scrollbar { height: 0; display: none; }
   .tab-nav { scrollbar-width: none; }
@@ -677,11 +677,11 @@
   ul { padding-left: 18px; margin: 6px 0; }
   li { font-size: 13px; line-height: 1.7; color: var(--text-secondary); }
   li strong { color: var(--text-primary); }
-  code { font-family: 'Share Tech Mono', monospace; font-size: 12px; background: rgba(0,0,0,0.25); padding: 1px 5px; border-radius: 2px; color: var(--accent-green); border: 1px solid rgba(104,228,95,0.15); }
+  code { font-family: 'Share Tech Mono', monospace; font-size: 12px; background: rgba(0,0,0,0.25); padding: 1px 5px; border-radius: 2px; color: var(--accent-green); border: 1px solid rgba(11,217,4,0.15); }
 
   /* ── LINKS ── */
   a { color: var(--accent-green); }
-  a:hover { color: #90F888; }
+  a:hover { color: #3EF535; }
 </style>
 </head>
 <body>
@@ -691,8 +691,7 @@
   <header class="site-header">
     <div class="header-eyebrow">★ Dragonball Asylum ★</div>
     <h1 class="header-title">DBA Wiki</h1>
-    <div class="header-subtitle">Managed by VsCactus</div>
-    <div class="version-badge">⚠ Latest Changelog: v8.67.17 · Wiki v1.2</div>
+    <div class="header-subtitle">Your guide to everything DBA</div>
     <div class="header-divider"></div>
   </header>
 
@@ -700,7 +699,7 @@
   <nav class="tab-nav" id="tabNav">
     <button class="tab-btn active" onclick="showTab('landing',this)"><span class="tab-icon">🏠</span>Home</button>
     <button class="tab-btn" onclick="showTab('newplayer',this)"><span class="tab-icon">🌱</span>Getting Started</button>
-    <button class="tab-btn" onclick="showTab('progression',this)"><span class="tab-icon">🏁</span>How to Win</button>
+    <button class="tab-btn" onclick="showTab('progression',this)"><span class="tab-icon">🏁</span>Road to End of Wipe</button>
     <button class="tab-btn" onclick="showTab('items',this)"><span class="tab-icon">💰</span>Economy</button>
     <button class="tab-btn" onclick="showTab('itemslist',this)"><span class="tab-icon">🎒</span>Items</button>
     <button class="tab-btn" onclick="showTab('races',this)"><span class="tab-icon">⚔️</span>Race &amp; Transformations</button>
@@ -713,6 +712,7 @@
     <button class="tab-btn" onclick="showTab('buildings',this)"><span class="tab-icon">🏗️</span>Buildings</button>
     <button class="tab-btn" onclick="showTab('guilds',this)"><span class="tab-icon">🏰</span>Guilds</button>
     <button class="tab-btn" onclick="showTab('medals',this)"><span class="tab-icon">🏅</span>Ranks & Quest Medals</button>
+    <button class="tab-btn" onclick="showTab('planets',this)"><span class="tab-icon">🌍</span>Planets</button>
   </nav>
 
   <!-- ══════════════════════════════════════════════
@@ -720,73 +720,82 @@
   ══════════════════════════════════════════════ -->
   <section class="tab-panel active" id="panel-landing">
 
+    <!-- WELCOME CARD -->
     <div class="card" style="text-align:center;padding:28px 24px;margin-top:16px;">
-      <div style="font-family:'Rajdhani',sans-serif;font-weight:700;font-size:28px;color:#ffffff;letter-spacing:2px;text-transform:uppercase;text-shadow:2px 2px 0 var(--pixel-shadow);">Welcome to the DBA Wiki</div>
-      <p style="color:var(--text-secondary);margin-top:8px;max-width:640px;display:inline-block;">Hi, welcome to the DBA Wiki! This wiki is managed by <strong style="color:var(--accent-green)">VsCactus</strong>. The goal is to have as much publicly available information in one space. Enjoy the information, and thank your local houseplant. 🌿</p>
-    </div>
-
-    <div class="section-header">📑 What's Inside</div>
-
-    <div class="card-grid">
-      <div class="card" style="cursor:pointer" onclick="showTab('newplayer',document.querySelectorAll('.tab-btn')[1])">
-        <div class="sub-sub-header" style="color:var(--accent-green)">🌱 Getting Started</div>
-        <p>Movement &amp; macros, classes, stats &amp; abilities, training methods, gravity multipliers, Training Point multipliers, and the Ignore system. Start here if you're brand new.</p>
-      </div>
-      <div class="card" style="cursor:pointer" onclick="showTab('progression',document.querySelectorAll('.tab-btn')[2])">
-        <div class="sub-sub-header" style="color:var(--accent-orange)">🏁 How to Win the Game</div>
-        <p>Road to Champion with step-by-step guides for every rebirth (0/3 → 6/3), rebirth rules checklist, quest medals, boosting thresholds, ZP level cap costs, and Beerus 6/3 paths.</p>
-      </div>
-      <div class="card" style="cursor:pointer" onclick="showTab('items',document.querySelectorAll('.tab-btn')[3])">
-        <div class="sub-sub-header" style="color:var(--accent-gold)">💰 Economy</div>
-        <p>All currencies explained, full conversion rate table with NPC locations, and Training Point multiplier breakdown.</p>
-      </div>
-      <div class="card" style="cursor:pointer" onclick="showTab('itemslist',document.querySelectorAll('.tab-btn')[4])">
-        <div class="sub-sub-header" style="color:var(--accent-orange)">🎒 Items</div>
-        <p>Dragon Ball wish sets, Dragon Radar levels, training items (shards &amp; stat candies), Z-Suit equipment, and weapons from Lazer the Blacksmith.</p>
-      </div>
-      <div class="card" style="cursor:pointer" onclick="showTab('races',document.querySelectorAll('.tab-btn')[5])">
-        <div class="sub-sub-header" style="color:var(--accent-blue)">⚔️ Race &amp; Transformations</div>
-        <p>Race tier list (4/3), universal transformations, Ultra Forms (UE/UI/Ultra Invert), Dual Gene info, and every race's transformation table organized by race with gene types, race types, and requirements.</p>
-      </div>
-      <div class="card" style="cursor:pointer" onclick="showTab('techniques',document.querySelectorAll('.tab-btn')[6])">
-        <div class="sub-sub-header" style="color:var(--accent-purple)">📜 Techniques</div>
-        <p>NPC-taught techniques, level-up technique unlock list, race-specific special techniques, Hakai mechanics, and SSA technique balance notes.</p>
-      </div>
-      <div class="card" style="cursor:pointer" onclick="showTab('mobfarming',document.querySelectorAll('.tab-btn')[7])">
-        <div class="sub-sub-header">🗺️ Mob Farming</div>
-        <p>Lab entrances, caves &amp; special portals, mob towers, space star planets, and SR portal locations with coordinates.</p>
-      </div>
-      <div class="card" style="cursor:pointer" onclick="showTab('events',document.querySelectorAll('.tab-btn')[8])">
-        <div class="sub-sub-header" style="color:var(--accent-orange)">🏆 Events</div>
-        <p>Sagas, Mayhem, tournaments, CTF, Mystical Cavern, Conquest, Golden Hour, RBA, Gamba, daily quests &amp; stamps, and the G.o.D system.</p>
-      </div>
-      <div class="card" style="cursor:pointer" onclick="showTab('rules',document.querySelectorAll('.tab-btn')[9])">
-        <div class="sub-sub-header" style="color:var(--accent-red)">📋 Rules</div>
-        <p>All 23 in-game rules. Read them. Follow them. Rule 23 is the Common Sense Rule. Loopholes are punishable.</p>
-      </div>
-      <div class="card" style="cursor:pointer" onclick="showTab('shop',document.querySelectorAll('.tab-btn')[10])">
-        <div class="sub-sub-header" style="color:var(--accent-blue)">💎 Pay to Win</div>
-        <p>Subscriber benefits (gravity, med pads, warp, gene, remakes, and more) plus the DBA Official Store link.</p>
-      </div>
-      <div class="card" style="cursor:pointer" onclick="showTab('npcs',document.querySelectorAll('.tab-btn')[11])">
-        <div class="sub-sub-header" style="color:var(--accent-green)">🧑‍🤝‍🧑 Important NPCs</div>
-        <p>Every important NPC organized by category: shops, progression, Z Agent, utility, casino, and NPC stat boosts.</p>
-      </div>
-      <div class="card" style="cursor:pointer" onclick="showTab('buildings',document.querySelectorAll('.tab-btn')[12])">
-        <div class="sub-sub-header" style="color:var(--accent-orange)">🏗️ Buildings</div>
-        <p>Main Spawn, Player House, Casino, FCC, Mall, Wackdonalds, Hall of Fame, Sub House, Club House, and Capsule Corp Space Pod - all major in-game locations and what's inside them.</p>
-      </div>
-      <div class="card" style="cursor:pointer" onclick="showTab('guilds',document.querySelectorAll('.tab-btn')[13])">
-        <div class="sub-sub-header" style="color:var(--accent-purple)">🏰 Guilds</div>
-        <p>Guild creation, leader abilities, Guild Houses, upgradeable facilities, and guild evolution paths (Gym Bunny, Mobsters, Hustlers) with full perk breakdowns.</p>
-      </div>
-      <div class="card" style="cursor:pointer" onclick="showTab('medals',document.querySelectorAll('.tab-btn')[14])">
-        <div class="sub-sub-header" style="color:var(--accent-gold)">🏅 Ranks &amp; Quest Medals</div>
-        <p>Rank progression table from Easy to Champion, and all 51 Quest Medals: who gives them, what to do, and what rewards you earn.</p>
+      <div style="font-family:'Rajdhani',sans-serif;font-weight:700;font-size:28px;color:#ffffff;letter-spacing:2px;text-transform:uppercase;text-shadow:2px 2px 0 var(--pixel-shadow);">Welcome to Dragon Ball Asylum</div>
+      <p style="color:var(--text-secondary);margin-top:10px;max-width:680px;display:inline-block;">DBA is a 2D MMORPG built on Dragon Ball Z. Train your fighter, compete in PvP, join events, build guilds, and push for Champion rank before the wipe ends - where the strongest players battle it out in a tournament for real cash prizes. The game is free to play and runs on <a href="https://www.byond.com/download/" target="_blank">BYOND</a>.</p>
+      <div style="margin-top:16px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+        <a href="https://www.byond.com/games/RatedRCobra/DBAsylum" target="_blank" style="display:inline-block;background:var(--accent-green);color:#000;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:14px;letter-spacing:1px;text-transform:uppercase;padding:8px 20px;border-radius:3px;text-decoration:none;box-shadow:2px 2px 0 var(--pixel-shadow);">Play DBA on BYOND</a>
+        <a href="https://discord.com/invite/MeCKY47" target="_blank" style="display:inline-block;background:#5865F2;color:#fff;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:14px;letter-spacing:1px;text-transform:uppercase;padding:8px 20px;border-radius:3px;text-decoration:none;box-shadow:2px 2px 0 var(--pixel-shadow);">Join the Discord</a>
       </div>
     </div>
 
-    <div class="tip-box" style="margin-top:16px">💡 This wiki is updated regularly, roughly <strong>every 5 changelogs</strong>. If something seems outdated, check the latest changelog in-game or on Discord.</div>
+    <!-- WHAT IS DBA -->
+    <div class="section-header">🐉 What is DBA?</div>
+    <div class="card">
+      <p>Dragon Ball Asylum is a competitive multiplayer RPG where you create a fighter, pick a race, and grind your way from Level 1 all the way to <strong>Champion rank</strong>. The game revolves around a <strong>wipe cycle</strong> - each wipe lasts roughly <strong>3 months</strong>. During that time, everyone starts fresh and races to the top. At the end of each wipe, a special tournament is held with <strong>real cash prizes</strong>, in-game rewards for the next wipe, and a permanent statue in the <strong>Hall of Fame</strong>.</p>
+      <p style="margin-top:6px">Along the way, you'll be training stats, unlocking transformations, completing quest medals, joining guilds, farming mobs, entering events, and competing in PvP. There's a lot to take in - that's what this wiki is for. Use the <strong>sidebar tabs</strong> to explore each system in detail.</p>
+    </div>
+
+    <!-- WHAT YOU'LL ENCOUNTER -->
+    <div class="section-header">🌍 What You'll Encounter</div>
+    <div class="card">
+      <p>DBA has a lot of systems working together. Here's the short version of what you'll run into as you play:</p>
+      <p style="margin-top:8px"><strong style="color:var(--accent-green)">Training &amp; Stats</strong> - You have core stats like Powerlevel, Ki, Strength, Defense, and Stamina. You raise them through training methods like Self Train, Shadow Spar, Meditation, and spending Training Points. Higher gravity rooms give better gains.</p>
+      <p style="margin-top:6px"><strong style="color:var(--accent-orange)">Rebirths</strong> - The progression system. You'll rebirth multiple times (0/3 through 6/3), each time resetting your level but keeping certain progress. Each rebirth unlocks new content, higher level caps, and stronger gear. The <strong>Road to End of Wipe</strong> tab walks you through every rebirth step by step.</p>
+      <p style="margin-top:6px"><strong style="color:var(--accent-blue)">Races &amp; Transformations</strong> - You choose a race during character creation. Each race has its own transformation tree with unique forms. Later on, you'll unlock universal forms, Ultra transformations, and even Dual Genes.</p>
+      <p style="margin-top:6px"><strong style="color:var(--accent-gold)">Currencies</strong> - There are several: Zenni, ZP, Training Points, EK, Ultra Points, Casino Tokens, and more. Each one has specific uses and exchange rates. ZP is especially important - it's used for level caps, gear, and major progression milestones.</p>
+      <p style="margin-top:6px"><strong style="color:var(--accent-red)">Events &amp; PvP</strong> - Sagas, Mayhem, tournaments, Capture the Flag, Mystical Cavern, Conquest, RBA, and more. Events are where you earn big rewards and test your build against other players.</p>
+      <p style="margin-top:6px"><strong style="color:var(--btn-highlight)">Quest Medals &amp; Ranks</strong> - There are 51 Quest Medals earned from NPCs across the map. You need a certain number of medals to break past level caps. Your rank (Easy → Champion) is tied to your level and medal count.</p>
+      <p style="margin-top:6px"><strong style="color:var(--accent-purple)">Guilds</strong> - Team up with other players. Guilds have their own houses, upgradeable facilities, evolution paths, and guild-specific quests and events.</p>
+    </div>
+
+    <!-- FIRST LOGIN -->
+    <div class="section-header">🚀 Your First Login</div>
+
+    <div class="rebirth-flow">
+      <div class="rebirth-step">
+        <span class="step-num">1</span>
+        <div class="step-title">Download BYOND &amp; Join the Game</div>
+        <div class="step-body">DBA runs on <a href="https://www.byond.com/download/" target="_blank">BYOND</a>. Download the client, create an account, and then join the game through the <a href="https://www.byond.com/games/RatedRCobra/DBAsylum" target="_blank">DBA Hub Page</a>. When you connect, you'll see options to create a new save, load an existing one, or delete. Hit <strong>New</strong> to get started.</div>
+      </div>
+      <div class="rebirth-step">
+        <span class="step-num">2</span>
+        <div class="step-title">Create Your Character</div>
+        <div class="step-body">The game will walk you through character creation. You'll pick your <strong>race</strong> using a visual selector, customize your appearance, and name your character. Take your time here - your race determines your transformation tree for the entire wipe. Check the <strong>Race &amp; Transformations</strong> tab if you want to plan ahead.</div>
+      </div>
+      <div class="rebirth-step">
+        <span class="step-num">3</span>
+        <div class="step-title">Get Your Bearings</div>
+        <div class="step-body">You'll spawn inside the <strong>Main Spawn House</strong>, right in front of <strong>Yamcha</strong>. Before doing anything else, take a minute to move around using <strong>Arrow Keys</strong> or <strong>Numpad</strong>. Get familiar with the <strong>chat boxes</strong> (OOC, Local, Universe), your <strong>stat panels</strong>, and the general layout of the interface.</div>
+      </div>
+      <div class="rebirth-step">
+        <span class="step-num">4</span>
+        <div class="step-title">Talk to Yamcha</div>
+        <div class="step-body">Yamcha is your first NPC. He'll give you a quest to reach <strong>Level 500</strong> - just use the <strong>Self Train</strong> verb to start gaining levels. Once you hit 500, you become a <strong>Permanent Combatant</strong> — meaning you can now leave Main Spawn and fight. Turn in the quest when done. Then ask Yamcha about learning to teleport to unlock <strong>Instant Transmission</strong>, which lets you move around the map fast.</div>
+      </div>
+      <div class="rebirth-step" style="border-left:3px solid var(--accent-green)">
+        <span class="step-num">5</span>
+        <div class="step-title">Follow the Game Loop</div>
+        <div class="step-body">From here, your goal is to keep leveling, earn <strong>Quest Medals</strong>, explore the map, and work toward your first <strong>Rebirth</strong>. Head to the <strong>Road to End of Wipe</strong> tab for the full step-by-step guide from 0/3 all the way to Champion.</div>
+      </div>
+    </div>
+
+    <!-- KEY TIPS -->
+    <div class="section-header">⚡ Things Every New Player Should Know</div>
+
+    <div class="warn-box">⚠️ <strong>Read the Rules.</strong> There are 23 of them, and Rule 23 is the Common Sense Rule - loopholes are punishable. Check the <strong>Rules</strong> tab before you get too deep. It takes 2 minutes and saves you a lot of headaches.</div>
+
+    <div class="tip-box">💡 <strong>Save your special currencies.</strong> ZP, EK, Ultra Points, and Training Points are all valuable. Don't spend them randomly early on - you'll need them for level caps, gear, and major progression milestones later. The <strong>Economy</strong> tab explains what everything is worth.</div>
+
+    <div class="tip-box">💡 <strong>The game is free to play.</strong> Most players never spend a dime. If you want to support the game and grab some bonus perks, check the <strong>Pay to Win</strong> tab - but everything is balanced in-game and nothing is required to compete.</div>
+
+    <div class="new-box"><span class="badge">TIP</span> <strong>Stay level headed and have fun.</strong> DBA is competitive, but it's also a community. Use the Ignore system if chat gets rough, join a guild, ask questions on <a href="https://discord.com/invite/MeCKY47" target="_blank">Discord</a>, and enjoy the grind.</div>
+
+    <!-- NAVIGATION HINT -->
+    <div class="card" style="text-align:center;padding:20px 24px;margin-top:20px;border-color:var(--btn-highlight);">
+      <p style="color:var(--text-secondary);margin:0;"><strong style="color:var(--text-primary)">Ready to dive deeper?</strong> Use the <strong style="color:var(--accent-green)">sidebar tabs</strong> to explore every system - stats, races, items, events, guilds, and more. Everything you need is in there.</p>
+    </div>
 
   </section>
 
@@ -809,55 +818,53 @@
       <code>.click z-sword</code> = equip/unequip without inventory · <code>.click gi\nhide gi</code> = equip + hide in one key</p>
 
       <div class="sub-sub-header">Skill Bar &amp; Skillcards</div>
-      <p>Techniques use the <strong>Skill Bar</strong> and <strong>Skillcard</strong> GUI. Skillcards appear at the bottom of your screen.</p>
+      <p>Techniques use the <strong>Skill Bar</strong> and <strong>Skillcard</strong> GUI. Skillcards appear at the bottom of your screen. You'll also find the <strong>Event</strong>, <strong>Gear</strong>, <strong>Radar</strong>, and <strong>Map</strong> buttons here.</p>
+      <p><strong>Event:</strong> Join or leave any currently active event. · <strong>Gear:</strong> Coming Soon. · <strong>Radar:</strong> Opens the Dragon Ball radar for your current planet (if balls are active). · <strong>Map:</strong> Pulls up a minimap of the planet you're on (if available).</p>
       <p><strong>Assign:</strong> Click an empty slot → select technique · <strong>Remove:</strong> Click an occupied slot → Remove · <strong>Use:</strong> Press <code>1</code>–<code>9</code> for the corresponding slot · <strong>Target:</strong> <code>Spacebar</code> · <strong>Untarget:</strong> <code>U</code></p>
       <p><em>Keys 1–9, Spacebar, and U are hard-coded. Delete any macros bound to these keys to avoid conflicts.</em></p>
     </div>
 
     <!-- STATS & ABILITIES -->
     <div class="section-header">📊 Stats &amp; Abilities</div>
-    <div class="card-grid">
-      <div class="card">
-        <div class="sub-sub-header">Core Stats</div>
-        <ul>
-          <li><strong>Powerlevel (PL):</strong> Reaches 0 = KO/killed. Health/durability only</li>
-          <li><strong>Ki:</strong> Strength of ki attacks</li>
-          <li><strong>Ki Defense:</strong> Defence vs. ki attacks</li>
-          <li><strong>Strength:</strong> Strength of melee attacks</li>
-          <li><strong>Defense:</strong> Defence vs. melee attacks</li>
-          <li><strong>Fatigue (Stamina):</strong> How long you can train. Depletes during training and gym equipment use. Restore with treadmills</li>
-        </ul>
-      </div>
-      <div class="card">
-        <div class="sub-sub-header">Abilities (talk to Hercule | cap: 75%)</div>
-        <ul>
-          <li><strong>Block</strong>: Chance to block melee attacks</li>
-          <li><strong>Counter</strong>: Chance to counter melee attacks</li>
-          <li><strong>Critical</strong>: Chance to score a critical hit</li>
-          <li><strong>Dodge</strong>: Chance to dodge ki attacks</li>
-          <li><strong>Reflect</strong>: Chance to reflect ki attacks</li>
-        </ul>
-      </div>
-      <div class="card">
-        <div class="sub-sub-header">🎯 Classes</div>
-        <p style="margin-bottom:6px">Change at Z Agent (Level 100,000) or any level at Rebirth 4/3 or 5/3 for <strong>25 ZP</strong>. Also changeable via <strong>Candy Broker NPC</strong> for Candy.</p>
-        <ul>
-          <li><strong class="t-orange">Mystic</strong>: Ki builds</li>
-          <li><strong class="t-orange">Aggressor</strong>: STR builds</li>
-          <li><strong class="t-orange">Guardian</strong>: Tank builds</li>
-          <li><strong class="t-orange">Velocitor</strong>: +5% EXP while mobbing + increased EXP while training <span class="t-green">⭐ Best for new players</span></li>
-        </ul>
-      </div>
-      <div class="card">
-        <div class="sub-sub-header">Other Stats</div>
-        <ul>
-          <li><strong>Level:</strong> Your current level. Raise it through training, mobbing, and events</li>
-          <li><strong>True Level (TL):</strong> Total levels accumulated during your current rebirth. Used as a flag for certain unlocks and as a currency for mechanics like Dual Gene (10.5m TL) and Ultra Points (1m TL = 1 UP)</li>
-          <li><strong>Age:</strong> How old your character is. One hour of real time = 1 month, 12 months = 1 year</li>
-          <li><strong>Universe:</strong> Which of the 4 Universes you belong to. Works like a party - the G.o.D title holder is the leader of that Universe</li>
-          <li><strong>Karma:</strong> Determines whether you are playing Good or Evil. Updates on kills and meditating. Required for certain NPC boosts (Guru = 25% Good, Babidi = 100% Evil)</li>
-        </ul>
-      </div>
+    <div class="card">
+      <div class="sub-sub-header">Core Stats</div>
+      <ul>
+        <li><strong>Powerlevel (PL):</strong> Your health — reaches 0 = KO/killed. Also controls the max amount of Ki, Ki Defense, Strength, and Defense you can have. You need to train Powerlevel to increase the cap on your other stats</li>
+        <li><strong>Ki:</strong> Strength of ki attacks</li>
+        <li><strong>Ki Defense:</strong> Defence vs. ki attacks</li>
+        <li><strong>Strength:</strong> Strength of melee attacks</li>
+        <li><strong>Defense:</strong> Defence vs. melee attacks</li>
+        <li><strong>Fatigue (Stamina):</strong> How long you can train. Depletes during training and gym equipment use. Restore with treadmills</li>
+      </ul>
+      <div class="sub-sub-header">Abilities (talk to Hercule | cap: 75%)</div>
+      <ul>
+        <li><strong>Block</strong>: Chance to block melee attacks</li>
+        <li><strong>Counter</strong>: Chance to counter melee attacks</li>
+        <li><strong>Critical</strong>: Chance to score a critical hit</li>
+        <li><strong>Dodge</strong>: Chance to dodge ki attacks</li>
+        <li><strong>Reflect</strong>: Chance to reflect ki attacks</li>
+      </ul>
+      <div class="sub-sub-header">Other Stats</div>
+      <ul>
+        <li><strong>Level:</strong> Your current level. Raise it through training, mobbing, and events</li>
+        <li><strong>EXP (Experience):</strong> Points earned from training, mobbing, and events. Accumulate enough EXP to level up</li>
+        <li><strong>TNL (Till Next Level):</strong> The amount of EXP required to reach your next level. Every time you level up, your TNL increases, making each subsequent level harder to reach. TNL Cuts (purchased with ZP) reduce this number, speeding up progression</li>
+        <li><strong>True Level (TL):</strong> Total levels accumulated during your current rebirth. Used as a flag for certain unlocks and as a currency for mechanics like Dual Gene (10.5m TL) and Ultra Points (1m TL = 1 UP)</li>
+        <li><strong>Age:</strong> How old your character is. One hour of real time = 1 month, 12 months = 1 year</li>
+        <li><strong>Universe:</strong> Which of the 4 Universes you belong to. Works like a party - the G.o.D title holder is the leader of that Universe</li>
+        <li><strong>Karma:</strong> Determines whether you are playing Good or Evil. Updates on kills and meditating. Required for certain NPC boosts (Guru = 25% Good, Babidi = 100% Evil)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="sub-sub-header">🎯 Classes</div>
+      <p style="margin-bottom:6px">Change at Z Agent (Level 100,000) or any level at Rebirth 4/3 or 5/3 for <strong>25 ZP</strong>. Also changeable via <strong>Candy Broker NPC</strong> for Candy.</p>
+      <ul>
+        <li><strong class="t-orange">Mystic</strong>: Ki builds — higher Ki gains per level</li>
+        <li><strong class="t-orange">Aggressor</strong>: STR builds — higher STR gains per level</li>
+        <li><strong class="t-orange">Guardian</strong>: Tank builds — higher DEF gains per level</li>
+        <li><strong class="t-orange">Velocitor</strong>: +5% EXP while mobbing + increased EXP while training <span class="t-green">⭐ Best for new players</span></li>
+      </ul>
     </div>
 
     <!-- TRAINING -->
@@ -867,27 +874,53 @@
         <thead><tr><th>Method</th><th>Description</th></tr></thead>
         <tbody>
           <tr><td class="t-bold">Self Train</td><td>Auto Training to gain Levels, Training Point Chance</td></tr>
-          <tr><td class="t-bold">Dual Train</td><td>Self Train, but with a partner. Less Training points, but better stat gains</td></tr>
-          <tr><td class="t-bold">Shadow Spar</td><td>DDR style Minigame with Multipliers for correct stages. Best EXP/TP Method</td></tr>
+          <tr><td class="t-bold">Dual Train</td><td>Self Train, but with a partner. Walk up to another player, use the Dual Train verb, and they accept to start. Less Training points, but better stat gains</td></tr>
+          <tr><td class="t-bold">Shadow Spar</td><td>Arrow press minigame with Multipliers for correct stages. Best EXP/TP Method</td></tr>
           <tr><td class="t-bold">Meditation</td><td>Pads can double gains. Sets karma Good or Evil (used for quests and NPC boosts). Guru requires 25% Good Karma, Babidi requires 100% Evil. Gain karma by killing mobs or players of the opposite alignment</td></tr>
           <tr><td class="t-bold">Killing Mobs</td><td>Gain EXP and Zenni defeating mobs</td></tr>
-          <tr><td class="t-bold t-green">Focus Meditation</td><td>A special meditation to raise stats over time, or a DDR minigame to go faster. Limited. Tied to a Quest</td></tr>
-          <tr><td class="t-bold t-orange">Spending Training Points</td><td>Spend TPs directly on Powerlevel, Ki, Ki Defense, Strength, Defense, Stamina, or EXP. See the Economy tab for TP multipliers</td></tr>
+          <tr><td class="t-bold">Focus Meditation</td><td>A special meditation to raise stats over time, or an arrow press minigame to go faster. Limited. Tied to a Quest</td></tr>
+          <tr><td class="t-bold">Spending Training Points</td><td>Spend TPs directly on Powerlevel, Ki, Ki Defense, Strength, Defense, Stamina, or EXP. See the Economy tab for TP multipliers</td></tr>
         </tbody>
       </table>
     </div>
 
-    <div class="sub-header">Gravity Multipliers</div>
+    <div class="sub-header">Gravity Training Options</div>
+    <div class="tip-box">💡 These locations offer <strong>EXP multipliers</strong> while inside. Some have a <strong>gravity strain</strong> that damages you over time, so remember to watch your powerlevel!</div>
     <div class="table-wrap">
       <table>
         <thead><tr><th>Location</th><th>Multi</th><th>Notes</th></tr></thead>
         <tbody>
           <tr><td>Club House</td><td class="t-gold t-bold">x30</td><td>Limited: 30 min session (60 min Gym Bunny)</td></tr>
-          <tr><td>HBTC</td><td class="t-orange t-bold">x15</td><td>Limited: 2 free entries × 2 hrs each (can buy more); <strong>freezes TNL</strong></td></tr>
-          <tr><td>Sub Room</td><td class="t-orange t-bold">x15</td><td>Unlimited time</td></tr>
+          <tr><td>HBTC</td><td class="t-orange t-bold">x15</td><td>Limited: 2 free entries × 2 hrs each</td></tr>
+          <tr><td>Sub Room</td><td class="t-orange t-bold">x15</td><td>Unlimited time. Located inside the Sub House</td></tr>
           <tr><td>FCC (PvP)</td><td class="t-blue t-bold">x15</td><td>EXP Till Next Level does NOT rise here</td></tr>
-          <tr><td>High Strain SZ Chamber (PvP)</td><td class="t-blue t-bold">x20</td><td>PvP zone</td></tr>
-          <tr><td>Normal Gravity</td><td class="t-dim">x2</td><td>-</td></tr>
+          <tr><td>High Strain Chamber (PvP)</td><td class="t-blue t-bold">x20</td><td>PvP enabled in this room</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sub-header">Gym Equipment</div>
+    <div class="tip-box">💡 Gym Equipment are interactable props found throughout the game world. Walk up to one and interact to start training the associated stat.</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Equipment</th><th>Stats Trained</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Treadmill</td><td>Powerlevel &amp; Stamina</td></tr>
+          <tr><td class="t-bold">Weight</td><td>Strength</td></tr>
+          <tr><td class="t-bold">Ki Machine</td><td>Ki &amp; Ki Defense</td></tr>
+          <tr><td class="t-bold">Machine</td><td>Defense</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Tier</th><th>Location / Source</th></tr></thead>
+        <tbody>
+          <tr><td class="t-bold">Standard</td><td>Main Spawn, various locations around the world</td></tr>
+          <tr><td class="t-bold">Advanced</td><td>Various locations</td></tr>
+          <tr><td class="t-bold t-blue">Sub</td><td>Sub House (subscriber only)</td></tr>
+          <tr><td class="t-bold t-orange">Legendary</td><td>Purchasable for your Player House (10 Billion Zenni)</td></tr>
+          <tr><td class="t-bold t-gold">Golden</td><td>Club House (requires Club Ticket)</td></tr>
         </tbody>
       </table>
     </div>
@@ -896,19 +929,20 @@
   </section>
 
   <!-- ══════════════════════════════════════════════
-       TAB 2: HOW TO WIN THE GAME
+       TAB 2: ROAD TO END OF WIPE
   ══════════════════════════════════════════════ -->
   <section class="tab-panel" id="panel-progression">
 
     <!-- ROAD TO 6/3 -->
-    <div class="section-header">🏁 Road to Champion</div>
+    <div class="section-header">🏁 Road to End of Wipe</div>
 
     <!-- REBIRTH RULES -->
     <div class="warn-box">⚠️ <strong>Before EVERY Rebirth - follow these rules:</strong><br>
     1. Complete all Z-Point Quests to avoid having to grind for them later.<br>
     2. Leave your Guild or Transfer Ownership.<br>
     3. Unequip and store all your items in a Locker above Yamcha and Bank your Zenni.<br>
-    4. Use as many Dragon Ball Wishes as possible.</div>
+    4. Use as many Dragon Ball Wishes as possible (wishes reset per rebirth — use them or lose them).</div>
+    <div class="tip-box">💡 <strong>What resets on Rebirth:</strong> Your Level, all core stats (PL, Ki, Ki Defense, STR, DEF, Stamina), Training Points, and your in-game Skill Stat Panel (except currencies and Super Dragon Ball wish counter). Plan accordingly!</div>
 
     <!-- ────────── 0/3 → 1/3 ────────── -->
     <div class="sub-header">0/3 → 1/3</div>
@@ -921,10 +955,10 @@
 
     <div class="rebirth-flow">
       <div class="rebirth-step"><span class="step-num">1</span><div class="step-title">Yamcha's Quest</div><div class="step-body">Talk to <strong>Yamcha</strong> and start his quest. You need to reach <strong>Level 500</strong> - just use the Self Train verb. Turn in the quest when done.</div></div>
-      <div class="rebirth-step"><span class="step-num">2</span><div class="step-title">Train to ~2,000</div><div class="step-body">Continue training to around <strong>Level 2,000</strong>. By now you should have become a permanent combatant and unlocked a ton of the main techniques.</div></div>
+      <div class="rebirth-step"><span class="step-num">2</span><div class="step-title">Train to ~2,000</div><div class="step-body">Continue training to around <strong>Level 2,000</strong>. By now you should have become a <strong>Permanent Combatant</strong> (at Level 500) and unlocked a ton of the main techniques.</div></div>
       <div class="rebirth-step"><span class="step-num">3</span><div class="step-title">Unlock Instant Transmission</div><div class="step-body">Ask <strong>Yamcha</strong> about learning to Teleport. Complete his task to unlock <strong>Instant Transmission</strong>.</div></div>
       <div class="rebirth-step"><span class="step-num">4</span><div class="step-title">Explore &amp; Experiment</div><div class="step-body">You can now experiment with <strong>Mobs</strong> on the Overworld, <strong>Mob Towers</strong>, and <strong>Events</strong> to gain EXP and learn the map.</div></div>
-      <div class="rebirth-step"><span class="step-num">5</span><div class="step-title">Earn 7 Quest Medals</div><div class="step-body">Your next focus is earning a total of <strong>7 Quest Medals</strong> so you can reach the 50k level cap. Easiest medals: <strong>King Kai, Yamcha (1, 2, &amp; 4), Dr. Briefs, Master Roshi (Kamehameha), and Saiyaman</strong>.</div></div>
+      <div class="rebirth-step"><span class="step-num">5</span><div class="step-title">Earn 7 Quest Medals</div><div class="step-body">Your next focus is earning a total of <strong>7 Quest Medals</strong> so you can reach the 50k level cap. Easiest medals: <strong>King Kai Kaioken, Bulma Spanner, Saiyaman Helmet, Master Roshi Kamehameha, Yamcha 1, Yamcha 2, and Yamcha 4</strong>.</div></div>
       <div class="rebirth-step"><span class="step-num">6</span><div class="step-title">Buy Gear</div><div class="step-body">Buy some <strong>Ultra Weights</strong> and <strong>Basic Shards</strong>. They will help multiply your gains significantly.</div></div>
       <div class="rebirth-step"><span class="step-num">7</span><div class="step-title">ZP Quests</div><div class="step-body"><strong>Master Roshi's Focus Meditation Quest</strong> and <strong>Enraged Trunks 2 Quest</strong> should be finished for an extra <strong>650 ZP</strong>.</div></div>
       <div class="rebirth-step" style="border-left:3px solid var(--accent-green)"><span class="step-num">R</span><div class="step-title">Rebirth to 1/3</div><div class="step-body">Upon reaching Level 50,000, follow the <strong>Rebirth Rules</strong> above and speak to <strong>King Kai</strong> or <strong>Dr. Gero</strong>. Congrats, you are now 1/3!</div></div>
@@ -1028,17 +1062,6 @@
       <div class="rebirth-step" style="border-left:3px solid var(--accent-green)"><span class="step-num">💪</span><div class="step-title">Get As Strong As You Can</div><div class="step-body">You've reached the final rebirth. Focus on building stats, farming endgame content, and preparing for the <strong>End of Wipe tournament</strong>. Good luck, Champion.</div></div>
     </div>
 
-    <div class="sub-header">ZP Level Cap Costs</div>
-    <div class="card-grid">
-      <div class="stat-card"><div class="stat-label">3/3 Level Cap</div><div class="stat-value">500 ZP × 2 = 1,000 ZP → Level 150k</div></div>
-      <div class="stat-card"><div class="stat-label">4/3 Level Cap</div><div class="stat-value">500 ZP × 2 = 1,000 ZP → Level 250k</div></div>
-      <div class="stat-card"><div class="stat-label">5/3 Level Cap</div><div class="stat-value">5,000 ZP → Level 500k max</div></div>
-      <div class="stat-card"><div class="stat-label">TNL Cutting Cost (4/3)</div><div class="stat-value t-red">500 ZP per cut (3 cuts max)</div></div>
-      <div class="stat-card"><div class="stat-label">TNL Cutting Cost (5/3+)</div><div class="stat-value t-red">400 ZP (unlimited uses)</div></div>
-      <div class="stat-card"><div class="stat-label">Total ZP to Champion</div><div class="stat-value t-gold">7,000 ZP</div></div>
-    </div>
-
-    <!-- BEERUS 6/3 PATHS -->
     <div class="sub-header">6th Rebirth / Beerus Paths</div>
     <p>Quest from <strong>NPC Beerus</strong>. Complete 3 trials: Instruction, Endurance (survive Sentinel waves), Growth. Grants <strong>+30% EXP boost</strong>. Cannot change path without rerolling via Beerus again.</p>
     <div class="table-wrap">
@@ -1058,6 +1081,16 @@
         <li><strong>G.o.Ds cannot rebirth or change their 6/3 path</strong> while holding a G.o.D title. Doing so would void the title</li>
         <li>If a Dual Gene is lost due to a 6/3 path change, it can be <strong>re-acquired for free</strong> at the Oracle Fish NPC</li>
       </ul>
+    </div>
+
+    <div class="sub-header">ZP Level Cap Costs</div>
+    <div class="card-grid">
+      <div class="stat-card"><div class="stat-label">3/3 Level Cap</div><div class="stat-value">500 ZP × 2 = 1,000 ZP → Level 150k</div></div>
+      <div class="stat-card"><div class="stat-label">4/3 Level Cap</div><div class="stat-value">500 ZP × 2 = 1,000 ZP → Level 250k</div></div>
+      <div class="stat-card"><div class="stat-label">5/3 Level Cap</div><div class="stat-value">5,000 ZP → Level 500k max</div></div>
+      <div class="stat-card"><div class="stat-label">TNL Cutting Cost (4/3)</div><div class="stat-value t-red">500 ZP per cut (3 cuts max)</div></div>
+      <div class="stat-card"><div class="stat-label">TNL Cutting Cost (5/3+)</div><div class="stat-value t-red">400 ZP (unlimited uses)</div></div>
+      <div class="stat-card"><div class="stat-label">Total ZP to Champion</div><div class="stat-value t-gold">7,000 ZP</div></div>
     </div>
 
   </section>
@@ -1126,7 +1159,7 @@
           <tr><td class="t-bold">True Level Multiplier</td><td class="t-green">Up to x16</td><td>x1 per 1 million TL, capped at 16m TL</td></tr>
           <tr><td class="t-bold">Beerus TPs Path</td><td class="t-orange t-bold">x5</td><td>Only applies after 200,000 True Level (6/3 path)</td></tr>
           <tr><td class="t-bold">G.o.D Leader</td><td class="t-orange">x1.5</td><td>Must hold a G.o.D title</td></tr>
-          <tr><td class="t-bold">Season Pass</td><td class="t-green t-bold">x1.25</td><td>Requires active season pass</td></tr>
+          <tr><td class="t-bold">Season Pass</td><td class="t-green t-bold">x1.25</td><td>Subscriber benefit (see Pay to Win tab)</td></tr>
           <tr><td class="t-bold">Hustlers Guild Evo</td><td class="t-green t-bold">x1.25</td><td>Hustlers guild evolution path</td></tr>
         </tbody>
       </table>
@@ -1149,8 +1182,8 @@
         <thead><tr><th>Item</th><th>Casino Token Cost</th></tr></thead>
         <tbody>
           <tr><td class="t-bold">Disable Slot Machine Lose Sound</td><td class="t-mono">C 500</td></tr>
-          <tr><td class="t-bold">Infinite Ki Machine</td><td class="t-mono">C 100,000</td></tr>
-          <tr><td class="t-bold">Infinite Ki Machine – Advanced</td><td class="t-mono">C 500,000</td></tr>
+          <tr><td class="t-bold">Infinite Ki Machine <span class="t-dim" style="font-weight:400">— Ki/Ki Def gym equipment for your house, never turns off</span></td><td class="t-mono">C 100,000</td></tr>
+          <tr><td class="t-bold">Infinite Ki Machine – Advanced <span class="t-dim" style="font-weight:400">— upgraded version</span></td><td class="t-mono">C 500,000</td></tr>
           <tr><td class="t-bold">Ultimate Dragon Radar</td><td class="t-mono">C 500,000</td></tr>
           <tr><td class="t-bold">500k TPs</td><td class="t-mono">C 2,500,000</td></tr>
           <tr><td class="t-bold">Increase Automate Max Bet</td><td class="t-mono">C 2,500,000</td></tr>
@@ -1159,7 +1192,7 @@
           <tr><td class="t-bold">Crystal Scan</td><td class="t-mono">C 4,000,000</td></tr>
           <tr><td class="t-bold">50M Zenni Pack</td><td class="t-mono">C 5,000,000</td></tr>
           <tr><td class="t-bold">Blue Stat Pill</td><td class="t-mono">C 10,000,000</td></tr>
-          <tr><td class="t-bold">Lucky Charm</td><td class="t-mono">C 10,000,000</td></tr>
+          <tr><td class="t-bold">Lucky Charm <span class="t-dim" style="font-weight:400">— doubles Slot Machine odds</span></td><td class="t-mono">C 10,000,000</td></tr>
           <tr><td class="t-bold t-orange">Robe of the Dark Lord (Suit)</td><td class="t-mono">C 10,000,000</td></tr>
           <tr><td class="t-bold">TNL Modifier</td><td class="t-mono">C 10,000,000</td></tr>
           <tr><td class="t-bold t-gold">Big Bang Kamehameha (Technique)</td><td class="t-mono">C 15,000,000</td></tr>
@@ -1329,7 +1362,7 @@
   <section class="tab-panel" id="panel-races">
 
     <!-- TIER LIST -->
-    <div class="section-header">📊 Race Tier List [4/3] (by Aleister)</div>
+    <div class="section-header">📊 Super/Zeno Race Tier List (by Aleister)</div>
     <div class="tier-row tier-sss">
       <div class="tier-label">SSS</div>
       <div class="tier-races"><strong>Cumber</strong><br>
@@ -1434,7 +1467,7 @@
 
     <!-- RACE TRANSFORMATION TABLES -->
     <div class="section-header">🔀 All Race Transformations</div>
-    <div class="tip-box">💡 <strong>Race Types:</strong> Standard = base game race | Super = requires 3/3 rebirths (unless noted) | PvP = 4/3 via PvP Broker | Zeno = 5/3 via NPC Zeno<br>
+    <div class="tip-box">💡 <strong>Race Types:</strong> Standard = base game race | Super = requires 3/3 rebirths (unless noted) | PvP = 4/3 via PvP Broker (buy with PVP Tokens, instantly changes your race, can revert) | Zeno = 5/3 via NPC Zeno (unlocked later than Super races, generally more fleshed out)<br>
     <strong>Trans Types:</strong> Non-Perm = revertable | Perm = permanent, only transform with desirable stats | Semi-Perm = some forms revertable, final form often permanent</div>
 
     <!-- ALIEN -->
@@ -1826,6 +1859,7 @@
 
     <!-- LEVEL-UP TECHNIQUES -->
     <div class="section-header">📈 Level-Up Techniques</div>
+    <div class="tip-box">💡 Level-Up Techniques are learned <strong>automatically</strong> when you reach the required level. No NPC needed — they just unlock.</div>
     <div class="sub-header">Universal (All Races)</div>
     <div class="table-wrap">
       <table>
@@ -1857,6 +1891,7 @@
 
     <!-- RACE SPECIAL TECHNIQUES -->
     <div class="section-header">⚔️ Race Special Techniques</div>
+    <div class="tip-box">💡 Race Special Techniques are <strong>automatically unlocked</strong> by being the compatible race. You don't need to visit an NPC — just be the right race.</div>
     <div class="table-wrap">
       <table>
         <thead><tr><th>Race</th><th>Technique</th><th>Effect</th></tr></thead>
@@ -1924,15 +1959,15 @@
     <div class="section-header">🗺️ Caves &amp; Special Portals</div>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>Name</th><th>Rec. Stats</th><th>Level Cap</th><th>Location</th></tr></thead>
+        <thead><tr><th>Name</th><th>Level Cap</th><th>Location</th></tr></thead>
         <tbody>
-          <tr><td class="t-bold">Special Portal #1</td><td class="t-mono t-orange">125,000,000</td><td class="t-dim">None</td><td class="t-dim">Future Earth - above &amp; left of Vegito <span class="t-mono">(6, 167, 3)</span></td></tr>
-          <tr><td class="t-bold">Special Portal #2</td><td class="t-mono t-orange">75,000,000</td><td class="t-dim">None</td><td class="t-dim">Planet Earth - right of Yajirobe <span class="t-mono">(387, 391, 1)</span></td></tr>
-          <tr><td class="t-bold">Special Portal #3</td><td class="t-mono t-orange">75,000,000</td><td class="t-dim">None</td><td class="t-dim">Future Earth - Cell Games Arena <span class="t-mono">(129, 132, 3)</span></td></tr>
-          <tr><td class="t-bold">Tapion's Cave</td><td class="t-mono t-green">35,000</td><td class="t-mono t-red">25,000</td><td class="t-dim">-</td></tr>
-          <tr><td class="t-bold">Videl's Cave</td><td class="t-mono t-green">35,000</td><td class="t-mono t-red">25,000</td><td class="t-dim">-</td></tr>
-          <tr><td class="t-bold">Future Earth's Cave</td><td class="t-mono t-red">5,000,000,000</td><td class="t-dim">None</td><td class="t-dim">Future Earth - middle bottom island <span class="t-mono">(222, 66, 3)</span></td></tr>
-          <tr><td class="t-bold">Z Cave</td><td class="t-mono t-red">15,000,000,000</td><td class="t-dim">None</td><td class="t-dim">Planet of Divines - behind Z Warrior <span class="t-mono">(279, 369, 10)</span></td></tr>
+          <tr><td class="t-bold">Special Portal #1</td><td class="t-dim">None</td><td class="t-dim">Future Earth - above &amp; left of Vegito <span class="t-mono">(6, 167, 3)</span></td></tr>
+          <tr><td class="t-bold">Special Portal #2</td><td class="t-dim">None</td><td class="t-dim">Planet Earth - right of Yajirobe <span class="t-mono">(387, 391, 1)</span></td></tr>
+          <tr><td class="t-bold">Special Portal #3</td><td class="t-dim">None</td><td class="t-dim">Future Earth - Cell Games Arena <span class="t-mono">(129, 132, 3)</span></td></tr>
+          <tr><td class="t-bold">Tapion's Cave</td><td class="t-mono t-red">25,000</td><td class="t-dim">-</td></tr>
+          <tr><td class="t-bold">Videl's Cave</td><td class="t-mono t-red">25,000</td><td class="t-dim">-</td></tr>
+          <tr><td class="t-bold">Future Earth's Cave</td><td class="t-dim">None</td><td class="t-dim">Future Earth - middle bottom island <span class="t-mono">(222, 66, 3)</span></td></tr>
+          <tr><td class="t-bold">Z Cave</td><td class="t-dim">None</td><td class="t-dim">Planet of Divines - behind Z Warrior <span class="t-mono">(279, 369, 10)</span></td></tr>
         </tbody>
       </table>
     </div>
@@ -1972,6 +2007,7 @@
           <tr><td class="t-bold">Gotenks Tower</td><td class="t-mono t-red">525,000,000</td><td class="t-dim">None</td><td class="t-dim">Future Earth - behind Gotenks <span class="t-mono">(100, 179, 3)</span></td></tr>
           <tr><td class="t-bold">Planet of Divines Tower</td><td class="t-mono t-red">7,500,000,000</td><td class="t-dim">None</td><td class="t-dim">Planet of Divines - below Z Warrior <span class="t-mono">(279, 332, 10)</span></td></tr>
           <tr><td class="t-bold">Space Tower</td><td class="t-mono t-red">20,000,000,000</td><td class="t-dim">None</td><td class="t-dim">Space - behind Lost Astronaut <span class="t-mono">(326, 30, 9)</span></td></tr>
+          <tr><td class="t-bold t-gold">Champion Tower</td><td class="t-mono t-red">—</td><td class="t-mono t-red">500,000</td><td class="t-dim">Requires Level 500,000 to enter</td></tr>
         </tbody>
       </table>
     </div>
@@ -1983,7 +2019,7 @@
         <thead><tr><th>Planet</th><th>Rec. Stats</th><th>Coordinates</th></tr></thead>
         <tbody>
           <tr><td class="t-bold t-orange">Orange Star</td><td class="t-mono t-green">1,000,000</td><td class="t-mono">164, 286, 9</td></tr>
-          <tr><td class="t-bold" style="color:#9BADB7">Purple Star</td><td class="t-mono t-orange">25,000,000</td><td class="t-mono">35, 206, 9</td></tr>
+          <tr><td class="t-bold" style="color:#418FBF">Purple Star</td><td class="t-mono t-orange">25,000,000</td><td class="t-mono">35, 206, 9</td></tr>
           <tr><td class="t-bold t-blue">Blue Star</td><td class="t-mono t-orange">75,000,000</td><td class="t-mono">172, 380, 9</td></tr>
           <tr><td class="t-bold t-dim">Dark Smoke</td><td class="t-mono t-orange">75,000,000</td><td class="t-mono">230, 37, 9</td></tr>
         </tbody>
@@ -2030,6 +2066,8 @@
        TAB 7: EVENTS
   ══════════════════════════════════════════════ -->
   <section class="tab-panel" id="panel-events">
+
+    <div class="tip-box" style="margin-top:16px">💡 Event timers and reward timers are tracked in the <strong>Server Statpanel</strong> in-game. Check it to see what's active, upcoming, and on cooldown.</div>
 
     <!-- SAGAS -->
     <div class="section-header">📖 Sagas</div>
@@ -2218,6 +2256,36 @@
           <tr><td class="t-bold">World Tournament</td><td>Levels (win or loss)</td></tr>
         </tbody>
       </table>
+    </div>
+
+    <!-- HORDE -->
+    <div class="section-header">🧟 Horde</div>
+    <div class="card">
+      <p>Sign up to compete against other players to get the most zombie kills! <strong>10 waves, 100 zombies in total.</strong> Melee only.</p>
+    </div>
+
+    <!-- GRAND MAZE -->
+    <div class="section-header">🌀 Grand Maze</div>
+    <div class="card">
+      <p>Players sign up for a <strong>loot bag hunt</strong>, followed by <strong>forced PvP</strong> once 4 players remain. Loot bags can contain tons of different things. Player kills drop better loot bags.</p>
+    </div>
+
+    <!-- PILLARS -->
+    <div class="section-header">🏛️ Pillars</div>
+    <div class="card">
+      <p>Universe members sign up to <strong>protect their pillar</strong> and <strong>destroy other universe towers</strong>. Unlimited respawns until your tower is destroyed.</p>
+    </div>
+
+    <!-- RED RIBBON TOWER -->
+    <div class="section-header">🗼 Red Ribbon Tower</div>
+    <div class="card">
+      <p>Collect <strong>2 Dragon Balls</strong> to enter the tower. Killing players will drop them. <strong>Exit the Forest of Chaos to win.</strong></p>
+    </div>
+
+    <!-- TEAM DEATHMATCH -->
+    <div class="section-header">⚔️ Team Deathmatch</div>
+    <div class="card">
+      <p><strong>2 teams</strong>, first to <strong>20 kills</strong> wins.</p>
     </div>
 
   </section>
@@ -2568,7 +2636,7 @@
     <!-- HBTC -->
     <div class="section-header">⏳ HBTC (Hyperbolic Time Chamber)</div>
     <div class="card">
-      <p>A training area with great gravity multipliers, located inside <strong>The Lookout</strong>. You get <strong>2 free entries</strong> and can stay for <strong>2 hours per entry</strong>. Additional entries can be purchased. Recommended to <strong>Dual Train</strong> with a partner or alt to maximize your time inside.</p>
+      <p>A training area with great gravity multipliers, located inside <strong>The Lookout</strong>. You get <strong>2 free entries</strong> and can stay for <strong>2 hours per entry</strong>. Recommended to <strong>Dual Train</strong> with a partner or alt to maximize your time inside.</p>
     </div>
 
     <!-- THE LOOKOUT -->
@@ -2667,7 +2735,7 @@
         <li><strong>Change Ranks &amp; Titles</strong>: Set ranks and titles for members</li>
         <li><strong>Mute Option</strong>: Mute members in guild chat</li>
         <li><strong>Summon Verb</strong>: Summon guild members to your location</li>
-        <li><strong>War System</strong>: Declare wars on other guilds</li>
+        <li><strong>War System</strong>: Declare wars on other guilds to wage competitive PvP battles</li>
         <li><strong>Buy Guild House</strong>: Purchase a guild house for your guild</li>
       </ul>
     </div>
@@ -2680,13 +2748,14 @@
     <div class="section-header">🏠 Guild House</div>
     <div class="card">
       <p>A hub for Guild Members to meet up and train. Inside you get access to increasing your <strong>member limit</strong>, <strong>3 facilities to upgrade</strong>, and your <strong>Guild Path</strong>. Use <strong>Guild Points (GP)</strong> to upgrade anything guild related.</p>
+      <p style="margin-top:6px"><strong>Member Limit:</strong> Guilds start with <strong>3 member slots</strong>. You can purchase the 4th and 5th slots for a maximum of <strong>5 members</strong>.</p>
     </div>
     <div class="card-grid">
       <div class="card">
         <div class="sub-sub-header">Right Angel Statue</div>
         <ul>
           <li>Guild Evolution</li>
-          <li>Upgrade &amp; Warp to Guild House Cave</li>
+          <li>Upgrade &amp; Warp to Guild House Cave (private mob farming spot for guild members)</li>
           <li>Reset Guild Evolution</li>
           <li>Information Option</li>
         </ul>
@@ -2745,7 +2814,7 @@
 
     <!-- RANKS -->
     <div class="section-header">🎖 Ranks</div>
-    <div class="tip-box">💡 Use <code>Quest Medal Check</code> in Training tab. Easiest early medals: King Kai, Yamcha (Lvl 500), Dr. Briefs, Master Roshi (Kamehameha), Saiyaman.</div>
+    <div class="tip-box">💡 Use <code>Quest Medal Check</code> in Training tab. Easiest early medals: King Kai Kaioken, Bulma Spanner, Saiyaman Helmet, Master Roshi Kamehameha, Yamcha 1, Yamcha 2, and Yamcha 4.</div>
     <div class="table-wrap">
       <table>
         <thead><tr><th>Level</th><th>Rank</th><th>Quest Medals Required</th></tr></thead>
@@ -2840,9 +2909,109 @@
 
   </section>
 
+  <!-- ══════════════════════════════════════════════
+       TAB: PLANETS
+  ══════════════════════════════════════════════ -->
+  <section class="tab-panel" id="panel-planets">
+
+    <div class="tip-box" style="margin-top:16px">💡 Travel between planets using <strong>Instant Transmission</strong> (teleport to NPCs) or the <strong>Capsule Corp Space Pod</strong> (for planets without NPCs to IT to). Space requires a Space Pod to access.</div>
+
+    <!-- PLANET EARTH -->
+    <div class="section-header">🌍 Planet Earth</div>
+    <div class="card">
+      <p>The starting planet and main hub of DBA. Contains the majority of shops, NPCs, and training facilities.</p>
+      <p style="margin-top:6px"><strong class="t-green">Key Locations:</strong> Main Spawn House, Megamall (Casino, Sub Casino, PVP Broker, Lazer the Blacksmith), The Lookout (HBTC, Korin, Kami, Mr. Popo), Sub House, Club House, Wackdonalds, Hall of Fame, Safe Zone (Z Agent), High Strain Chamber, Training Island (via Master Roshi)</p>
+      <p style="margin-top:6px"><strong class="t-orange">Key NPCs:</strong> Yamcha, Babidi, Bulma, Dr. Briefs, Hercule, Korin, Master Roshi, Oolong, Saiyaman, Tapion, Tien, Videl, Whis, Yajirobe, Zeno, Puar</p>
+      <p style="margin-top:6px"><strong class="t-blue">Mob Farming:</strong> Saiba Tower, Babidi Tower, Tapion's Cave, Videl's Cave, Special Portal #2 (right of Yajirobe), Lab Entrance (NE of Tapion)</p>
+      <p style="margin-top:6px"><strong class="t-dim">SR Portals:</strong> Cauliflower Saibaman, Granolah's Gulag, Herculean Warrior Cave, Majin Uub's Portal, Tapion Ice Portal</p>
+    </div>
+
+    <!-- FUTURE EARTH -->
+    <div class="section-header">🌆 Future Earth</div>
+    <div class="card">
+      <p>An alternate-timeline version of Earth with its own set of NPCs, portals, and mob farming areas.</p>
+      <p style="margin-top:6px"><strong class="t-green">Key Locations:</strong> FCC (Future Capsule Corp — gravity training &amp; equipment room, unlocked via Gogeta's quest)</p>
+      <p style="margin-top:6px"><strong class="t-orange">Key NPCs:</strong> Trunks, Trunks Enraged, Cell, Vegito, Gotenks, Son Gohan</p>
+      <p style="margin-top:6px"><strong class="t-blue">Mob Farming:</strong> Trunks Tower, Gotenks Tower, Future Earth's Cave, Special Portal #1 (near Vegito), Special Portal #3 (Cell Games Arena), Lab Entrance (East of Gotenks)</p>
+      <p style="margin-top:6px"><strong class="t-dim">SR Portals:</strong> Android 21's Portal, Cell's Pit, Dark Syn Kingdom, Jiren Portal, Mira's Dominion, Super 17's Laboratory</p>
+    </div>
+
+    <!-- PLANET NAMEK -->
+    <div class="section-header">🟢 Planet Namek</div>
+    <div class="card">
+      <p>Home of the Namekians and the Namek Dragon Balls.</p>
+      <p style="margin-top:6px"><strong class="t-orange">Key NPCs:</strong> Piccolo, Guru, Frieza</p>
+      <p style="margin-top:6px"><strong class="t-blue">Mob Farming:</strong> Piccolo Tower, Guru Tower, Lab Entrance (NE of Guru)</p>
+      <p style="margin-top:6px"><strong class="t-dim">SR Portals:</strong> Cooler's Cavern, Namekian's Nether</p>
+    </div>
+
+    <!-- PLANET VEGETA -->
+    <div class="section-header">🔴 Planet Vegeta</div>
+    <div class="card">
+      <p>Home planet of the Saiyans.</p>
+      <p style="margin-top:6px"><strong class="t-orange">Key NPCs:</strong> King Vegeta, Yardrat Sensei</p>
+      <p style="margin-top:6px"><strong class="t-blue">Mob Farming:</strong> King Vegeta Tower, Lab Entrance (West of Yardrat Sensei)</p>
+      <p style="margin-top:6px"><strong class="t-dim">SR Portals:</strong> Bebi's Base, Fu's Fortress</p>
+    </div>
+
+    <!-- PLANET GLASS -->
+    <div class="section-header">🔷 Planet Glass</div>
+    <div class="card">
+      <p>Home to the Glass and Tuffle civilizations. Several quest medals are tied to this planet.</p>
+      <p style="margin-top:6px"><strong class="t-orange">Key NPCs:</strong> Glass Civilians, Tuffle Civilians</p>
+      <p style="margin-top:6px"><strong class="t-blue">Quest Medals:</strong> Glass Civilian (1, 2, 3), Tuffle Civilian (1, 2, 3, 4), Yardrat, Sensei</p>
+      <p style="margin-top:6px" class="t-dim"><em>More details coming soon.</em></p>
+    </div>
+
+    <!-- PLANET OF DIVINES -->
+    <div class="section-header">✨ Planet of Divines</div>
+    <div class="card">
+      <p>A high-level planet home to some of the toughest mob farming content in the game.</p>
+      <p style="margin-top:6px"><strong class="t-orange">Key NPCs:</strong> Gogeta, Z Warrior</p>
+      <p style="margin-top:6px"><strong class="t-blue">Mob Farming:</strong> Planet of Divines Tower, Z Cave (behind Z Warrior)</p>
+      <p style="margin-top:6px"><strong class="t-dim">SR Portals:</strong> Broly Cave, Gogeta Island, Super Bojack's Territory</p>
+    </div>
+
+    <!-- BEERUS PLANET -->
+    <div class="section-header">🐱 Beerus Planet</div>
+    <div class="card">
+      <p>Home of the God of Destruction. Hub for 6/3 Rebirth quests and Ultra Form training.</p>
+      <p style="margin-top:6px"><strong class="t-orange">Key NPCs:</strong> Beerus (6/3 Rebirth, Ultra Ego training, Request Residence), Champa (Ultra Invert training)</p>
+      <p style="margin-top:6px"><strong class="t-dim">SR Portal:</strong> Feline's Fissure</p>
+    </div>
+
+    <!-- LAND OF THE KAIS -->
+    <div class="section-header">⛩️ Land of the Kais</div>
+    <div class="card">
+      <p>A sacred planet home to the Supreme Kais. Contains key quest and progression NPCs.</p>
+      <p style="margin-top:6px"><strong class="t-orange">Key NPCs:</strong> Shin, Supreme Kai</p>
+      <p style="margin-top:6px"><strong class="t-green">Key Items:</strong> Z-Sword (found here)</p>
+      <p style="margin-top:6px"><strong class="t-dim">SR Portals:</strong> Zamasu's Otherworld Portal, Gohan's Training Forest</p>
+    </div>
+
+    <!-- HFIL -->
+    <div class="section-header">🔥 HFIL</div>
+    <div class="card">
+      <p>The afterlife underworld. You'll end up here if you fall off <strong>Snake Way</strong>.</p>
+      <p style="margin-top:6px"><strong class="t-orange">Key NPCs:</strong> Pikkon, Dabura, Yemma's Helper</p>
+      <p style="margin-top:6px"><strong class="t-dim">SR Portal:</strong> Demigra's Dominion</p>
+    </div>
+
+    <!-- SPACE -->
+    <div class="section-header">🌌 Space</div>
+    <div class="card">
+      <p>Accessible via the <strong>Capsule Corp Space Pod</strong>. Contains Star Planets for mob farming and is where <strong>Super Dragon Balls</strong> can be found.</p>
+      <p style="margin-top:6px"><strong class="t-orange">Key NPCs:</strong> Lost Astronaut</p>
+      <p style="margin-top:6px"><strong class="t-blue">Mob Farming:</strong> Space Tower (behind Lost Astronaut), Orange Star, Purple Star, Blue Star, Dark Smoke</p>
+    </div>
+
+  </section>
+
   <!-- FOOTER -->
   <footer style="margin-top:40px;padding:20px 0;border-top:2px solid var(--border-frame);text-align:center;">
-    <p style="color:var(--text-dim);font-size:12px;font-family:'Share Tech Mono',monospace;">All Data comes from in game guides, player made guides in discord, and changelogs. V1.2 4.19.2026</p>
+    <p style="color:var(--text-secondary);font-size:12px;font-family:'Share Tech Mono',monospace;margin-bottom:6px;">DBA Wiki · Managed by <strong style="color:var(--accent-green)">VsCactus</strong></p>
+    <p style="color:var(--text-dim);font-size:11px;font-family:'Share Tech Mono',monospace;margin-bottom:4px;">Latest Changelog: v8.67.17 · Wiki v1.3 · Updated 4.22.2026</p>
+    <p style="color:var(--text-dim);font-size:11px;font-family:'Share Tech Mono',monospace;">All data comes from in-game guides, player-made guides on Discord, and changelogs.</p>
   </footer>
 
 </div>
